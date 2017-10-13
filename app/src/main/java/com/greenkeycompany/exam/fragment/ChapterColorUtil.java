@@ -22,5 +22,4 @@ public class ChapterColorUtil {
             default: return Color.BLACK;
         }
     }
-
 }
