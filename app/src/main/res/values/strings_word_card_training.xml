@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="word_card_training_progress_item_margin">1dp</dimen>
+    <dimen name="word_card_training_progress_item_height">5dp</dimen>
+
+    <string name="word_card_training_description">Правильно ли написано слово?</string>
+    <string name="word_card_training_correct_word">Правильный ответ\n%1$s</string>
+
+    <string name="word_card_training_next">Далее</string>
+    <string name="word_card_training_true_answer">Правильно</string>
+    <string name="word_card_training_false_answer">Неправильно</string>
+</resources>

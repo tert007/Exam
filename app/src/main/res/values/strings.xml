@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Русский язык</string>
+
+    <string name="rule">Правило</string>
+    <string name="training">Тренировка</string>
+    <string name="exam">Экзамен</string>
+
+    <string name="score">Оценка</string>
+    <string name="best_score">Лучшая оценка</string>
+
+    <string name="chapter_start">Начать</string>
+    <string name="chapter_continue">Продолжить</string>
+
+    <string name="help">Помощь</string>
+    <string name="settings">Настройки</string>
+
+    <string-array name="chapter_titles">
+        <item>Гласные</item>
+    </string-array>
+
+    <string-array name="chapter_1_rule_titles">
+        <item>Гласные после шипящих и ц</item>
+    </string-array>
+
+    <string-array name="rule_1_rule_point_titles">
+        <item>§1</item>
+    </string-array>
+    <string-array name="rule_1_rule_point_descriptions">
+        <item>
+            После ж, ч, ш, щ не пишутся ю, я, ы, а пишутся у, а, и, например: чудо, щука,
+            час, роща, жир, шить.
+
+            \n\nБуквы ю и я допускаются после этих согласных только в иноязычных словах
+            (преимущественно французских), например: жюри, парашют (в том числе — в именах
+            собственных, например: Сен-Жюст), а также в сложносокращённых словах и буквенных
+            аббревиатурах, в которых, по общему правилу, допускаются любые сочетания букв (см. § 110).
+        </item>
+    </string-array>
+    <string-array name="rule_point_1_word_card_correct_words">
+        <!--§1-->
+        <item>Чудо</item>
+        <item>Щука</item>
+        <item>Час</item>
+        <item>Роща</item>
+        <item>Жир</item>
+        <item>Жюри</item>
+        <item>Парашют</item>
+        <item>Шить</item>
+        <item>Цапля</item>
+        <item>Площадка</item>
+    </string-array>
+    <string-array name="rule_point_1_word_card_incorrect_words">
+        <!--§1-->
+        <item>Чюдо</item>
+        <item>Щюка</item>
+        <item>Чяс</item>
+        <item>Рощя</item>
+        <item>Жыр</item>
+        <item>Жури</item>
+        <item>Парашут</item>
+        <item>Шыть</item>
+        <item>Цяпля</item>
+        <item>Площядка</item>
+    </string-array>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ПОМОЙКА НИЖЕ!!! -->
+    <string-array name="array3">
+        <item>Цыган</item>
+        <item>Циган</item>
+    </string-array>
+    <string name="text1">Равные по составу.</string>
+
+    <integer-array name="text1_indexes">
+        <item>1</item>
+        <item>11</item>
+        <item>15</item>
+    </integer-array>
+
+    <string-array name="text1_answers_1">
+        <item>a</item>
+        <item>о</item>
+    </string-array>
+
+    <string-array name="text1_answers_2">
+        <item>d</item>
+        <item>f</item>
+    </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_height="150dp"
+    android:layout_width="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:id="@+id/progress_layout"
+
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.1">
+
+        <TextView
+            android:id="@+id/progress_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+            android:gravity="center_horizontal"
+
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            tools:text="10%" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal"
+
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+
+            android:text="усвоено" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_text_view"
+
+        tools:text="Гласные"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@+id/start_text_view"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/start_text_view"
+        app:layout_constraintLeft_toLeftOf="@+id/start_text_view" />
+
+    <TextView
+        android:id="@+id/start_text_view"
+
+        tools:text="Начать"
+
+        android:gravity="center"
+
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/chapter_button_background_selector"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/progress_layout"
+        app:layout_constraintHorizontal_bias="0.85" />
+    
+</android.support.constraint.ConstraintLayout>
