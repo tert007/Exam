@@ -46,6 +46,7 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
         presenter.requestToSetMainMenuFragment();
     }
 
+    /*
     @Override
     public void setActionBarColor(@ColorInt int color) {
         toolbar.setBackgroundColor(color);
@@ -55,6 +56,7 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     public void setActionBarTitleTextColor(@ColorInt int color) {
         toolbarTitleTextView.setTextColor(color);
     }
+    */
 
     @Override
     public void requestToSetMainMenuFragment() {

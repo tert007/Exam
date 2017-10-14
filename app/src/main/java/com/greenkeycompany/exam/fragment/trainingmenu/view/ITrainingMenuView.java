@@ -3,7 +3,7 @@ package com.greenkeycompany.exam.fragment.trainingmenu.view;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 
-import com.greenkeycompany.exam.fragment.trainingmenu.model.TrainingMenuModel;
+import com.greenkeycompany.exam.fragment.trainingmenu.model.WordCardMenuItem;
 import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface ITrainingMenuView extends MvpView {
     void setBackgroundColor(@ColorInt int color);
-    void setTrainingModelItems(@NonNull List<TrainingMenuModel> trainingMenuModelList);
+    void setTrainingModelItems(@NonNull List<WordCardMenuItem> wordCardMenuItemList);
 
     void requestToSetWordCardRulePointTrainingFragment(int rulePointId);
 }

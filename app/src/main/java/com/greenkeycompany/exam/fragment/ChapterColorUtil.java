@@ -1,10 +1,7 @@
 package com.greenkeycompany.exam.fragment;
 
-import android.content.Context;
 import android.graphics.Color;
-import android.support.v4.content.ContextCompat;
-
-import com.greenkeycompany.exam.R;
+import android.support.annotation.ColorInt;
 
 /**
  * Created by tert0 on 09.10.2017.
@@ -12,6 +9,7 @@ import com.greenkeycompany.exam.R;
 
 public class ChapterColorUtil {
 
+    @ColorInt
     public static int getColor(int chapterId) {
         switch (chapterId) {
             case 1 : return Color.parseColor("#489D9B");

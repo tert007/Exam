@@ -13,5 +13,6 @@ import java.util.List;
 
 public interface IChapterView extends MvpView {
     void setItemList(@NonNull List<Rule> ruleList);
-    void requestToSetDetailFragment(int ruleId);
+
+    void requestToSetRuleFragment(int ruleId);
 }

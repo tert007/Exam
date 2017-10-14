@@ -1,7 +1,6 @@
 package com.greenkeycompany.exam.fragment.trainingmenu.view;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
@@ -11,13 +10,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
-import com.greenkeycompany.exam.fragment.trainingmenu.model.TrainingMenuModel;
+import com.greenkeycompany.exam.fragment.trainingmenu.model.WordCardMenuItem;
 import com.greenkeycompany.exam.fragment.trainingmenu.presenter.ITrainingMenuPresenter;
 import com.greenkeycompany.exam.fragment.trainingmenu.presenter.TrainingMenuPresenter;
 import com.greenkeycompany.exam.repository.RealmRepository;
+import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 
 import java.util.ArrayList;
@@ -107,8 +109,8 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
     }
 
     @Override
-    public void setTrainingModelItems(@NonNull List<TrainingMenuModel> trainingMenuModelList) {
-        adapter.setItemList(trainingMenuModelList);
+    public void setTrainingModelItems(@NonNull List<WordCardMenuItem> wordCardMenuItemList) {
+        adapter.setItemList(wordCardMenuItemList);
     }
 
     @Override
@@ -141,7 +143,7 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
         fragmentListener = null;
     }
 
-    private static class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.ViewHolder> {
+    static class TrainingAdapter extends RecyclerView.Adapter<TrainingAdapter.ViewHolder> {
 
         interface ItemClickListener {
             void onItemClick(int position);
@@ -149,8 +151,9 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
 
         class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-            //@BindView(R.id.score_text_view) TextView scoreTextView;
-            //@BindView(R.id.title_text_view) TextView titleTextView;
+            @BindView(R.id.title_text_view) TextView titleTextView;
+            @BindView(R.id.word_card_count_text_view) TextView wordCardCountTextView;
+            @BindView(R.id.completed_image_view) ImageView completedImageView;
 
             private ItemClickListener itemClickListener;
 
@@ -170,14 +173,14 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
         }
 
         private ItemClickListener itemClickListener;
-        private final List<TrainingMenuModel> trainingMenuModelList = new ArrayList<>();
+        private final List<WordCardMenuItem> wordCardMenuItemList = new ArrayList<>();
 
         TrainingAdapter(@NonNull Context context, @NonNull ItemClickListener itemClickListener) {
             this.itemClickListener = itemClickListener;
         }
 
-        void setItemList(@NonNull List<TrainingMenuModel> trainingMenuModelList) {
-            this.trainingMenuModelList.addAll(trainingMenuModelList);
+        void setItemList(@NonNull List<WordCardMenuItem> wordCardMenuItemList) {
+            this.wordCardMenuItemList.addAll(wordCardMenuItemList);
             this.notifyDataSetChanged();
         }
 
@@ -190,12 +193,19 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
-            TrainingMenuModel trainingMenuModel = trainingMenuModelList.get(position);
+            WordCardMenuItem wordCardMenuItem = wordCardMenuItemList.get(position);
+            RulePoint rulePoint = wordCardMenuItem.getRulePoint();
+
+            holder.titleTextView.setText(rulePoint.getTitle());
+            holder.wordCardCountTextView.setText(String.valueOf(wordCardMenuItem.getWordCardCount()));
+            holder.completedImageView.setImageResource(rulePoint.isCompleted() ?
+                    R.drawable.ic_checked :
+                    R.drawable.ic_unchecked);
         }
 
         @Override
         public int getItemCount() {
-            return trainingMenuModelList.size();
+            return wordCardMenuItemList.size();
         }
     }
 }

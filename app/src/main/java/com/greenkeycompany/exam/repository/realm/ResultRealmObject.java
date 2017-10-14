@@ -6,9 +6,6 @@ package com.greenkeycompany.exam.repository.realm;
 
 public interface ResultRealmObject {
 
-    float MIN_SCORE = 0.0f;
-    float MAX_SCORE = 5.0f;
-
     String FILED_SCORE = "score";
 
     float getScore();

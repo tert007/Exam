@@ -5,9 +5,8 @@ import android.support.annotation.Nullable;
 
 import com.greenkeycompany.exam.repository.model.Chapter;
 import com.greenkeycompany.exam.repository.model.Rule;
+import com.greenkeycompany.exam.repository.model.RuleExamResult;
 import com.greenkeycompany.exam.repository.model.RulePoint;
-import com.greenkeycompany.exam.repository.model.RulePointTrainingResult;
-import com.greenkeycompany.exam.repository.model.RuleTrainingResult;
 import com.greenkeycompany.exam.repository.model.WordCard;
 import com.greenkeycompany.exam.repository.realm.IdentityRealmObject;
 import com.greenkeycompany.exam.repository.realm.ResultRealmObject;
@@ -117,15 +116,22 @@ public class RealmRepository implements IRepository {
     }
 
     @Override
-    public void addRuleTrainingResult(final int ruleId, final float score, final long unixTime) {
+    public long getWordCardCount(int rulePointId) {
+        return realm.where(WordCard.class).
+                equalTo(WordCard.FILED_RULE_POINT_ID, rulePointId).
+                count();
+    }
+
+    @Override
+    public void addRuleExamResult(final int ruleId, final float score, final long unixTime) {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
                 Rule rule = getRule(ruleId);
 
-                int nextId = getNextId(RuleTrainingResult.class);
+                int nextId = getNextId(RuleExamResult.class);
 
-                RuleTrainingResult result = realm.createObject(RuleTrainingResult.class, nextId);
+                RuleExamResult result = realm.createObject(RuleExamResult.class, nextId);
                 result.setRule(rule);
                 result.setScore(score);
                 result.setUnixTime(unixTime);
@@ -134,54 +140,37 @@ public class RealmRepository implements IRepository {
     }
 
     @Override
-    public void addRulePointResult(final int rulePointId, final float score, final long unixTime) {
+    public void updateRulePoint(final int rulePointId, final boolean completed) {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
-                RulePoint rulePoint = getRulePoint(rulePointId);
-
-                int nextId = getNextId(RulePointTrainingResult.class);
-
-                RulePointTrainingResult result = realm.createObject(RulePointTrainingResult.class, nextId);
-                result.setRulePoint(rulePoint);
-                result.setScore(score);
-                result.setUnixTime(unixTime);
+                getRulePoint(rulePointId).setCompleted(completed);
             }
         });
     }
 
+    @Override
+    public boolean trainingCompleted(int ruleId) {
+        for (RulePoint rulePoint : getRulePointList(ruleId)) {
+            if ( ! rulePoint.isCompleted()) return false;
+        }
+        return true;
+    }
+
     @Nullable
     @Override
-    public RuleTrainingResult getLastRuleTrainingResult(int ruleId) {
-        return realm.where(RuleTrainingResult.class).
-                equalTo(RuleTrainingResult.FIELD_RULE_ID, ruleId).
+    public RuleExamResult getLastRuleTrainingResult(int ruleId) {
+        return realm.where(RuleExamResult.class).
+                equalTo(RuleExamResult.FIELD_RULE_ID, ruleId).
                 findAllSorted(IdentityRealmObject.FILED_ID, Sort.DESCENDING).
                 first();
     }
 
     @Nullable
     @Override
-    public RuleTrainingResult getBestRuleTrainingResult(int ruleId) {
-        return realm.where(RuleTrainingResult.class).
-                equalTo(RuleTrainingResult.FIELD_RULE_ID, ruleId).
-                findAllSorted(ResultRealmObject.FILED_SCORE, Sort.DESCENDING).
-                first();
-    }
-
-    @Nullable
-    @Override
-    public RulePointTrainingResult getLastRulePointTrainingResult(int rulePointId) {
-        return realm.where(RulePointTrainingResult.class).
-                equalTo(RulePointTrainingResult.FIELD_RULE_POINT_ID, rulePointId).
-                findAllSorted(IdentityRealmObject.FILED_ID, Sort.DESCENDING).
-                first();
-    }
-
-    @Nullable
-    @Override
-    public RulePointTrainingResult getBestRulePointTrainingResult(int rulePointId) {
-        return realm.where(RulePointTrainingResult.class).
-                equalTo(RulePointTrainingResult.FIELD_RULE_POINT_ID, rulePointId).
+    public RuleExamResult getBestRuleExamResult(int ruleId) {
+        return realm.where(RuleExamResult.class).
+                equalTo(RuleExamResult.FIELD_RULE_ID, ruleId).
                 findAllSorted(ResultRealmObject.FILED_SCORE, Sort.DESCENDING).
                 first();
     }

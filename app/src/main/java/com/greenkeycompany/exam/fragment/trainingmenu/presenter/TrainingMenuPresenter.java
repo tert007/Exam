@@ -3,7 +3,7 @@ package com.greenkeycompany.exam.fragment.trainingmenu.presenter;
 import android.support.annotation.NonNull;
 
 import com.greenkeycompany.exam.fragment.ChapterColorUtil;
-import com.greenkeycompany.exam.fragment.trainingmenu.model.TrainingMenuModel;
+import com.greenkeycompany.exam.fragment.trainingmenu.model.WordCardMenuItem;
 import com.greenkeycompany.exam.fragment.trainingmenu.view.ITrainingMenuView;
 import com.greenkeycompany.exam.repository.IRepository;
 import com.greenkeycompany.exam.repository.model.RulePoint;
@@ -24,28 +24,30 @@ public class TrainingMenuPresenter extends MvpBasePresenter<ITrainingMenuView>
         this.repository = repository;
     }
 
-    private List<TrainingMenuModel> trainingMenuModelList;
+    private List<RulePoint> rulePointList;
 
     @Override
     public void init(int ruleId) {
-        trainingMenuModelList = new ArrayList<>();
+        this.rulePointList = repository.getRulePointList(ruleId);
 
-        List<RulePoint> rulePointList = repository.getRulePointList(ruleId);
+        List<WordCardMenuItem> wordCardMenuItemList = new ArrayList<>();
         for (RulePoint rulePoint : rulePointList) {
-            trainingMenuModelList.add(new TrainingMenuModel(rulePoint.getId()));
+            long wordCardCount = repository.getWordCardCount(rulePoint.getId());
+
+            wordCardMenuItemList.add(new WordCardMenuItem(rulePoint, wordCardCount));
         }
 
         int chapterId = repository.getRule(ruleId).getChapter().getId();
         if (isViewAttached()) {
             getView().setBackgroundColor(ChapterColorUtil.getColor(chapterId));
-            getView().setTrainingModelItems(trainingMenuModelList);
+            getView().setTrainingModelItems(wordCardMenuItemList);
         }
     }
 
     @Override
     public void onTrainingItemClick(int index) {
         if (isViewAttached()) {
-            getView().requestToSetWordCardRulePointTrainingFragment(trainingMenuModelList.get(index).getRulePointId());
+            getView().requestToSetWordCardRulePointTrainingFragment(rulePointList.get(index).getId());
         }
     }
 }

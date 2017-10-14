@@ -5,9 +5,8 @@ import android.support.annotation.Nullable;
 
 import com.greenkeycompany.exam.repository.model.Chapter;
 import com.greenkeycompany.exam.repository.model.Rule;
+import com.greenkeycompany.exam.repository.model.RuleExamResult;
 import com.greenkeycompany.exam.repository.model.RulePoint;
-import com.greenkeycompany.exam.repository.model.RulePointTrainingResult;
-import com.greenkeycompany.exam.repository.model.RuleTrainingResult;
 import com.greenkeycompany.exam.repository.model.WordCard;
 
 import java.util.List;
@@ -32,12 +31,14 @@ public interface IRepository {
     @NonNull List<WordCard> getWordCardListByRule(int ruleId);
     @NonNull List<WordCard> getWordCardListByRulePoint(int rulePointId);
 
-    void addRuleTrainingResult(int ruleId, float score, long unixTime);
-    void addRulePointResult(int rulePointId, float score, long unixTime);
+    long getWordCardCount(int rulePointId);
+    void addRuleExamResult(int ruleId, float score, long unixTime);
+    void updateRulePoint(int rulePointId, boolean completed);
+    boolean trainingCompleted(int ruleId);
 
-    @Nullable RuleTrainingResult getLastRuleTrainingResult(int ruleId);
-    @Nullable RuleTrainingResult getBestRuleTrainingResult(int ruleId);
+    @Nullable RuleExamResult getBestRuleExamResult(int ruleId);
 
-    @Nullable RulePointTrainingResult getLastRulePointTrainingResult(int rulePointId);
-    @Nullable RulePointTrainingResult getBestRulePointTrainingResult(int rulePointId);
+    @Deprecated
+    @Nullable
+    RuleExamResult getLastRuleTrainingResult(int ruleId);
 }

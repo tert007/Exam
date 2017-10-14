@@ -12,8 +12,8 @@ import com.hannesdorfmann.mosby3.mvp.MvpView;
 public interface IMainView extends MvpView,
         FragmentListener {
 
-    void setActionBarColor(@ColorInt int color);
-    void setActionBarTitleTextColor(@ColorInt int color);
+    //void setActionBarColor(@ColorInt int color);
+    //void setActionBarTitleTextColor(@ColorInt int color);
 
     void setMainFragment();
     void setChapterFragment(int chapterId);

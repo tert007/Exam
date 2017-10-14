@@ -26,8 +26,8 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
         fragmentType = FragmentType.MAIN_MENU;
         if (isViewAttached()) {
             getView().setMainFragment();
-            getView().setActionBarColor(Color.WHITE);
-            getView().setActionBarTitleTextColor(Color.BLACK);
+            //getView().setActionBarColor(Color.WHITE);
+            //getView().setActionBarTitleTextColor(Color.BLACK);
         }
     }
 
@@ -36,8 +36,8 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
         fragmentType = FragmentType.CHAPTER_MENU;
         if (isViewAttached()) {
             getView().setChapterFragment(chapterId);
-            getView().setActionBarColor(ChapterColorUtil.getColor(chapterId));
-            getView().setActionBarTitleTextColor(Color.WHITE);
+            //getView().setActionBarColor(ChapterColorUtil.getReferenceColor(chapterId));
+            //getView().setActionBarTitleTextColor(Color.WHITE);
         }
     }
 

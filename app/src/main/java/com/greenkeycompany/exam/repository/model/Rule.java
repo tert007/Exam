@@ -15,6 +15,7 @@ public class Rule extends RealmObject implements IdentityRealmObject {
     private int id;
     private String title;
     private Chapter chapter;
+    private boolean descriptionCompleted;
 
     @Override
     public int getId() {
@@ -40,5 +41,13 @@ public class Rule extends RealmObject implements IdentityRealmObject {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public boolean isDescriptionCompleted() {
+        return descriptionCompleted;
+    }
+
+    public void setDescriptionCompleted(boolean descriptionCompleted) {
+        this.descriptionCompleted = descriptionCompleted;
     }
 }

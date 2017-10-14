@@ -7,7 +7,6 @@ import com.greenkeycompany.exam.repository.IRepository;
 import com.greenkeycompany.exam.repository.model.Rule;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,7 +34,7 @@ public class ChapterPresenter extends MvpBasePresenter<IChapterView>
     @Override
     public void onRuleItemClick(int index) {
         if (isViewAttached()) {
-            getView().requestToSetDetailFragment(ruleList.get(index).getId());
+            getView().requestToSetRuleFragment(ruleList.get(index).getId());
         }
     }
 }

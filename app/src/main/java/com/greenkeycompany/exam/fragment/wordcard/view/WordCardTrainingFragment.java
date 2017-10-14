@@ -16,9 +16,9 @@ import android.widget.TextView;
 
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
+import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.wordcard.presenter.IWordCardTrainingPresenter;
 import com.greenkeycompany.exam.fragment.wordcard.presenter.WordCardTrainingPresenter;
-import com.greenkeycompany.exam.fragment.wordcard.util.ScoreUtil;
 import com.greenkeycompany.exam.repository.RealmRepository;
 import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 

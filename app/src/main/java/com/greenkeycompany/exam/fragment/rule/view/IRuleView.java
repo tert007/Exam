@@ -10,4 +10,9 @@ import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 public interface IRuleView extends MvpView {
     void setBackgroundColor(@ColorInt int color);
+
+    void setRuleDescriptionCompleted(boolean completed);
+    void setRuleTrainingCompleted(boolean completed);
+    void setRuleExamUncompleted();
+    void setRuleExamCompleted(float score);
 }

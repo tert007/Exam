@@ -11,7 +11,7 @@ import io.realm.annotations.PrimaryKey;
  * Created by tert0 on 12.10.2017.
  */
 
-public class RuleTrainingResult extends RealmObject implements IdentityRealmObject,
+public class RuleExamResult extends RealmObject implements IdentityRealmObject,
         UnixTimeRealmObject, ResultRealmObject {
 
     public static final String FIELD_RULE_ID = "rule.id";

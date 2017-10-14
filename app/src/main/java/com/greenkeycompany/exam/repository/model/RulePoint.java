@@ -17,6 +17,7 @@ public class RulePoint extends RealmObject implements IdentityRealmObject {
     private int id;
     private String title;
     private String description;
+    private boolean completed;
 
     private Rule rule;
 
@@ -44,6 +45,14 @@ public class RulePoint extends RealmObject implements IdentityRealmObject {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 
     public Rule getRule() {

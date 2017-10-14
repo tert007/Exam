@@ -5,7 +5,6 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -104,7 +103,7 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
     }
 
     @Override
-    public void requestToSetDetailFragment(int ruleId) {
+    public void requestToSetRuleFragment(int ruleId) {
         fragmentListener.requestToSetRuleFragment(ruleId);
     }
 
@@ -177,9 +176,9 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
         RuleAdapter(@NonNull Context context, @NonNull ItemClickListener itemClickListener) {
             this.itemClickListener = itemClickListener;
 
-            //greyColor = ContextCompat.getColor(context, R.color.colorFirstChapter);
-            //greenColor = ContextCompat.getColor(context, R.color.colorSecondChapter);
-            //orangeColor = ContextCompat.getColor(context, R.color.colorThirdChapter);
+            //greyColor = ContextCompat.getReferenceColor(context, R.color.colorFirstChapter);
+            //greenColor = ContextCompat.getReferenceColor(context, R.color.colorSecondChapter);
+            //orangeColor = ContextCompat.getReferenceColor(context, R.color.colorThirdChapter);
         }
 
         void setItemList(@NonNull List<Rule> ruleModelList) {
@@ -189,7 +188,7 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rule_list_item, parent, false);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rule_item, parent, false);
 
             return new ViewHolder(view, itemClickListener);
         }
