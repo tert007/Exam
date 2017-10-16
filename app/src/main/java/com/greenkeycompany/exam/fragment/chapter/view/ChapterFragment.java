@@ -15,10 +15,11 @@ import android.widget.TextView;
 
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
+import com.greenkeycompany.exam.fragment.ScoreUtil;
+import com.greenkeycompany.exam.fragment.chapter.model.RuleMenuItem;
 import com.greenkeycompany.exam.fragment.chapter.presenter.IChapterPresenter;
 import com.greenkeycompany.exam.fragment.chapter.presenter.ChapterPresenter;
 import com.greenkeycompany.exam.repository.RealmRepository;
-import com.greenkeycompany.exam.repository.model.Rule;
 import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 
 import java.util.ArrayList;
@@ -79,7 +80,7 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
         adapter = new RuleAdapter(getContext(), new RuleAdapter.ItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                presenter.onRuleItemClick(position);
+                presenter.onRuleMenuItemClick(position);
             }
         });
 
@@ -98,7 +99,7 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
     }
 
     @Override
-    public void setItemList(@NonNull List<Rule> ruleList) {
+    public void setItemList(@NonNull List<RuleMenuItem> ruleList) {
         adapter.setItemList(ruleList);
     }
 
@@ -148,6 +149,7 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
 
             @BindView(R.id.score_text_view) TextView scoreTextView;
             @BindView(R.id.title_text_view) TextView titleTextView;
+            @BindView(R.id.subtitle_text_view) TextView subtitleTextView;
 
             private ItemClickListener itemClickListener;
 
@@ -166,23 +168,17 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
             }
         }
 
-        //private int greyColor;
-        //private int greenColor;
-        //private int orangeColor;
-
+        private Context context;
         private ItemClickListener itemClickListener;
-        private final List<Rule> ruleModelList = new ArrayList<>();
+        private final List<RuleMenuItem> ruleMenuItemList = new ArrayList<>();
 
         RuleAdapter(@NonNull Context context, @NonNull ItemClickListener itemClickListener) {
+            this.context = context;
             this.itemClickListener = itemClickListener;
-
-            //greyColor = ContextCompat.getReferenceColor(context, R.color.colorFirstChapter);
-            //greenColor = ContextCompat.getReferenceColor(context, R.color.colorSecondChapter);
-            //orangeColor = ContextCompat.getReferenceColor(context, R.color.colorThirdChapter);
         }
 
-        void setItemList(@NonNull List<Rule> ruleModelList) {
-            this.ruleModelList.addAll(ruleModelList);
+        void setItemList(@NonNull List<RuleMenuItem> ruleMenuItemList) {
+            this.ruleMenuItemList.addAll(ruleMenuItemList);
             this.notifyDataSetChanged();
         }
 
@@ -195,26 +191,23 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
-            Rule rule = ruleModelList.get(position);
+            RuleMenuItem ruleMenuItem = ruleMenuItemList.get(position);
 
             GradientDrawable shape = new GradientDrawable();
             shape.setShape(GradientDrawable.OVAL);
+            shape.setColor(ScoreUtil.getReferenceColor(ruleMenuItem.getScore()));
 
-            //float score = rule.getScore();
-
-            /*
-            if (score == Rule.MIN_SCORE) shape.setColor(greyColor); else
-            if (score == Rule.MAX_SCORE) shape.setColor(greenColor); else
-                                         shape.setColor(orangeColor);
-            */
             holder.scoreTextView.setBackground(shape);
-            //holder.scoreTextView.setText(String.valueOf(score));
-            holder.titleTextView.setText(rule.getTitle());
+            holder.scoreTextView.setText(String.valueOf(ruleMenuItem.getScore()));
+            holder.titleTextView.setText(ruleMenuItem.getTitle());
+            holder.subtitleTextView.setText(context.getString(R.string.rule_completed,
+                    ruleMenuItem.getWordCardCompletedCount(),
+                    ruleMenuItem.getWordCardCount()));
         }
 
         @Override
         public int getItemCount() {
-            return ruleModelList.size();
+            return ruleMenuItemList.size();
         }
     }
 }

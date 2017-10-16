@@ -7,8 +7,8 @@ import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.rule.view.IRuleView;
 import com.greenkeycompany.exam.repository.IRepository;
 import com.greenkeycompany.exam.repository.model.Rule;
-import com.greenkeycompany.exam.repository.model.RuleExamResult;
 import com.greenkeycompany.exam.repository.model.RulePoint;
+import com.greenkeycompany.exam.repository.model.RuleResult;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 
 import java.util.List;
@@ -25,11 +25,20 @@ public class RulePresenter extends MvpBasePresenter<IRuleView>
         this.repository = repository;
     }
 
+    private boolean isTrainingCompleted(@NonNull List<RulePoint> rulePointList) {
+        for (RulePoint rulePoint: rulePointList) {
+            if ( ! rulePoint.isCompleted()) return false;
+        }
+
+        return true;
+    }
+
     @Override
     public void init(int ruleId) {
         Rule rule = repository.getRule(ruleId);
-        boolean trainingCompleted = repository.trainingCompleted(ruleId);
+        List<RulePoint> rulePointList = repository.getRulePointList(ruleId);
 
+        boolean trainingCompleted = isTrainingCompleted(rulePointList);
         if (isViewAttached()) {
             getView().setBackgroundColor(ChapterColorUtil.getColor(rule.getChapter().getId()));
             getView().setRuleDescriptionCompleted(rule.isDescriptionCompleted());
@@ -37,11 +46,11 @@ public class RulePresenter extends MvpBasePresenter<IRuleView>
         }
 
         if (trainingCompleted) {
-            RuleExamResult ruleExamResult = repository.getBestRuleExamResult(ruleId);
+            RuleResult ruleResult = repository.getBestRuleExamResult(ruleId);
             if (isViewAttached()) {
-                getView().setRuleExamCompleted(ruleExamResult == null ?
+                getView().setRuleExamCompleted(ruleResult == null ?
                         ScoreUtil.MIN_SCORE :
-                        ruleExamResult.getScore());
+                        ruleResult.getScore());
             }
         } else {
             if (isViewAttached()) {

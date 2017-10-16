@@ -2,7 +2,7 @@ package com.greenkeycompany.exam.fragment.chapter.view;
 
 import android.support.annotation.NonNull;
 
-import com.greenkeycompany.exam.repository.model.Rule;
+import com.greenkeycompany.exam.fragment.chapter.model.RuleMenuItem;
 import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
  */
 
 public interface IChapterView extends MvpView {
-    void setItemList(@NonNull List<Rule> ruleList);
+    void setItemList(@NonNull List<RuleMenuItem> ruleList);
 
     void requestToSetRuleFragment(int ruleId);
 }

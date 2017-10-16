@@ -17,4 +17,7 @@ public interface FragmentListener {
     void requestToSetWordCardTrainingFragment();
     void requestToSetWordCardRuleTrainingFragment(int ruleId);
     void requestToSetWordCardRulePointTrainingFragment(int rulePointId);
+
+    void requestToSetRuleResultFragment(int ruleId, int wordCardCount, int[] wrongAnswerWordCardIds);
+    void requestToSetRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds);
 }

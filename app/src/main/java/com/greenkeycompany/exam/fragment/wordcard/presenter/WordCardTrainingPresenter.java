@@ -2,11 +2,16 @@ package com.greenkeycompany.exam.fragment.wordcard.presenter;
 
 import android.support.annotation.NonNull;
 
+import com.greenkeycompany.exam.fragment.ScoreUtil;
+import com.greenkeycompany.exam.fragment.TrainingCompletedUtil;
+import com.greenkeycompany.exam.fragment.wordcard.WordCardTrainingType;
 import com.greenkeycompany.exam.repository.IRepository;
+import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.greenkeycompany.exam.repository.model.WordCard;
 import com.greenkeycompany.exam.fragment.wordcard.view.IWordCardTrainingView;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -26,18 +31,31 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
 
     @Override
     public void initTraining() {
+        trainingType = WordCardTrainingType.EXAM;
+
         //wordCardList = repository.getWordCardList(); ///SUB LIST!!!
         //init(wordCards);
     }
 
+    private WordCardTrainingType trainingType;
+
+    private int ruleId;
+    private int rulePointId;
+    private int wordCardCount;
+
     @Override
     public void initRuleTraining(int ruleId) {
+        this.ruleId = ruleId;
+        this.trainingType = WordCardTrainingType.RULE_EXAM;
         //wordCardList = repository.getWordCardListByRule(ruleId);  ///SUB LIST
         //init(wordCards);
     }
 
     @Override
     public void initRulePointTraining(int rulePointId) {
+        this.rulePointId = rulePointId;
+        this.trainingType = WordCardTrainingType.RULE_POINT_TRAINING;
+
         init(repository.getWordCardListByRulePoint(rulePointId));
     }
 
@@ -45,9 +63,13 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
 
     private int wordModelIndex;
     private List<WordCard> wordCardList;
+    private List<WordCard> wrongAnswerWordCardList;
 
-    private void init(List<WordCard> wordCardList) {
+    private void init(@NonNull List<WordCard> wordCardList) {
         this.wordCardList = wordCardList;
+        this.wordCardCount = wordCardList.size();
+        this.wrongAnswerWordCardList = new ArrayList<>(wordCardCount);
+
         this.correctWord = random.nextBoolean();
 
         WordCard wordCard = wordCardList.get(wordModelIndex);
@@ -67,7 +89,7 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
     @Override
     public void onNextClick() {
         wordModelIndex++;
-        if (wordModelIndex < wordCardList.size()) {
+        if (wordModelIndex < wordCardCount) {
             correctWord = random.nextBoolean();
             WordCard wordCard = wordCardList.get(wordModelIndex);
             if (isViewAttached()) {
@@ -79,10 +101,35 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
                 getView().setWordView(correctWord ? wordCard.getCorrectWord() : wordCard.getIncorrectWord());
             }
         } else {
-            if (isViewAttached()) {
-                getView().setAnswersButtonVisibility(false);
+            switch (trainingType) {
+                case EXAM:
+
+                    break;
+                case RULE_EXAM:
+                    repository.addRuleResult(ruleId, ScoreUtil.getScore(wordCardCount, trueAnswerCount), System.currentTimeMillis());
+                    if (isViewAttached()) {
+                        getView().requestToSetRuleResultFragment(ruleId, wordCardCount, getWrongAnswerWordCardIds());
+                    }
+                    break;
+                case RULE_POINT_TRAINING:
+                    RulePoint rulePoint = repository.getRulePoint(rulePointId);
+                    if (rulePoint.getWordCardCompletedCount() < trueAnswerCount) {
+                        repository.updateRulePoint(rulePointId, trueAnswerCount, TrainingCompletedUtil.isCompleted(trueAnswerCount, wordCardCount));
+                    }
+                    if (isViewAttached()) {
+                        getView().requestToSetRulePointResultFragment(rulePointId, wordCardCount, getWrongAnswerWordCardIds());
+                    }
+                    break;
             }
         }
+    }
+
+    private int[] getWrongAnswerWordCardIds() {
+        int[] wrongAnswerWordCardIds = new int[wrongAnswerWordCardList.size()];
+        for (int i = 0; i < wrongAnswerWordCardList.size(); i++) {
+            wrongAnswerWordCardIds[i] = wrongAnswerWordCardList.get(i).getId();
+        }
+        return wrongAnswerWordCardIds;
     }
 
     private int trueAnswerCount;
@@ -97,12 +144,11 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
         updateView( ! correctWord);
     }
 
-
     private void updateView(boolean trueAnswer) {
         if (trueAnswer) {
             trueAnswerCount++;
             if (isViewAttached()) {
-                getView().setScoreView(wordCardList.size(), trueAnswerCount);
+                getView().setScoreView(wordCardCount, trueAnswerCount);
             }
         } else {
             WordCard wordCard = wordCardList.get(wordModelIndex);
@@ -110,6 +156,7 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
                 getView().setCorrectWordView(wordCard.getCorrectWord());
                 getView().setCorrectWordViewVisibility(true);
             }
+            wrongAnswerWordCardList.add(wordCard);
         }
 
         if (isViewAttached()) {

@@ -88,4 +88,17 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
             getView().setWordCardRulePointTrainingFragment(rulePointId);
         }
     }
+
+    @Override
+    public void requestToSetRuleResultFragment(int ruleId, int wordCardCount, int[] wrongAnswerWordCardIds) {
+
+    }
+
+    @Override
+    public void requestToSetRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds) {
+        ///
+        if (isViewAttached()) {
+            getView().setWordCardRulePointResultFragment(rulePointId, wordCardCount, wrongAnswerWordCardIds);
+        }
+    }
 }

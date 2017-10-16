@@ -5,9 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -96,9 +93,21 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
 
         unbinder = ButterKnife.bind(this, view);
 
-        setHasOptionsMenu(true);
+        //setHasOptionsMenu(true);
 
         return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        if (rulePointId != EMPTY_PARAM) {
+            presenter.initRulePointTraining(rulePointId);
+        } else if (ruleId != EMPTY_PARAM) {
+            presenter.initRuleTraining(ruleId);
+        } else {
+            presenter.initTraining();
+        }
     }
 
     @BindView(R.id.progress_layout) LinearLayout progressLayout;
@@ -148,24 +157,12 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
     @BindView(R.id.score_text_view) TextView scoreTextView;
     @Override
     public void setScoreView(int wordCardCount, int trueAnswerCount) {
-        scoreTextView.setText(ScoreUtil.getScore(wordCardCount, trueAnswerCount));
+        scoreTextView.setText(ScoreUtil.getScoreByString(wordCardCount, trueAnswerCount));
     }
 
     @Override
     public void setProgressViewItem(int index, boolean trueAnswer) {
         progressItemList.get(index).setBackgroundColor(trueAnswer ? colorGreen : colorRed);
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        if (rulePointId != EMPTY_PARAM) {
-            presenter.initRulePointTraining(rulePointId);
-        } else if (ruleId != EMPTY_PARAM) {
-            presenter.initRuleTraining(ruleId);
-        } else {
-            presenter.initTraining();
-        }
     }
 
     @BindView(R.id.word_text_view) TextView wordTextView;
@@ -235,6 +232,7 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
         realmRepository.close();
     }
 
+    /*
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.training_menu, menu);
@@ -249,6 +247,17 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    */
+
+    @Override
+    public void requestToSetRuleResultFragment(int ruleId, int wordCardCount, int[] wrongAnswerWordCardIds) {
+        fragmentListener.requestToSetRuleResultFragment(ruleId, wordCardCount, wrongAnswerWordCardIds);
+    }
+
+    @Override
+    public void requestToSetRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds) {
+        fragmentListener.requestToSetRulePointResultFragment(rulePointId, wordCardCount, wrongAnswerWordCardIds);
     }
 
     private FragmentListener fragmentListener;

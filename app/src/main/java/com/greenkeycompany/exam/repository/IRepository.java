@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 
 import com.greenkeycompany.exam.repository.model.Chapter;
 import com.greenkeycompany.exam.repository.model.Rule;
-import com.greenkeycompany.exam.repository.model.RuleExamResult;
+import com.greenkeycompany.exam.repository.model.RuleResult;
 import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.greenkeycompany.exam.repository.model.WordCard;
 
@@ -31,14 +31,14 @@ public interface IRepository {
     @NonNull List<WordCard> getWordCardListByRule(int ruleId);
     @NonNull List<WordCard> getWordCardListByRulePoint(int rulePointId);
 
-    long getWordCardCount(int rulePointId);
-    void addRuleExamResult(int ruleId, float score, long unixTime);
-    void updateRulePoint(int rulePointId, boolean completed);
-    boolean trainingCompleted(int ruleId);
+    int getWordCardCountByRule(int ruleId);
+    int getWordCardCountByRulePoint(int rulePointId);
 
-    @Nullable RuleExamResult getBestRuleExamResult(int ruleId);
+    void updateRule(int ruleId, boolean descriptionCompleted);
+    void updateRulePoint(int rulePointId, int wordCardCompletedCount, boolean trainingCompleted);
 
-    @Deprecated
+
+    void addRuleResult(int ruleId, float score, long unixTime);
     @Nullable
-    RuleExamResult getLastRuleTrainingResult(int ruleId);
+    RuleResult getBestRuleExamResult(int ruleId);
 }

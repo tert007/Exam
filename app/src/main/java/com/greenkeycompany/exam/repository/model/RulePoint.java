@@ -12,12 +12,15 @@ import io.realm.annotations.PrimaryKey;
 public class RulePoint extends RealmObject implements IdentityRealmObject {
 
     public static final String FIELD_RULE_ID = "rule.id";
+    public static final String FIELD_WORD_CARD_COMPLETED_COUNT = "wordCardCompletedCount";
 
     @PrimaryKey
     private int id;
     private String title;
     private String description;
+
     private boolean completed;
+    private int wordCardCompletedCount;
 
     private Rule rule;
 
@@ -53,6 +56,14 @@ public class RulePoint extends RealmObject implements IdentityRealmObject {
 
     public void setCompleted(boolean completed) {
         this.completed = completed;
+    }
+
+    public int getWordCardCompletedCount() {
+        return wordCardCompletedCount;
+    }
+
+    public void setWordCardCompletedCount(int wordCardCompletedCount) {
+        this.wordCardCompletedCount = wordCardCompletedCount;
     }
 
     public Rule getRule() {

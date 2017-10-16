@@ -10,5 +10,5 @@ import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
 public interface IChapterPresenter extends MvpPresenter<IChapterView> {
     void init(int chapterId);
 
-    void onRuleItemClick(int index);
+    void onRuleMenuItemClick(int index);
 }

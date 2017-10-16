@@ -18,6 +18,7 @@ import com.greenkeycompany.exam.fragment.ruledescription.view.RuleDescriptionFra
 import com.greenkeycompany.exam.fragment.chapter.view.ChapterFragment;
 import com.greenkeycompany.exam.fragment.trainingmenu.view.TrainingMenuFragment;
 import com.greenkeycompany.exam.fragment.wordcard.view.WordCardTrainingFragment;
+import com.greenkeycompany.exam.fragment.wordcardresult.view.WordCardRulePointResultFragment;
 import com.hannesdorfmann.mosby3.mvp.MvpActivity;
 
 import butterknife.BindView;
@@ -99,6 +100,11 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     }
 
     @Override
+    public void requestToSetRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds) {
+        presenter.requestToSetRulePointResultFragment(rulePointId, wordCardCount, wrongAnswerWordCardIds);
+    }
+
+    @Override
     public void setMainFragment() {
         setFragment(MainMenuFragment.newInstance());
     }
@@ -136,6 +142,16 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     @Override
     public void setWordCardRulePointTrainingFragment(int rulePointId) {
         setFragment(WordCardTrainingFragment.newRulePointTrainingInstance(rulePointId));
+    }
+
+    @Override
+    public void setWordCardRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds) {
+        setFragment(WordCardRulePointResultFragment.newInstance(rulePointId, wordCardCount, wrongAnswerWordCardIds));
+    }
+
+    @Override
+    public void requestToSetRuleResultFragment(int ruleId, int wordCardCount, int[] wrongAnswerWordCardIds) {
+
     }
 
     public void setFragment(Fragment fragment) {

@@ -20,4 +20,7 @@ public interface IWordCardTrainingView extends MvpView {
 
     void setNextButtonVisibility(boolean visible);
     void setAnswersButtonVisibility(boolean visible);
+
+    void requestToSetRuleResultFragment(int ruleId, int wordCardCount, int[] wrongAnswerWordCardIds);
+    void requestToSetRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds);
 }

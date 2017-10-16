@@ -10,19 +10,50 @@ import com.greenkeycompany.exam.repository.model.RulePoint;
 
 public class WordCardMenuItem {
 
-    private long wordCardCount;
-    private RulePoint rulePoint;
+    private String title;
+    private int wordCardCount;
+    private int wordCardCompletedCount;
+    private boolean completed;
 
-    public WordCardMenuItem(@NonNull RulePoint rulePoint, long wordCardCount) {
-        this.rulePoint = rulePoint;
+    public WordCardMenuItem() {
+    }
+
+    public WordCardMenuItem(String title, int wordCardCount, int wordCardCompletedCount, boolean completed) {
+        this.title = title;
+        this.wordCardCount = wordCardCount;
+        this.wordCardCompletedCount = wordCardCompletedCount;
+        this.completed = completed;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setWordCardCount(int wordCardCount) {
         this.wordCardCount = wordCardCount;
     }
 
-    public RulePoint getRulePoint() {
-        return rulePoint;
+    public void setWordCardCompletedCount(int wordCardCompletedCount) {
+        this.wordCardCompletedCount = wordCardCompletedCount;
     }
 
-    public long getWordCardCount() {
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getWordCardCount() {
         return wordCardCount;
+    }
+
+    public int getWordCardCompletedCount() {
+        return wordCardCompletedCount;
+    }
+
+    public boolean isCompleted() {
+        return completed;
     }
 }

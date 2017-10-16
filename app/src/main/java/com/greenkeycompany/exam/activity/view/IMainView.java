@@ -26,5 +26,7 @@ public interface IMainView extends MvpView,
     void setWordCardRuleTrainingFragment(int ruleId);
     void setWordCardRulePointTrainingFragment(int rulePointId);
 
+    void setWordCardRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds);
+
     void finish();
 }

@@ -26,12 +26,14 @@ public class ScoreUtil {
         return Color.BLACK;
     }
 
+    public static float getScore(int count, int trueAnswerCount) {
+        float scorePerAnswer = MAX_SCORE /  count;
+        return trueAnswerCount * scorePerAnswer;
+    }
+
     private static final String format = "%1$.2f";
 
-    public static String getScore(int count, int trueAnswerCount) {
-        float scorePerAnswer = MAX_SCORE /  count;
-        float score = trueAnswerCount * scorePerAnswer;
-
-        return String.format(Locale.getDefault(), format, score);
+    public static String getScoreByString(int count, int trueAnswerCount) {
+        return String.format(Locale.getDefault(), format, getScore(count, trueAnswerCount));
     }
 }

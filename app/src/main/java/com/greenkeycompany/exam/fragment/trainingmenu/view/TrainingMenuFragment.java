@@ -153,6 +153,7 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
 
             @BindView(R.id.title_text_view) TextView titleTextView;
             @BindView(R.id.word_card_count_text_view) TextView wordCardCountTextView;
+            @BindView(R.id.word_count_completed_count_text_view) TextView wordCardCompletedCountTextView;
             @BindView(R.id.completed_image_view) ImageView completedImageView;
 
             private ItemClickListener itemClickListener;
@@ -172,10 +173,12 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
             }
         }
 
+        private Context context;
         private ItemClickListener itemClickListener;
         private final List<WordCardMenuItem> wordCardMenuItemList = new ArrayList<>();
 
         TrainingAdapter(@NonNull Context context, @NonNull ItemClickListener itemClickListener) {
+            this.context = context;
             this.itemClickListener = itemClickListener;
         }
 
@@ -194,11 +197,12 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
             WordCardMenuItem wordCardMenuItem = wordCardMenuItemList.get(position);
-            RulePoint rulePoint = wordCardMenuItem.getRulePoint();
 
-            holder.titleTextView.setText(rulePoint.getTitle());
+            holder.titleTextView.setText(wordCardMenuItem.getTitle());
             holder.wordCardCountTextView.setText(String.valueOf(wordCardMenuItem.getWordCardCount()));
-            holder.completedImageView.setImageResource(rulePoint.isCompleted() ?
+            holder.wordCardCompletedCountTextView.setText(context.getString(R.string.word_card_completed,
+                    wordCardMenuItem.getWordCardCompletedCount()));
+            holder.completedImageView.setImageResource(wordCardMenuItem.isCompleted() ?
                     R.drawable.ic_checked :
                     R.drawable.ic_unchecked);
         }
