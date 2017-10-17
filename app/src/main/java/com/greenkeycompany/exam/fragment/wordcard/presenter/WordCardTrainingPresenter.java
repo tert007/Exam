@@ -81,7 +81,7 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
 
             getView().setCorrectWordViewVisibility(false);
 
-            getView().setNextButtonVisibility(false);
+            getView().setNextViewVisibility(false);
             getView().setAnswersButtonVisibility(true);
         }
     }
@@ -93,7 +93,7 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
             correctWord = random.nextBoolean();
             WordCard wordCard = wordCardList.get(wordModelIndex);
             if (isViewAttached()) {
-                getView().setNextButtonVisibility(false);
+                getView().setNextViewVisibility(false);
                 getView().setAnswersButtonVisibility(true);
 
                 getView().setCorrectWordViewVisibility(false);
@@ -160,7 +160,7 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
         }
 
         if (isViewAttached()) {
-            getView().setNextButtonVisibility(true);
+            getView().setNextViewVisibility(true);
             getView().setAnswersButtonVisibility(false);
 
             getView().setWordResultView(trueAnswer);

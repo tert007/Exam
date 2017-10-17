@@ -7,6 +7,6 @@
     <string name="word_card_training_correct_word">Правильный ответ\n%1$s</string>
 
     <string name="word_card_training_next">Далее</string>
-    <string name="word_card_training_true_answer">Правильно</string>
-    <string name="word_card_training_false_answer">Неправильно</string>
+    <string name="word_card_training_true_answer">Верно</string>
+    <string name="word_card_training_false_answer">Не верно</string>
 </resources>

@@ -18,7 +18,7 @@ public interface IWordCardTrainingView extends MvpView {
     void setCorrectWordView(String correctWord);
     void setCorrectWordViewVisibility(boolean visible);
 
-    void setNextButtonVisibility(boolean visible);
+    void setNextViewVisibility(boolean visible);
     void setAnswersButtonVisibility(boolean visible);
 
     void requestToSetRuleResultFragment(int ruleId, int wordCardCount, int[] wrongAnswerWordCardIds);

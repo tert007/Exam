@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -191,32 +191,32 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
         correctWordTextView.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
     }
 
-    @BindView(R.id.next_button) Button nextButton;
+    @BindView(R.id.next_view) View nextView;
     @Override
-    public void setNextButtonVisibility(boolean visible) {
-        nextButton.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
+    public void setNextViewVisibility(boolean visible) {
+        nextView.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
     }
 
-    @OnClick(R.id.next_button)
-    public void onNextButtonClick() {
+    @OnClick(R.id.next_view)
+    public void onNextViewClick() {
         presenter.onNextClick();
     }
 
-    @BindViews({R.id.false_answer_button, R.id.true_answer_button}) List<Button> buttonList;
+    @BindViews({R.id.false_answer_view, R.id.true_answer_view}) List<View> answerViewList;
     @Override
     public void setAnswersButtonVisibility(boolean visible) {
-        for (Button button : buttonList) {
-            button.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
+        for (View view : answerViewList) {
+            view.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
         }
     }
 
-    @OnClick(R.id.false_answer_button)
-    public void onFalseAnswerButtonClick() {
+    @OnClick(R.id.false_answer_view)
+    public void onFalseAnswerViewClick() {
         presenter.onFalseAnswerClick();
     }
 
-    @OnClick(R.id.true_answer_button)
-    public void onTrueAnswerButtonClick() {
+    @OnClick(R.id.true_answer_view)
+    public void onTrueAnswerViewClick() {
         presenter.onTrueAnswerClick();
     }
 

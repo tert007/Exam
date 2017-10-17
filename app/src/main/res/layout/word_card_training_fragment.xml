@@ -18,11 +18,12 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
 
     <TextView
         android:id="@+id/score_text_view"
@@ -62,13 +63,15 @@
 
         android:gravity="center"
 
-        android:layout_width="200dp"
+        android:layout_width="260dp"
         android:layout_height="100dp"
 
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/false_answer_button"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintVertical_bias="0.4" />
 
     <TextView
         android:id="@+id/correct_word_text_view"
@@ -86,48 +89,73 @@
         app:layout_constraintLeft_toLeftOf="@+id/word_text_view"
         app:layout_constraintTop_toBottomOf="@+id/word_text_view" />
 
-    <Button
-        android:id="@+id/false_answer_button"
-
-        android:text="@string/word_card_training_false_answer"
-
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/true_answer_button"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintTop_toTopOf="parent"
-
-        app:layout_constraintVertical_bias="0.8" />
-
-    <Button
-        android:id="@+id/true_answer_button"
-
-        android:text="@string/word_card_training_true_answer"
-
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintLeft_toRightOf="@+id/false_answer_button"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/false_answer_button"
-        app:layout_constraintBottom_toBottomOf="@+id/false_answer_button" />
-
-    <Button
-        android:id="@+id/next_button"
+    <TextView
+        android:id="@+id/next_view"
 
         android:visibility="invisible"
 
         android:text="@string/word_card_training_next"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+
+        android:background="@drawable/word_card_next_button_background_selector"
+
+        android:gravity="center"
 
         android:layout_width="140dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
 
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/false_answer_button"
-        app:layout_constraintTop_toTopOf="@+id/false_answer_button" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintVertical_bias="0.8"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+
+        android:orientation="horizontal"
+
+        app:layout_constraintVertical_bias="0.8"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/false_answer_view"
+
+            android:text="@string/word_card_training_false_answer"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+
+            android:gravity="center"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:background="@drawable/word_card_wrong_button_background_selector" />
+
+        <TextView
+            android:id="@+id/true_answer_view"
+
+            android:text="@string/word_card_training_true_answer"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+
+            android:gravity="center"
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:background="@drawable/word_card_true_button_background_selector" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
