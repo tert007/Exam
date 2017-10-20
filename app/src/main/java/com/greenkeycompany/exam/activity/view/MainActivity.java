@@ -1,9 +1,6 @@
 package com.greenkeycompany.exam.activity.view;
 
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
@@ -18,7 +15,7 @@ import com.greenkeycompany.exam.fragment.ruledescription.view.RuleDescriptionFra
 import com.greenkeycompany.exam.fragment.chapter.view.ChapterFragment;
 import com.greenkeycompany.exam.fragment.trainingmenu.view.TrainingMenuFragment;
 import com.greenkeycompany.exam.fragment.wordcard.view.WordCardTrainingFragment;
-import com.greenkeycompany.exam.fragment.wordcardresult.view.WordCardRulePointResultFragment;
+import com.greenkeycompany.exam.fragment.wordcardresult.view.WordCardResultFragment;
 import com.hannesdorfmann.mosby3.mvp.MvpActivity;
 
 import butterknife.BindView;
@@ -146,7 +143,7 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
 
     @Override
     public void setWordCardRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds) {
-        setFragment(WordCardRulePointResultFragment.newInstance(rulePointId, wordCardCount, wrongAnswerWordCardIds));
+        setFragment(WordCardResultFragment.newRulePointInstance(rulePointId, wordCardCount, wrongAnswerWordCardIds));
     }
 
     @Override

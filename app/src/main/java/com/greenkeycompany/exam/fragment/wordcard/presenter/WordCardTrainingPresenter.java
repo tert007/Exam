@@ -106,7 +106,7 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
 
                     break;
                 case RULE_EXAM:
-                    repository.addRuleResult(ruleId, ScoreUtil.getScore(wordCardCount, trueAnswerCount), System.currentTimeMillis());
+                    repository.addRuleResult(ruleId, ScoreUtil.getScore(trueAnswerCount, wordCardCount), System.currentTimeMillis());
                     if (isViewAttached()) {
                         getView().requestToSetRuleResultFragment(ruleId, wordCardCount, getWrongAnswerWordCardIds());
                     }

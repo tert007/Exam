@@ -18,6 +18,7 @@ public class ScoreUtil {
 
     @ColorInt
     public static int getReferenceColor(float score) {
+        if (score == MIN_SCORE) return Color.GRAY;
         if (score < MEDIUM_SCORE) return Color.parseColor("#a2a6a5");
         if (score < COMPLETED_SCORE) return Color.parseColor("#FFFFCA28");
         if (score < MAX_SCORE) return Color.parseColor("#32BA7C");
@@ -26,14 +27,14 @@ public class ScoreUtil {
         return Color.BLACK;
     }
 
-    public static float getScore(int count, int trueAnswerCount) {
+    public static float getScore(int trueAnswerCount, int count) {
         float scorePerAnswer = MAX_SCORE /  count;
         return trueAnswerCount * scorePerAnswer;
     }
 
     private static final String format = "%1$.2f";
 
-    public static String getScoreByString(int count, int trueAnswerCount) {
-        return String.format(Locale.getDefault(), format, getScore(count, trueAnswerCount));
+    public static String getScoreByString(int trueAnswerCount, int count) {
+        return String.format(Locale.getDefault(), format, getScore(trueAnswerCount, count));
     }
 }
