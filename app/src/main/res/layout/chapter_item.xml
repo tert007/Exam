@@ -22,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.1">
 
         <TextView
-            android:id="@+id/progress_text_view"
+            android:id="@+id/score_text_view"
             android:layout_width="match_parent"
             android:layout_height="45dp"
 
@@ -30,7 +30,7 @@
 
             android:textColor="@android:color/white"
             android:textSize="40sp"
-            tools:text="10%" />
+            tools:text="4,75" />
 
         <TextView
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
             android:textColor="@android:color/white"
             android:textSize="20sp"
 
-            android:text="усвоено" />
+            android:text="@string/score" />
     </LinearLayout>
 
     <TextView

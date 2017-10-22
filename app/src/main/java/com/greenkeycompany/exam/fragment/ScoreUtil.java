@@ -32,9 +32,13 @@ public class ScoreUtil {
         return trueAnswerCount * scorePerAnswer;
     }
 
+    public static String convertScoreToString(float score) {
+        return String.format(Locale.getDefault(), format, score);
+    }
+
     private static final String format = "%1$.2f";
 
     public static String getScoreByString(int trueAnswerCount, int count) {
-        return String.format(Locale.getDefault(), format, getScore(trueAnswerCount, count));
+        return convertScoreToString(getScore(trueAnswerCount, count));
     }
 }

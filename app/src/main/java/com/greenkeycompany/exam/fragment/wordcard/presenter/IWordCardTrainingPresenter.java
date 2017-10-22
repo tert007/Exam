@@ -1,5 +1,8 @@
 package com.greenkeycompany.exam.fragment.wordcard.presenter;
 
+import android.support.annotation.NonNull;
+
+import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.wordcard.view.IWordCardTrainingView;
 import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
 
@@ -8,10 +11,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
  */
 
 public interface IWordCardTrainingPresenter extends MvpPresenter<IWordCardTrainingView> {
-
-    void initTraining();
-    void initRuleTraining(int ruleId);
-    void initRulePointTraining(int rulePointId);
+    void initTraining(@NonNull TrainingType trainingType, int id);
 
     void onNextClick();
     void onTrueAnswerClick();

@@ -1,6 +1,7 @@
 package com.greenkeycompany.exam.fragment.ruledescription.view;
 
 import android.support.annotation.NonNull;
+import android.text.Spanned;
 
 import com.hannesdorfmann.mosby3.mvp.MvpView;
 

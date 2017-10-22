@@ -1,9 +1,11 @@
 package com.greenkeycompany.exam.fragment.ruledescription.view;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Html;
+import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,7 +94,11 @@ public class RuleDescriptionFragment extends MvpFragment<IRuleDescriptionView, I
     @Override
     public void addRulePointView(@NonNull String title, @NonNull String message) {
         TextView textView = new TextView(getContext());
-        textView.setText(Html.fromHtml(message));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            textView.setText(Html.fromHtml(message, Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            textView.setText(Html.fromHtml(message));
+        }
 
         contentHolderLayout.addView(textView);
     }

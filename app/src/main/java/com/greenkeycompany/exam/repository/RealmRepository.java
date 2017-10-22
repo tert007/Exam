@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.greenkeycompany.exam.repository.model.Chapter;
+import com.greenkeycompany.exam.repository.model.ChapterResult;
 import com.greenkeycompany.exam.repository.model.Rule;
 import com.greenkeycompany.exam.repository.model.RuleResult;
 import com.greenkeycompany.exam.repository.model.RulePoint;
@@ -101,6 +102,14 @@ public class RealmRepository implements IRepository {
 
     @NonNull
     @Override
+    public List<WordCard> getWordCardListByChapter(int chapterId) {
+        return realm.where(WordCard.class).
+                equalTo(WordCard.FILED_CHAPTER_ID, chapterId).
+                findAll();
+    }
+
+    @NonNull
+    @Override
     public List<WordCard> getWordCardListByRule(int ruleId) {
         return realm.where(WordCard.class).
                 equalTo(WordCard.FILED_RULE_ID, ruleId).
@@ -113,6 +122,15 @@ public class RealmRepository implements IRepository {
         return realm.where(WordCard.class).
                 equalTo(WordCard.FILED_RULE_POINT_ID, rulePointId).
                 findAll();
+    }
+
+    @Override
+    public int getWordCardCountByChapter(int chapterId) {
+        long count = realm.where(WordCard.class).
+                equalTo(WordCard.FILED_CHAPTER_ID, chapterId).
+                count();
+
+        return (int) count;
     }
 
     @Override
@@ -151,6 +169,27 @@ public class RealmRepository implements IRepository {
     }
 
     @Override
+    public void addChapterResult(final int chapterId, final float score, final long unixTime) {
+        realm.executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                Chapter chapter = getChapter(chapterId);
+
+                int nextId = getNextId(ChapterResult.class);
+
+                ChapterResult result = realm.createObject(ChapterResult.class, nextId);
+                result.setChapter(chapter);
+                result.setScore(score);
+                result.setUnixTime(unixTime);
+            }
+        });
+    }
+
+
+
+
+
+    @Override
     public void updateRule(final int ruleId, final boolean descriptionCompleted) {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
@@ -173,11 +212,24 @@ public class RealmRepository implements IRepository {
         });
     }
 
+
+
+
+
     @Nullable
     @Override
-    public RuleResult getBestRuleExamResult(int ruleId) {
+    public RuleResult getBestRuleResult(int ruleId) {
         return realm.where(RuleResult.class).
                 equalTo(RuleResult.FIELD_RULE_ID, ruleId).
+                findAllSorted(ResultRealmObject.FILED_SCORE, Sort.DESCENDING).
+                first(null);
+    }
+
+    @Nullable
+    @Override
+    public ChapterResult getBestChapterResult(int chapterId) {
+        return realm.where(ChapterResult.class).
+                equalTo(ChapterResult.FIELD_CHAPTER_ID, chapterId).
                 findAllSorted(ResultRealmObject.FILED_SCORE, Sort.DESCENDING).
                 first(null);
     }

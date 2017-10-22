@@ -46,7 +46,7 @@ public class RulePresenter extends MvpBasePresenter<IRuleView>
         }
 
         if (trainingCompleted) {
-            RuleResult ruleResult = repository.getBestRuleExamResult(ruleId);
+            RuleResult ruleResult = repository.getBestRuleResult(ruleId);
             if (isViewAttached()) {
                 getView().setRuleExamCompleted(ruleResult == null ?
                         ScoreUtil.MIN_SCORE :

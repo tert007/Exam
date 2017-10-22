@@ -1,5 +1,7 @@
 package com.greenkeycompany.exam;
 
+import android.support.annotation.NonNull;
+
 /**
  * Created by tert0 on 04.10.2017.
  */
@@ -14,10 +16,6 @@ public interface FragmentListener {
     void requestToSetRuleFragment(int ruleId);
     void requestToSetRuleDescriptionFragment(int ruleId);
 
-    void requestToSetWordCardTrainingFragment();
-    void requestToSetWordCardRuleTrainingFragment(int ruleId);
-    void requestToSetWordCardRulePointTrainingFragment(int rulePointId);
-
-    void requestToSetRuleResultFragment(int ruleId, int wordCardCount, int[] wrongAnswerWordCardIds);
-    void requestToSetRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds);
+    void requestToSetWordCardTrainingFragment(@NonNull TrainingType trainingType, int id);
+    void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds);
 }

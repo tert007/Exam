@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
+import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.rule.presenter.IRulePresenter;
 import com.greenkeycompany.exam.fragment.rule.presenter.RulePresenter;
@@ -110,7 +111,7 @@ public class RuleFragment extends MvpFragment<IRuleView, IRulePresenter>
 
     @OnClick(R.id.rule_exam_view)
     public void onRuleExamViewClick() {
-        fragmentListener.requestToSetWordCardRuleTrainingFragment(ruleId);
+        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.RULE, ruleId);
     }
 
     @BindView(R.id.rule_exam_completed_text_view) TextView ruleExamCompletedTextView;

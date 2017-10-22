@@ -1,8 +1,11 @@
 package com.greenkeycompany.exam.activity.view;
 
 import android.support.annotation.ColorInt;
+import android.support.annotation.NonNull;
 
 import com.greenkeycompany.exam.FragmentListener;
+import com.greenkeycompany.exam.FragmentType;
+import com.greenkeycompany.exam.TrainingType;
 import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 /**
@@ -12,8 +15,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpView;
 public interface IMainView extends MvpView,
         FragmentListener {
 
-    //void setActionBarColor(@ColorInt int color);
-    //void setActionBarTitleTextColor(@ColorInt int color);
+    void setActionBarHomeButtonVisibility(boolean visible);
 
     void setMainFragment();
     void setChapterFragment(int chapterId);
@@ -22,11 +24,11 @@ public interface IMainView extends MvpView,
     void setTrainingMenuFragment(int ruleId);
     void setRuleDescriptionFragment(int ruleId);
 
-    void setWordCardTrainingFragment();
-    void setWordCardRuleTrainingFragment(int ruleId);
-    void setWordCardRulePointTrainingFragment(int rulePointId);
+    void setWordCardTrainingFragment(@NonNull TrainingType trainingType, int id);
+    void setWordCardResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds);
 
-    void setWordCardRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds);
+    void backStack(FragmentType fragmentType);
+    void backStack();
 
     void finish();
 }

@@ -28,8 +28,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/score_text_view"
-        app:layout_constraintBottom_toTopOf="@+id/subtitle_text_view"
-        app:layout_constraintHorizontal_bias="1.0" />
+        app:layout_constraintBottom_toTopOf="@+id/subtitle_text_view"/>
 
     <TextView
         android:id="@+id/subtitle_text_view"
