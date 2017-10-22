@@ -2,6 +2,7 @@ package com.greenkeycompany.exam.fragment.mainmenu.view;
 
 import android.support.annotation.NonNull;
 
+import com.greenkeycompany.exam.fragment.mainmenu.model.ChapterMenuItem;
 import com.greenkeycompany.exam.repository.model.Chapter;
 import com.hannesdorfmann.mosby3.mvp.MvpView;
 
@@ -12,7 +13,7 @@ import java.util.List;
  */
 
 public interface IMainMenuView extends MvpView {
-    void setChapters(@NonNull List<Chapter> chapterList);
+    void setChapters(@NonNull List<ChapterMenuItem> chapterList);
 
     void requestToSetChapterFragment(int chapterId);
 }

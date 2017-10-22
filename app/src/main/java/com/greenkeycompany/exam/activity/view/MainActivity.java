@@ -3,10 +3,14 @@ package com.greenkeycompany.exam.activity.view;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.greenkeycompany.exam.FragmentType;
 import com.greenkeycompany.exam.R;
+import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.activity.presenter.IMainPresenter;
 import com.greenkeycompany.exam.activity.presenter.MainPresenter;
 import com.greenkeycompany.exam.fragment.mainmenu.view.MainMenuFragment;
@@ -40,21 +44,15 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.action_bar_back_button_icon);
 
         presenter.requestToSetMainMenuFragment();
     }
 
-    /*
     @Override
-    public void setActionBarColor(@ColorInt int color) {
-        toolbar.setBackgroundColor(color);
+    public void setActionBarHomeButtonVisibility(boolean visible) {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(visible);
     }
-
-    @Override
-    public void setActionBarTitleTextColor(@ColorInt int color) {
-        toolbarTitleTextView.setTextColor(color);
-    }
-    */
 
     @Override
     public void requestToSetMainMenuFragment() {
@@ -82,81 +80,85 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     }
 
     @Override
-    public void requestToSetWordCardTrainingFragment() {
-        presenter.requestToSetWordCardTrainingFragment();
+    public void requestToSetWordCardTrainingFragment(@NonNull TrainingType trainingType, int id) {
+        presenter.requestToSetWordCardTrainingFragment(trainingType, id);
     }
 
     @Override
-    public void requestToSetWordCardRuleTrainingFragment(int ruleId) {
-        presenter.requestToSetWordCardRuleTrainingFragment(ruleId);
-    }
-
-    @Override
-    public void requestToSetWordCardRulePointTrainingFragment(int rulePointId) {
-        presenter.requestToSetWordCardRulePointTrainingFragment(rulePointId);
-    }
-
-    @Override
-    public void requestToSetRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds) {
-        presenter.requestToSetRulePointResultFragment(rulePointId, wordCardCount, wrongAnswerWordCardIds);
+    public void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds) {
+        presenter.requestToSetWordCardResultFragment(trainingType, id, wordCardCount, wrongAnswerWordCardIds);
     }
 
     @Override
     public void setMainFragment() {
-        setFragment(MainMenuFragment.newInstance());
+        setFragment(MainMenuFragment.newInstance(), FragmentType.MAIN);
     }
 
     @Override
     public void setChapterFragment(int chapterId) {
-        setFragment(ChapterFragment.newInstance(chapterId));
+        setFragment(ChapterFragment.newInstance(chapterId), FragmentType.CHAPTER);
     }
 
     @Override
     public void setRuleFragment(int ruleId) {
-        setFragment(RuleFragment.newInstance(ruleId));
+        setFragment(RuleFragment.newInstance(ruleId), FragmentType.RULE);
     }
 
     @Override
     public void setRuleDescriptionFragment(int ruleId) {
-        setFragment(RuleDescriptionFragment.newInstance(ruleId));
+        setFragment(RuleDescriptionFragment.newInstance(ruleId), FragmentType.RULE_DESCRIPTION);
     }
 
     @Override
     public void setTrainingMenuFragment(int ruleId) {
-        setFragment(TrainingMenuFragment.newInstance(ruleId));
+        setFragment(TrainingMenuFragment.newInstance(ruleId), FragmentType.TRAINING_MENU);
     }
 
     @Override
-    public void setWordCardTrainingFragment() {
-        setFragment(WordCardTrainingFragment.newTrainingInstance());
+    public void setWordCardTrainingFragment(@NonNull TrainingType trainingType, int id) {
+        setFragment(WordCardTrainingFragment.newInstance(trainingType, id));
     }
 
     @Override
-    public void setWordCardRuleTrainingFragment(int ruleId) {
-        setFragment(WordCardTrainingFragment.newRuleTrainingInstance(ruleId));
+    public void setWordCardResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds) {
+        setFragment(WordCardResultFragment.newInstance(trainingType, id, wordCardCount, wrongAnswerWordCardIds));
     }
 
-    @Override
-    public void setWordCardRulePointTrainingFragment(int rulePointId) {
-        setFragment(WordCardTrainingFragment.newRulePointTrainingInstance(rulePointId));
-    }
-
-    @Override
-    public void setWordCardRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds) {
-        setFragment(WordCardResultFragment.newRulePointInstance(rulePointId, wordCardCount, wrongAnswerWordCardIds));
-    }
-
-    @Override
-    public void requestToSetRuleResultFragment(int ruleId, int wordCardCount, int[] wrongAnswerWordCardIds) {
-
+    public void setFragment(Fragment fragment, FragmentType fragmentType) {
+        getSupportFragmentManager().
+                beginTransaction().
+                replace(R.id.container, fragment).
+                addToBackStack(fragmentType.name()).
+                commit();
     }
 
     public void setFragment(Fragment fragment) {
         getSupportFragmentManager().
                 beginTransaction().
                 replace(R.id.container, fragment).
-                //addToBackStack(null).
+                addToBackStack(null).
                 commit();
+    }
+
+    @Override
+    public void backStack() {
+        getSupportFragmentManager().popBackStack();
+    }
+
+    @Override
+    public void backStack(FragmentType fragmentType) {
+        getSupportFragmentManager().popBackStack(fragmentType.name(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                presenter.onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override

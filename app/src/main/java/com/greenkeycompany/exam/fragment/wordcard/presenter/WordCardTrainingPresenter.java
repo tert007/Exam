@@ -2,9 +2,10 @@ package com.greenkeycompany.exam.fragment.wordcard.presenter;
 
 import android.support.annotation.NonNull;
 
+import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
+import com.greenkeycompany.exam.fragment.WordCardListUtil;
 import com.greenkeycompany.exam.fragment.TrainingCompletedUtil;
-import com.greenkeycompany.exam.fragment.wordcard.WordCardTrainingType;
 import com.greenkeycompany.exam.repository.IRepository;
 import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.greenkeycompany.exam.repository.model.WordCard;
@@ -29,41 +30,32 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
         this.repository = repository;
     }
 
-    @Override
-    public void initTraining() {
-        trainingType = WordCardTrainingType.EXAM;
+    private TrainingType trainingType;
+    private int id;
 
-        //wordCardList = repository.getWordCardList(); ///SUB LIST!!!
-        //init(wordCards);
+    @Override
+    public void initTraining(@NonNull TrainingType trainingType, int id) {
+        this.trainingType = trainingType;
+        this.id = id;
+        switch (trainingType) {
+            case RULE_POINT:
+                init(repository.getWordCardListByRulePoint(id));
+                break;
+            case RULE:
+                init(WordCardListUtil.getRuleShuffleSubList(repository.getWordCardListByRule(id)));
+                break;
+            case CHAPTER:
+                init(WordCardListUtil.getChapterShuffleSubList(repository.getWordCardListByChapter(id)));
+                break;
+        }
     }
 
-    private WordCardTrainingType trainingType;
-
-    private int ruleId;
-    private int rulePointId;
     private int wordCardCount;
-
-    @Override
-    public void initRuleTraining(int ruleId) {
-        this.ruleId = ruleId;
-        this.trainingType = WordCardTrainingType.RULE_EXAM;
-        //wordCardList = repository.getWordCardListByRule(ruleId);  ///SUB LIST
-        //init(wordCards);
-    }
-
-    @Override
-    public void initRulePointTraining(int rulePointId) {
-        this.rulePointId = rulePointId;
-        this.trainingType = WordCardTrainingType.RULE_POINT_TRAINING;
-
-        init(repository.getWordCardListByRulePoint(rulePointId));
-    }
-
-    private boolean correctWord;
-
     private int wordModelIndex;
     private List<WordCard> wordCardList;
     private List<WordCard> wrongAnswerWordCardList;
+
+    private boolean correctWord;
 
     private void init(@NonNull List<WordCard> wordCardList) {
         this.wordCardList = wordCardList;
@@ -76,7 +68,7 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
         if (isViewAttached()) {
             getView().initProgressView(wordCardList.size());
 
-            getView().setScoreView(wordCardList.size(), 0);
+            getView().setScoreView(0, wordCardList.size());
             getView().setWordView(correctWord ? wordCard.getCorrectWord() : wordCard.getIncorrectWord());
 
             getView().setCorrectWordViewVisibility(false);
@@ -102,23 +94,33 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
             }
         } else {
             switch (trainingType) {
-                case EXAM:
-
-                    break;
-                case RULE_EXAM:
-                    repository.addRuleResult(ruleId, ScoreUtil.getScore(trueAnswerCount, wordCardCount), System.currentTimeMillis());
-                    if (isViewAttached()) {
-                        getView().requestToSetRuleResultFragment(ruleId, wordCardCount, getWrongAnswerWordCardIds());
-                    }
-                    break;
-                case RULE_POINT_TRAINING:
-                    RulePoint rulePoint = repository.getRulePoint(rulePointId);
+                case RULE_POINT:
+                    RulePoint rulePoint = repository.getRulePoint(id);
                     if (rulePoint.getWordCardCompletedCount() < trueAnswerCount) {
-                        repository.updateRulePoint(rulePointId, trueAnswerCount, TrainingCompletedUtil.isCompleted(trueAnswerCount, wordCardCount));
+                        repository.updateRulePoint(id, trueAnswerCount, TrainingCompletedUtil.isCompleted(trueAnswerCount, wordCardCount));
                     }
+
                     if (isViewAttached()) {
-                        getView().requestToSetRulePointResultFragment(rulePointId, wordCardCount, getWrongAnswerWordCardIds());
+                        getView().requestToSetResultFragment(trainingType, id, wordCardCount, getWrongAnswerWordCardIds());
                     }
+                    break;
+                case RULE:
+                    repository.addRuleResult(id, ScoreUtil.getScore(trueAnswerCount, wordCardCount), System.currentTimeMillis());
+                    if (isViewAttached()) {
+                        getView().requestToSetResultFragment(trainingType, id, wordCardCount, getWrongAnswerWordCardIds());
+                    }
+                    break;
+                case CHAPTER:
+                    repository.addChapterResult(id, ScoreUtil.getScore(trueAnswerCount, wordCardCount), System.currentTimeMillis());
+                    if (isViewAttached()) {
+                        getView().requestToSetResultFragment(trainingType, id, wordCardCount, getWrongAnswerWordCardIds());
+                    }
+                    break;
+                case FINAL:
+                    //
+                    //if (isViewAttached()) {
+                    //    getView().requestToSetResultFragment(trainingType, id, wordCardCount, getWrongAnswerWordCardIds());
+                    //}
                     break;
             }
         }
@@ -144,11 +146,12 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
         updateView( ! correctWord);
     }
 
+
     private void updateView(boolean trueAnswer) {
         if (trueAnswer) {
             trueAnswerCount++;
             if (isViewAttached()) {
-                getView().setScoreView(wordCardCount, trueAnswerCount);
+                getView().setScoreView(trueAnswerCount, wordCardCount);
             }
         } else {
             WordCard wordCard = wordCardList.get(wordModelIndex);

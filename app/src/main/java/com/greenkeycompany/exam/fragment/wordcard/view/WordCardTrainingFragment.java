@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
+import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.wordcard.presenter.IWordCardTrainingPresenter;
 import com.greenkeycompany.exam.fragment.wordcard.presenter.WordCardTrainingPresenter;
@@ -46,31 +47,35 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
         return new WordCardTrainingPresenter(realmRepository);
     }
 
-    private static final String RULE_ID_PARAM = "rule_id";
-    private static final String RULE_POINT_ID_PARAM = "rule_point_id";
+    private static final String TRAINING_TYPE_PARAM = "training_type";
+    private static final String ID_PARAM = "id";
 
-    private int ruleId;
-    private int rulePointId;
+    private TrainingType trainingType;
+    private int id;
 
-    private static final int EMPTY_PARAM = 0;
+    /*
+    public static WordCardTrainingFragment newFinalTrainingInstance() {
+        return newInstance(TrainingType.FINAL, 0);
+    }
 
-    public static WordCardTrainingFragment newTrainingInstance() {
-        return newInstance(EMPTY_PARAM, EMPTY_PARAM);
+    public static WordCardTrainingFragment newChapterTrainingInstance(int chapterId) {
+        return newInstance(TrainingType.CHAPTER, chapterId);
     }
 
     public static WordCardTrainingFragment newRuleTrainingInstance(int ruleId) {
-        return newInstance(ruleId, EMPTY_PARAM);
+        return newInstance(TrainingType.RULE, ruleId);
     }
 
     public static WordCardTrainingFragment newRulePointTrainingInstance(int rulePointId) {
-        return newInstance(EMPTY_PARAM, rulePointId);
+        return newInstance(TrainingType.RULE_POINT, rulePointId);
     }
+    */
 
-    private static WordCardTrainingFragment newInstance(int ruleId, int rulePointId) {
+    public static WordCardTrainingFragment newInstance(@NonNull TrainingType trainingType, int id) {
         WordCardTrainingFragment fragment = new WordCardTrainingFragment();
         Bundle args = new Bundle();
-        args.putInt(RULE_ID_PARAM, ruleId);
-        args.putInt(RULE_POINT_ID_PARAM, rulePointId);
+        args.putSerializable(TRAINING_TYPE_PARAM, trainingType);
+        args.putInt(ID_PARAM, id);
         fragment.setArguments(args);
         return fragment;
     }
@@ -79,8 +84,8 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            ruleId = getArguments().getInt(RULE_ID_PARAM);
-            rulePointId = getArguments().getInt(RULE_POINT_ID_PARAM);
+            trainingType = (TrainingType) getArguments().getSerializable(TRAINING_TYPE_PARAM);
+            id = getArguments().getInt(ID_PARAM);
         }
     }
 
@@ -101,13 +106,7 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if (rulePointId != EMPTY_PARAM) {
-            presenter.initRulePointTraining(rulePointId);
-        } else if (ruleId != EMPTY_PARAM) {
-            presenter.initRuleTraining(ruleId);
-        } else {
-            presenter.initTraining();
-        }
+        presenter.initTraining(trainingType, id);
     }
 
     @BindView(R.id.progress_layout) LinearLayout progressLayout;
@@ -156,8 +155,8 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
 
     @BindView(R.id.score_text_view) TextView scoreTextView;
     @Override
-    public void setScoreView(int wordCardCount, int trueAnswerCount) {
-        scoreTextView.setText(ScoreUtil.getScoreByString(wordCardCount, trueAnswerCount));
+    public void setScoreView(int trueAnswerCount, int wordCardCount) {
+        scoreTextView.setText(ScoreUtil.getScoreByString(trueAnswerCount, wordCardCount));
     }
 
     @Override
@@ -174,8 +173,7 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
 
     @Override
     public void setWordResultView(boolean trueAnswer) {
-        wordTextView.setBackgroundResource(
-                trueAnswer ?
+        wordTextView.setBackgroundResource(trueAnswer ?
                         R.drawable.word_card_training_true_answer_background :
                         R.drawable.word_card_training_false_answer_background);
     }
@@ -251,13 +249,8 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
     */
 
     @Override
-    public void requestToSetRuleResultFragment(int ruleId, int wordCardCount, int[] wrongAnswerWordCardIds) {
-        fragmentListener.requestToSetRuleResultFragment(ruleId, wordCardCount, wrongAnswerWordCardIds);
-    }
-
-    @Override
-    public void requestToSetRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds) {
-        fragmentListener.requestToSetRulePointResultFragment(rulePointId, wordCardCount, wrongAnswerWordCardIds);
+    public void requestToSetResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds) {
+        fragmentListener.requestToSetWordCardResultFragment(trainingType, id, wordCardCount, wrongAnswerWordCardIds);
     }
 
     private FragmentListener fragmentListener;

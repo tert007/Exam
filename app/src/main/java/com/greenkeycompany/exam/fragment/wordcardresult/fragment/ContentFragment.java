@@ -11,7 +11,12 @@ import android.widget.TextView;
 
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
+import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.repository.RealmRepository;
+import com.greenkeycompany.exam.repository.model.ChapterResult;
+import com.greenkeycompany.exam.repository.model.Rule;
+import com.greenkeycompany.exam.repository.model.RulePoint;
+import com.greenkeycompany.exam.repository.model.RuleResult;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -63,31 +68,56 @@ public class ContentFragment extends Fragment {
         }
     }
 
-    @BindView(R.id.completed_text_view) TextView completedTextView;
-
-    private Unbinder unbinder;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.word_card_result_rule_point_content, container, false);
+        View view = null;
 
-        unbinder = ButterKnife.bind(this, view);
+        switch (trainingType) {
+            case RULE_POINT: {
+                view = inflater.inflate(R.layout.word_card_result_rule_point_content, container, false);
 
-        //boolean completed = TrainingCompletedUtil.isCompleted(trueAnswerWordCardCount, wordCardCount);
-        completedTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_badge, 0, 0);
-        completedTextView.setText(getString(R.string.rule_completed, trueAnswerWordCardCount, wordCardCount));
+                //RulePoint rulePoint = realmRepository.getRulePoint(id);
+                //int wordCardCompletedCount = rulePoint.getWordCardCompletedCount();
+
+                TextView completedTextView = view.findViewById(R.id.completed_text_view);
+                completedTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_badge, 0, 0);
+                completedTextView.setText(getString(R.string.rule_completed, trueAnswerWordCardCount, wordCardCount));
+            }
+            break;
+            case RULE: {
+                view = inflater.inflate(R.layout.word_card_result_content, container, false);
+
+                RuleResult bestResult = realmRepository.getBestRuleResult(id);
+
+                TextView scoreTextView = view.findViewById(R.id.score_text_view);
+                float score = ScoreUtil.getScore(trueAnswerWordCardCount, wordCardCount);
+                scoreTextView.setText(ScoreUtil.convertScoreToString(score));
+
+                TextView bestScoreTextView = view.findViewById(R.id.best_score_text_view);
+                float bestScore = bestResult.getScore();
+                bestScoreTextView.setText(ScoreUtil.convertScoreToString(bestScore));
+            }
+            break;
+            case CHAPTER: {
+                view = inflater.inflate(R.layout.word_card_result_content, container, false);
+
+                ChapterResult bestResult = realmRepository.getBestChapterResult(id);
+
+                TextView scoreTextView = view.findViewById(R.id.score_text_view);
+                float score = ScoreUtil.getScore(trueAnswerWordCardCount, wordCardCount);
+                scoreTextView.setText(ScoreUtil.convertScoreToString(score));
+
+                TextView bestScoreTextView = view.findViewById(R.id.best_score_text_view);
+                float bestScore = bestResult.getScore();
+                bestScoreTextView.setText(ScoreUtil.convertScoreToString(bestScore));
+            }
+            break;
+        }
 
         return view;
     }
 
-
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
 
     @Override
     public void onDestroy() {

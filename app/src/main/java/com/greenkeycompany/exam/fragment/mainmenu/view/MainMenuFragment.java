@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.fragment.ChapterColorUtil;
+import com.greenkeycompany.exam.fragment.ScoreUtil;
+import com.greenkeycompany.exam.fragment.mainmenu.model.ChapterMenuItem;
 import com.greenkeycompany.exam.fragment.mainmenu.presenter.IMainMenuPresenter;
 import com.greenkeycompany.exam.fragment.mainmenu.presenter.MainMenuPresenter;
 import com.greenkeycompany.exam.repository.RealmRepository;
@@ -81,8 +83,8 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
     }
 
     @Override
-    public void setChapters(@NonNull List<Chapter> chapterList) {
-        adapter.setItemList(chapterList);
+    public void setChapters(@NonNull List<ChapterMenuItem> chapterMenuItemList) {
+        adapter.setItemList(chapterMenuItemList);
     }
 
     @Override
@@ -129,7 +131,7 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
 
         class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-            @BindView(R.id.progress_text_view) TextView progressTextView;
+            @BindView(R.id.score_text_view) TextView scoreTextView;
             @BindView(R.id.title_text_view) TextView titleTextView;
             @BindView(R.id.start_text_view) TextView startTextView;
 
@@ -152,15 +154,15 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
 
         private Context context;
         private ItemClickListener itemClickListener;
-        private final List<Chapter> chapterList = new ArrayList<>();
+        private final List<ChapterMenuItem> chapterMenuItemList = new ArrayList<>();
 
         ChapterAdapter(@NonNull Context context, @NonNull ItemClickListener itemClickListener) {
             this.context = context;
             this.itemClickListener = itemClickListener;
         }
 
-        void setItemList(@NonNull List<Chapter> chapterList) {
-            this.chapterList.addAll(chapterList);
+        void setItemList(@NonNull List<ChapterMenuItem> chapterMenuItemList) {
+            this.chapterMenuItemList.addAll(chapterMenuItemList);
             this.notifyDataSetChanged();
         }
 
@@ -171,23 +173,23 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
             return new ViewHolder(view, itemClickListener);
         }
 
-        private static final String percentFormat = "%s";
+        //private static final String percentFormat = "%1$d%%";
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
-            Chapter chapter = chapterList.get(position);
+            ChapterMenuItem chapterMenuItem = chapterMenuItemList.get(position);
 
-            holder.itemView.setBackgroundColor(ChapterColorUtil.getColor(chapter.getId()));
-            holder.titleTextView.setText(chapter.getTitle());
+            holder.itemView.setBackgroundColor(ChapterColorUtil.getColor(chapterMenuItem.getId()));
+            holder.titleTextView.setText(chapterMenuItem.getTitle());
             holder.startTextView.setText(1 == 1 ?
                     context.getString(R.string.chapter_start) :
                     context.getString(R.string.chapter_continue));
-            holder.progressTextView.setText(String.format(Locale.getDefault(), percentFormat, 4.5));
+            holder.scoreTextView.setText(ScoreUtil.convertScoreToString(chapterMenuItem.getScore()));
         }
 
         @Override
         public int getItemCount() {
-            return chapterList.size();
+            return chapterMenuItemList.size();
         }
     }
 }

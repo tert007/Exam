@@ -11,6 +11,7 @@ import io.realm.annotations.PrimaryKey;
 
 public class WordCard extends RealmObject implements IdentityRealmObject {
 
+    public static final String FILED_CHAPTER_ID = "rulePoint.rule.chapter.id";
     public static final String FILED_RULE_POINT_ID = "rulePoint.id";
     public static final String FILED_RULE_ID = "rulePoint.rule.id";
 

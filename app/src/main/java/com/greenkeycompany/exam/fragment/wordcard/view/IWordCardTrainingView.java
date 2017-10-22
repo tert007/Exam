@@ -1,5 +1,8 @@
 package com.greenkeycompany.exam.fragment.wordcard.view;
 
+import android.support.annotation.NonNull;
+
+import com.greenkeycompany.exam.TrainingType;
 import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 /**
@@ -7,6 +10,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpView;
  */
 
 public interface IWordCardTrainingView extends MvpView {
+
     void initProgressView(int itemCount);
     void setProgressViewItem(int index, boolean trueAnswer);
     
@@ -21,6 +25,5 @@ public interface IWordCardTrainingView extends MvpView {
     void setNextViewVisibility(boolean visible);
     void setAnswersButtonVisibility(boolean visible);
 
-    void requestToSetRuleResultFragment(int ruleId, int wordCardCount, int[] wrongAnswerWordCardIds);
-    void requestToSetRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds);
+    void requestToSetResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds);
 }

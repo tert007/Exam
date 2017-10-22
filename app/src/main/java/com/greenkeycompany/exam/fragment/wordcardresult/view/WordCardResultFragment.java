@@ -55,7 +55,7 @@ public class WordCardResultFragment extends MvpFragment<IWordCardResultView, IWo
     private int wordCardCount;
     private int[] wrongAnswerWordCardIds;
 
-
+    /*
     public static WordCardResultFragment newFinalTestInstance(int wordCardCount, int[] wrongAnswerWordCardIds) {
         return newInstance(TrainingType.FINAL, 0, wordCardCount, wrongAnswerWordCardIds);
     }
@@ -71,8 +71,8 @@ public class WordCardResultFragment extends MvpFragment<IWordCardResultView, IWo
     public static WordCardResultFragment newRulePointInstance(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds) {
         return newInstance(TrainingType.RULE_POINT, rulePointId, wordCardCount, wrongAnswerWordCardIds);
     }
-
-    private static WordCardResultFragment newInstance(@NonNull TrainingType trainingType,
+    */
+    public static WordCardResultFragment newInstance(@NonNull TrainingType trainingType,
                                                       int id,
                                                       int wordCardCount,
                                                       int[] wrongAnswerWordCardIds) {

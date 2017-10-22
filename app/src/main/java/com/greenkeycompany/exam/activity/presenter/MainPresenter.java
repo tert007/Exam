@@ -1,10 +1,10 @@
 package com.greenkeycompany.exam.activity.presenter;
 
-import android.graphics.Color;
+import android.support.annotation.NonNull;
 
 import com.greenkeycompany.exam.FragmentType;
+import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.activity.view.IMainView;
-import com.greenkeycompany.exam.fragment.ChapterColorUtil;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 
 /**
@@ -18,32 +18,53 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
 
     @Override
     public void onBackPressed() {
+        if (fragmentType.getParent() == null) {
+            if (isViewAttached()) {
+                getView().finish();
+            }
+        } else {
+            if (fragmentType == FragmentType.WORD_CARD_RULE_POINT_RESULT ||
+                fragmentType == FragmentType.WORD_CARD_RULE_RESULT ||
+                fragmentType == FragmentType.WORD_CARD_CHAPTER_RESULT) {
+                if (isViewAttached()) {
+                    getView().backStack(fragmentType.getParent());
+                }
+            } else {
+                if (isViewAttached()) {
+                    getView().backStack();
+                }
+            }
 
+            fragmentType = fragmentType.getParent();
+            if (fragmentType == FragmentType.MAIN) {
+                if (isViewAttached()) {
+                    getView().setActionBarHomeButtonVisibility(false);
+                }
+            }
+        }
     }
 
     @Override
     public void requestToSetMainMenuFragment() {
-        fragmentType = FragmentType.MAIN_MENU;
+        fragmentType = FragmentType.MAIN;
         if (isViewAttached()) {
             getView().setMainFragment();
-            //getView().setActionBarColor(Color.WHITE);
-            //getView().setActionBarTitleTextColor(Color.BLACK);
+            getView().setActionBarHomeButtonVisibility(false);
         }
     }
 
     @Override
     public void requestToSetChapterFragment(int chapterId) {
-        fragmentType = FragmentType.CHAPTER_MENU;
+        fragmentType = FragmentType.CHAPTER;
         if (isViewAttached()) {
             getView().setChapterFragment(chapterId);
-            //getView().setActionBarColor(ChapterColorUtil.getReferenceColor(chapterId));
-            //getView().setActionBarTitleTextColor(Color.WHITE);
+            getView().setActionBarHomeButtonVisibility(true);
         }
     }
 
     @Override
     public void requestToSetRuleFragment(int ruleId) {
-        fragmentType = FragmentType.RULE_MENU;
+        fragmentType = FragmentType.RULE;
         if (isViewAttached()) {
             getView().setRuleFragment(ruleId);
         }
@@ -66,39 +87,26 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
     }
 
     @Override
-    public void requestToSetWordCardTrainingFragment() {
-        fragmentType = FragmentType.WORD_CARD_RULE_TRAINING;
+    public void requestToSetWordCardTrainingFragment(@NonNull TrainingType trainingType, int id) {
+        switch (trainingType) {
+            case RULE_POINT: fragmentType = FragmentType.WORD_CARD_RULE_POINT_TRAINING; break;
+            case RULE: fragmentType = FragmentType.WORD_CARD_RULE_TRAINING; break;
+            case CHAPTER: fragmentType = FragmentType.WORD_CARD_CHAPTER_TRAINING; break;
+        }
         if (isViewAttached()) {
-            getView().setWordCardTrainingFragment();
+            getView().setWordCardTrainingFragment(trainingType, id);
         }
     }
 
     @Override
-    public void requestToSetWordCardRuleTrainingFragment(int ruleId) {
-        fragmentType = FragmentType.WORD_CARD_RULE_TRAINING;
-        if (isViewAttached()) {
-            getView().setWordCardRuleTrainingFragment(ruleId);
+    public void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds) {
+        switch (trainingType) {
+            case RULE_POINT: fragmentType = FragmentType.WORD_CARD_RULE_POINT_RESULT; break;
+            case RULE: fragmentType = FragmentType.WORD_CARD_RULE_RESULT; break;
+            case CHAPTER: fragmentType = FragmentType.WORD_CARD_CHAPTER_RESULT; break;
         }
-    }
-
-    @Override
-    public void requestToSetWordCardRulePointTrainingFragment(int rulePointId) {
-        fragmentType = FragmentType.WORD_CARD_RULE_TRAINING;
         if (isViewAttached()) {
-            getView().setWordCardRulePointTrainingFragment(rulePointId);
-        }
-    }
-
-    @Override
-    public void requestToSetRuleResultFragment(int ruleId, int wordCardCount, int[] wrongAnswerWordCardIds) {
-
-    }
-
-    @Override
-    public void requestToSetRulePointResultFragment(int rulePointId, int wordCardCount, int[] wrongAnswerWordCardIds) {
-        ///
-        if (isViewAttached()) {
-            getView().setWordCardRulePointResultFragment(rulePointId, wordCardCount, wrongAnswerWordCardIds);
+            getView().setWordCardResultFragment(trainingType, id, wordCardCount, wrongAnswerWordCardIds);
         }
     }
 }
