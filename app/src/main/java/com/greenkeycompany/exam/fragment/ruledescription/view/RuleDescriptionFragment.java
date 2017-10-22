@@ -93,7 +93,7 @@ public class RuleDescriptionFragment extends MvpFragment<IRuleDescriptionView, I
     public void addRulePointView(@NonNull String title, @NonNull String message) {
         TextView textView = new TextView(getContext());
         textView.setText(Html.fromHtml(message));
-
+        textView.setTextSize(16);
         contentHolderLayout.addView(textView);
     }
 

@@ -19,7 +19,7 @@
             android:id="@+id/title_text_view"
 
             tools:text="Пункт 1.1"
-
+            android:textSize="12sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
@@ -38,8 +38,8 @@
 
             android:textSize="50sp"
             android:textColor="?android:textColorPrimary"
-
-            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:layout_marginTop="0dp"
             android:layout_marginBottom="8dp"
 
             android:layout_width="wrap_content"
@@ -56,7 +56,7 @@
             android:textSize="14sp"
             android:textColor="?android:textColorSecondary"
 
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="0dp"
             android:layout_marginBottom="8dp"
 
             android:layout_width="wrap_content"
@@ -65,7 +65,9 @@
             app:layout_constraintTop_toBottomOf="@+id/word_card_count_text_view"
             app:layout_constraintRight_toRightOf="@+id/word_card_count_text_view"
             app:layout_constraintLeft_toLeftOf="@+id/word_card_count_text_view"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/completed_image_view"

@@ -193,12 +193,13 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
         public void onBindViewHolder(ViewHolder holder, int position) {
             RuleMenuItem ruleMenuItem = ruleMenuItemList.get(position);
 
-            GradientDrawable shape = new GradientDrawable();
-            shape.setShape(GradientDrawable.OVAL);
-            shape.setColor(ScoreUtil.getReferenceColor(ruleMenuItem.getScore()));
+            //GradientDrawable shape = new GradientDrawable();
+            //shape.setShape(GradientDrawable.OVAL);
+            //shape.setColor(ScoreUtil.getReferenceColor(ruleMenuItem.getScore()));
 
-            holder.scoreTextView.setBackground(shape);
+            //holder.scoreTextView.setBackground(shape);
             holder.scoreTextView.setText(String.valueOf(ruleMenuItem.getScore()));
+            holder.scoreTextView.setTextColor(ScoreUtil.getReferenceColor(ruleMenuItem.getScore()));
             holder.titleTextView.setText(ruleMenuItem.getTitle());
             holder.subtitleTextView.setText(context.getString(R.string.rule_completed,
                     ruleMenuItem.getWordCardCompletedCount(),

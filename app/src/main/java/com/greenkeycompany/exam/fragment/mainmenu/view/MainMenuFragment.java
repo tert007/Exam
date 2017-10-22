@@ -171,7 +171,7 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
             return new ViewHolder(view, itemClickListener);
         }
 
-        private static final String percentFormat = "%1$d%%";
+        private static final String percentFormat = "%s";
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
@@ -182,7 +182,7 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
             holder.startTextView.setText(1 == 1 ?
                     context.getString(R.string.chapter_start) :
                     context.getString(R.string.chapter_continue));
-            holder.progressTextView.setText(String.format(Locale.getDefault(), percentFormat, 21));
+            holder.progressTextView.setText(String.format(Locale.getDefault(), percentFormat, 4.5));
         }
 
         @Override

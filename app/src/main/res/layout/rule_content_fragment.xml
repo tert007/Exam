@@ -5,11 +5,34 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/content_holder_layout"
-
-        android:orientation="vertical"
-
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/content_holder_layout"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Прочитано"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/rule_description_compleate_shape"/>
+
+    </LinearLayout>
 
 </ScrollView>
