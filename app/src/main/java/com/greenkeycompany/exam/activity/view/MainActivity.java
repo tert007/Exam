@@ -85,8 +85,8 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     }
 
     @Override
-    public void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds) {
-        presenter.requestToSetWordCardResultFragment(trainingType, id, wordCardCount, wrongAnswerWordCardIds);
+    public void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds) {
+        presenter.requestToSetWordCardResultFragment(trainingType, resultId, wrongAnswerWordCardIds);
     }
 
     @Override
@@ -120,8 +120,8 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     }
 
     @Override
-    public void setWordCardResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds) {
-        setFragment(WordCardResultFragment.newInstance(trainingType, id, wordCardCount, wrongAnswerWordCardIds));
+    public void setWordCardResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds) {
+        setFragment(WordCardResultFragment.newInstance(trainingType, resultId, wrongAnswerWordCardIds));
     }
 
     public void setFragment(Fragment fragment, FragmentType fragmentType) {

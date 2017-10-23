@@ -7,6 +7,7 @@ import com.greenkeycompany.exam.fragment.chapter.model.RuleMenuItem;
 import com.greenkeycompany.exam.fragment.chapter.view.IChapterView;
 import com.greenkeycompany.exam.repository.IRepository;
 import com.greenkeycompany.exam.repository.model.Rule;
+import com.greenkeycompany.exam.repository.model.RulePointResult;
 import com.greenkeycompany.exam.repository.model.RuleResult;
 import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
@@ -43,7 +44,8 @@ public class ChapterPresenter extends MvpBasePresenter<IChapterView>
             int wordCardCount = repository.getWordCardCountByRule(rule.getId());
             int wordCardCompletedCount = 0;
             for (RulePoint rulePoint : repository.getRulePointList(rule.getId())) {
-                wordCardCompletedCount = rulePoint.getWordCardCompletedCount();
+                RulePointResult rulePointResult = repository.getBestRulePointResult(rulePoint.getId());
+                wordCardCompletedCount += rulePointResult != null ? rulePointResult.getWordCardCompletedCount() : 0;
             }
 
             ruleMenuItemList.add(new RuleMenuItem(title, bestScore, wordCardCount, wordCardCompletedCount));

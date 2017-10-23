@@ -2,6 +2,7 @@ package com.greenkeycompany.exam.fragment.wordcardresult.view;
 
 import android.support.annotation.NonNull;
 
+import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.repository.model.WordCard;
 import com.hannesdorfmann.mosby3.mvp.MvpView;
 
@@ -12,10 +13,5 @@ import java.util.List;
  */
 
 public interface IWordCardResultView extends MvpView {
-
-    void setCompletedView(boolean completed, int wordCardCompletedCount, int wordCardCount);
-
-    void setItems(@NonNull List<WordCard> wordCardList);
-
-    void requestToSetWordCardRulePointFragment(int rulePointId);
+    void requestToRefresh(@NonNull TrainingType trainingType, int trainingId);
 }

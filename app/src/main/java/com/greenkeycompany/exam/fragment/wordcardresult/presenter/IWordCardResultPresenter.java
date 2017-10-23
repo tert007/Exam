@@ -11,5 +11,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
  */
 
 public interface IWordCardResultPresenter extends MvpPresenter<IWordCardResultView> {
-    void init(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds);
+    void init(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds);
+
+    void onActionBarRestartPressed(@NonNull TrainingType trainingType, int resultId);
 }

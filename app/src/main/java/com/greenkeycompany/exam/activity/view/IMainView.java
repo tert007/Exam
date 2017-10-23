@@ -25,7 +25,7 @@ public interface IMainView extends MvpView,
     void setRuleDescriptionFragment(int ruleId);
 
     void setWordCardTrainingFragment(@NonNull TrainingType trainingType, int id);
-    void setWordCardResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds);
+    void setWordCardResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds);
 
     void backStack(FragmentType fragmentType);
     void backStack();

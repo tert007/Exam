@@ -25,9 +25,30 @@ public class WordCardResultPresenter extends MvpBasePresenter<IWordCardResultVie
     }
 
     @Override
-    public void init(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds) {
+    public void onActionBarRestartPressed(@NonNull TrainingType trainingType, int resultId) {
+        switch (trainingType) {
+            case RULE_POINT:
+                if (isViewAttached()) {
+                    getView().requestToRefresh(trainingType, repository.getRulePointResult(resultId).getRulePoint().getId());
+                }
+                break;
+            case RULE:
+                if (isViewAttached()) {
+                    getView().requestToRefresh(trainingType, repository.getRuleResult(resultId).getRule().getId());
+                }
+                break;
+            case CHAPTER:
+                if (isViewAttached()) {
+                    getView().requestToRefresh(trainingType, repository.getChapterResult(resultId).getChapter().getId());
+                }
+                break;
+        }
+    }
+
+    @Override
+    public void init(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds) {
+        /*
         int wrongAnswerCount = wrongAnswerWordCardIds.length;
-        int trueAnswerCount = wordCardCount - wrongAnswerCount;
 
         List<WordCard> wrongAnswerWordCardList = new ArrayList<>(wrongAnswerCount);
         for (int wordCardId : wrongAnswerWordCardIds) {
@@ -43,5 +64,6 @@ public class WordCardResultPresenter extends MvpBasePresenter<IWordCardResultVie
                 }
                 break;
         }
+        */
     }
 }

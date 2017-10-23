@@ -31,21 +31,21 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
     }
 
     private TrainingType trainingType;
-    private int id;
+    private int trainingId;
 
     @Override
-    public void initTraining(@NonNull TrainingType trainingType, int id) {
+    public void initTraining(@NonNull TrainingType trainingType, int trainingId) {
         this.trainingType = trainingType;
-        this.id = id;
+        this.trainingId = trainingId;
         switch (trainingType) {
             case RULE_POINT:
-                init(repository.getWordCardListByRulePoint(id));
+                init(repository.getWordCardListByRulePoint(trainingId));
                 break;
             case RULE:
-                init(WordCardListUtil.getRuleShuffleSubList(repository.getWordCardListByRule(id)));
+                init(WordCardListUtil.getRuleShuffleSubList(repository.getWordCardListByRule(trainingId)));
                 break;
             case CHAPTER:
-                init(WordCardListUtil.getChapterShuffleSubList(repository.getWordCardListByChapter(id)));
+                init(WordCardListUtil.getChapterShuffleSubList(repository.getWordCardListByChapter(trainingId)));
                 break;
         }
     }
@@ -94,32 +94,51 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
             }
         } else {
             switch (trainingType) {
-                case RULE_POINT:
-                    RulePoint rulePoint = repository.getRulePoint(id);
-                    if (rulePoint.getWordCardCompletedCount() < trueAnswerCount) {
-                        repository.updateRulePoint(id, trueAnswerCount, TrainingCompletedUtil.isCompleted(trueAnswerCount, wordCardCount));
+                case RULE_POINT: {
+                    RulePoint rulePoint = repository.getRulePoint(trainingId);
+                    if ( ! rulePoint.isCompleted()) {
+                        if (TrainingCompletedUtil.isCompleted(trueAnswerCount, wordCardCount)) {
+                            repository.updateRulePoint(trainingId, true);
+                        }
                     }
-
-                    if (isViewAttached()) {
-                        getView().requestToSetResultFragment(trainingType, id, wordCardCount, getWrongAnswerWordCardIds());
-                    }
-                    break;
-                case RULE:
-                    repository.addRuleResult(id, ScoreUtil.getScore(trueAnswerCount, wordCardCount), System.currentTimeMillis());
-                    if (isViewAttached()) {
-                        getView().requestToSetResultFragment(trainingType, id, wordCardCount, getWrongAnswerWordCardIds());
-                    }
-                    break;
-                case CHAPTER:
-                    repository.addChapterResult(id, ScoreUtil.getScore(trueAnswerCount, wordCardCount), System.currentTimeMillis());
-                    if (isViewAttached()) {
-                        getView().requestToSetResultFragment(trainingType, id, wordCardCount, getWrongAnswerWordCardIds());
-                    }
-                    break;
+                    repository.addRulePointResult(trainingId, trueAnswerCount, System.currentTimeMillis(), new IRepository.Listener() {
+                        @Override
+                        public void onAdded(int id) {
+                            if (isViewAttached()) {
+                                getView().requestToSetResultFragment(trainingType, id, getWrongAnswerWordCardIds());
+                            }
+                        }
+                    });
+                }
+                break;
+                case RULE: {
+                    float score = ScoreUtil.getScore(trueAnswerCount, wordCardCount);
+                    repository.addRuleResult(trainingId, score, System.currentTimeMillis(), new IRepository.Listener() {
+                        @Override
+                        public void onAdded(int id) {
+                            if (isViewAttached()) {
+                                getView().requestToSetResultFragment(trainingType, id, getWrongAnswerWordCardIds());
+                            }
+                        }
+                    });
+                }
+                break;
+                case CHAPTER: {
+                    float score = ScoreUtil.getScore(trueAnswerCount, wordCardCount);
+                    repository.addChapterResult(trainingId, score, System.currentTimeMillis(), new IRepository.Listener() {
+                        @Override
+                        public void onAdded(int id) {
+                            if (isViewAttached()) {
+                                getView().requestToSetResultFragment(trainingType, id, getWrongAnswerWordCardIds());
+                            }
+                        }
+                    });
+                }
+                break;
                 case FINAL:
                     //
                     //if (isViewAttached()) {
-                    //    getView().requestToSetResultFragment(trainingType, id, wordCardCount, getWrongAnswerWordCardIds());
+                    //    getView().requestToSetResultFragment(trainingType, trainingId, wordCardCount, getWrongAnswerWordCardIds());
                     //}
                     break;
             }

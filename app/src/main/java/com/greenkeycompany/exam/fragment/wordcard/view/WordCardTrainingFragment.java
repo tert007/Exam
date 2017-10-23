@@ -249,8 +249,8 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
     */
 
     @Override
-    public void requestToSetResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds) {
-        fragmentListener.requestToSetWordCardResultFragment(trainingType, id, wordCardCount, wrongAnswerWordCardIds);
+    public void requestToSetResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds) {
+        fragmentListener.requestToSetWordCardResultFragment(trainingType, resultId, wrongAnswerWordCardIds);
     }
 
     private FragmentListener fragmentListener;

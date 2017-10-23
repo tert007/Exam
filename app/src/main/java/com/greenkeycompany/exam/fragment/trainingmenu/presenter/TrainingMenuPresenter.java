@@ -7,6 +7,7 @@ import com.greenkeycompany.exam.fragment.trainingmenu.model.WordCardMenuItem;
 import com.greenkeycompany.exam.fragment.trainingmenu.view.ITrainingMenuView;
 import com.greenkeycompany.exam.repository.IRepository;
 import com.greenkeycompany.exam.repository.model.RulePoint;
+import com.greenkeycompany.exam.repository.model.RulePointResult;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 
 import java.util.ArrayList;
@@ -34,9 +35,14 @@ public class TrainingMenuPresenter extends MvpBasePresenter<ITrainingMenuView>
         for (RulePoint rulePoint : rulePointList) {
             WordCardMenuItem wordCardMenuItem = new WordCardMenuItem();
 
+            RulePointResult rulePointResult = repository.getBestRulePointResult(rulePoint.getId());
+            int wordCardCount = repository.getWordCardCountByRulePoint(rulePoint.getId());
+            int wordCardCompletedCount = rulePointResult != null ? rulePointResult.getWordCardCompletedCount() : 0;
+
             wordCardMenuItem.setTitle(rulePoint.getTitle());
-            wordCardMenuItem.setWordCardCount(repository.getWordCardCountByRulePoint(rulePoint.getId()));
-            wordCardMenuItem.setWordCardCompletedCount(rulePoint.getWordCardCompletedCount());
+            wordCardMenuItem.setWordCardCount(wordCardCount);
+
+            wordCardMenuItem.setWordCardCompletedCount(wordCardCompletedCount);
             wordCardMenuItem.setCompleted(rulePoint.isCompleted());
 
             wordCardMenuItemList.add(wordCardMenuItem);

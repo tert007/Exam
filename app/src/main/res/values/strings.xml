@@ -9,19 +9,24 @@
     <string name="chapter_continue">Продолжить</string>
 
     <string name="rule_completed">Пройдено %1$d из %2$d</string>
+    <string name="word_card_completed">Пройдено %1$d</string>
 
+    <string name="training_result">Пройдено %1$d из %2$d</string>
+    <string name="training_best_result">Лучший результат %1$d из %2$d</string>
+
+    <string name="training_score">Оценка %1$s</string>
+    <string name="training_best_score">Лучший результат %1$s</string>
 
     <string name="score">Оценка</string>
     <string name="best_score">Лучшая оценка</string>
 
-    <string name="word_card_completed">Пройдено %1$d</string>
-
     <string name="word_card_result">Результат</string>
     <string name="word_card_list">Список слов</string>
 
-
     <string name="help">Помощь</string>
     <string name="settings">Настройки</string>
+
+
 
     <string-array name="chapter_titles">
         <item>Гласные</item>

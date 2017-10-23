@@ -53,7 +53,6 @@ public class WordListFragment extends Fragment {
     }
 
     @BindView(R.id.recycler_view) RecyclerView recyclerView;
-    @BindView(R.id.empty_view) View emptyView;
 
     private Unbinder unbinder;
 
@@ -72,16 +71,9 @@ public class WordListFragment extends Fragment {
                     wordCardList.add(realmRepository.getWordCard(wordCardId));
                 }
 
-                if (wordCardList.isEmpty()) {
-                    recyclerView.setVisibility(View.GONE);
-                    emptyView.setVisibility(View.VISIBLE);
-                } else {
-                    emptyView.setVisibility(View.GONE);
-
-                    recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-                    recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
-                    recyclerView.setAdapter(new WordCardAdapter(wordCardList));
-                }
+                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
+                recyclerView.setAdapter(new WordCardAdapter(wordCardList));
             }
         });
 

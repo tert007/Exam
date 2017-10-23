@@ -119,7 +119,7 @@ public class App extends Application {
                     chapterId++;
                 }
             }
-        }).build();
+        }).deleteRealmIfMigrationNeeded().build();
 
         Realm.setDefaultConfiguration(config);
     }

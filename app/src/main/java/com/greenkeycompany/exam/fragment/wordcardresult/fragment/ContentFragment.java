@@ -12,15 +12,12 @@ import android.widget.TextView;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
+import com.greenkeycompany.exam.fragment.TrainingCompletedUtil;
 import com.greenkeycompany.exam.repository.RealmRepository;
 import com.greenkeycompany.exam.repository.model.ChapterResult;
-import com.greenkeycompany.exam.repository.model.Rule;
-import com.greenkeycompany.exam.repository.model.RulePoint;
+import com.greenkeycompany.exam.repository.model.RulePointResult;
 import com.greenkeycompany.exam.repository.model.RuleResult;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 import io.realm.Realm;
 
 /**
@@ -32,27 +29,18 @@ public class ContentFragment extends Fragment {
     private RealmRepository realmRepository = new RealmRepository(Realm.getDefaultInstance());
 
     private static final String TRAINING_TYPE_PARAM = "training_type";
-    private static final String ID_PARAM = "id";
-
-    private static final String WORD_CARD_TRUE_ANSWER_COUNT_PARAM = "word_card_true_answer_count";
-    private static final String WORD_CARD_COUNT_PARAM = "word_card_count";
+    private static final String RESULT_ID_PARAM = "result_id";
 
     private TrainingType trainingType;
-    private int id;
-    private int trueAnswerWordCardCount;
-    private int wordCardCount;
+    private int resultId;
 
     public static ContentFragment newInstance(@NonNull TrainingType trainingType,
-                                              int id,
-                                              int trueAnswerWordCardCount,
-                                              int wordCardCount) {
+                                              int resultId) {
 
         ContentFragment fragment = new ContentFragment();
         Bundle args = new Bundle();
         args.putSerializable(TRAINING_TYPE_PARAM, trainingType);
-        args.putInt(ID_PARAM, id);
-        args.putInt(WORD_CARD_TRUE_ANSWER_COUNT_PARAM, trueAnswerWordCardCount);
-        args.putInt(WORD_CARD_COUNT_PARAM, wordCardCount);
+        args.putInt(RESULT_ID_PARAM, resultId);
         fragment.setArguments(args);
         return fragment;
     }
@@ -62,9 +50,7 @@ public class ContentFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             trainingType = (TrainingType) getArguments().getSerializable(TRAINING_TYPE_PARAM);
-            id = getArguments().getInt(ID_PARAM);
-            trueAnswerWordCardCount = getArguments().getInt(WORD_CARD_TRUE_ANSWER_COUNT_PARAM);
-            wordCardCount = getArguments().getInt(WORD_CARD_COUNT_PARAM);
+            resultId = getArguments().getInt(RESULT_ID_PARAM);
         }
     }
 
@@ -77,40 +63,66 @@ public class ContentFragment extends Fragment {
             case RULE_POINT: {
                 view = inflater.inflate(R.layout.word_card_result_rule_point_content, container, false);
 
-                //RulePoint rulePoint = realmRepository.getRulePoint(id);
-                //int wordCardCompletedCount = rulePoint.getWordCardCompletedCount();
+                RulePointResult result = realmRepository.getRulePointResult(resultId);
+                RulePointResult bestResult = realmRepository.getBestRulePointResult(result.getRulePoint().getId());
 
-                TextView completedTextView = view.findViewById(R.id.completed_text_view);
-                completedTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_badge, 0, 0);
-                completedTextView.setText(getString(R.string.rule_completed, trueAnswerWordCardCount, wordCardCount));
+                int wordCardCount = realmRepository.getWordCardCountByRulePoint(result.getRulePoint().getId());
+
+                TextView resultTextView = view.findViewById(R.id.result_text_view);
+                resultTextView.setText(getString(R.string.training_result, result.getWordCardCompletedCount(), wordCardCount));
+
+                if (result.getWordCardCompletedCount() == wordCardCount) {
+                    resultTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.result_completed_fully_icon, 0, 0);
+                } else if (TrainingCompletedUtil.isCompleted(result.getWordCardCompletedCount(), wordCardCount)) {
+                    resultTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.result_completed_icon, 0, 0);
+                } else {
+                    resultTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.result_uncompleted_icon, 0, 0);
+                }
+
+                TextView bestResultTextView = view.findViewById(R.id.best_result_text_view);
+                bestResultTextView.setText(getString(R.string.training_best_result, bestResult.getWordCardCompletedCount(), wordCardCount));
             }
             break;
             case RULE: {
                 view = inflater.inflate(R.layout.word_card_result_content, container, false);
 
-                RuleResult bestResult = realmRepository.getBestRuleResult(id);
+                RuleResult result = realmRepository.getRuleResult(resultId);
+                RuleResult bestResult = realmRepository.getBestRuleResult(result.getRule().getId());
 
-                TextView scoreTextView = view.findViewById(R.id.score_text_view);
-                float score = ScoreUtil.getScore(trueAnswerWordCardCount, wordCardCount);
-                scoreTextView.setText(ScoreUtil.convertScoreToString(score));
+                TextView resultTextView = view.findViewById(R.id.result_text_view);
+                resultTextView.setText(getString(R.string.training_score, ScoreUtil.convertScoreToString(result.getScore())));
 
-                TextView bestScoreTextView = view.findViewById(R.id.best_score_text_view);
-                float bestScore = bestResult.getScore();
-                bestScoreTextView.setText(ScoreUtil.convertScoreToString(bestScore));
+                if (result.getScore() == ScoreUtil.MAX_SCORE) {
+                    resultTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.result_completed_fully_icon, 0, 0);
+                } else if (result.getScore() >= ScoreUtil.COMPLETED_SCORE) {
+                    resultTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.result_completed_icon, 0, 0);
+                } else {
+                    resultTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.result_uncompleted_icon, 0, 0);
+                }
+
+                TextView bestResultTextView = view.findViewById(R.id.best_result_text_view);
+                bestResultTextView.setText(getString(R.string.training_score, ScoreUtil.convertScoreToString(bestResult.getScore())));
             }
             break;
             case CHAPTER: {
                 view = inflater.inflate(R.layout.word_card_result_content, container, false);
 
-                ChapterResult bestResult = realmRepository.getBestChapterResult(id);
+                ChapterResult result = realmRepository.getChapterResult(resultId);
+                ChapterResult bestResult = realmRepository.getBestChapterResult(result.getChapter().getId());
 
-                TextView scoreTextView = view.findViewById(R.id.score_text_view);
-                float score = ScoreUtil.getScore(trueAnswerWordCardCount, wordCardCount);
-                scoreTextView.setText(ScoreUtil.convertScoreToString(score));
+                TextView resultTextView = view.findViewById(R.id.result_text_view);
+                resultTextView.setText(getString(R.string.training_score, ScoreUtil.convertScoreToString(result.getScore())));
 
-                TextView bestScoreTextView = view.findViewById(R.id.best_score_text_view);
-                float bestScore = bestResult.getScore();
-                bestScoreTextView.setText(ScoreUtil.convertScoreToString(bestScore));
+                if (result.getScore() == ScoreUtil.MAX_SCORE) {
+                    resultTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.result_completed_fully_icon, 0, 0);
+                } else if (result.getScore() >= ScoreUtil.COMPLETED_SCORE) {
+                    resultTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.result_completed_icon, 0, 0);
+                } else {
+                    resultTextView.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.result_uncompleted_icon, 0, 0);
+                }
+
+                TextView bestResultTextView = view.findViewById(R.id.best_result_text_view);
+                bestResultTextView.setText(getString(R.string.training_score, ScoreUtil.convertScoreToString(bestResult.getScore())));
             }
             break;
         }

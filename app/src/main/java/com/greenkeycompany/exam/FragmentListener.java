@@ -17,5 +17,5 @@ public interface FragmentListener {
     void requestToSetRuleDescriptionFragment(int ruleId);
 
     void requestToSetWordCardTrainingFragment(@NonNull TrainingType trainingType, int id);
-    void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds);
+    void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds);
 }

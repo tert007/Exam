@@ -50,9 +50,7 @@
             app:layout_constraintLeft_toRightOf="@+id/rule_description_title_view"
             app:layout_constraintBottom_toBottomOf="@+id/rule_description_title_view"
             app:layout_constraintTop_toTopOf="@+id/rule_description_title_view"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="1dp" />
+            android:layout_marginTop="8dp" />
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
@@ -126,7 +124,7 @@
         <TextView
             android:id="@+id/rule_exam_completed_text_view"
 
-            tools:text="4.5"
+            tools:text="4.65"
 
             android:textSize="12sp"
             android:textColor="@color/colorWhite"

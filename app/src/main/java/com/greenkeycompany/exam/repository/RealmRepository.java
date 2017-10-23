@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import com.greenkeycompany.exam.repository.model.Chapter;
 import com.greenkeycompany.exam.repository.model.ChapterResult;
 import com.greenkeycompany.exam.repository.model.Rule;
+import com.greenkeycompany.exam.repository.model.RulePointResult;
 import com.greenkeycompany.exam.repository.model.RuleResult;
 import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.greenkeycompany.exam.repository.model.WordCard;
@@ -58,7 +59,7 @@ public class RealmRepository implements IRepository {
     @Override
     public Rule getRule(int id) {
         return realm.where(Rule.class).
-                equalTo(Chapter.FILED_ID, id).
+                equalTo(Rule.FILED_ID, id).
                 findFirst();
     }
 
@@ -73,7 +74,7 @@ public class RealmRepository implements IRepository {
     @Override
     public RulePoint getRulePoint(int id) {
         return realm.where(RulePoint.class).
-                equalTo(Chapter.FILED_ID, id).
+                equalTo(RulePoint.FILED_ID, id).
                 findFirst();
     }
 
@@ -89,7 +90,7 @@ public class RealmRepository implements IRepository {
     @Override
     public WordCard getWordCard(int id) {
         return realm.where(WordCard.class).
-                equalTo(Chapter.FILED_ID, id).
+                equalTo(WordCard.FILED_ID, id).
                 findFirst();
     }
 
@@ -152,42 +153,85 @@ public class RealmRepository implements IRepository {
     }
 
     @Override
-    public void addRuleResult(final int ruleId, final float score, final long unixTime) {
-        realm.executeTransaction(new Realm.Transaction() {
+    public void addRulePointResult(final int rulePointId, final int wordCardCompletedCount, final long unixTime,
+                                   final Listener listener) {
+
+        final int nextId = getNextId(RulePointResult.class);
+
+        realm.executeTransactionAsync(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
-                Rule rule = getRule(ruleId);
+                RulePoint rulePoint = realm.where(RulePoint.class).
+                        equalTo(RulePoint.FILED_ID, rulePointId).
+                        findFirst();
 
-                int nextId = getNextId(RuleResult.class);
+                RulePointResult result = realm.createObject(RulePointResult.class, nextId);
+                result.setRulePoint(rulePoint);
+                result.setWordCardCompletedCount(wordCardCompletedCount);
+                result.setUnixTime(unixTime);
+            }
+        }, new Realm.Transaction.OnSuccess() {
+            @Override
+            public void onSuccess() {
+                if (listener != null)
+                    listener.onAdded(nextId);
+            }
+        });
+    }
+
+    @Override
+    public void addRuleResult(final int ruleId, final float score, final long unixTime,
+                              final Listener listener) {
+
+        final int nextId = getNextId(RuleResult.class);
+
+        realm.executeTransactionAsync(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                Rule rule = realm.where(Rule.class).
+                        equalTo(Rule.FILED_ID, ruleId).
+                        findFirst();
 
                 RuleResult result = realm.createObject(RuleResult.class, nextId);
                 result.setRule(rule);
                 result.setScore(score);
                 result.setUnixTime(unixTime);
             }
+        }, new Realm.Transaction.OnSuccess() {
+            @Override
+            public void onSuccess() {
+                if (listener != null)
+                    listener.onAdded(nextId);
+            }
         });
     }
 
     @Override
-    public void addChapterResult(final int chapterId, final float score, final long unixTime) {
-        realm.executeTransaction(new Realm.Transaction() {
+    public void addChapterResult(final int chapterId, final float score, final long unixTime,
+                                 final Listener listener) {
+
+        final int nextId = getNextId(ChapterResult.class);
+
+        realm.executeTransactionAsync(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
-                Chapter chapter = getChapter(chapterId);
-
-                int nextId = getNextId(ChapterResult.class);
+                Chapter chapter = realm.where(Chapter.class).
+                        equalTo(Chapter.FILED_ID, chapterId).
+                        findFirst();
 
                 ChapterResult result = realm.createObject(ChapterResult.class, nextId);
                 result.setChapter(chapter);
                 result.setScore(score);
                 result.setUnixTime(unixTime);
             }
+        }, new Realm.Transaction.OnSuccess() {
+            @Override
+            public void onSuccess() {
+                if (listener != null)
+                    listener.onAdded(nextId);
+            }
         });
     }
-
-
-
-
 
     @Override
     public void updateRule(final int ruleId, final boolean descriptionCompleted) {
@@ -201,28 +245,56 @@ public class RealmRepository implements IRepository {
     }
 
     @Override
-    public void updateRulePoint(final int rulePointId, final int wordCardCompletedCount, final boolean trainingCompleted) {
+    public void updateRulePoint(final int rulePointId, final boolean trainingCompleted) {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
                 RulePoint rulePoint = getRulePoint(rulePointId);
                 rulePoint.setCompleted(trainingCompleted);
-                rulePoint.setWordCardCompletedCount(wordCardCompletedCount);
             }
         });
     }
 
+    @Nullable
+    @Override
+    public RulePointResult getRulePointResult(int id) {
+        return realm.where(RulePointResult.class).
+                equalTo(RulePointResult.FILED_ID, id).
+                findFirst();
+    }
 
+    @Nullable
+    @Override
+    public RulePointResult getBestRulePointResult(int rulePointId) {
+        return realm.where(RulePointResult.class).
+                equalTo(RulePointResult.FIELD_RULE_POINT_ID, rulePointId).
+                findAllSorted(RulePointResult.FIELD_WORD_CARD_COMPLETED_COUNT_, Sort.DESCENDING).
+                first(null);
+    }
 
-
+    @Nullable
+    @Override
+    public RuleResult getRuleResult(int id) {
+        return realm.where(RuleResult.class).
+                equalTo(RuleResult.FILED_ID, id).
+                findFirst();
+    }
 
     @Nullable
     @Override
     public RuleResult getBestRuleResult(int ruleId) {
         return realm.where(RuleResult.class).
                 equalTo(RuleResult.FIELD_RULE_ID, ruleId).
-                findAllSorted(ResultRealmObject.FILED_SCORE, Sort.DESCENDING).
+                findAllSorted(RuleResult.FILED_SCORE, Sort.DESCENDING).
                 first(null);
+    }
+
+    @Nullable
+    @Override
+    public ChapterResult getChapterResult(int id) {
+        return realm.where(ChapterResult.class).
+                equalTo(ChapterResult.FILED_ID, id).
+                findFirst();
     }
 
     @Nullable
@@ -230,7 +302,7 @@ public class RealmRepository implements IRepository {
     public ChapterResult getBestChapterResult(int chapterId) {
         return realm.where(ChapterResult.class).
                 equalTo(ChapterResult.FIELD_CHAPTER_ID, chapterId).
-                findAllSorted(ResultRealmObject.FILED_SCORE, Sort.DESCENDING).
+                findAllSorted(ChapterResult.FILED_SCORE, Sort.DESCENDING).
                 first(null);
     }
 }

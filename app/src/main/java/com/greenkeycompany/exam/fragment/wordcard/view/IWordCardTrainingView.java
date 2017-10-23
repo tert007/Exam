@@ -25,5 +25,5 @@ public interface IWordCardTrainingView extends MvpView {
     void setNextViewVisibility(boolean visible);
     void setAnswersButtonVisibility(boolean visible);
 
-    void requestToSetResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds);
+    void requestToSetResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds);
 }

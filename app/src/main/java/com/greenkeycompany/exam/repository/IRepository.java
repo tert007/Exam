@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import com.greenkeycompany.exam.repository.model.Chapter;
 import com.greenkeycompany.exam.repository.model.ChapterResult;
 import com.greenkeycompany.exam.repository.model.Rule;
+import com.greenkeycompany.exam.repository.model.RulePointResult;
 import com.greenkeycompany.exam.repository.model.RuleResult;
 import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.greenkeycompany.exam.repository.model.WordCard;
@@ -38,11 +39,21 @@ public interface IRepository {
     int getWordCardCountByRulePoint(int rulePointId);
 
     void updateRule(int ruleId, boolean descriptionCompleted);
-    void updateRulePoint(int rulePointId, int wordCardCompletedCount, boolean trainingCompleted);
+    void updateRulePoint(int rulePointId, boolean trainingCompleted);
 
-    void addRuleResult(int ruleId, float score, long unixTime);
-    void addChapterResult(int chapterId, float score, long unixTime);
+    interface Listener {
+        void onAdded(int id);
+    }
 
+    void addRulePointResult(int rulePointId, int wordCardCompletedCount, long unixTime, Listener listener);
+    @Nullable RulePointResult getRulePointResult(int id);
+    @Nullable RulePointResult getBestRulePointResult(int rulePointId);
+
+    void addRuleResult(int ruleId, float score, long unixTime, Listener listener);
+    @Nullable RuleResult getRuleResult(int id);
     @Nullable RuleResult getBestRuleResult(int ruleId);
+
+    void addChapterResult(int chapterId, float score, long unixTime, Listener listener);
+    @Nullable ChapterResult getChapterResult(int id);
     @Nullable ChapterResult getBestChapterResult(int chapterId);
 }

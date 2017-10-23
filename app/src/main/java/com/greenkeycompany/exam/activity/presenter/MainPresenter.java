@@ -99,14 +99,14 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
     }
 
     @Override
-    public void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int id, int wordCardCount, int[] wrongAnswerWordCardIds) {
+    public void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds) {
         switch (trainingType) {
             case RULE_POINT: fragmentType = FragmentType.WORD_CARD_RULE_POINT_RESULT; break;
             case RULE: fragmentType = FragmentType.WORD_CARD_RULE_RESULT; break;
             case CHAPTER: fragmentType = FragmentType.WORD_CARD_CHAPTER_RESULT; break;
         }
         if (isViewAttached()) {
-            getView().setWordCardResultFragment(trainingType, id, wordCardCount, wrongAnswerWordCardIds);
+            getView().setWordCardResultFragment(trainingType, resultId, wrongAnswerWordCardIds);
         }
     }
 }
