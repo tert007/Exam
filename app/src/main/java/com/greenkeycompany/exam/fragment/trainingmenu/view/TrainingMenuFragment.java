@@ -88,7 +88,7 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
         });
 
         recyclerView.setOverScrollMode(View.OVER_SCROLL_NEVER);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
         recyclerView.setAdapter(adapter);
 
         return parentView;
