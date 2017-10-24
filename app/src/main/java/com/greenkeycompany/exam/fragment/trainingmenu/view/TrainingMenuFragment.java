@@ -73,6 +73,8 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
 
     private Unbinder unbinder;
 
+    private static final int COLUMN_COUNT = 3;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -88,7 +90,7 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
         });
 
         recyclerView.setOverScrollMode(View.OVER_SCROLL_NEVER);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), COLUMN_COUNT));
         recyclerView.setAdapter(adapter);
 
         return parentView;
