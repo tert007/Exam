@@ -56,6 +56,9 @@ public class App extends Application {
         String[] getWordCardCorrectWords(int rulePointId) {
             switch (rulePointId) {
                 case 1: return resources.getStringArray(R.array.rule_point_1_word_card_correct_words);
+                case 2: return resources.getStringArray(R.array.rule_point_2_word_card_correct_words);
+                case 3: return resources.getStringArray(R.array.rule_point_3_word_card_correct_words);
+                case 4: return resources.getStringArray(R.array.rule_point_4_word_card_correct_words);
 
                 default: return null;
             }
@@ -63,6 +66,9 @@ public class App extends Application {
         String[] getWordCardIncorrectWords(int rulePointId) {
             switch (rulePointId) {
                 case 1: return resources.getStringArray(R.array.rule_point_1_word_card_incorrect_words);
+                case 2: return resources.getStringArray(R.array.rule_point_2_word_card_incorrect_words);
+                case 3: return resources.getStringArray(R.array.rule_point_3_word_card_incorrect_words);
+                case 4: return resources.getStringArray(R.array.rule_point_4_word_card_incorrect_words);
 
                 default: return null;
             }
