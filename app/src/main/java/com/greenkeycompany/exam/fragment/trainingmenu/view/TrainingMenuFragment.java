@@ -155,7 +155,7 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
 
         class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-            @BindView(R.id.title_text_view) TextView titleTextView;
+           // @BindView(R.id.title_text_view) TextView titleTextView;
             @BindView(R.id.word_card_count_text_view) TextView wordCardCountTextView;
             @BindView(R.id.word_count_completed_count_text_view) TextView wordCardCompletedCountTextView;
             @BindView(R.id.completed_image_view) ImageView completedImageView;
@@ -202,7 +202,7 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
         public void onBindViewHolder(ViewHolder holder, int position) {
             WordCardMenuItem wordCardMenuItem = wordCardMenuItemList.get(position);
 
-            holder.titleTextView.setText(wordCardMenuItem.getTitle());
+            //holder.titleTextView.setText(wordCardMenuItem.getTitle());
             holder.wordCardCountTextView.setText(String.valueOf(wordCardMenuItem.getWordCardCount()));
             holder.wordCardCompletedCountTextView.setText(context.getString(R.string.word_card_completed,
                     wordCardMenuItem.getWordCardCompletedCount()));
