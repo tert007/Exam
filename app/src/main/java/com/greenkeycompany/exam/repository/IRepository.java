@@ -34,9 +34,9 @@ public interface IRepository {
     @NonNull List<WordCard> getWordCardListByRule(int ruleId);
     @NonNull List<WordCard> getWordCardListByRulePoint(int rulePointId);
 
-    int getWordCardCountByChapter(int chapterId);
-    int getWordCardCountByRule(int ruleId);
-    int getWordCardCountByRulePoint(int rulePointId);
+    //int getWordCardCountByChapter(int chapterId);
+    //int getWordCardCountByRule(int ruleId);
+    //int getWordCardCountByRulePoint(int rulePointId);
 
     void updateRule(int ruleId, boolean descriptionCompleted);
     void updateRulePoint(int rulePointId, boolean trainingCompleted);

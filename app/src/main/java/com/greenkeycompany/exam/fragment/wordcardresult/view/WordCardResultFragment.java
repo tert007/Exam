@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,30 +17,16 @@ import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.wordcardresult.fragment.ContentFragment;
 import com.greenkeycompany.exam.fragment.wordcardresult.fragment.WordListFragment;
-import com.greenkeycompany.exam.fragment.wordcardresult.presenter.IWordCardResultPresenter;
-import com.greenkeycompany.exam.fragment.wordcardresult.presenter.WordCardResultPresenter;
-import com.greenkeycompany.exam.repository.RealmRepository;
-import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import io.realm.Realm;
 
 /**
  * Created by tert0 on 20.09.2017.
  */
 
-public class WordCardResultFragment extends MvpFragment<IWordCardResultView, IWordCardResultPresenter>
-        implements IWordCardResultView {
-
-    private RealmRepository realmRepository = new RealmRepository(Realm.getDefaultInstance());
-
-    @NonNull
-    @Override
-    public IWordCardResultPresenter createPresenter() {
-        return new WordCardResultPresenter(realmRepository);
-    }
+public class WordCardResultFragment extends Fragment {
 
     private static final String TRAINING_TYPE_PARAM = "training_type";
     private static final String RESULT_ID_PARAM = "result_id";
@@ -89,7 +75,7 @@ public class WordCardResultFragment extends MvpFragment<IWordCardResultView, IWo
         if (wrongAnswerWordCardIds.length == 0) {
             tabLayout.setVisibility(View.GONE);
 
-            viewPager.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
+            viewPager.setAdapter(new FragmentStatePagerAdapter(getFragmentManager()) {
 
                 private static final int FRAGMENT_COUNT = 1;
 
@@ -107,7 +93,7 @@ public class WordCardResultFragment extends MvpFragment<IWordCardResultView, IWo
                 }
             });
         } else {
-            viewPager.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
+            viewPager.setAdapter(new FragmentStatePagerAdapter(getFragmentManager()) {
 
                 private static final int FRAGMENT_COUNT = 2;
 
@@ -135,26 +121,9 @@ public class WordCardResultFragment extends MvpFragment<IWordCardResultView, IWo
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        presenter.init(trainingType, resultId, wrongAnswerWordCardIds);
-    }
-
-    @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        realmRepository.close();
-    }
-
-    @Override
-    public void requestToRefresh(@NonNull TrainingType trainingType, int trainingId) {
-        fragmentListener.requestToSetWordCardTrainingFragment(trainingType, trainingId);
     }
 
     private FragmentListener fragmentListener;

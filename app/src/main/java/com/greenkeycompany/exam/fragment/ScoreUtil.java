@@ -22,7 +22,7 @@ public class ScoreUtil {
         if (score < MEDIUM_SCORE) return Color.parseColor("#a2a6a5");
         if (score < COMPLETED_SCORE) return Color.parseColor("#FFFFCA28");
         if (score < MAX_SCORE) return Color.parseColor("#32BA7C");
-        if (score == MAX_SCORE) return Color.parseColor("0AA06E");
+        if (score == MAX_SCORE) return Color.parseColor("#0AA06E");
 
         return Color.BLACK;
     }

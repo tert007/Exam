@@ -15,6 +15,7 @@ public interface IWordCardTrainingView extends MvpView {
     void setProgressViewItem(int index, boolean trueAnswer);
     
     void setScoreView(int wordCardCount, int trueAnswerCount);
+    void setScoreViewVisibility(boolean visible);
 
     void setWordView(String word);
     void setWordResultView(boolean trueAnswer);

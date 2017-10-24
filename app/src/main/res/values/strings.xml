@@ -97,6 +97,13 @@
             ]]>
         </item>
     </string-array>
+    <integer-array name="rule_1_rule_point_word_card_training_count">
+        <item>10</item>
+        <item>15</item>
+        <item>5</item>
+        <item>10</item>
+    </integer-array>
+
     <string-array name="rule_point_1_word_card_correct_words">
         <!--§1-->
         <item>Чудо</item>
@@ -144,7 +151,6 @@
         <item>Отчищять</item>
     </string-array>
 
-
     <string-array name="rule_point_2_word_card_correct_words">
         <!--§2-->
         <item>Птицы</item>
@@ -191,7 +197,6 @@
         <item>Цыклон</item>
         <item>Цырк</item>
     </string-array>
-
 
     <string-array name="rule_point_3_word_card_correct_words">
         <!--§3-->

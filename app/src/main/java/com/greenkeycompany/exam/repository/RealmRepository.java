@@ -11,7 +11,6 @@ import com.greenkeycompany.exam.repository.model.RuleResult;
 import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.greenkeycompany.exam.repository.model.WordCard;
 import com.greenkeycompany.exam.repository.realm.IdentityRealmObject;
-import com.greenkeycompany.exam.repository.realm.ResultRealmObject;
 
 import java.util.List;
 
@@ -125,6 +124,7 @@ public class RealmRepository implements IRepository {
                 findAll();
     }
 
+    /*
     @Override
     public int getWordCardCountByChapter(int chapterId) {
         long count = realm.where(WordCard.class).
@@ -151,6 +151,7 @@ public class RealmRepository implements IRepository {
 
         return (int) count;
     }
+    */
 
     @Override
     public void addRulePointResult(final int rulePointId, final int wordCardCompletedCount, final long unixTime,
@@ -250,7 +251,7 @@ public class RealmRepository implements IRepository {
             @Override
             public void execute(Realm realm) {
                 RulePoint rulePoint = getRulePoint(rulePointId);
-                rulePoint.setCompleted(trainingCompleted);
+                rulePoint.setTrainingCompleted(trainingCompleted);
             }
         });
     }

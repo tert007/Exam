@@ -1,9 +1,5 @@
 package com.greenkeycompany.exam.repository.model;
 
-import android.os.Build;
-import android.text.Html;
-import android.text.Spanned;
-
 import com.greenkeycompany.exam.repository.realm.IdentityRealmObject;
 
 import io.realm.RealmObject;
@@ -16,13 +12,15 @@ import io.realm.annotations.PrimaryKey;
 public class RulePoint extends RealmObject implements IdentityRealmObject {
 
     public static final String FIELD_RULE_ID = "rule.id";
+    public static final String FIELD_WORD_CARD_TRAINING_COUNT = "wordCardTrainingCount";
 
     @PrimaryKey
     private int id;
     private String title;
     private String description;
 
-    private boolean completed;
+    private int wordCardTrainingCount;
+    private boolean trainingCompleted;
 
     private Rule rule;
 
@@ -52,12 +50,20 @@ public class RulePoint extends RealmObject implements IdentityRealmObject {
         this.description = description;
     }
 
-    public boolean isCompleted() {
-        return completed;
+    public int getWordCardTrainingCount() {
+        return wordCardTrainingCount;
     }
 
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
+    public void setWordCardTrainingCount(int wordCardTrainingCount) {
+        this.wordCardTrainingCount = wordCardTrainingCount;
+    }
+
+    public boolean isTrainingCompleted() {
+        return trainingCompleted;
+    }
+
+    public void setTrainingCompleted(boolean completed) {
+        this.trainingCompleted = completed;
     }
 
     public Rule getRule() {

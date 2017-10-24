@@ -41,9 +41,12 @@ public class ChapterPresenter extends MvpBasePresenter<IChapterView>
             RuleResult bestResult = repository.getBestRuleResult(rule.getId());
             float bestScore = bestResult == null ? ScoreUtil.MIN_SCORE : bestResult.getScore();
 
-            int wordCardCount = repository.getWordCardCountByRule(rule.getId());
+            int wordCardCount = 0;
             int wordCardCompletedCount = 0;
+
             for (RulePoint rulePoint : repository.getRulePointList(rule.getId())) {
+                wordCardCount += rulePoint.getWordCardTrainingCount();
+
                 RulePointResult rulePointResult = repository.getBestRulePointResult(rulePoint.getId());
                 wordCardCompletedCount += rulePointResult != null ? rulePointResult.getWordCardCompletedCount() : 0;
             }

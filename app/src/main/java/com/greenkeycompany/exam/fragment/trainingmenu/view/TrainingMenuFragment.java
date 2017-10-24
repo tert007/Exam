@@ -155,7 +155,7 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
 
         class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-           // @BindView(R.id.title_text_view) TextView titleTextView;
+            //@BindView(R.id.title_text_view) TextView titleTextView;
             @BindView(R.id.word_card_count_text_view) TextView wordCardCountTextView;
             @BindView(R.id.word_count_completed_count_text_view) TextView wordCardCompletedCountTextView;
             @BindView(R.id.completed_image_view) ImageView completedImageView;

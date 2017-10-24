@@ -36,14 +36,15 @@ public class TrainingMenuPresenter extends MvpBasePresenter<ITrainingMenuView>
             WordCardMenuItem wordCardMenuItem = new WordCardMenuItem();
 
             RulePointResult rulePointResult = repository.getBestRulePointResult(rulePoint.getId());
-            int wordCardCount = repository.getWordCardCountByRulePoint(rulePoint.getId());
+
+            int wordCardCount = rulePoint.getWordCardTrainingCount();
             int wordCardCompletedCount = rulePointResult != null ? rulePointResult.getWordCardCompletedCount() : 0;
 
             wordCardMenuItem.setTitle(rulePoint.getTitle());
             wordCardMenuItem.setWordCardCount(wordCardCount);
 
             wordCardMenuItem.setWordCardCompletedCount(wordCardCompletedCount);
-            wordCardMenuItem.setCompleted(rulePoint.isCompleted());
+            wordCardMenuItem.setCompleted(rulePoint.isTrainingCompleted());
 
             wordCardMenuItemList.add(wordCardMenuItem);
         }

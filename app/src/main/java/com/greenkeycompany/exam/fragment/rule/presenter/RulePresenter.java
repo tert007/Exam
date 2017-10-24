@@ -27,7 +27,7 @@ public class RulePresenter extends MvpBasePresenter<IRuleView>
 
     private boolean isTrainingCompleted(@NonNull List<RulePoint> rulePointList) {
         for (RulePoint rulePoint: rulePointList) {
-            if ( ! rulePoint.isCompleted()) return false;
+            if ( ! rulePoint.isTrainingCompleted()) return false;
         }
 
         return true;

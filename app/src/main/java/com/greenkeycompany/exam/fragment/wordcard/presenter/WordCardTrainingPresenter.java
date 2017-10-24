@@ -39,13 +39,13 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
         this.trainingId = trainingId;
         switch (trainingType) {
             case RULE_POINT:
-                init(repository.getWordCardListByRulePoint(trainingId));
+                init(WordCardListUtil.getRulePointList(repository.getWordCardListByRulePoint(trainingId), repository.getRulePoint(trainingId).getWordCardTrainingCount()));
                 break;
             case RULE:
-                init(WordCardListUtil.getRuleShuffleSubList(repository.getWordCardListByRule(trainingId)));
+                init(WordCardListUtil.getRuleList(repository.getWordCardListByRule(trainingId)));
                 break;
             case CHAPTER:
-                init(WordCardListUtil.getChapterShuffleSubList(repository.getWordCardListByChapter(trainingId)));
+                init(WordCardListUtil.getChapterList(repository.getWordCardListByChapter(trainingId)));
                 break;
         }
     }
@@ -69,8 +69,9 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
             getView().initProgressView(wordCardList.size());
 
             getView().setScoreView(0, wordCardList.size());
-            getView().setWordView(correctWord ? wordCard.getCorrectWord() : wordCard.getIncorrectWord());
+            getView().setScoreViewVisibility(trainingType != TrainingType.RULE_POINT);
 
+            getView().setWordView(correctWord ? wordCard.getCorrectWord() : wordCard.getIncorrectWord());
             getView().setCorrectWordViewVisibility(false);
 
             getView().setNextViewVisibility(false);
@@ -96,7 +97,7 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
             switch (trainingType) {
                 case RULE_POINT: {
                     RulePoint rulePoint = repository.getRulePoint(trainingId);
-                    if ( ! rulePoint.isCompleted()) {
+                    if ( ! rulePoint.isTrainingCompleted()) {
                         if (TrainingCompletedUtil.isCompleted(trueAnswerCount, wordCardCount)) {
                             repository.updateRulePoint(trainingId, true);
                         }

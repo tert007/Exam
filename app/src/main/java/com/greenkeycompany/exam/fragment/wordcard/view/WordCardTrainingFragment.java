@@ -133,20 +133,58 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
         LinearLayout.LayoutParams itemParams = new LinearLayout.LayoutParams(0, progressItemHeight, 1f);
         itemParams.setMargins(progressItemMargin, progressItemMargin, progressItemMargin, progressItemMargin);
 
-        int lineCount = itemCount / ITEMS_PER_LINE;
+        int lineCount;
+        int remainder = itemCount % ITEMS_PER_LINE;
+
+        if (remainder == 0) {
+            lineCount = itemCount / ITEMS_PER_LINE;
+        } else {
+            lineCount = itemCount / ITEMS_PER_LINE + 1;
+        }
 
         for (int i = 0; i < lineCount; i++) {
             LinearLayout linearLayout = new LinearLayout(getContext());
             linearLayout.setLayoutParams(layoutParams);
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
-            for (int j = 0; j < ITEMS_PER_LINE; j++) {
-                View item = new View(getContext());
-                item.setLayoutParams(itemParams);
-                item.setBackgroundColor(colorGrey);
+            if (remainder == 0) {
+                for (int j = 0; j < ITEMS_PER_LINE; j++) {
+                    View item = new View(getContext());
+                    item.setLayoutParams(itemParams);
+                    item.setBackgroundColor(colorGrey);
 
-                linearLayout.addView(item);
-                progressItemList.add(item);
+                    linearLayout.addView(item);
+                    progressItemList.add(item);
+                }
+            } else {
+                if (i != lineCount - 1) { // NOT LAST LINE
+                    for (int j = 0; j < ITEMS_PER_LINE; j++) {
+                        View item = new View(getContext());
+                        item.setLayoutParams(itemParams);
+                        item.setBackgroundColor(colorGrey);
+
+                        linearLayout.addView(item);
+                        progressItemList.add(item);
+                    }
+                } else {                  // LAST LINE
+                    for (int j = 0; j < remainder; j++) {
+                        View item = new View(getContext());
+                        item.setLayoutParams(itemParams);
+                        item.setBackgroundColor(colorGrey);
+
+                        linearLayout.addView(item);
+                        progressItemList.add(item);
+                    }
+
+                    for (int j = remainder; j < ITEMS_PER_LINE; j++) {
+                        View item = new View(getContext());
+                        item.setLayoutParams(itemParams);
+                        item.setVisibility(View.INVISIBLE);
+
+                        linearLayout.addView(item);
+                        progressItemList.add(item);
+                    }
+                }
             }
 
             progressLayout.addView(linearLayout);
@@ -157,6 +195,11 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
     @Override
     public void setScoreView(int trueAnswerCount, int wordCardCount) {
         scoreTextView.setText(ScoreUtil.getScoreByString(trueAnswerCount, wordCardCount));
+    }
+
+    @Override
+    public void setScoreViewVisibility(boolean visible) {
+        scoreTextView.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
     }
 
     @Override

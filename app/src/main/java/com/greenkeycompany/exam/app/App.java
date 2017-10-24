@@ -53,6 +53,14 @@ public class App extends Application {
             }
         }
 
+        int[] getWordCardTrainingCounts(int ruleId) {
+            switch (ruleId) {
+                case 1: return resources.getIntArray(R.array.rule_1_rule_point_word_card_training_count);
+
+                default: return null;
+            }
+        }
+
         String[] getWordCardCorrectWords(int rulePointId) {
             switch (rulePointId) {
                 case 1: return resources.getStringArray(R.array.rule_point_1_word_card_correct_words);
@@ -100,6 +108,7 @@ public class App extends Application {
                         rule.setTitle(ruleTitle);
                         rule.setChapter(chapter);
 
+                        int[] wordCardTrainingCounts = realmHelper.getWordCardTrainingCounts(ruleId);
                         String[] rulePointTitles = realmHelper.getRulePointTitles(ruleId);
                         String[] rulePointDescriptions = realmHelper.getRulePointDescriptions(ruleId);
 
@@ -108,6 +117,7 @@ public class App extends Application {
                             rulePoint.setRule(rule);
                             rulePoint.setTitle(rulePointTitles[rulePointIndex]);
                             rulePoint.setDescription(rulePointDescriptions[rulePointIndex]);
+                            rulePoint.setWordCardTrainingCount(wordCardTrainingCounts[rulePointIndex]);
 
                             String[] wordCardCorrectWords = realmHelper.getWordCardCorrectWords(rulePointId);
                             String[] wordCardIncorrectWords = realmHelper.getWordCardIncorrectWords(rulePointId);

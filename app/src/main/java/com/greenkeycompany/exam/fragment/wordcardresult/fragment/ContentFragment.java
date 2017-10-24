@@ -66,7 +66,7 @@ public class ContentFragment extends Fragment {
                 RulePointResult result = realmRepository.getRulePointResult(resultId);
                 RulePointResult bestResult = realmRepository.getBestRulePointResult(result.getRulePoint().getId());
 
-                int wordCardCount = realmRepository.getWordCardCountByRulePoint(result.getRulePoint().getId());
+                int wordCardCount = result.getRulePoint().getWordCardTrainingCount();
 
                 TextView resultTextView = view.findViewById(R.id.result_text_view);
                 resultTextView.setText(getString(R.string.training_result, result.getWordCardCompletedCount(), wordCardCount));
@@ -101,7 +101,7 @@ public class ContentFragment extends Fragment {
                 }
 
                 TextView bestResultTextView = view.findViewById(R.id.best_result_text_view);
-                bestResultTextView.setText(getString(R.string.training_score, ScoreUtil.convertScoreToString(bestResult.getScore())));
+                bestResultTextView.setText(getString(R.string.training_best_score, ScoreUtil.convertScoreToString(bestResult.getScore())));
             }
             break;
             case CHAPTER: {
@@ -122,7 +122,7 @@ public class ContentFragment extends Fragment {
                 }
 
                 TextView bestResultTextView = view.findViewById(R.id.best_result_text_view);
-                bestResultTextView.setText(getString(R.string.training_score, ScoreUtil.convertScoreToString(bestResult.getScore())));
+                bestResultTextView.setText(getString(R.string.training_best_score, ScoreUtil.convertScoreToString(bestResult.getScore())));
             }
             break;
         }

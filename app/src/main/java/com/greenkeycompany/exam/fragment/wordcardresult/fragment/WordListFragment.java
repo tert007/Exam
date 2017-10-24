@@ -1,5 +1,6 @@
 package com.greenkeycompany.exam.fragment.wordcardresult.fragment;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -7,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -138,7 +140,11 @@ public class WordListFragment extends Fragment {
 
             holder.correctWordTextView.setText(wordCard.getCorrectWord());
             holder.incorrectWordTextView.setText(wordCard.getIncorrectWord());
-            holder.ruleDescriptionTextView.setText(wordCard.getRulePoint().getDescription());
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                holder.ruleDescriptionTextView.setText(Html.fromHtml(wordCard.getRulePoint().getDescription(), Html.FROM_HTML_MODE_LEGACY));
+            } else {
+                holder.ruleDescriptionTextView.setText(Html.fromHtml(wordCard.getRulePoint().getDescription()));
+            }
         }
 
         @Override
