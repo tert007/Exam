@@ -25,7 +25,7 @@
 
     <string name="help">Помощь</string>
     <string name="settings">Настройки</string>
-
+    <string name="training_fragment_word_card_description">Слов</string>
 
 
     <string-array name="chapter_titles">
@@ -38,16 +38,63 @@
 
     <string-array name="rule_1_rule_point_titles">
         <item>§1</item>
+        <item>§2</item>
+        <item>§3</item>
+        <item>§4</item>
     </string-array>
     <string-array name="rule_1_rule_point_descriptions">
         <item>
-            <![CDATA[После ж, ч, ш, щ не пишутся <b>ю</b>, я, ы, а пишутся у, а, и, например: чудо, щука,
-            час, роща, жир, шить.
+            <![CDATA[<p>После <b>ж</b>, <b>ч</b>, <b>ш</b>, <b>щ</b> не пишутся <b>ю</b>, <b>я</b>, <b>ы</b>, а пишутся <b>у</b>, <b>а</b>, и, например: чудо, щука,
+            ч<u>а</u>с, рощ<u>а</u>, ж<u>и</u>р, ш<u>и</u>ть.</p>
 
-            \n\n<h1>Буквы ю и я допускаются после</h1> этих согласных только в иноязычных словах
-            (преимущественно французских), например: жюри, парашют (в том числе — в именах
-            собственных, например: Сен-Жюст), а также в сложносокращённых словах и буквенных
-            аббревиатурах, в которых, по общему правилу, допускаются любые сочетания букв (см. § 110).]]>
+            <p>Буквы <b>ю</b> и <b>я</b> допускаются после этих согласных только в иноязычных словах
+            (преимущественно французских), например: ж<u>ю</u>ри, параш<u>ю</u>т (в том числе — в именах
+            собственных, например: Сен-Ж<u>ю</u>ст), а также в сложносокращённых словах и буквенных
+            аббревиатурах, в которых, по общему правилу, допускаются любые сочетания букв.</p>]]>
+        </item>
+
+        <item>
+             <![CDATA[
+             <p>После <b>ц</b> буква <b>ы</b> пишется в окончаниях и в суффиксе <b>-ын</b>, например: <i>птиц<u>ы</u></i>,
+             <i>о́вц<u>ы</u></i> и <i>овц<u>ы́</u></i>, <i>огурц<u>ы</u></i>, <i>белолиц<u>ы</u>й</i>,
+             <i>сестриц<u>ы</u>н</i>, <i>лисиц<u>ы</u>н</i>, а также в словах <i>ц<u>ы</u>ган</i>,
+             <i>ц<u>ы</u>плёнок</i>, <i>на ц<u>ы</u>почках</i>, <i>ц<u>ы</u>ц</i> (междометие) и в других словах того же корня.</p>
+             <p>В остальных случаях после ц пишется всегда и, например: <i>станц<u>и</u>я</i>, <i>ц<u>и</u>бик</i>, <i>ц<u>и</u>новка</i>,
+             <i>ц<u>и</u>мбалы</i>, <i>ц<u>и</u>нк</i>, <i>мед<u>и</u>цина</i></p>.]]>
+        </item>
+
+        <item>
+            <![CDATA[<p>После <b>ц</b> буквы <b>ю</b> и <b>я</b> допускаются только
+              в иноязычных именах собственных, например <i>Ц<u>ю</u>рих</i>, <i>Свенц<u>я</u>ны</i>.</p>]]>
+        </item>
+        <item>
+            <![CDATA[
+            <p>А. Если после <b>ж</b>, <b>ч</b>, <b>ш</b>, <b>щ</b> произносится под ударением <b>о</b>, то буква <b>о</b> пишется:</p>
+            <ol>
+                <li>В окончаниях имён существительных и прилагательных, например: <u>плеч<i>о</i></u>, <u>нож<i>о</i>м</u>, <u>шалаш<i>о</i>м</u>, <u>плеч<i>о</i>м</u>, <u>Фомич<i>о</i>м</u>, <u>плащ<i>о</i>м</u>, <u>меж<i>о</i>й</u>, <u>вожж<i>о</i>й</u>, <u>душ<i>о</i>й</u>, <u>свеч<i>о</i>й</u>, <u>пращ<i>о</i>й</u>, <u>чуж<i>о</i>й</u>, <u>больш<i>о</i>й</u>.</li>
+                <li>
+                    В суффиксах:
+                    <p>а) имён существительных:</p>
+                    <p><b>-ок</b>, например: <u>рож<i>о</i>к</u>, <u>петуш<i>о</i>к</u>, <u>крюч<i>о</i>к</u>, <u>борщ<i>о</i>к</u>;</p>
+                    <p><b>-онок</b>, например: <u>медвеж<i>о</i>нок</u>, <u>мыш<i>о</i>нок</u>, <u>галч<i>о</i>нок</u>, <u>боч<i>о</i>нок</u>;</p>
+                    <p><b>-онк-а</b>, например: <u>книж<i>о</i>нка</u>, <u>рубаш<i>о</i>нка</u>, <u>руч<i>о</i>нка</u>; также <u>деньж<i>о</i>нки</u>;</p>
+                    <p>б) имён прилагательных:</p>
+                    <p><b>-ов-</b>, например: <u>еж<i>о</i>вый</u>, <u>грош<i>о</i>вый</u>, <u>парч<i>о</i>вый</u>, <u>холщ<i>о</i>вый</u>;</p>
+                    <p><b>-он</b> (с беглым <b>о</b>), например: <u>смеш<i>о</i>н</u>;</p>
+                    <p>в) наречий, например: <u>свеж<i>о</i></u>, <u>горяч<i>о</i></u>, <u>общ<i>о</i></u>.</p>
+                </li>
+                <li>
+                    В именах существительных родительного падежа множественного числа на <b>-ок</b>, <b>-он</b>, например: <i>кишок</i>, <i>княжон</i>.
+                </li>
+                <li>
+                    В словах (и в производных от них): <i>обжора, крыжовник, жом, трещотка, трущоба, чащоба, чокаться, чопорный,
+                    Печора, шов, шорох, шоры, в именах существительных: изжога, ожог, поджог (ср. написания с -ёг в прошедшем
+                    времени глаголов: изжёг, ожёг, поджёг); также в некоторых областных и просторечных словах, например:
+                    жолкнуть, зажора (и зажор), жох, ужо (в значении «потом», «после»), вечор (в значении «вчера вечером»),
+                    чох (например, в выражении «не верит ни в сон, ни в чох»), наречие чохом.
+                </li>
+            </ol>
+            ]]>
         </item>
     </string-array>
     <string-array name="rule_point_1_word_card_correct_words">
@@ -56,12 +103,22 @@
         <item>Щука</item>
         <item>Час</item>
         <item>Роща</item>
-        <item>Жир</item>
         <item>Жюри</item>
         <item>Парашют</item>
         <item>Шить</item>
-        <item>Цапля</item>
-        <item>Площадка</item>
+        <item>Щуриться</item>
+        <item>Сен-Жюст</item>
+        <item>Жю-Райтис</item>
+        <item>Шипы</item>
+        <item>Шило</item>
+        <item>Частота</item>
+        <item>Чувство</item>
+        <item>Щупальца</item>
+        <item>Щавель</item>
+        <item>Чары</item>
+        <item>Качать</item>
+        <item>Вещать</item>
+        <item>Отчищать</item>
     </string-array>
     <string-array name="rule_point_1_word_card_incorrect_words">
         <!--§1-->
@@ -69,11 +126,146 @@
         <item>Щюка</item>
         <item>Чяс</item>
         <item>Рощя</item>
-        <item>Жыр</item>
         <item>Жури</item>
         <item>Парашут</item>
         <item>Шыть</item>
-        <item>Цяпля</item>
-        <item>Площядка</item>
+        <item>Щюриться</item>
+        <item>Сен-Жуст</item>
+        <item>Жу-Райтис</item>
+        <item>Шыпы</item>
+        <item>Шыло</item>
+        <item>Чястота</item>
+        <item>Чювство</item>
+        <item>Щюпальца</item>
+        <item>Щявель</item>
+        <item>Чяры</item>
+        <item>Качять</item>
+        <item>Вещять</item>
+        <item>Отчищять</item>
+    </string-array>
+
+
+    <string-array name="rule_point_2_word_card_correct_words">
+        <!--§2-->
+        <item>Птицы</item>
+        <item>Огурцы</item>
+        <item>Белолицый</item>
+        <item>Цифра</item>
+        <item>Сестрицын</item>
+        <item>Лисицын</item>
+        <item>Цыган</item>
+        <item>Цыц</item>
+        <item>Цыплёнок</item>
+        <item>На цыпочках</item>
+        <item>Станция</item>
+        <item>Цибик</item>
+        <item>Циновка</item>
+        <item>Цимбалы</item>
+        <item>Цинк</item>
+        <item>Медицина</item>
+        <item>Циркуль</item>
+        <item>Цыкать</item>
+        <item>Циклон</item>
+        <item>Цирк</item>
+    </string-array>
+    <string-array name="rule_point_2_word_card_incorrect_words">
+        <!--§2-->
+        <item>Птици</item>
+        <item>Огурци</item>
+        <item>Белолицый</item>
+        <item>Цыфра</item>
+        <item>Сестрицин</item>
+        <item>Лисицин</item>
+        <item>Циган</item>
+        <item>Циц</item>
+        <item>Циплёнок</item>
+        <item>На ципочках</item>
+        <item>Станцыя</item>
+        <item>Цыбик</item>
+        <item>Цыновка</item>
+        <item>Цымбалы</item>
+        <item>Цынк</item>
+        <item>Медицына</item>
+        <item>Цыркуль</item>
+        <item>Цикать</item>
+        <item>Цыклон</item>
+        <item>Цырк</item>
+    </string-array>
+
+
+    <string-array name="rule_point_3_word_card_correct_words">
+        <!--§3-->
+        <item>Цюрих</item>
+        <item>Свенцяны</item>
+        <item>Цюрупа</item>
+        <item>Дацюк</item>
+        <item>Цяньнань</item>
+    </string-array>
+    <string-array name="rule_point_3_word_card_incorrect_words">
+        <!--§3-->
+        <item>Цурих</item>
+        <item>Свенцаны</item>
+        <item>Цурупа</item>
+        <item>Дацук</item>
+        <item>Цаньнань</item>
+    </string-array>
+
+    <string-array name="rule_point_4_word_card_correct_words">
+        <!--§4-->
+        <item>Рожок</item>
+        <item>Петушок</item>
+        <item>Медвежонок</item>
+        <item>Бочонок</item>
+        <item>Ручонка</item>
+        <item>Деньжонки</item>
+        <item>Парчовый</item>
+        <item>Холщовый</item>
+        <item>Смешон</item>
+        <item>Свежо</item>
+        <item>Общо</item>
+        <item>Княжон</item>
+        <item>Жом</item>
+        <item>Трещотка</item>
+        <item>Чащоба</item>
+        <item>Чокаться</item>
+        <item>Чопорный</item>
+        <item>Печора</item>
+        <item>Жолкнуть</item>
+        <item>Зажора</item>
+        <item>Вечор</item>
+        <item>Чох</item>
+        <item>Лжёшь</item>
+        <item>Печёт</item>
+        <item>Затушёвывать</item>
+        <item>Перекочёвывать</item>
+    </string-array>
+    <string-array name="rule_point_4_word_card_incorrect_words">
+        <!--§4-->
+        <item>Рожёк</item>
+        <item>Петушёк</item>
+        <item>Медвежёнок</item>
+        <item>Бочёнок</item>
+        <item>Ручёнка</item>
+        <item>Деньжёнки</item>
+        <item>Парчёвый</item>
+        <item>Холщёвый</item>
+        <item>Смешён</item>
+        <item>Свежё</item>
+        <item>Общё</item>
+        <item>Княжён</item>
+        <item>Жём</item>
+        <item>Трещётка</item>
+        <item>Чащёба</item>
+        <item>Чёкаться</item>
+        <item>Чёпорный</item>
+        <item>Печёра</item>
+        <item>Жёлкнуть</item>
+        <item>Зажёра</item>
+        <item>Вечёр</item>
+        <item>Чёх</item>
+        <item>Лжошь</item>
+        <item>Печот</item>
+        <item>Затушовывать</item>
+        <item>Перекочовывать</item>
     </string-array>
 </resources>
