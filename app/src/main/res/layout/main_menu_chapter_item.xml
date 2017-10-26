@@ -73,7 +73,7 @@
         android:layout_width="150dp"
         android:layout_height="35dp"
 
-        android:textColor="@android:color/white"
+        android:textColor="@drawable/text_color_selector"
         android:textSize="20sp"
 
         android:layout_marginTop="8dp"

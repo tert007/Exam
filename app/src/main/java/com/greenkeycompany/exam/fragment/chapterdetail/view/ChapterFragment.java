@@ -1,8 +1,8 @@
-package com.greenkeycompany.exam.fragment.chapter.view;
+package com.greenkeycompany.exam.fragment.chapterdetail.view;
 
 import android.content.Context;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DividerItemDecoration;
@@ -16,9 +16,9 @@ import android.widget.TextView;
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
-import com.greenkeycompany.exam.fragment.chapter.model.RuleMenuItem;
-import com.greenkeycompany.exam.fragment.chapter.presenter.IChapterPresenter;
-import com.greenkeycompany.exam.fragment.chapter.presenter.ChapterPresenter;
+import com.greenkeycompany.exam.fragment.chapterdetail.model.RuleMenuItem;
+import com.greenkeycompany.exam.fragment.chapterdetail.presenter.IChapterPresenter;
+import com.greenkeycompany.exam.fragment.chapterdetail.presenter.ChapterPresenter;
 import com.greenkeycompany.exam.repository.RealmRepository;
 import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 
@@ -73,7 +73,7 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.rule_list_fragment, container, false);
+        View view = inflater.inflate(R.layout.chapter_detail_fragment, container, false);
 
         unbinder = ButterKnife.bind(this, view);
 
@@ -98,13 +98,19 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
         presenter.init(chapterId);
     }
 
+    @BindView(R.id.chapter_view) View chapterView;
     @Override
-    public void setItemList(@NonNull List<RuleMenuItem> ruleList) {
+    public void setChapterDescriptionViewColor(@ColorInt int color) {
+        chapterView.setBackgroundColor(color);
+    }
+
+    @Override
+    public void setRuleItemList(@NonNull List<RuleMenuItem> ruleList) {
         adapter.setItemList(ruleList);
     }
 
     @Override
-    public void requestToSetRuleFragment(int ruleId) {
+    public void requestToSetRuleDetailFragment(int ruleId) {
         fragmentListener.requestToSetRuleFragment(ruleId);
     }
 
@@ -184,7 +190,7 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rule_item, parent, false);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.chapter_detail_rule_item, parent, false);
 
             return new ViewHolder(view, itemClickListener);
         }
@@ -193,17 +199,13 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
         public void onBindViewHolder(ViewHolder holder, int position) {
             RuleMenuItem ruleMenuItem = ruleMenuItemList.get(position);
 
-            //GradientDrawable shape = new GradientDrawable();
-            //shape.setShape(GradientDrawable.OVAL);
-            //shape.setColor(ScoreUtil.getReferenceColor(ruleMenuItem.getScore()));
-
-            //holder.scoreTextView.setBackground(shape);
-            holder.scoreTextView.setText(String.valueOf(ruleMenuItem.getScore()));
-            holder.scoreTextView.setTextColor(ScoreUtil.getReferenceColor(ruleMenuItem.getScore()));
             holder.titleTextView.setText(ruleMenuItem.getTitle());
             holder.subtitleTextView.setText(context.getString(R.string.rule_completed,
                     ruleMenuItem.getWordCardCompletedCount(),
                     ruleMenuItem.getWordCardCount()));
+
+            holder.scoreTextView.setText(ScoreUtil.convertScoreToString(ruleMenuItem.getScore()));
+            holder.scoreTextView.setTextColor(ScoreUtil.getReferenceColor(ruleMenuItem.getScore()));
         }
 
         @Override

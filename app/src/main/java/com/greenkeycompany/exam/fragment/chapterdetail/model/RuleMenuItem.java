@@ -1,4 +1,4 @@
-package com.greenkeycompany.exam.fragment.chapter.model;
+package com.greenkeycompany.exam.fragment.chapterdetail.model;
 
 /**
  * Created by tert0 on 15.10.2017.

@@ -1,4 +1,4 @@
-package com.greenkeycompany.exam.fragment.rule.view;
+package com.greenkeycompany.exam.fragment.ruledetail.view;
 
 import android.support.annotation.ColorInt;
 
@@ -13,6 +13,14 @@ public interface IRuleView extends MvpView {
 
     void setRuleDescriptionCompleted(boolean completed);
     void setRuleTrainingCompleted(boolean completed);
+
     void setRuleExamUncompleted();
     void setRuleExamCompleted(float score);
+
+    void showTrainingLockedDialog();
+    void showRuleExamLockedDialog();
+
+    void requestToShowDescription(int ruleId);
+    void requestToShowTraining(int ruleId);
+    void requestToShowRuleExam(int ruleId);
 }

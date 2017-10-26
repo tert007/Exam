@@ -8,6 +8,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
  */
 
 public interface IRuleDescriptionPresenter extends MvpPresenter<IRuleDescriptionView> {
-    void initRule(int ruleId);
-    void initRulePoint(int rulePointId);
+    void init(int ruleId);
+
+    void onCompletedButtonClick();
 }

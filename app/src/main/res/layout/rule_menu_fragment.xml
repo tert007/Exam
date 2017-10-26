@@ -22,7 +22,7 @@
         <TextView
             android:id="@+id/rule_description_title_view"
 
-            android:drawableTop="@drawable/rule_reading_icon"
+            android:drawableTop="@drawable/rule_description_icon"
 
             android:drawablePadding="16dp"
 
@@ -30,7 +30,7 @@
 
             android:text="@string/rule"
             android:textSize="28sp"
-            android:textColor="@color/colorWhite"
+            android:textColor="@drawable/text_color_selector"
 
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
 
             android:text="@string/training"
             android:textSize="28sp"
-            android:textColor="@color/colorWhite"
+            android:textColor="@drawable/text_color_selector"
 
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -108,14 +108,14 @@
         <TextView
             android:id="@+id/rule_exam_title_view"
 
-            android:drawableTop="@drawable/feather_3_icon"
+            android:drawableTop="@drawable/rule_exam_icon"
             android:drawablePadding="16dp"
 
             android:gravity="center"
 
             android:text="@string/exam"
             android:textSize="28sp"
-            android:textColor="@color/colorWhite"
+            android:textColor="@drawable/text_color_selector"
 
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -142,8 +142,6 @@
 
             app:layout_constraintBottom_toBottomOf="@+id/rule_exam_title_view"
             app:layout_constraintLeft_toRightOf="@+id/rule_exam_title_view"
-            app:layout_constraintTop_toTopOf="@+id/rule_exam_title_view"
-            android:layout_marginTop="0dp"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@+id/rule_exam_title_view" />
     </android.support.constraint.ConstraintLayout>
 </LinearLayout>

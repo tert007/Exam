@@ -10,5 +10,8 @@ import com.hannesdorfmann.mosby3.mvp.MvpView;
  */
 
 public interface IRuleDescriptionView extends MvpView {
+    void setRuleTitleView(@NonNull String title);
     void addRulePointView(@NonNull String title, @NonNull String message);
+
+    void setCompletedButtonVisibility(boolean visible);
 }

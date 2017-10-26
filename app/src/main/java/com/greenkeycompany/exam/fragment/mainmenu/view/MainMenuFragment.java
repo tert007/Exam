@@ -19,12 +19,10 @@ import com.greenkeycompany.exam.fragment.mainmenu.model.ChapterMenuItem;
 import com.greenkeycompany.exam.fragment.mainmenu.presenter.IMainMenuPresenter;
 import com.greenkeycompany.exam.fragment.mainmenu.presenter.MainMenuPresenter;
 import com.greenkeycompany.exam.repository.RealmRepository;
-import com.greenkeycompany.exam.repository.model.Chapter;
 import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -168,7 +166,7 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.chapter_item, parent, false);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_menu_chapter_item, parent, false);
 
             return new ViewHolder(view, itemClickListener);
         }
