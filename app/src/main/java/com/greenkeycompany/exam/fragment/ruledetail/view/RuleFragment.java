@@ -1,11 +1,13 @@
-package com.greenkeycompany.exam.fragment.rule.view;
+package com.greenkeycompany.exam.fragment.ruledetail.view;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +18,8 @@ import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
-import com.greenkeycompany.exam.fragment.rule.presenter.IRulePresenter;
-import com.greenkeycompany.exam.fragment.rule.presenter.RulePresenter;
+import com.greenkeycompany.exam.fragment.ruledetail.presenter.IRulePresenter;
+import com.greenkeycompany.exam.fragment.ruledetail.presenter.RulePresenter;
 import com.greenkeycompany.exam.repository.RealmRepository;
 import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 
@@ -85,37 +87,19 @@ public class RuleFragment extends MvpFragment<IRuleView, IRulePresenter>
         parentView.setBackgroundColor(color);
     }
 
-    @OnClick(R.id.rule_description_view)
-    public void onRuleDescriptionViewClick() {
-        fragmentListener.requestToSetRuleDescriptionFragment(ruleId);
-    }
-
     @BindView(R.id.rule_description_completed_image_view) ImageView ruleDescriptionCompletedImageView;
-
     @Override
     public void setRuleDescriptionCompleted(boolean completed) {
         ruleDescriptionCompletedImageView.setImageResource(completed ? R.drawable.ic_checked : R.drawable.ic_unchecked);
     }
 
-    @OnClick(R.id.rule_training_view)
-    public void onRuleTrainingViewClick() {
-        fragmentListener.requestToSetTrainingMenuFragment(ruleId);
-    }
-
     @BindView(R.id.rule_training_completed_image_view) ImageView ruleTrainingCompletedImageView;
-
     @Override
     public void setRuleTrainingCompleted(boolean completed) {
         ruleTrainingCompletedImageView.setImageResource(completed ? R.drawable.ic_checked : R.drawable.ic_unchecked);
     }
 
-    @OnClick(R.id.rule_exam_view)
-    public void onRuleExamViewClick() {
-        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.RULE, ruleId);
-    }
-
     @BindView(R.id.rule_exam_completed_text_view) TextView ruleExamCompletedTextView;
-
     @Override
     public void setRuleExamUncompleted() {
         ruleExamCompletedTextView.setBackgroundResource(R.drawable.ic_unchecked);
@@ -132,6 +116,56 @@ public class RuleFragment extends MvpFragment<IRuleView, IRulePresenter>
     }
 
     @Override
+    public void showTrainingLockedDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle(R.string.training_locked_title);
+        builder.setMessage(R.string.training_locked_message);
+
+        builder.setPositiveButton(R.string.locked_close, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    @Override
+    public void showRuleExamLockedDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle(R.string.exam_locked_title);
+        builder.setMessage(R.string.exam_locked_message);
+
+        builder.setPositiveButton(R.string.locked_close, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    @OnClick(R.id.rule_description_view)
+    public void onRuleDescriptionViewClick() {
+        presenter.onDescriptionViewClick();
+    }
+
+    @OnClick(R.id.rule_training_view)
+    public void onRuleTrainingViewClick() {
+        presenter.onTrainingViewClick();
+    }
+
+    @OnClick(R.id.rule_exam_view)
+    public void onRuleExamViewClick() {
+        presenter.onRuleExamViewClick();
+    }
+
+
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
@@ -141,6 +175,21 @@ public class RuleFragment extends MvpFragment<IRuleView, IRulePresenter>
     public void onDestroy() {
         super.onDestroy();
         realmRepository.close();
+    }
+
+    @Override
+    public void requestToShowDescription(int ruleId) {
+        fragmentListener.requestToSetRuleDescriptionFragment(ruleId);
+    }
+
+    @Override
+    public void requestToShowTraining(int ruleId) {
+        fragmentListener.requestToSetTrainingMenuFragment(ruleId);
+    }
+
+    @Override
+    public void requestToShowRuleExam(int ruleId) {
+        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.RULE, ruleId);
     }
 
     private FragmentListener fragmentListener;

@@ -1,6 +1,6 @@
-package com.greenkeycompany.exam.fragment.chapter.presenter;
+package com.greenkeycompany.exam.fragment.chapterdetail.presenter;
 
-import com.greenkeycompany.exam.fragment.chapter.view.IChapterView;
+import com.greenkeycompany.exam.fragment.chapterdetail.view.IChapterView;
 import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
 
 /**

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Html;
-import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +19,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 import io.realm.Realm;
 
@@ -39,24 +39,15 @@ public class RuleDescriptionFragment extends MvpFragment<IRuleDescriptionView, I
     }
 
     private static final String RULE_ID_PARAM = "rule_id";
-    private static final String RULE_POINT_ID_PARAM = "rule_point_id";
-
-    public static final int ALL_RULE_POINTS = 0;
 
     private int ruleId;
-    private int rulePointId;
 
-    public static RuleDescriptionFragment newInstance(int ruleId, int rulePointId) {
+    public static RuleDescriptionFragment newInstance(int ruleId) {
         RuleDescriptionFragment fragment = new RuleDescriptionFragment();
         Bundle args = new Bundle();
         args.putInt(RULE_ID_PARAM, ruleId);
-        args.putInt(RULE_POINT_ID_PARAM, rulePointId);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public static RuleDescriptionFragment newInstance(int ruleId) {
-        return newInstance(ruleId, ALL_RULE_POINTS);
     }
 
     @Override
@@ -64,7 +55,6 @@ public class RuleDescriptionFragment extends MvpFragment<IRuleDescriptionView, I
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             ruleId = getArguments().getInt(RULE_ID_PARAM);
-            rulePointId = getArguments().getInt(RULE_POINT_ID_PARAM);
         }
     }
 
@@ -83,11 +73,13 @@ public class RuleDescriptionFragment extends MvpFragment<IRuleDescriptionView, I
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if (ALL_RULE_POINTS == rulePointId) {
-            presenter.initRule(ruleId);
-        } else {
-            presenter.initRulePoint(rulePointId);
-        }
+        presenter.init(ruleId);
+    }
+
+    @BindView(R.id.title_text_view) TextView titleTextView;
+    @Override
+    public void setRuleTitleView(@NonNull String title) {
+        titleTextView.setText(title);
     }
 
     @BindView(R.id.content_holder_layout) LinearLayout contentHolderLayout;
@@ -101,6 +93,17 @@ public class RuleDescriptionFragment extends MvpFragment<IRuleDescriptionView, I
         }
 
         contentHolderLayout.addView(textView);
+    }
+
+    @BindView(R.id.completed_view) View completedView;
+    @Override
+    public void setCompletedButtonVisibility(boolean visible) {
+        completedView.setVisibility(visible ? View.VISIBLE : View.GONE);
+    }
+
+    @OnClick(R.id.completed_view)
+    public void onCompletedViewClick() {
+        presenter.onCompletedButtonClick();
     }
 
     @Override

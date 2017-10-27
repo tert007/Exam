@@ -2,38 +2,63 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+
+    android:overScrollMode="never"
+
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_text_view"
+
+            android:layout_marginTop="16dp"
+
+            tools:text="Название правила"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="20sp"
+
+            android:gravity="center_horizontal"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:id="@+id/content_holder_layout"
+
             android:orientation="vertical"
-            android:paddingLeft="16dp"
-            android:paddingTop="16dp"
-            android:paddingRight="16dp"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:layout_marginTop="16dp"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp"
-            android:layout_gravity="center"
+            android:id="@+id/completed_view"
+
+            android:gravity="center"
+
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Прочитано"
+            android:text="@string/rule_description_completed"
             android:textColor="@color/colorWhite"
-            android:background="@drawable/rule_description_compleate_shape"/>
 
+            android:background="@drawable/rule_description_completed_button_background_selector"
+
+            android:layout_marginBottom="16dp"
+
+            android:layout_gravity="center_horizontal"
+
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
     </LinearLayout>
-
 </ScrollView>
