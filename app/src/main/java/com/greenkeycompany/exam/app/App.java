@@ -66,7 +66,10 @@ public class App extends Application {
                 case 1: return resources.getStringArray(R.array.rule_point_1_word_card_correct_words);
                 case 2: return resources.getStringArray(R.array.rule_point_2_word_card_correct_words);
                 case 3: return resources.getStringArray(R.array.rule_point_3_word_card_correct_words);
-                case 4: return resources.getStringArray(R.array.rule_point_4_word_card_correct_words);
+                case 4: return resources.getStringArray(R.array.rule_point_4_1_word_card_correct_words);
+                case 5: return resources.getStringArray(R.array.rule_point_4_2_word_card_correct_words);
+                case 6: return resources.getStringArray(R.array.rule_point_5_word_card_correct_words);
+                case 7: return resources.getStringArray(R.array.rule_point_6_word_card_correct_words);
 
                 default: return null;
             }
@@ -76,7 +79,10 @@ public class App extends Application {
                 case 1: return resources.getStringArray(R.array.rule_point_1_word_card_incorrect_words);
                 case 2: return resources.getStringArray(R.array.rule_point_2_word_card_incorrect_words);
                 case 3: return resources.getStringArray(R.array.rule_point_3_word_card_incorrect_words);
-                case 4: return resources.getStringArray(R.array.rule_point_4_word_card_incorrect_words);
+                case 4: return resources.getStringArray(R.array.rule_point_4_1_word_card_incorrect_words);
+                case 5: return resources.getStringArray(R.array.rule_point_4_2_word_card_incorrect_words);
+                case 6: return resources.getStringArray(R.array.rule_point_5_word_card_incorrect_words);
+                case 7: return resources.getStringArray(R.array.rule_point_6_word_card_incorrect_words);
 
                 default: return null;
             }
