@@ -4,9 +4,10 @@
     <dimen name="word_card_training_progress_item_height">5dp</dimen>
 
     <string name="word_card_training_description">Правильно ли написано слово?</string>
-    <string name="word_card_training_correct_word">Правильный ответ\n%1$s</string>
+    <string name="word_card_training_correct_word">Слово написано правильно</string>
+    <string name="word_card_training_incorrect_word">Правильный ответ\n%1$s</string>
 
     <string name="word_card_training_next">Далее</string>
     <string name="word_card_training_true_answer">Верно</string>
-    <string name="word_card_training_false_answer">Не верно</string>
+    <string name="word_card_training_false_answer">Неверно</string>
 </resources>

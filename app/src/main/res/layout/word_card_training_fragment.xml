@@ -60,7 +60,7 @@
         android:background="@drawable/word_card_training_answer_background"
 
         android:textColor="?android:textColorPrimary"
-        android:textSize="30sp"
+        android:textSize="24sp"
 
         android:gravity="center"
 
@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="0.4" />
 
     <TextView
-        android:id="@+id/correct_word_text_view"
+        android:id="@+id/incorrect_word_message_text_view"
 
         tools:text="Правильный ответ\nЦыган"
         android:textSize="14sp"
@@ -83,7 +83,25 @@
         android:gravity="center_horizontal"
         android:layout_marginTop="16dp"
 
-        android:layout_width="wrap_content"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintRight_toRightOf="@+id/word_text_view"
+        app:layout_constraintLeft_toLeftOf="@+id/word_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/word_text_view" />
+
+    <TextView
+        android:id="@+id/correct_word_message_text_view"
+
+        android:visibility="invisible"
+
+        android:text="@string/word_card_training_correct_word"
+        android:textSize="14sp"
+
+        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
 
         app:layout_constraintRight_toRightOf="@+id/word_text_view"

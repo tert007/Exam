@@ -66,6 +66,7 @@ public class RealmRepository implements IRepository {
     @Override
     public List<Rule> getRuleList(int chapterId) {
         return realm.where(Rule.class).
+                equalTo(Rule.FIELD_CHAPTER_ID, chapterId).
                 findAll();
     }
 
@@ -123,35 +124,6 @@ public class RealmRepository implements IRepository {
                 equalTo(WordCard.FILED_RULE_POINT_ID, rulePointId).
                 findAll();
     }
-
-    /*
-    @Override
-    public int getWordCardCountByChapter(int chapterId) {
-        long count = realm.where(WordCard.class).
-                equalTo(WordCard.FILED_CHAPTER_ID, chapterId).
-                count();
-
-        return (int) count;
-    }
-
-    @Override
-    public int getWordCardCountByRule(int ruleId) {
-        long count = realm.where(WordCard.class).
-                equalTo(WordCard.FILED_RULE_ID, ruleId).
-                count();
-
-        return (int) count;
-    }
-
-    @Override
-    public int getWordCardCountByRulePoint(int rulePointId) {
-        long count = realm.where(WordCard.class).
-                equalTo(WordCard.FILED_RULE_POINT_ID, rulePointId).
-                count();
-
-        return (int) count;
-    }
-    */
 
     @Override
     public void addRulePointResult(final int rulePointId, final int wordCardCompletedCount, final long unixTime,

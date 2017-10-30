@@ -55,14 +55,17 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
     private List<WordCard> wordCardList;
     private List<WordCard> wrongAnswerWordCardList;
 
-    private boolean correctWord;
+    private boolean isCorrectWord;
 
     private void init(@NonNull List<WordCard> wordCardList) {
+        this.wordModelIndex = 0;
+        this.trueAnswerCount = 0;
+
         this.wordCardList = wordCardList;
         this.wordCardCount = wordCardList.size();
         this.wrongAnswerWordCardList = new ArrayList<>(wordCardCount);
 
-        this.correctWord = random.nextBoolean();
+        this.isCorrectWord = random.nextBoolean();
 
         WordCard wordCard = wordCardList.get(wordModelIndex);
         if (isViewAttached()) {
@@ -71,7 +74,7 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
             getView().setScoreView(0, wordCardList.size());
             getView().setScoreViewVisibility(trainingType != TrainingType.RULE_POINT);
 
-            getView().setWordView(correctWord ? wordCard.getCorrectWord() : wordCard.getIncorrectWord());
+            getView().setWordView(isCorrectWord ? wordCard.getCorrectWord() : wordCard.getIncorrectWord());
             getView().setCorrectWordViewVisibility(false);
 
             getView().setNextViewVisibility(false);
@@ -83,15 +86,16 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
     public void onNextClick() {
         wordModelIndex++;
         if (wordModelIndex < wordCardCount) {
-            correctWord = random.nextBoolean();
+            isCorrectWord = random.nextBoolean();
             WordCard wordCard = wordCardList.get(wordModelIndex);
             if (isViewAttached()) {
                 getView().setNextViewVisibility(false);
                 getView().setAnswersButtonVisibility(true);
 
                 getView().setCorrectWordViewVisibility(false);
+                getView().setIncorrectWordViewVisibility(false);
 
-                getView().setWordView(correctWord ? wordCard.getCorrectWord() : wordCard.getIncorrectWord());
+                getView().setWordView(isCorrectWord ? wordCard.getCorrectWord() : wordCard.getIncorrectWord());
             }
         } else {
             switch (trainingType) {
@@ -158,12 +162,12 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
 
     @Override
     public void onTrueAnswerClick() {
-        updateView(correctWord);
+        updateView(isCorrectWord);
     }
 
     @Override
     public void onFalseAnswerClick() {
-        updateView( ! correctWord);
+        updateView( !isCorrectWord);
     }
 
 
@@ -175,10 +179,17 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
             }
         } else {
             WordCard wordCard = wordCardList.get(wordModelIndex);
-            if (isViewAttached()) {
-                getView().setCorrectWordView(wordCard.getCorrectWord());
-                getView().setCorrectWordViewVisibility(true);
+            if (isCorrectWord) {
+                if (isViewAttached()) {
+                    getView().setCorrectWordViewVisibility(true);
+                }
+            } else {
+                if (isViewAttached()) {
+                    getView().setIncorrectWordView(wordCard.getCorrectWord());
+                    getView().setIncorrectWordViewVisibility(true);
+                }
             }
+
             wrongAnswerWordCardList.add(wordCard);
         }
 

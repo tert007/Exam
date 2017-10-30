@@ -65,8 +65,8 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     }
 
     @Override
-    public void requestToSetRuleFragment(int ruleId) {
-        presenter.requestToSetRuleFragment(ruleId);
+    public void requestToSetRuleDetailFragment(int ruleId) {
+        presenter.requestToSetRuleDetailFragment(ruleId);
     }
 
     @Override

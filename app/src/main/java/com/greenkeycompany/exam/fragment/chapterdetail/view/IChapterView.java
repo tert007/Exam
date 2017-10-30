@@ -16,5 +16,8 @@ public interface IChapterView extends MvpView {
     void setChapterDescriptionViewColor(@ColorInt int color);
     void setRuleItemList(@NonNull List<RuleMenuItem> ruleList);
 
+    void showChapterTrainingLockedDialog();
+
+    void requestToStartChapterTraining(int chapterId);
     void requestToSetRuleDetailFragment(int ruleId);
 }

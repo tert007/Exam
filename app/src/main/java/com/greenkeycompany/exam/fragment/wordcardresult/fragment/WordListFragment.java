@@ -61,7 +61,7 @@ public class WordListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.word_card_list_fragment, container, false);
+        View view = inflater.inflate(R.layout.word_card_result_list_fragment, container, false);
 
         unbinder = ButterKnife.bind(this, view);
 
@@ -97,7 +97,7 @@ public class WordListFragment extends Fragment {
     static class WordCardAdapter extends RecyclerView.Adapter<WordCardAdapter.ViewHolder> {
 
         class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-            @BindView(R.id.correct_word_text_view) TextView correctWordTextView;
+            @BindView(R.id.incorrect_word_message_text_view) TextView correctWordTextView;
             @BindView(R.id.incorrect_word_text_view) TextView incorrectWordTextView;
 
             @BindView(R.id.arrow_image_view) ImageView arrowImageView;

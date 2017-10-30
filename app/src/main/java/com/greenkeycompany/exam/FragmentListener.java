@@ -13,7 +13,7 @@ public interface FragmentListener {
 
     void requestToSetTrainingMenuFragment(int ruleId);
 
-    void requestToSetRuleFragment(int ruleId);
+    void requestToSetRuleDetailFragment(int ruleId);
     void requestToSetRuleDescriptionFragment(int ruleId);
 
     void requestToSetWordCardTrainingFragment(@NonNull TrainingType trainingType, int id);

@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -53,24 +55,6 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
     private TrainingType trainingType;
     private int id;
 
-    /*
-    public static WordCardTrainingFragment newFinalTrainingInstance() {
-        return newInstance(TrainingType.FINAL, 0);
-    }
-
-    public static WordCardTrainingFragment newChapterTrainingInstance(int chapterId) {
-        return newInstance(TrainingType.CHAPTER, chapterId);
-    }
-
-    public static WordCardTrainingFragment newRuleTrainingInstance(int ruleId) {
-        return newInstance(TrainingType.RULE, ruleId);
-    }
-
-    public static WordCardTrainingFragment newRulePointTrainingInstance(int rulePointId) {
-        return newInstance(TrainingType.RULE_POINT, rulePointId);
-    }
-    */
-
     public static WordCardTrainingFragment newInstance(@NonNull TrainingType trainingType, int id) {
         WordCardTrainingFragment fragment = new WordCardTrainingFragment();
         Bundle args = new Bundle();
@@ -98,9 +82,25 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
 
         unbinder = ButterKnife.bind(this, view);
 
-        //setHasOptionsMenu(true);
+        setHasOptionsMenu(true);
 
         return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.training_menu, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.restart:
+                presenter.initTraining(trainingType, id);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override
@@ -124,6 +124,7 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
 
     @Override
     public void initProgressView(int itemCount) {
+        progressLayout.removeAllViews();
         progressItemList = new ArrayList<>(itemCount);
 
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
@@ -221,12 +222,18 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
                         R.drawable.word_card_training_false_answer_background);
     }
 
-    @BindView(R.id.correct_word_text_view) TextView correctWordTextView;
+    @BindView(R.id.incorrect_word_message_text_view) TextView incorrectWordTextView;
     @Override
-    public void setCorrectWordView(String correctWord) {
-        correctWordTextView.setText(getString(R.string.word_card_training_correct_word, correctWord));
+    public void setIncorrectWordView(String correctWord) {
+        incorrectWordTextView.setText(getString(R.string.word_card_training_incorrect_word, correctWord));
     }
 
+    @Override
+    public void setIncorrectWordViewVisibility(boolean visible) {
+        incorrectWordTextView.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
+    }
+
+    @BindView(R.id.correct_word_message_text_view) TextView correctWordTextView;
     @Override
     public void setCorrectWordViewVisibility(boolean visible) {
         correctWordTextView.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
@@ -272,24 +279,6 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
         super.onDestroy();
         realmRepository.close();
     }
-
-    /*
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.training_menu, menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.help:
-                //fragmentListener.requestToSetFragment(FragmentType.RULE_CONTENT);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-    */
 
     @Override
     public void requestToSetResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds) {

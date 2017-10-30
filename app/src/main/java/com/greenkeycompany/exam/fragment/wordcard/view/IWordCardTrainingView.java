@@ -20,7 +20,8 @@ public interface IWordCardTrainingView extends MvpView {
     void setWordView(String word);
     void setWordResultView(boolean trueAnswer);
 
-    void setCorrectWordView(String correctWord);
+    void setIncorrectWordView(String correctWord);
+    void setIncorrectWordViewVisibility(boolean visible);
     void setCorrectWordViewVisibility(boolean visible);
 
     void setNextViewVisibility(boolean visible);

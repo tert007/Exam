@@ -3,6 +3,7 @@ package com.greenkeycompany.exam.fragment.chapterdetail.presenter;
 import android.support.annotation.NonNull;
 
 import com.greenkeycompany.exam.fragment.ChapterColorUtil;
+import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.chapterdetail.model.RuleMenuItem;
 import com.greenkeycompany.exam.fragment.chapterdetail.view.IChapterView;
 import com.greenkeycompany.exam.repository.IRepository;
@@ -27,11 +28,17 @@ public class ChapterPresenter extends MvpBasePresenter<IChapterView>
         this.repository = repository;
     }
 
+    private int chapterId;
+    private boolean chapterTrainingLocked;
+
     private List<Rule> ruleList;
     private List<RuleMenuItem> ruleMenuItemList;
 
     @Override
     public void init(int chapterId) {
+        this.chapterId = chapterId;
+        this.chapterTrainingLocked = false;
+
         ruleList = repository.getRuleList(chapterId);
         ruleMenuItemList = new ArrayList<>(ruleList.size());
 
@@ -40,6 +47,8 @@ public class ChapterPresenter extends MvpBasePresenter<IChapterView>
 
             RuleResult bestResult = repository.getBestRuleResult(rule.getId());
             float bestScore = bestResult == null ? 0 : bestResult.getScore();
+
+            if (bestScore < ScoreUtil.COMPLETED_SCORE) chapterTrainingLocked = true;
 
             int wordCardCount = 0;
             int wordCardCompletedCount = 0;
@@ -57,6 +66,19 @@ public class ChapterPresenter extends MvpBasePresenter<IChapterView>
         if (isViewAttached()) {
             getView().setRuleItemList(ruleMenuItemList);
             getView().setChapterDescriptionViewColor(ChapterColorUtil.getColor(chapterId));
+        }
+    }
+
+    @Override
+    public void onStartChapterTrainingClick() {
+        if (chapterTrainingLocked) {
+            if (isViewAttached()) {
+                getView().showChapterTrainingLockedDialog();
+            }
+        } else {
+            if (isViewAttached()) {
+                getView().requestToStartChapterTraining(chapterId);
+            }
         }
     }
 

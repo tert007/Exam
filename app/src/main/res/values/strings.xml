@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Русский язык</string>
 
+    <string name="restart">Перезапуск</string>
+
     <string name="rule">Правило</string>
     <string name="training">Тренировка</string>
     <string name="exam">Экзамен</string>

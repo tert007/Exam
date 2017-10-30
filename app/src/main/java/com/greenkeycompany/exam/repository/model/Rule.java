@@ -11,6 +11,8 @@ import io.realm.annotations.PrimaryKey;
 
 public class Rule extends RealmObject implements IdentityRealmObject {
 
+    public static final String FIELD_CHAPTER_ID = "chapter.id";
+
     @PrimaryKey
     private int id;
     private String title;

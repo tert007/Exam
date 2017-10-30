@@ -1,10 +1,12 @@
 package com.greenkeycompany.exam.fragment.chapterdetail.view;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,6 +17,7 @@ import android.widget.TextView;
 
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
+import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.chapterdetail.model.RuleMenuItem;
 import com.greenkeycompany.exam.fragment.chapterdetail.presenter.IChapterPresenter;
@@ -27,6 +30,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 import io.realm.Realm;
 
@@ -104,14 +108,42 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
         chapterView.setBackgroundColor(color);
     }
 
+    @OnClick(R.id.start_chapter_training_text_view)
+    public void onStartChapterTrainingViewClick() {
+        presenter.onStartChapterTrainingClick();
+    }
+
     @Override
     public void setRuleItemList(@NonNull List<RuleMenuItem> ruleList) {
         adapter.setItemList(ruleList);
     }
 
     @Override
+    public void showChapterTrainingLockedDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
+        builder.setTitle("ЗАБЛОКИРОВАНО!");
+        builder.setMessage("Пройди всё на 4,5 и сможешь сюда нажать!");
+
+        builder.setPositiveButton("Закрыть", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    @Override
+    public void requestToStartChapterTraining(int chapterId) {
+        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.CHAPTER, chapterId);
+    }
+
+    @Override
     public void requestToSetRuleDetailFragment(int ruleId) {
-        fragmentListener.requestToSetRuleFragment(ruleId);
+        fragmentListener.requestToSetRuleDetailFragment(ruleId);
     }
 
     @Override

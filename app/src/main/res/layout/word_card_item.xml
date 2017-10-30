@@ -20,7 +20,7 @@
         android:layout_height="64dp">
 
         <TextView
-            android:id="@+id/correct_word_text_view"
+            android:id="@+id/incorrect_word_message_text_view"
             tools:text="Профессианализм"
 
             android:textSize="20sp"
@@ -57,7 +57,7 @@
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/correct_word_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/incorrect_word_message_text_view"
             app:layout_constraintRight_toLeftOf="@+id/arrow_image_view"/>
 
         <ImageView

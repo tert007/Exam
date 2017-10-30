@@ -63,7 +63,7 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
     }
 
     @Override
-    public void requestToSetRuleFragment(int ruleId) {
+    public void requestToSetRuleDetailFragment(int ruleId) {
         fragmentType = FragmentType.RULE;
         if (isViewAttached()) {
             getView().setRuleFragment(ruleId);
