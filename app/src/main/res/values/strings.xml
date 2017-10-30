@@ -54,16 +54,20 @@
     <string name="settings">Настройки</string>
     <string name="training_fragment_word_card_description">Слов</string>
 
-
-
-
-
     <string-array name="chapter_titles">
         <item>Гласные</item>
+        <item>Твёрдый и мягкий знаки</item>
     </string-array>
 
     <string-array name="chapter_1_rule_titles">
         <item>Гласные после шипящих и ц</item>
+        <item>Гласные ы и и после приставок</item>
+        <item>Буква э</item>
+        <item>Буква ё</item>
+    </string-array>
+
+    <string-array name="chapter_2_rule_titles">
+        <item>Твёрдый знак</item>
     </string-array>
 
     <string-array name="rule_1_rule_point_titles">
@@ -480,6 +484,326 @@
         <item>Баренцэво море</item>
         <item>Палаццё</item>
         <item>Скерцё</item>
+    </string-array>
+
+
+    <string-array name="rule_2_rule_point_titles">
+        <item>§7</item>
+    </string-array>
+    <string-array name="rule_2_rule_point_descriptions">
+        <item>
+            <![CDATA[
+            <p>При сочетании приставки, оканчивающейся на согласный, с корнем или с другой приставкой, которые начинаются с <b>и</b>, пишется, согласно с произношением, по общему правилу <b>ы</b>, например: <i>роз<u>ы</u>ск, пред<u>ы</u>дущий, воз<u>ы</u>меть, из<u>ы</u>мать</i> (но: <i>вз<u>и</u>мать</i>, где произносится <b>и</b>), <i>под<u>ы</u>тожить, без<u>ы</u>скусственный, с<u>ы</u>знова, без<u>ы</u>дейный, без<u>ы</u>нициативный, без<u>ы</u>нтересный, с<u>ы</u>мпровизировать, над<u>ы</u>ндивидуальный, пред<u>ы</u>стория</i>.</p>
+            <p>Но пишется <b>и</b>:</p>
+            <p>&nbsp; &nbsp;<b>1.</b> В словах с приставками <b>меж-</b> и <b>сверх-</b>, например: <i>меж<u>и</u>рригационный, сверх<u>и</u>зысканный. </i></p>
+            <p>&nbsp; &nbsp;<b>2.</b> В словах с иноязычными приставками и частицами: <b>пан-</b>, <b>суб-</b>, <b>транс-</b>, <b>контр-</b> и т. п.</p>
+            ]]>
+        </item>
+    </string-array>
+    <integer-array name="rule_2_rule_point_word_card_training_count">
+        <item>30</item>
+    </integer-array>
+
+    <string-array name="rule_point_7_word_card_correct_words">
+        <!--§7-->
+        <item>Розыск</item>
+        <item>Предыдущий</item>
+        <item>Возыметь</item>
+        <item>Изымать</item>
+        <item>Взимать</item>
+        <item>Подытожить</item>
+        <item>Безыскусственный</item>
+        <item>Сызнова</item>
+        <item>Безыдейный</item>
+        <item>Безынициативный</item>
+        <item>Безынтересный</item>
+        <item>Сымпровизировать</item>
+        <item>Надындивидуальный</item>
+        <item>Предыстория</item>
+        <item>Межирригационный</item>
+        <item>Сверхизысканный</item>
+        <item>Гиперинфляция</item>
+        <item>Дезинфекция</item>
+        <item>Панисламизм</item>
+        <item>Субинспектор</item>
+        <item>Поистине</item>
+        <item>Выиграть</item>
+        <item>Спортинвентарь</item>
+        <item>Политинформация</item>
+        <item>Отыграть</item>
+        <item>Отыскать</item>
+        <item>Предынфарктный</item>
+        <item>Розыгрыш</item>
+        <item>Постинфарктный</item>
+        <item>Постинсультный</item>
+        <item>Госимущество</item>
+    </string-array>
+    <string-array name="rule_point_7_word_card_incorrect_words">
+        <!--§7-->
+        <item>Розиск</item>
+        <item>Предидущий</item>
+        <item>Возиметь</item>
+        <item>Изимать</item>
+        <item>Взымать</item>
+        <item>Подитожить</item>
+        <item>Безискусственный</item>
+        <item>Сизнова</item>
+        <item>Безидейный</item>
+        <item>Безинициативный</item>
+        <item>Безинтересный</item>
+        <item>Симпровизировать</item>
+        <item>Надиндивидуальный</item>
+        <item>Предистория</item>
+        <item>Межырригационный</item>
+        <item>Сверхызысканный</item>
+        <item>Гиперынфляция</item>
+        <item>Дезынфекция</item>
+        <item>Панысламизм</item>
+        <item>Субынспектор</item>
+        <item>Поыстине</item>
+        <item>Вииграть</item>
+        <item>Спортынвентарь</item>
+        <item>Политынформация</item>
+        <item>Отиграть</item>
+        <item>Отискать</item>
+        <item>Прединфарктный</item>
+        <item>Розигрыш</item>
+        <item>Постынфарктный</item>
+        <item>Постынсультный</item>
+        <item>Госымущество</item>
+    </string-array>
+
+
+    <string-array name="rule_3_rule_point_titles">
+        <item>§8</item>
+        <item>§9</item>
+    </string-array>
+    <string-array name="rule_3_rule_point_descriptions">
+        <item>
+            <![CDATA[
+            <p>Буква <b>э</b> пишется только в следующих русских местоименных словах и междометиях: <u>э</u><i>тот (<u>э</u>та, <u>э</u>то, <u>э</u>ти), <u>э</u>такий, <u>э</u>дакий, <u>э</u>кий, <u>э</u>так, <u>э</u>дак;&nbsp;<u>э</u>ва,<b> </b><u>э</u>вон, <u>э</u>ге, <u>э</u>ге-ге, <u>э</u>й, <u>э</u>к, <u>э</u>х, <u>э</u>хма, <u>э</u>хе-хе.</i></p>
+            ]]>
+        </item>
+        <item>
+            <![CDATA[
+            <p>В иноязычных словах употребление буквы <b>э</b> определяется следующими правилами:</p>
+            <p>1. В начале слов <b>э</b> и <b>е</b> пишутся в соответствии с произношением, например: с одной стороны &mdash; <i><u>э</u>ра, <u>э</u>ллин, <u>э</u>тика, <u>э</u>кзамен, <u>э</u>вкалипт</i>, с другой стороны &mdash; <i><u>е</u>герь, <u>е</u>ресь, <u>Е</u>вропа, <u>е</u>ралаш</i>.</p>
+            <p>2. После гласных (кроме <b>и</b>) пишется преимущественно <b>э</b>, например: <i>по<u>э</u>зия, стату<u>э</u>тка, ма<u>э</u>стро</i>. Но в отдельных случаях, определяемых в словарном порядке, пишется <b>е</b>, например: <i>про<u>е</u>кт, про<u>е</u>кция, тра<u>е</u>ктория, ре<u>е</u>стр, ге<u>е</u>нна, фе<u>е</u>рия</i>. После гласной <b>и</b> пишется <b>е</b>, например: <i>ди<u>е</u>та, ди<u>е</u>з, пи<u>е</u>тет, пи<u>е</u>мия, гиги<u>е</u>на, рекви<u>е</u>м.</i></p>
+            <p>3. После согласных пишется <b>е</b>, кроме слов <i>п<u>э</u>р, м<u>э</u>р, с<u>э</u>р</i>, а также некоторых собственных имён, например: <i>Улан-Уд<u>э</u>, Б<u>э</u>кон, Т<u>э</u>н</i>.</p>
+            <p>4. Если слово начинается с буквы <b>э</b>, то написание <b>э</b> сохраняется также после приставки и в составе сложного слова, например: <i>с<u>э</u>кономить, пере<u>э</u>кзаменовать, одно<u>э</u>тажный, двух<u>э</u>лементный, квинт<u>э</u>ссенция, поли<u>э</u>др.</i></p>
+            ]]>
+        </item>
+    </string-array>
+    <integer-array name="rule_3_rule_point_word_card_training_count">
+        <item>10</item>
+        <item>20</item>
+    </integer-array>
+
+    <string-array name="rule_point_8_word_card_correct_words">
+        <!--§8-->
+        <item>Этот</item>
+        <item>Эта</item>
+        <item>Это</item>
+        <item>Эти</item>
+        <item>Этакий</item>
+        <item>Эдакий</item>
+        <item>Экий</item>
+        <item>Этак</item>
+        <item>Эдак</item>
+        <item>Эва</item>
+        <item>Эвон</item>
+        <item>Эй</item>
+        <item>Эх</item>
+    </string-array>
+    <string-array name="rule_point_8_word_card_incorrect_words">
+        <!--§8-->
+        <item>Етот</item>
+        <item>Ета</item>
+        <item>Ето</item>
+        <item>Ети</item>
+        <item>Етакий</item>
+        <item>Едакий</item>
+        <item>Екий</item>
+        <item>Етак</item>
+        <item>Едак</item>
+        <item>Ева</item>
+        <item>Евон</item>
+        <item>Ей</item>
+        <item>Ех</item>
+    </string-array>
+
+    <string-array name="rule_point_9_word_card_correct_words">
+        <!--§9-->
+        <item>Поэзия</item>
+        <item>Статуэтка</item>
+        <item>Маэстро</item>
+        <item>Проект</item>
+        <item>Проекция</item>
+        <item>Траектория</item>
+        <item>Реестр</item>
+        <item>Геенна</item>
+        <item>Феерия</item>
+        <item>Диета</item>
+        <item>Диез</item>
+        <item>Пиетет</item>
+        <item>Пиемия</item>
+        <item>Гигиена</item>
+        <item>Реквием</item>
+        <item>Пэр</item>
+        <item>Мэр</item>
+        <item>Сэр</item>
+        <item>Улан-Удэ</item>
+        <item>Сэкономить</item>
+        <item>Переэкзаменовать</item>
+        <item>Одноэтажный</item>
+        <item>Полиэдр</item>
+        <item>Квинтэссенция</item>
+    </string-array>
+    <string-array name="rule_point_9_word_card_incorrect_words">
+        <!--§9-->
+        <item>Поезия</item>
+        <item>Статуетка</item>
+        <item>Маестро</item>
+        <item>Проэкт</item>
+        <item>Проэкция</item>
+        <item>Траэктория</item>
+        <item>Реэстр</item>
+        <item>Геэнна</item>
+        <item>Феэрия</item>
+        <item>Диэта</item>
+        <item>Диэз</item>
+        <item>Пиэтет</item>
+        <item>Пиэмия</item>
+        <item>Гигиэна</item>
+        <item>Реквиэм</item>
+        <item>Пер</item>
+        <item>Мер</item>
+        <item>Сер</item>
+        <item>Улан-Уде</item>
+        <item>Секономить</item>
+        <item>Переекзаменовать</item>
+        <item>Одноетажный</item>
+        <item>Полиедр</item>
+        <item>Квинтессенция</item>
+    </string-array>
+
+    <string-array name="rule_4_rule_point_titles">
+        <item>§10</item>
+    </string-array>
+    <string-array name="rule_4_rule_point_descriptions">
+        <item>
+            <![CDATA[
+            <p>Буква <b>ё</b> пишется в следующих случаях:</p>
+            <p>1. Когда необходимо предупредить неверное чтение и понимание слова, например: <i>узна<u>ё</u>м </i>в отличие от <i>узна́<u>е</u>м</i>; <i>вс<u>ё</u> </i>в отличие от <i>все́</i>; <i>в<u>ё</u>дро&nbsp;</i>в отличие от <i>в<u>е</u>дро́</i>; <i>соверш<u>ё</u>нный </i>(причастие) в отличие от <i>соверш<u>е́</u>нный </i>(прилагательное).</p>
+            <p>2. Когда надо указать произношение малоизвестного слова, например: <i>река Ол<u>ё</u>кма</i>.</p>
+            <p>3. В специальных текстах: букварях, школьных учебниках русского языка, учебниках орфоэпии и т. п., а также в словарях для указания места ударения и правильного произношения.</p>
+            <p>Примечание. Вместо буквы <b>ё</b> пишется <b>йо</b> в иноязычных словах в начале слов и после гласных, например: <i><u>йо</u>д</i>, <i><u>йо</u>т</i>, <i>ра<u>йо</u>н</i>, <i>ма<u>йо</u>р</i>.</p>
+            ]]>
+        </item>
+    </string-array>
+    <integer-array name="rule_4_rule_point_word_card_training_count">
+        <item>5</item>
+    </integer-array>
+
+    <string-array name="rule_point_10_word_card_correct_words">
+        <!--§10-->
+        <item>Йод</item>
+        <item>Йот</item>
+        <item>Район</item>
+        <item>Майор</item>
+        <item>Майонез</item>
+        <item>Йогурт</item>
+        <item>Йота</item>
+        <item>Койот</item>
+    </string-array>
+    <string-array name="rule_point_10_word_card_incorrect_words">
+        <!--§10-->
+        <item>Ёд</item>
+        <item>Ёт</item>
+        <item>Раён</item>
+        <item>Маёр</item>
+        <item>Маёнез</item>
+        <item>Ёгурт</item>
+        <item>Ёта</item>
+        <item>Коёт</item>
+    </string-array>
+
+    <string-array name="rule_5_rule_point_titles">
+        <item>§70</item>
+    </string-array>
+    <string-array name="rule_5_rule_point_descriptions">
+        <item>
+            <![CDATA[
+            <p>Буква <b>ъ</b> пишется только перед <b>е</b>, <b>ю</b>, <b>я</b> в следующих случаях:</p>
+            <p>1. При сочетании приставки, оканчивающейся на согласную, и корня, например: <i>под<u>ъ</u>езд, об<u>ъ</u>ём, сверх<u>ъ</u>естественный, волеиз<u>ъ</u>явление, меж<u>ъ</u>ярусный.</i></p>
+            <p>2. В сложных словах после числительных <b>двух-</b>, <b>трёх-</b>, <b>четырёх-</b>, например: <i>трёх<u>ъ</u>ярусный. </i></p>
+            ]]>
+        </item>
+        <item>
+            <![CDATA[
+            <p>3. В иноязычных словах после иноязычных приставок <b>аб-</b>, <b>ад-</b>, <b>диз-</b>, <b>ин-</b>, <b>интер-</b>, <b>кон-</b>, <b>контр-</b>, <b>об-</b>, <b>суб-</b>, <b>транс-</b> и после начальной составной частицы <b>пан-</b>, например: <i>ад<u>ъ</u>ютант, диз<u>ъ</u>юнкция, ин<u>ъ</u>екция, интер<u>ъ</u>екционный, кон<u>ъ</u>юнктура, контр<u>ъ</u>ярус, об<u>ъ</u>ект, суб<u>ъ</u>ект, транс<u>ъ</u>европейский, пан<u>ъ</u>европейский.</i></p>
+            ]]>
+        </item>
+    </string-array>
+    <integer-array name="rule_5_rule_point_word_card_training_count">
+        <item>10</item>
+        <item>10</item>
+    </integer-array>
+
+    <string-array name="rule_point_11_word_card_correct_words">
+        <!--§11-->
+        <item>Подъезд</item>
+        <item>Объём</item>
+        <item>Сверхъестественный</item>
+        <item>Волеизъявление</item>
+        <item>Межъярусный</item>
+        <item>Трёхъярусный</item>
+        <item>Взъесться</item>
+        <item>Взъяриться</item>
+        <item>Въезд</item>
+        <item>Изъездить</item>
+        <item>Изъявить</item>
+    </string-array>
+    <string-array name="rule_point_11_word_card_incorrect_words">
+        <!--§11-->
+        <item>Подезд</item>
+        <item>Обём</item>
+        <item>Сверхестественный</item>
+        <item>Волеизявление</item>
+        <item>Межярусный</item>
+        <item>Трёхярусный</item>
+        <item>Взесться</item>
+        <item>Взяриться</item>
+        <item>Везд</item>
+        <item>Изездить</item>
+        <item>Изявить</item>
+    </string-array>
+
+    <string-array name="rule_point_12_word_card_correct_words">
+        <!--§12-->
+        <item>Адъютант</item>
+        <item>Дизъюнкция</item>
+        <item>Инъекция</item>
+        <item>Интеръекционный</item>
+        <item>Конъюнктура</item>
+        <item>Контръярус</item>
+        <item>Объект</item>
+        <item>Субъект</item>
+        <item>Трансъевропейский</item>
+        <item>Панъевропейский</item>
+    </string-array>
+    <string-array name="rule_point_12_word_card_incorrect_words">
+        <!--§10-->
+        <item>Адютант</item>
+        <item>Дизюнкция</item>
+        <item>Инекция</item>
+        <item>Интерекционный</item>
+        <item>Конюнктура</item>
+        <item>Контрярус</item>
+        <item>Оъект</item>
+        <item>Субект</item>
+        <item>Трансевропейский</item>
+        <item>Паневропейский</item>
     </string-array>
 
 </resources>
