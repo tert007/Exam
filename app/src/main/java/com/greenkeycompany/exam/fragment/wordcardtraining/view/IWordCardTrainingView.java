@@ -1,4 +1,4 @@
-package com.greenkeycompany.exam.fragment.wordcard.view;
+package com.greenkeycompany.exam.fragment.wordcardtraining.view;
 
 import android.support.annotation.NonNull;
 

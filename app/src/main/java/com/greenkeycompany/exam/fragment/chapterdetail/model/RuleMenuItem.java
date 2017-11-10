@@ -5,6 +5,7 @@ package com.greenkeycompany.exam.fragment.chapterdetail.model;
  */
 
 public class RuleMenuItem {
+
     private final String title;
     private final float score;
     private final int wordCardCount;

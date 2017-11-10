@@ -12,8 +12,10 @@ import java.util.List;
  * Created by tert0 on 20.09.2017.
  */
 
-public interface IChapterView extends MvpView {
-    void setChapterDescriptionViewColor(@ColorInt int color);
+public interface IChapterDetailView extends MvpView {
+    void setChapterScore(float score);
+    void setChapterViewColor(@ColorInt int color);
+
     void setRuleItemList(@NonNull List<RuleMenuItem> ruleList);
 
     void showChapterTrainingLockedDialog();

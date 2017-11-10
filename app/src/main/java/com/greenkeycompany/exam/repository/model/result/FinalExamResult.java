@@ -1,4 +1,4 @@
-package com.greenkeycompany.exam.repository.model;
+package com.greenkeycompany.exam.repository.model.result;
 
 import com.greenkeycompany.exam.repository.realm.IdentityRealmObject;
 import com.greenkeycompany.exam.repository.realm.ResultRealmObject;
@@ -11,15 +11,11 @@ import io.realm.annotations.PrimaryKey;
  * Created by tert0 on 12.10.2017.
  */
 
-public class RuleResult extends RealmObject implements IdentityRealmObject,
+public class FinalExamResult extends RealmObject implements IdentityRealmObject,
         UnixTimeRealmObject, ResultRealmObject {
-
-    public static final String FIELD_RULE_ID = "rule.id";
 
     @PrimaryKey
     private int id;
-
-    private Rule rule;
 
     private float score;
     private long unixTime;
@@ -32,14 +28,6 @@ public class RuleResult extends RealmObject implements IdentityRealmObject,
     @Override
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Rule getRule() {
-        return rule;
-    }
-
-    public void setRule(Rule rule) {
-        this.rule = rule;
     }
 
     @Override

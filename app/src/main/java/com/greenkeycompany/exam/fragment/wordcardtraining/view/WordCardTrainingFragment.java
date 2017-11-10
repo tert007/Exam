@@ -1,4 +1,4 @@
-package com.greenkeycompany.exam.fragment.wordcard.view;
+package com.greenkeycompany.exam.fragment.wordcardtraining.view;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -17,8 +17,8 @@ import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
-import com.greenkeycompany.exam.fragment.wordcard.presenter.IWordCardTrainingPresenter;
-import com.greenkeycompany.exam.fragment.wordcard.presenter.WordCardTrainingPresenter;
+import com.greenkeycompany.exam.fragment.wordcardtraining.presenter.IWordCardTrainingPresenter;
+import com.greenkeycompany.exam.fragment.wordcardtraining.presenter.WordCardTrainingPresenter;
 import com.greenkeycompany.exam.repository.RealmRepository;
 import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 

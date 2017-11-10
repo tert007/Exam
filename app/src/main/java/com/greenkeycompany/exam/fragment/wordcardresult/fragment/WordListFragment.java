@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.repository.RealmRepository;
+import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.greenkeycompany.exam.repository.model.WordCard;
 
 import java.util.ArrayList;
@@ -68,14 +69,26 @@ public class WordListFragment extends Fragment {
         recyclerView.post(new Runnable() {
             @Override
             public void run() {
-                List<WordCard> wordCardList = new ArrayList<>(wrongAnswerWordCardIds.length);
+                List<WordCardResultItem> wordCardResultItemList = new ArrayList<>(wrongAnswerWordCardIds.length);
                 for (int wordCardId : wrongAnswerWordCardIds) {
-                    wordCardList.add(realmRepository.getWordCard(wordCardId));
+                    WordCard wordCard = realmRepository.getWordCard(wordCardId);
+                    RulePoint rulePoint = realmRepository.getRulePoint(wordCard.getRulePointId());
+
+                    WordCardResultItem item = new WordCardResultItem();
+                    item.setCorrectWord(wordCard.getCorrectWord());
+                    item.setIncorrectWord(wordCard.getIncorrectWord());
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        item.setRuleDescription(Html.fromHtml(rulePoint.getDescription(), Html.FROM_HTML_MODE_LEGACY));
+                    } else {
+                        item.setRuleDescription(Html.fromHtml(rulePoint.getDescription()));
+                    }
+
+                    wordCardResultItemList.add(item);
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                 recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
-                recyclerView.setAdapter(new WordCardAdapter(wordCardList));
+                recyclerView.setAdapter(new WordCardAdapter(wordCardResultItemList));
             }
         });
 
@@ -92,6 +105,37 @@ public class WordListFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         realmRepository.close();
+    }
+
+    static class WordCardResultItem {
+        private String correctWord;
+        private String incorrectWord;
+
+        private CharSequence ruleDescription;
+
+        public String getCorrectWord() {
+            return correctWord;
+        }
+
+        public void setCorrectWord(String correctWord) {
+            this.correctWord = correctWord;
+        }
+
+        public String getIncorrectWord() {
+            return incorrectWord;
+        }
+
+        public void setIncorrectWord(String incorrectWord) {
+            this.incorrectWord = incorrectWord;
+        }
+
+        public CharSequence getRuleDescription() {
+            return ruleDescription;
+        }
+
+        public void setRuleDescription(CharSequence ruleDescription) {
+            this.ruleDescription = ruleDescription;
+        }
     }
 
     static class WordCardAdapter extends RecyclerView.Adapter<WordCardAdapter.ViewHolder> {
@@ -122,8 +166,8 @@ public class WordListFragment extends Fragment {
             }
         }
 
-        private final List<WordCard> wordCardList;
-        WordCardAdapter(@NonNull List<WordCard> wordCardList) {
+        private final List<WordCardResultItem> wordCardList;
+        WordCardAdapter(@NonNull List<WordCardResultItem> wordCardList) {
             this.wordCardList = wordCardList;
         }
 
@@ -136,15 +180,11 @@ public class WordListFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
-            WordCard wordCard = wordCardList.get(position);
+            WordCardResultItem wordCardResultItem = wordCardList.get(position);
 
-            holder.correctWordTextView.setText(wordCard.getCorrectWord());
-            holder.incorrectWordTextView.setText(wordCard.getIncorrectWord());
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                holder.ruleDescriptionTextView.setText(Html.fromHtml(wordCard.getRulePoint().getDescription(), Html.FROM_HTML_MODE_LEGACY));
-            } else {
-                holder.ruleDescriptionTextView.setText(Html.fromHtml(wordCard.getRulePoint().getDescription()));
-            }
+            holder.correctWordTextView.setText(wordCardResultItem.getCorrectWord());
+            holder.incorrectWordTextView.setText(wordCardResultItem.getIncorrectWord());
+            holder.ruleDescriptionTextView.setText(wordCardResultItem.getRuleDescription());
         }
 
         @Override

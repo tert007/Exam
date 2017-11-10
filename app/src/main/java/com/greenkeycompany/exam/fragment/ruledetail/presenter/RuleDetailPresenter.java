@@ -3,11 +3,14 @@ package com.greenkeycompany.exam.fragment.ruledetail.presenter;
 import android.support.annotation.NonNull;
 
 import com.greenkeycompany.exam.fragment.ChapterColorUtil;
-import com.greenkeycompany.exam.fragment.ruledetail.view.IRuleView;
+import com.greenkeycompany.exam.fragment.ruledetail.view.IRuleDetailView;
 import com.greenkeycompany.exam.repository.IRepository;
 import com.greenkeycompany.exam.repository.model.Rule;
 import com.greenkeycompany.exam.repository.model.RulePoint;
-import com.greenkeycompany.exam.repository.model.RuleResult;
+import com.greenkeycompany.exam.repository.model.WordCardSet;
+import com.greenkeycompany.exam.repository.model.result.RuleExamResult;
+import com.greenkeycompany.exam.repository.model.status.RuleStatus;
+import com.greenkeycompany.exam.repository.model.status.WordCardSetStatus;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 
 import java.util.List;
@@ -16,17 +19,21 @@ import java.util.List;
  * Created by tert0 on 20.09.2017.
  */
 
-public class RulePresenter extends MvpBasePresenter<IRuleView>
-        implements IRulePresenter {
+public class RuleDetailPresenter extends MvpBasePresenter<IRuleDetailView>
+        implements IRuleDetailPresenter {
 
     private IRepository repository;
-    public RulePresenter(@NonNull IRepository repository) {
+    public RuleDetailPresenter(@NonNull IRepository repository) {
         this.repository = repository;
     }
 
-    private boolean isTrainingCompleted(@NonNull List<RulePoint> rulePointList) {
-        for (RulePoint rulePoint: rulePointList) {
-            if ( ! rulePoint.isTrainingCompleted()) return false;
+    private boolean isTrainingCompleted(@NonNull List<WordCardSet> wordCardSetList) {
+        for (WordCardSet wordCardSet: wordCardSetList) {
+            WordCardSetStatus status = repository.getWordCardSetStatus(wordCardSet.getId());
+
+            if (status == null || ! status.isCompleted()) {
+                return false;
+            }
         }
 
         return true;
@@ -34,7 +41,7 @@ public class RulePresenter extends MvpBasePresenter<IRuleView>
 
     private int ruleId;
 
-    private boolean descriptionCompleted;
+    private boolean learned;
     private boolean trainingCompleted;
 
     @Override
@@ -42,18 +49,21 @@ public class RulePresenter extends MvpBasePresenter<IRuleView>
         this.ruleId = ruleId;
 
         Rule rule = repository.getRule(ruleId);
-        List<RulePoint> rulePointList = repository.getRulePointList(ruleId);
+        RuleStatus ruleStatus = repository.getRuleStatus(ruleId);
 
-        descriptionCompleted = rule.isDescriptionCompleted();
-        trainingCompleted = isTrainingCompleted(rulePointList);
+        learned = ruleStatus != null && ruleStatus.isLearned();
+
+        List<WordCardSet> wordCardSetList = repository.getWordCardSetList(ruleId);
+        trainingCompleted = isTrainingCompleted(wordCardSetList);
+
         if (isViewAttached()) {
-            getView().setBackgroundColor(ChapterColorUtil.getColor(rule.getChapter().getId()));
-            getView().setRuleDescriptionCompleted(descriptionCompleted);
+            getView().setBackgroundColor(ChapterColorUtil.getColor(rule.getChapterId()));
+            getView().setRuleDescriptionCompleted(learned);
             getView().setRuleTrainingCompleted(trainingCompleted);
         }
 
         if (trainingCompleted) {
-            RuleResult bestResult = repository.getBestRuleResult(ruleId);
+            RuleExamResult bestResult = repository.getBestRuleExamResult(ruleId);
             if (isViewAttached()) {
                 getView().setRuleExamCompleted(bestResult == null ? 0 : bestResult.getScore());
             }
@@ -73,7 +83,7 @@ public class RulePresenter extends MvpBasePresenter<IRuleView>
 
     @Override
     public void onTrainingViewClick() {
-        if (descriptionCompleted) {
+        if (learned) {
             if (isViewAttached()) {
                 getView().requestToShowTraining(ruleId);
             }

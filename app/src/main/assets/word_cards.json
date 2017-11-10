@@ -1,0 +1,52 @@
+[
+  {
+    "id" : 1,
+    "correctWord" : "Равнины",
+    "incorrectWord" : "Ровнина",
+
+    "chapterId" : 1,
+    "ruleId" : 1,
+    "rulePointId" : 1,
+    "wordCardSetId" : 1
+  },
+  {
+    "id" : 2,
+    "correctWord" : "Подлива",
+    "incorrectWord" : "Падлива",
+
+    "chapterId" : 1,
+    "ruleId" : 1,
+    "rulePointId" : 1,
+    "wordCardSetId" : 1
+  },
+  {
+    "id" : 3,
+    "correctWord" : "Лоза",
+    "incorrectWord" : "Лаза",
+
+    "chapterId" : 1,
+    "ruleId" : 1,
+    "rulePointId" : 1,
+    "wordCardSetId" : 1
+  },
+  {
+    "id" : 4,
+    "correctWord" : "Цыган",
+    "incorrectWord" : "Циган",
+
+    "chapterId" : 1,
+    "ruleId" : 2,
+    "rulePointId" : 2,
+    "wordCardSetId" : 2
+  },
+  {
+    "id" : 5,
+    "correctWord" : "Цыплёнок",
+    "incorrectWord" : "Циплёнок",
+
+    "chapterId" : 1,
+    "ruleId" : 2,
+    "rulePointId" : 2,
+    "wordCardSetId" : 2
+  }
+]

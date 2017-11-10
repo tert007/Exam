@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
+import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.ChapterColorUtil;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.mainmenu.model.ChapterMenuItem;
@@ -26,6 +27,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 import io.realm.Realm;
 
@@ -71,6 +73,9 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
 
+        //getActivity().getActionBar().setTitle(R.string.app_name);
+        //getActivity().getActionBar().setDisplayHomeAsUpEnabled(false);
+
         return view;
     }
 
@@ -78,6 +83,11 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         presenter.init();
+    }
+
+    @OnClick(R.id.final_exam_view)
+    public void onFinalExamClick() {
+        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.FINAL_EXAM, 0);
     }
 
     @Override

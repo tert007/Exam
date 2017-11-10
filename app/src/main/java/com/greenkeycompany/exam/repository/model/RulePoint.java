@@ -11,18 +11,15 @@ import io.realm.annotations.PrimaryKey;
 
 public class RulePoint extends RealmObject implements IdentityRealmObject {
 
-    public static final String FIELD_RULE_ID = "rule.id";
-    public static final String FIELD_WORD_CARD_TRAINING_COUNT = "wordCardTrainingCount";
+    public static final String FIELD_RULE_ID = "ruleId";
 
     @PrimaryKey
     private int id;
+
+    private int ruleId;
+
     private String title;
     private String description;
-
-    private int wordCardTrainingCount;
-    private boolean trainingCompleted;
-
-    private Rule rule;
 
     @Override
     public int getId() {
@@ -32,6 +29,14 @@ public class RulePoint extends RealmObject implements IdentityRealmObject {
     @Override
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getRuleId() {
+        return ruleId;
+    }
+
+    public void setRuleId(int ruleId) {
+        this.ruleId = ruleId;
     }
 
     public String getTitle() {
@@ -50,27 +55,4 @@ public class RulePoint extends RealmObject implements IdentityRealmObject {
         this.description = description;
     }
 
-    public int getWordCardTrainingCount() {
-        return wordCardTrainingCount;
-    }
-
-    public void setWordCardTrainingCount(int wordCardTrainingCount) {
-        this.wordCardTrainingCount = wordCardTrainingCount;
-    }
-
-    public boolean isTrainingCompleted() {
-        return trainingCompleted;
-    }
-
-    public void setTrainingCompleted(boolean completed) {
-        this.trainingCompleted = completed;
-    }
-
-    public Rule getRule() {
-        return rule;
-    }
-
-    public void setRule(Rule rule) {
-        this.rule = rule;
-    }
 }

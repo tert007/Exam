@@ -1,9 +1,9 @@
-package com.greenkeycompany.exam.fragment.wordcard.presenter;
+package com.greenkeycompany.exam.fragment.wordcardtraining.presenter;
 
 import android.support.annotation.NonNull;
 
 import com.greenkeycompany.exam.TrainingType;
-import com.greenkeycompany.exam.fragment.wordcard.view.IWordCardTrainingView;
+import com.greenkeycompany.exam.fragment.wordcardtraining.view.IWordCardTrainingView;
 import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
 
 /**

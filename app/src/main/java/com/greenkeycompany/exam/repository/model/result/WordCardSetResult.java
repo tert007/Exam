@@ -1,7 +1,7 @@
-package com.greenkeycompany.exam.repository.model;
+package com.greenkeycompany.exam.repository.model.result;
 
+import com.greenkeycompany.exam.repository.model.WordCardSet;
 import com.greenkeycompany.exam.repository.realm.IdentityRealmObject;
-import com.greenkeycompany.exam.repository.realm.ResultRealmObject;
 import com.greenkeycompany.exam.repository.realm.UnixTimeRealmObject;
 
 import io.realm.RealmObject;
@@ -11,16 +11,16 @@ import io.realm.annotations.PrimaryKey;
  * Created by tert0 on 12.10.2017.
  */
 
-public class RulePointResult extends RealmObject implements IdentityRealmObject,
+public class WordCardSetResult extends RealmObject implements IdentityRealmObject,
         UnixTimeRealmObject {
 
     public static final String FIELD_WORD_CARD_COMPLETED_COUNT_ = "wordCardCompletedCount";
-    public static final String FIELD_RULE_POINT_ID = "rulePoint.id";
+    public static final String FIELD_WORD_CARD_SET_ID = "wordCardSetId";
 
     @PrimaryKey
     private int id;
 
-    private RulePoint rulePoint;
+    private int wordCardSetId;
 
     private int wordCardCompletedCount;
 
@@ -36,12 +36,12 @@ public class RulePointResult extends RealmObject implements IdentityRealmObject,
         this.id = id;
     }
 
-    public RulePoint getRulePoint() {
-        return rulePoint;
+    public int getWordCardSetId() {
+        return wordCardSetId;
     }
 
-    public void setRulePoint(RulePoint rulePoint) {
-        this.rulePoint = rulePoint;
+    public void setWordCardSetId(int wordCardSetId) {
+        this.wordCardSetId = wordCardSetId;
     }
 
     public int getWordCardCompletedCount() {

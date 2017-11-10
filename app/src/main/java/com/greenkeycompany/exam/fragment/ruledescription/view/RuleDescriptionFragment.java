@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Html;
+import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,10 +87,14 @@ public class RuleDescriptionFragment extends MvpFragment<IRuleDescriptionView, I
     @Override
     public void addRulePointView(@NonNull String title, @NonNull String message) {
         TextView textView = new TextView(getContext());
+        Spanned text;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            textView.setText(Html.fromHtml(message, Html.FROM_HTML_MODE_LEGACY));
+            text = Html.fromHtml(message, Html.FROM_HTML_MODE_LEGACY);
+            textView.setText(text);
         } else {
-            textView.setText(Html.fromHtml(message));
+            text = Html.fromHtml(message);
+
+            textView.setText(text);
         }
 
         contentHolderLayout.addView(textView);

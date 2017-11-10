@@ -1,8 +1,9 @@
-package com.greenkeycompany.exam.repository.model;
+package com.greenkeycompany.exam.repository.model.result;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
+import com.greenkeycompany.exam.repository.model.Chapter;
 import com.greenkeycompany.exam.repository.realm.IdentityRealmObject;
 import com.greenkeycompany.exam.repository.realm.ResultRealmObject;
 import com.greenkeycompany.exam.repository.realm.UnixTimeRealmObject;
@@ -11,15 +12,15 @@ import com.greenkeycompany.exam.repository.realm.UnixTimeRealmObject;
  * Created by tert0 on 20.10.2017.
  */
 
-public class ChapterResult extends RealmObject implements IdentityRealmObject,
+public class ChapterExamResult extends RealmObject implements IdentityRealmObject,
         ResultRealmObject, UnixTimeRealmObject {
 
-    public static final String FIELD_CHAPTER_ID = "chapter.id";
+    public static final String FIELD_CHAPTER_ID = "chapterId";
 
     @PrimaryKey
     private int id;
 
-    private Chapter chapter;
+    private int chapterId;
 
     private float score;
     private long unixTime;
@@ -34,12 +35,12 @@ public class ChapterResult extends RealmObject implements IdentityRealmObject,
         this.id = id;
     }
 
-    public Chapter getChapter() {
-        return chapter;
+    public int getChapterId() {
+        return chapterId;
     }
 
-    public void setChapter(Chapter chapter) {
-        this.chapter = chapter;
+    public void setChapterId(int chapterId) {
+        this.chapterId = chapterId;
     }
 
     @Override

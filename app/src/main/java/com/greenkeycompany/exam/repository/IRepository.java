@@ -4,12 +4,16 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.greenkeycompany.exam.repository.model.Chapter;
-import com.greenkeycompany.exam.repository.model.ChapterResult;
+import com.greenkeycompany.exam.repository.model.WordCardSet;
+import com.greenkeycompany.exam.repository.model.result.ChapterExamResult;
 import com.greenkeycompany.exam.repository.model.Rule;
-import com.greenkeycompany.exam.repository.model.RulePointResult;
-import com.greenkeycompany.exam.repository.model.RuleResult;
+import com.greenkeycompany.exam.repository.model.result.FinalExamResult;
+import com.greenkeycompany.exam.repository.model.result.WordCardSetResult;
+import com.greenkeycompany.exam.repository.model.result.RuleExamResult;
 import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.greenkeycompany.exam.repository.model.WordCard;
+import com.greenkeycompany.exam.repository.model.status.RuleStatus;
+import com.greenkeycompany.exam.repository.model.status.WordCardSetStatus;
 
 import java.util.List;
 
@@ -28,32 +32,38 @@ public interface IRepository {
     @Nullable RulePoint getRulePoint(int id);
     @NonNull List<RulePoint> getRulePointList(int ruleId);
 
+    @Nullable WordCardSet getWordCardSet(int id);
+    @NonNull List<WordCardSet> getWordCardSetList(int ruleId);
+
     @Nullable WordCard getWordCard(int id);
     @NonNull List<WordCard> getWordCardList();
     @NonNull List<WordCard> getWordCardListByChapter(int chapterId);
     @NonNull List<WordCard> getWordCardListByRule(int ruleId);
-    @NonNull List<WordCard> getWordCardListByRulePoint(int rulePointId);
-
-    //int getWordCardCountByChapter(int chapterId);
-    //int getWordCardCountByRule(int ruleId);
-    //int getWordCardCountByRulePoint(int rulePointId);
-
-    void updateRule(int ruleId, boolean descriptionCompleted);
-    void updateRulePoint(int rulePointId, boolean trainingCompleted);
+    @NonNull List<WordCard> getWordCardListByWordCardSet(int wordCardSetId);
 
     interface Listener {
         void onAdded(int id);
     }
 
-    void addRulePointResult(int rulePointId, int wordCardCompletedCount, long unixTime, Listener listener);
-    @Nullable RulePointResult getRulePointResult(int id);
-    @Nullable RulePointResult getBestRulePointResult(int rulePointId);
+    void addOrUpdateRuleStatus(int ruleId, boolean learned);
+    @Nullable RuleStatus getRuleStatus(int ruleId);
 
-    void addRuleResult(int ruleId, float score, long unixTime, Listener listener);
-    @Nullable RuleResult getRuleResult(int id);
-    @Nullable RuleResult getBestRuleResult(int ruleId);
+    void addOrUpdateWordCardSetStatus(int wordCardSetId, boolean completed);
+    @Nullable WordCardSetStatus getWordCardSetStatus(int wordCardSetId);
 
-    void addChapterResult(int chapterId, float score, long unixTime, Listener listener);
-    @Nullable ChapterResult getChapterResult(int id);
-    @Nullable ChapterResult getBestChapterResult(int chapterId);
+    void addWordCardSetResult(int wordCardSetId, int wordCardCompletedCount, long unixTime, Listener listener);
+    @Nullable WordCardSetResult getWordCardSetResult(int id);
+    @Nullable WordCardSetResult getBestWordCardSetResult(int wordCardSetId);
+
+    void addRuleExamResult(int ruleId, float score, long unixTime, Listener listener);
+    @Nullable RuleExamResult getRuleExamResult(int id);
+    @Nullable RuleExamResult getBestRuleExamResult(int ruleId);
+
+    void addChapterExamResult(int chapterId, float score, long unixTime, Listener listener);
+    @Nullable ChapterExamResult getChapterExamResult(int id);
+    @Nullable ChapterExamResult getBestChapterExamResult(int chapterId);
+
+    void addFinalExamResult(float score, long unixTime, Listener listener);
+    @Nullable FinalExamResult getFinalExamResult(int id);
+    @Nullable FinalExamResult getBestFinalExamResult();
 }

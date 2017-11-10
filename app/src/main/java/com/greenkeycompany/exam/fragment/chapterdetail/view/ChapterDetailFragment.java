@@ -20,8 +20,8 @@ import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.chapterdetail.model.RuleMenuItem;
-import com.greenkeycompany.exam.fragment.chapterdetail.presenter.IChapterPresenter;
-import com.greenkeycompany.exam.fragment.chapterdetail.presenter.ChapterPresenter;
+import com.greenkeycompany.exam.fragment.chapterdetail.presenter.IChapterDetailPresenter;
+import com.greenkeycompany.exam.fragment.chapterdetail.presenter.ChapterDetailPresenter;
 import com.greenkeycompany.exam.repository.RealmRepository;
 import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 
@@ -38,22 +38,22 @@ import io.realm.Realm;
  * Created by tert0 on 20.09.2017.
  */
 
-public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter>
-        implements IChapterView {
+public class ChapterDetailFragment extends MvpFragment<IChapterDetailView, IChapterDetailPresenter>
+        implements IChapterDetailView {
 
     private RealmRepository realmRepository = new RealmRepository(Realm.getDefaultInstance());
 
     @NonNull
     @Override
-    public IChapterPresenter createPresenter() {
-        return new ChapterPresenter(realmRepository);
+    public IChapterDetailPresenter createPresenter() {
+        return new ChapterDetailPresenter(realmRepository);
     }
 
     private static final String CHAPTER_ID_PARAM = "chapter_id";
     private int chapterId;
 
-    public static ChapterFragment newInstance(int chapterId) {
-        ChapterFragment fragment = new ChapterFragment();
+    public static ChapterDetailFragment newInstance(int chapterId) {
+        ChapterDetailFragment fragment = new ChapterDetailFragment();
         Bundle args = new Bundle();
         args.putInt(CHAPTER_ID_PARAM, chapterId);
         fragment.setArguments(args);
@@ -104,11 +104,17 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
 
     @BindView(R.id.chapter_view) View chapterView;
     @Override
-    public void setChapterDescriptionViewColor(@ColorInt int color) {
+    public void setChapterViewColor(@ColorInt int color) {
         chapterView.setBackgroundColor(color);
     }
 
-    @OnClick(R.id.start_chapter_training_text_view)
+    @BindView(R.id.chapter_score_text_view) TextView scoreTextView;
+    @Override
+    public void setChapterScore(float score) {
+        scoreTextView.setText(ScoreUtil.convertScoreToString(score));
+    }
+
+    @OnClick(R.id.chapter_start_training_text_view)
     public void onStartChapterTrainingViewClick() {
         presenter.onStartChapterTrainingClick();
     }
@@ -122,10 +128,10 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
     public void showChapterTrainingLockedDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
-        builder.setTitle("ЗАБЛОКИРОВАНО!");
-        builder.setMessage("Пройди всё на 4,5 и сможешь сюда нажать!");
+        builder.setTitle(R.string.chapter_exam_locked_title);
+        builder.setMessage(R.string.chapter_exam_locked_message);
 
-        builder.setPositiveButton("Закрыть", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.locked_close, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
@@ -138,7 +144,7 @@ public class ChapterFragment extends MvpFragment<IChapterView, IChapterPresenter
 
     @Override
     public void requestToStartChapterTraining(int chapterId) {
-        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.CHAPTER, chapterId);
+        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.CHAPTER_EXAM, chapterId);
     }
 
     @Override

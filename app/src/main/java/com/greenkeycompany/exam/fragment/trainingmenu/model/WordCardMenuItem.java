@@ -10,24 +10,9 @@ import com.greenkeycompany.exam.repository.model.RulePoint;
 
 public class WordCardMenuItem {
 
-    private String title;
     private int wordCardCount;
     private int wordCardCompletedCount;
     private boolean completed;
-
-    public WordCardMenuItem() {
-    }
-
-    public WordCardMenuItem(String title, int wordCardCount, int wordCardCompletedCount, boolean completed) {
-        this.title = title;
-        this.wordCardCount = wordCardCount;
-        this.wordCardCompletedCount = wordCardCompletedCount;
-        this.completed = completed;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public void setWordCardCount(int wordCardCount) {
         this.wordCardCount = wordCardCount;
@@ -39,10 +24,6 @@ public class WordCardMenuItem {
 
     public void setCompleted(boolean completed) {
         this.completed = completed;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public int getWordCardCount() {

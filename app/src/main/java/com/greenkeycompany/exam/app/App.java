@@ -1,14 +1,24 @@
 package com.greenkeycompany.exam.app;
 
 import android.app.Application;
+import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
+import com.greenkeycompany.exam.PremiumUtil;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.repository.model.Chapter;
 import com.greenkeycompany.exam.repository.model.Rule;
 import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.greenkeycompany.exam.repository.model.WordCard;
+import com.greenkeycompany.exam.repository.model.WordCardSet;
+
+import org.solovyev.android.checkout.Billing;
+
+import java.io.IOException;
+
+import javax.annotation.Nonnull;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -19,6 +29,31 @@ import io.realm.RealmConfiguration;
 
 public class App extends Application {
 
+    private PremiumUtil premiumUtil;
+    public PremiumUtil getPremiumUtil() {
+        return premiumUtil;
+    }
+
+    @Nonnull
+    private final Billing billing = new Billing(this, new Billing.DefaultConfiguration() {
+        @Nonnull
+        @Override
+        public String getPublicKey() {
+            return "AAAAAAAAAAAAAAAAAAAAAAA";
+        }
+    });
+
+    @Nonnull
+    public Billing getBilling() {
+        return billing;
+    }
+
+    private static App instance;
+    public static App get() {
+        return instance;
+    }
+
+    /*
     private static class RealmHelper {
 
         private Resources resources;
@@ -113,12 +148,15 @@ public class App extends Application {
             }
         }
     }
+    */
 
     @Override
     public void onCreate() {
         super.onCreate();
+        App.instance = this;
         Realm.init(this);
 
+        /*
         RealmConfiguration config = new RealmConfiguration.Builder().initialData(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
@@ -167,8 +205,25 @@ public class App extends Application {
                 }
             }
         }).deleteRealmIfMigrationNeeded().build();
+        */
+
+        RealmConfiguration config = new RealmConfiguration.Builder().initialData(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                try {
+                    AssetManager assetManager = getResources().getAssets();
+
+                    realm.createAllFromJson(Chapter.class, assetManager.open("chapters.json"));
+                    realm.createAllFromJson(Rule.class, assetManager.open("rules.json"));
+                    realm.createAllFromJson(RulePoint.class, assetManager.open("rule_points.json"));
+                    realm.createAllFromJson(WordCardSet.class, assetManager.open("word_card_sets.json"));
+                    realm.createAllFromJson(WordCard.class, assetManager.open("word_cards.json"));
+                } catch (IOException e) {
+                    Log.d("RealmConfiguration", e.getMessage());
+                }
+            }
+        }).deleteRealmIfMigrationNeeded().build();
 
         Realm.setDefaultConfiguration(config);
     }
-
 }

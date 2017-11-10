@@ -6,7 +6,7 @@ import com.greenkeycompany.exam.fragment.mainmenu.model.ChapterMenuItem;
 import com.greenkeycompany.exam.fragment.mainmenu.view.IMainMenuView;
 import com.greenkeycompany.exam.repository.IRepository;
 import com.greenkeycompany.exam.repository.model.Chapter;
-import com.greenkeycompany.exam.repository.model.ChapterResult;
+import com.greenkeycompany.exam.repository.model.result.ChapterExamResult;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class MainMenuPresenter extends MvpBasePresenter<IMainMenuView>
 
         this.chapterMenuItemList = new ArrayList<>(chapterList.size());
         for (Chapter chapter: chapterList) {
-            ChapterResult bestResult = repository.getBestChapterResult(chapter.getId());
+            ChapterExamResult bestResult = repository.getBestChapterExamResult(chapter.getId());
             if (bestResult == null) {
                 chapterMenuItemList.add(new ChapterMenuItem(chapter.getId(), chapter.getTitle()));
             } else {

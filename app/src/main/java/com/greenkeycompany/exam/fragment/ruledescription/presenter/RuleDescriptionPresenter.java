@@ -6,6 +6,7 @@ import com.greenkeycompany.exam.fragment.ruledescription.view.IRuleDescriptionVi
 import com.greenkeycompany.exam.repository.IRepository;
 import com.greenkeycompany.exam.repository.model.Rule;
 import com.greenkeycompany.exam.repository.model.RulePoint;
+import com.greenkeycompany.exam.repository.model.status.RuleStatus;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 
 import java.util.List;
@@ -23,15 +24,18 @@ public class RuleDescriptionPresenter extends MvpBasePresenter<IRuleDescriptionV
     }
 
     private int ruleId;
-    private Rule rule;
 
     @Override
     public void init(int ruleId) {
         this.ruleId = ruleId;
-        this.rule = repository.getRule(ruleId);
+
+        Rule rule = repository.getRule(ruleId);
+        RuleStatus ruleStatus = repository.getRuleStatus(ruleId);
+
+        boolean learned = ruleStatus != null && ruleStatus.isLearned();
         if (isViewAttached()) {
             getView().setRuleTitleView(rule.getTitle());
-            getView().setCompletedButtonVisibility( ! rule.isDescriptionCompleted());
+            getView().setCompletedButtonVisibility( ! learned);
         }
 
         List<RulePoint> rulePointList = repository.getRulePointList(ruleId);
@@ -44,7 +48,7 @@ public class RuleDescriptionPresenter extends MvpBasePresenter<IRuleDescriptionV
 
     @Override
     public void onCompletedButtonClick() {
-        repository.updateRule(ruleId, true);
+        repository.addOrUpdateRuleStatus(ruleId, true);
         if (isViewAttached()) {
             getView().setCompletedButtonVisibility(false);
         }

@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.greenkeycompany.exam.FragmentType;
 import com.greenkeycompany.exam.R;
@@ -14,11 +13,11 @@ import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.activity.presenter.IMainPresenter;
 import com.greenkeycompany.exam.activity.presenter.MainPresenter;
 import com.greenkeycompany.exam.fragment.mainmenu.view.MainMenuFragment;
-import com.greenkeycompany.exam.fragment.ruledetail.view.RuleFragment;
+import com.greenkeycompany.exam.fragment.ruledetail.view.RuleDetailFragment;
 import com.greenkeycompany.exam.fragment.ruledescription.view.RuleDescriptionFragment;
-import com.greenkeycompany.exam.fragment.chapterdetail.view.ChapterFragment;
+import com.greenkeycompany.exam.fragment.chapterdetail.view.ChapterDetailFragment;
 import com.greenkeycompany.exam.fragment.trainingmenu.view.TrainingMenuFragment;
-import com.greenkeycompany.exam.fragment.wordcard.view.WordCardTrainingFragment;
+import com.greenkeycompany.exam.fragment.wordcardtraining.view.WordCardTrainingFragment;
 import com.greenkeycompany.exam.fragment.wordcardresult.view.WordCardResultFragment;
 import com.hannesdorfmann.mosby3.mvp.MvpActivity;
 
@@ -35,7 +34,6 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     }
 
     @BindView(R.id.toolbar) Toolbar toolbar;
-    @BindView(R.id.toolbar_title_text_view) TextView toolbarTitleTextView;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -96,12 +94,12 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
 
     @Override
     public void setChapterFragment(int chapterId) {
-        setFragment(ChapterFragment.newInstance(chapterId), FragmentType.CHAPTER);
+        setFragment(ChapterDetailFragment.newInstance(chapterId), FragmentType.CHAPTER);
     }
 
     @Override
     public void setRuleFragment(int ruleId) {
-        setFragment(RuleFragment.newInstance(ruleId), FragmentType.RULE);
+        setFragment(RuleDetailFragment.newInstance(ruleId), FragmentType.RULE);
     }
 
     @Override

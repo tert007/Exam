@@ -11,16 +11,52 @@ import io.realm.annotations.PrimaryKey;
 
 public class WordCard extends RealmObject implements IdentityRealmObject {
 
-    public static final String FILED_CHAPTER_ID = "rulePoint.rule.chapter.id";
-    public static final String FILED_RULE_POINT_ID = "rulePoint.id";
-    public static final String FILED_RULE_ID = "rulePoint.rule.id";
+    public static final String FILED_CHAPTER_ID = "chapterId";
+    public static final String FILED_RULE_ID = "ruleId";
+    public static final String FILED_RULE_POINT_ID = "rulePointId";
+    public static final String FILED_WORD_CARD_SET_ID = "wordCardSetId";
+
+    private int chapterId;
+    private int ruleId;
+    private int rulePointId;
+    private int wordCardSetId;
 
     @PrimaryKey
     private int id;
     private String correctWord;
     private String incorrectWord;
 
-    private RulePoint rulePoint;
+    public int getChapterId() {
+        return chapterId;
+    }
+
+    public void setChapterId(int chapterId) {
+        this.chapterId = chapterId;
+    }
+
+    public int getRuleId() {
+        return ruleId;
+    }
+
+    public void setRuleId(int ruleId) {
+        this.ruleId = ruleId;
+    }
+
+    public int getRulePointId() {
+        return rulePointId;
+    }
+
+    public void setRulePointId(int rulePointId) {
+        this.rulePointId = rulePointId;
+    }
+
+    public int getWordCardSetId() {
+        return wordCardSetId;
+    }
+
+    public void setWordCardSetId(int wordCardSetId) {
+        this.wordCardSetId = wordCardSetId;
+    }
 
     @Override
     public int getId() {
@@ -46,13 +82,5 @@ public class WordCard extends RealmObject implements IdentityRealmObject {
 
     public void setIncorrectWord(String incorrectWord) {
         this.incorrectWord = incorrectWord;
-    }
-
-    public RulePoint getRulePoint() {
-        return rulePoint;
-    }
-
-    public void setRulePoint(RulePoint rulePoint) {
-        this.rulePoint = rulePoint;
     }
 }

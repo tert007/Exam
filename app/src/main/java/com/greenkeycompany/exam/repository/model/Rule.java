@@ -11,13 +11,13 @@ import io.realm.annotations.PrimaryKey;
 
 public class Rule extends RealmObject implements IdentityRealmObject {
 
-    public static final String FIELD_CHAPTER_ID = "chapter.id";
+    public static final String FIELD_CHAPTER_ID = "chapterId";
+
+    private int chapterId;
 
     @PrimaryKey
     private int id;
     private String title;
-    private Chapter chapter;
-    private boolean descriptionCompleted;
 
     @Override
     public int getId() {
@@ -29,12 +29,12 @@ public class Rule extends RealmObject implements IdentityRealmObject {
         this.id = id;
     }
 
-    public Chapter getChapter() {
-        return chapter;
+    public int getChapterId() {
+        return chapterId;
     }
 
-    public void setChapter(Chapter chapter) {
-        this.chapter = chapter;
+    public void setChapterId(int chapterId) {
+        this.chapterId = chapterId;
     }
 
     public String getTitle() {
@@ -43,13 +43,5 @@ public class Rule extends RealmObject implements IdentityRealmObject {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public boolean isDescriptionCompleted() {
-        return descriptionCompleted;
-    }
-
-    public void setDescriptionCompleted(boolean descriptionCompleted) {
-        this.descriptionCompleted = descriptionCompleted;
     }
 }

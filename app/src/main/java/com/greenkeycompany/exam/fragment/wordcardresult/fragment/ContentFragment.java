@@ -14,9 +14,9 @@ import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.TrainingCompletedUtil;
 import com.greenkeycompany.exam.repository.RealmRepository;
-import com.greenkeycompany.exam.repository.model.ChapterResult;
-import com.greenkeycompany.exam.repository.model.RulePointResult;
-import com.greenkeycompany.exam.repository.model.RuleResult;
+import com.greenkeycompany.exam.repository.model.result.ChapterExamResult;
+import com.greenkeycompany.exam.repository.model.result.WordCardSetResult;
+import com.greenkeycompany.exam.repository.model.result.RuleExamResult;
 
 import io.realm.Realm;
 
@@ -60,13 +60,13 @@ public class ContentFragment extends Fragment {
         View view = null;
 
         switch (trainingType) {
-            case RULE_POINT: {
+            case WORD_CARD_SET_TRAINING: {
                 view = inflater.inflate(R.layout.word_card_result_rule_point_content, container, false);
 
-                RulePointResult result = realmRepository.getRulePointResult(resultId);
-                RulePointResult bestResult = realmRepository.getBestRulePointResult(result.getRulePoint().getId());
+                WordCardSetResult result = realmRepository.getWordCardSetResult(resultId);
+                WordCardSetResult bestResult = realmRepository.getBestWordCardSetResult(result.getWordCardSetId());
 
-                int wordCardCount = result.getRulePoint().getWordCardTrainingCount();
+                int wordCardCount = realmRepository.getWordCardSet(result.getWordCardSetId()).getSize();
 
                 TextView resultTextView = view.findViewById(R.id.result_text_view);
                 resultTextView.setText(getString(R.string.training_result, result.getWordCardCompletedCount(), wordCardCount));
@@ -83,11 +83,11 @@ public class ContentFragment extends Fragment {
                 bestResultTextView.setText(getString(R.string.training_best_result, bestResult.getWordCardCompletedCount(), wordCardCount));
             }
             break;
-            case RULE: {
+            case RULE_EXAM: {
                 view = inflater.inflate(R.layout.word_card_result_content, container, false);
 
-                RuleResult result = realmRepository.getRuleResult(resultId);
-                RuleResult bestResult = realmRepository.getBestRuleResult(result.getRule().getId());
+                RuleExamResult result = realmRepository.getRuleExamResult(resultId);
+                RuleExamResult bestResult = realmRepository.getBestRuleExamResult(result.getRuleId());
 
                 TextView resultTextView = view.findViewById(R.id.result_text_view);
                 resultTextView.setText(getString(R.string.training_score, ScoreUtil.convertScoreToString(result.getScore())));
@@ -104,11 +104,11 @@ public class ContentFragment extends Fragment {
                 bestResultTextView.setText(getString(R.string.training_best_score, ScoreUtil.convertScoreToString(bestResult.getScore())));
             }
             break;
-            case CHAPTER: {
+            case CHAPTER_EXAM: {
                 view = inflater.inflate(R.layout.word_card_result_content, container, false);
 
-                ChapterResult result = realmRepository.getChapterResult(resultId);
-                ChapterResult bestResult = realmRepository.getBestChapterResult(result.getChapter().getId());
+                ChapterExamResult result = realmRepository.getChapterExamResult(resultId);
+                ChapterExamResult bestResult = realmRepository.getBestChapterExamResult(result.getChapterId());
 
                 TextView resultTextView = view.findViewById(R.id.result_text_view);
                 resultTextView.setText(getString(R.string.training_score, ScoreUtil.convertScoreToString(result.getScore())));

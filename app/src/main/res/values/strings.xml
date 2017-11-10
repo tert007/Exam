@@ -7,23 +7,31 @@
     <string name="training">Тренировка</string>
     <string name="exam">Экзамен</string>
 
+    <string name="final_exam">Финальный экзамен</string>
+    <string name="final_exam_looked_description">Финальный экзамен</string>
+
     <!-- MAIN MENU -->
     <string name="chapter_start">Начать</string>
     <string name="chapter_continue">Продолжить</string>
 
-    <!-- CHAPTER DETAIL -->
-    <string name="chapter_locked_message">
+    <!--  CHAPTER DETAIL -->
+    <string name="chapter_exam_locked_title">Заблокированно</string>
+    <string name="chapter_exam_locked_message">
         Выпоните экзамены по каждому правилу в данной главе на оценку 4,5 или выше, чтобы открыть экзамен по главе.
     </string>
 
-    <!-- RULE DETAIL -->
-    <string name="training_locked_title">Тренировка заблокирована</string>
-    <string name="training_locked_message">Прочитйка правила, а!</string>
+    <!--RULE DETAIL -->
+    <string name="training_locked_title">Заблокированно</string>
+    <string name="training_locked_message">
+        Для доустпа к тренировки необходимо прочитать правила.
+    </string>
 
-    <string name="exam_locked_title">Экзамен заблокирован</string>
-    <string name="exam_locked_message">Пройдика тренировку, а!</string>
+    <string name="exam_locked_title">Заблокированно</string>
+    <string name="exam_locked_message">
+        Для доуступа к экзамену необходимо пройти каждый этап тренировки.
+    </string>
 
-    <string name="locked_close">Я понял :(</string>
+    <string name="locked_close">Закрыть</string>
 
 
     <!-- RULE DESCRIPTION -->

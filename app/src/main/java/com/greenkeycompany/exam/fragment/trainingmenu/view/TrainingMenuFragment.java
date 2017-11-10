@@ -6,7 +6,6 @@ import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +20,6 @@ import com.greenkeycompany.exam.fragment.trainingmenu.model.WordCardMenuItem;
 import com.greenkeycompany.exam.fragment.trainingmenu.presenter.ITrainingMenuPresenter;
 import com.greenkeycompany.exam.fragment.trainingmenu.presenter.TrainingMenuPresenter;
 import com.greenkeycompany.exam.repository.RealmRepository;
-import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 
 import java.util.ArrayList;
@@ -109,7 +107,7 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
 
     @Override
     public void requestToSetWordCardRulePointTrainingFragment(int rulePointId) {
-        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.RULE_POINT, rulePointId);
+        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.WORD_CARD_SET_TRAINING, rulePointId);
     }
 
     @Override

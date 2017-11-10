@@ -1,4 +1,4 @@
-package com.greenkeycompany.exam.fragment.wordcard.presenter;
+package com.greenkeycompany.exam.fragment.wordcardtraining.presenter;
 
 import android.support.annotation.NonNull;
 
@@ -7,9 +7,9 @@ import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.WordCardListUtil;
 import com.greenkeycompany.exam.fragment.TrainingCompletedUtil;
 import com.greenkeycompany.exam.repository.IRepository;
-import com.greenkeycompany.exam.repository.model.RulePoint;
 import com.greenkeycompany.exam.repository.model.WordCard;
-import com.greenkeycompany.exam.fragment.wordcard.view.IWordCardTrainingView;
+import com.greenkeycompany.exam.fragment.wordcardtraining.view.IWordCardTrainingView;
+import com.greenkeycompany.exam.repository.model.status.WordCardSetStatus;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 
 import java.util.ArrayList;
@@ -38,14 +38,17 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
         this.trainingType = trainingType;
         this.trainingId = trainingId;
         switch (trainingType) {
-            case RULE_POINT:
-                init(WordCardListUtil.getRulePointList(repository.getWordCardListByRulePoint(trainingId), repository.getRulePoint(trainingId).getWordCardTrainingCount()));
+            case WORD_CARD_SET_TRAINING:
+                init(WordCardListUtil.getWordCardSetList(repository.getWordCardListByWordCardSet(trainingId), repository.getWordCardSet(trainingId).getSize()));
                 break;
-            case RULE:
-                init(WordCardListUtil.getRuleList(repository.getWordCardListByRule(trainingId)));
+            case RULE_EXAM:
+                init(WordCardListUtil.getRuleExamList(repository.getWordCardListByRule(trainingId)));
                 break;
-            case CHAPTER:
-                init(WordCardListUtil.getChapterList(repository.getWordCardListByChapter(trainingId)));
+            case CHAPTER_EXAM:
+                init(WordCardListUtil.getChapterExamList(repository.getWordCardListByChapter(trainingId)));
+                break;
+            case FINAL_EXAM:
+                init(WordCardListUtil.getFinalExamList(repository.getWordCardList()));
                 break;
         }
     }
@@ -72,7 +75,7 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
             getView().initProgressView(wordCardList.size());
 
             getView().setScoreView(0, wordCardList.size());
-            getView().setScoreViewVisibility(trainingType != TrainingType.RULE_POINT);
+            getView().setScoreViewVisibility(trainingType != TrainingType.WORD_CARD_SET_TRAINING);
 
             getView().setWordView(isCorrectWord ? wordCard.getCorrectWord() : wordCard.getIncorrectWord());
             getView().setCorrectWordViewVisibility(false);
@@ -99,14 +102,14 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
             }
         } else {
             switch (trainingType) {
-                case RULE_POINT: {
-                    RulePoint rulePoint = repository.getRulePoint(trainingId);
-                    if ( ! rulePoint.isTrainingCompleted()) {
+                case WORD_CARD_SET_TRAINING: {
+                    WordCardSetStatus status = repository.getWordCardSetStatus(trainingId);
+                    if (status == null || ! status.isCompleted()) {
                         if (TrainingCompletedUtil.isCompleted(trueAnswerCount, wordCardCount)) {
-                            repository.updateRulePoint(trainingId, true);
+                            repository.addOrUpdateWordCardSetStatus(trainingId, true);
                         }
                     }
-                    repository.addRulePointResult(trainingId, trueAnswerCount, System.currentTimeMillis(), new IRepository.Listener() {
+                    repository.addWordCardSetResult(trainingId, trueAnswerCount, System.currentTimeMillis(), new IRepository.Listener() {
                         @Override
                         public void onAdded(int id) {
                             if (isViewAttached()) {
@@ -116,9 +119,9 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
                     });
                 }
                 break;
-                case RULE: {
+                case RULE_EXAM: {
                     float score = ScoreUtil.getScore(trueAnswerCount, wordCardCount);
-                    repository.addRuleResult(trainingId, score, System.currentTimeMillis(), new IRepository.Listener() {
+                    repository.addRuleExamResult(trainingId, score, System.currentTimeMillis(), new IRepository.Listener() {
                         @Override
                         public void onAdded(int id) {
                             if (isViewAttached()) {
@@ -128,9 +131,9 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
                     });
                 }
                 break;
-                case CHAPTER: {
+                case CHAPTER_EXAM: {
                     float score = ScoreUtil.getScore(trueAnswerCount, wordCardCount);
-                    repository.addChapterResult(trainingId, score, System.currentTimeMillis(), new IRepository.Listener() {
+                    repository.addChapterExamResult(trainingId, score, System.currentTimeMillis(), new IRepository.Listener() {
                         @Override
                         public void onAdded(int id) {
                             if (isViewAttached()) {
@@ -140,11 +143,16 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
                     });
                 }
                 break;
-                case FINAL:
-                    //
-                    //if (isViewAttached()) {
-                    //    getView().requestToSetResultFragment(trainingType, trainingId, wordCardCount, getWrongAnswerWordCardIds());
-                    //}
+                case FINAL_EXAM:
+                    float score = ScoreUtil.getScore(trueAnswerCount, wordCardCount);
+                    repository.addFinalExamResult(score, System.currentTimeMillis(), new IRepository.Listener() {
+                        @Override
+                        public void onAdded(int id) {
+                            if (isViewAttached()) {
+                                getView().requestToSetResultFragment(trainingType, id, getWrongAnswerWordCardIds());
+                            }
+                        }
+                    });
                     break;
             }
         }

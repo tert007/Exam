@@ -5,12 +5,13 @@ import android.support.annotation.NonNull;
 import com.greenkeycompany.exam.fragment.ChapterColorUtil;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.chapterdetail.model.RuleMenuItem;
-import com.greenkeycompany.exam.fragment.chapterdetail.view.IChapterView;
+import com.greenkeycompany.exam.fragment.chapterdetail.view.IChapterDetailView;
 import com.greenkeycompany.exam.repository.IRepository;
+import com.greenkeycompany.exam.repository.model.WordCardSet;
+import com.greenkeycompany.exam.repository.model.result.ChapterExamResult;
 import com.greenkeycompany.exam.repository.model.Rule;
-import com.greenkeycompany.exam.repository.model.RulePointResult;
-import com.greenkeycompany.exam.repository.model.RuleResult;
-import com.greenkeycompany.exam.repository.model.RulePoint;
+import com.greenkeycompany.exam.repository.model.result.WordCardSetResult;
+import com.greenkeycompany.exam.repository.model.result.RuleExamResult;
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 
 import java.util.ArrayList;
@@ -20,11 +21,11 @@ import java.util.List;
  * Created by tert0 on 20.09.2017.
  */
 
-public class ChapterPresenter extends MvpBasePresenter<IChapterView>
-        implements IChapterPresenter {
+public class ChapterDetailPresenter extends MvpBasePresenter<IChapterDetailView>
+        implements IChapterDetailPresenter {
 
     private IRepository repository;
-    public ChapterPresenter(@NonNull IRepository repository) {
+    public ChapterDetailPresenter(@NonNull IRepository repository) {
         this.repository = repository;
     }
 
@@ -45,7 +46,7 @@ public class ChapterPresenter extends MvpBasePresenter<IChapterView>
         for (Rule rule : ruleList) {
             String title = rule.getTitle();
 
-            RuleResult bestResult = repository.getBestRuleResult(rule.getId());
+            RuleExamResult bestResult = repository.getBestRuleExamResult(rule.getId());
             float bestScore = bestResult == null ? 0 : bestResult.getScore();
 
             if (bestScore < ScoreUtil.COMPLETED_SCORE) chapterTrainingLocked = true;
@@ -53,19 +54,21 @@ public class ChapterPresenter extends MvpBasePresenter<IChapterView>
             int wordCardCount = 0;
             int wordCardCompletedCount = 0;
 
-            for (RulePoint rulePoint : repository.getRulePointList(rule.getId())) {
-                wordCardCount += rulePoint.getWordCardTrainingCount();
+            for (WordCardSet wordCardSet : repository.getWordCardSetList(rule.getId())) {
+                wordCardCount += wordCardSet.getSize();
 
-                RulePointResult rulePointResult = repository.getBestRulePointResult(rulePoint.getId());
-                wordCardCompletedCount += rulePointResult != null ? rulePointResult.getWordCardCompletedCount() : 0;
+                WordCardSetResult wordCardSetResult = repository.getBestWordCardSetResult(wordCardSet.getId());
+                wordCardCompletedCount += wordCardSetResult != null ? wordCardSetResult.getWordCardCompletedCount() : 0;
             }
 
             ruleMenuItemList.add(new RuleMenuItem(title, bestScore, wordCardCount, wordCardCompletedCount));
         }
 
+        ChapterExamResult bestChapterResult = repository.getBestChapterExamResult(chapterId);
         if (isViewAttached()) {
             getView().setRuleItemList(ruleMenuItemList);
-            getView().setChapterDescriptionViewColor(ChapterColorUtil.getColor(chapterId));
+            getView().setChapterViewColor(ChapterColorUtil.getColor(chapterId));
+            getView().setChapterScore(bestChapterResult == null ? 0 : bestChapterResult.getScore());
         }
     }
 

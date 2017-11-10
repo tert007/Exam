@@ -36,7 +36,7 @@ public class ScoreUtil {
         return String.format(Locale.getDefault(), format, score);
     }
 
-    private static final String format = "%1$.2f";
+    private static final String format = "%1$.1f";
 
     public static String getScoreByString(int trueAnswerCount, int count) {
         return convertScoreToString(getScore(trueAnswerCount, count));

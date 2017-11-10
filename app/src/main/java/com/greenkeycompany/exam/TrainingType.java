@@ -5,8 +5,8 @@ package com.greenkeycompany.exam;
  */
 
 public enum  TrainingType {
-    FINAL,
-    CHAPTER,
-    RULE,
-    RULE_POINT
+    FINAL_EXAM,
+    CHAPTER_EXAM,
+    RULE_EXAM,
+    WORD_CARD_SET_TRAINING
 }

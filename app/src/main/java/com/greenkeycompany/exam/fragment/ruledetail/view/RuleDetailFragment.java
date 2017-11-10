@@ -18,8 +18,8 @@ import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
-import com.greenkeycompany.exam.fragment.ruledetail.presenter.IRulePresenter;
-import com.greenkeycompany.exam.fragment.ruledetail.presenter.RulePresenter;
+import com.greenkeycompany.exam.fragment.ruledetail.presenter.IRuleDetailPresenter;
+import com.greenkeycompany.exam.fragment.ruledetail.presenter.RuleDetailPresenter;
 import com.greenkeycompany.exam.repository.RealmRepository;
 import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 
@@ -33,22 +33,22 @@ import io.realm.Realm;
  * Created by tert0 on 20.09.2017.
  */
 
-public class RuleFragment extends MvpFragment<IRuleView, IRulePresenter>
-        implements IRuleView {
+public class RuleDetailFragment extends MvpFragment<IRuleDetailView, IRuleDetailPresenter>
+        implements IRuleDetailView {
 
     private RealmRepository realmRepository = new RealmRepository(Realm.getDefaultInstance());
 
     @NonNull
     @Override
-    public IRulePresenter createPresenter() {
-        return new RulePresenter(realmRepository);
+    public IRuleDetailPresenter createPresenter() {
+        return new RuleDetailPresenter(realmRepository);
     }
 
     private static final String RULE_ID_PARAM = "rule_id";
     private int ruleId;
 
-    public static RuleFragment newInstance(int ruleId) {
-        RuleFragment fragment = new RuleFragment();
+    public static RuleDetailFragment newInstance(int ruleId) {
+        RuleDetailFragment fragment = new RuleDetailFragment();
         Bundle args = new Bundle();
         args.putInt(RULE_ID_PARAM, ruleId);
         fragment.setArguments(args);
@@ -189,7 +189,7 @@ public class RuleFragment extends MvpFragment<IRuleView, IRulePresenter>
 
     @Override
     public void requestToShowRuleExam(int ruleId) {
-        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.RULE, ruleId);
+        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.RULE_EXAM, ruleId);
     }
 
     private FragmentListener fragmentListener;
