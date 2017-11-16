@@ -1078,5 +1078,6485 @@
     "chapterId": "1",
     "ruleId": "1",
     "rulePointId": "2"
+  },
+  {
+    "id": "121",
+    "correctWord": "прижимание",
+    "incorrectWord": "прежимание",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "122",
+    "correctWord": "пребогатый",
+    "incorrectWord": "прибогатый",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "123",
+    "correctWord": "премногоуважаемый",
+    "incorrectWord": "примногоуважаемый",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "124",
+    "correctWord": "притягательный",
+    "incorrectWord": "претягательный",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "125",
+    "correctWord": "приоткрытый",
+    "incorrectWord": "преоткрытый",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "126",
+    "correctWord": "презанятный",
+    "incorrectWord": "призанятный",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "127",
+    "correctWord": "притыкать",
+    "incorrectWord": "претыкать",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "128",
+    "correctWord": "приросший",
+    "incorrectWord": "преросший",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "129",
+    "correctWord": "пречудесный",
+    "incorrectWord": "причудесный",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "130",
+    "correctWord": "превознесённый",
+    "incorrectWord": "привознесённый",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "131",
+    "correctWord": "приумолкать",
+    "incorrectWord": "преумолкать",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "132",
+    "correctWord": "прибедняться",
+    "incorrectWord": "пребедняться",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "133",
+    "correctWord": "прирезанный",
+    "incorrectWord": "пререзанный",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "134",
+    "correctWord": "прилезший",
+    "incorrectWord": "прелезший",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "135",
+    "correctWord": "припечь",
+    "incorrectWord": "препечь",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "136",
+    "correctWord": "преобразовать",
+    "incorrectWord": "приобразовать",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "137",
+    "correctWord": "пресыщение",
+    "incorrectWord": "присыщение",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "138",
+    "correctWord": "прищучивать",
+    "incorrectWord": "прещучивать",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "139",
+    "correctWord": "примежевать",
+    "incorrectWord": "премежевать",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "140",
+    "correctWord": "примётывать",
+    "incorrectWord": "премётывать",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "141",
+    "correctWord": "прежирный",
+    "incorrectWord": "прижирный",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "142",
+    "correctWord": "притереть",
+    "incorrectWord": "претереть",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "143",
+    "correctWord": "приставлять",
+    "incorrectWord": "преставлять",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "144",
+    "correctWord": "преострый",
+    "incorrectWord": "приострый",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "145",
+    "correctWord": "припухлый",
+    "incorrectWord": "препухлый",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "146",
+    "correctWord": "превкусный",
+    "incorrectWord": "привкусный",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "147",
+    "correctWord": "приварить",
+    "incorrectWord": "преварить",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "148",
+    "correctWord": "прищёлкивание",
+    "incorrectWord": "прещёлкивание",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "149",
+    "correctWord": "превзошедший",
+    "incorrectWord": "привзошедший",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "150",
+    "correctWord": "прибытие",
+    "incorrectWord": "пребытие",
+    "wordCardSetId": "5",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "151",
+    "correctWord": "предполётный",
+    "incorrectWord": "придполётный",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "152",
+    "correctWord": "предусматривать",
+    "incorrectWord": "придусматривать",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "153",
+    "correctWord": "приспособленец",
+    "incorrectWord": "преспособленец",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "154",
+    "correctWord": "применение",
+    "incorrectWord": "пременение",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "155",
+    "correctWord": "предплюсна",
+    "incorrectWord": "придплюсна",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "156",
+    "correctWord": "предвещать",
+    "incorrectWord": "придвещать",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "157",
+    "correctWord": "припадок",
+    "incorrectWord": "препадок",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "158",
+    "correctWord": "префект",
+    "incorrectWord": "прифект",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "159",
+    "correctWord": "предпринятый",
+    "incorrectWord": "придпринятый",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "160",
+    "correctWord": "предоставление",
+    "incorrectWord": "придоставление",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "161",
+    "correctWord": "председательница",
+    "incorrectWord": "придседательница",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "162",
+    "correctWord": "притворщица",
+    "incorrectWord": "претворщица",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "163",
+    "correctWord": "предпосланный",
+    "incorrectWord": "придпосланный",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "164",
+    "correctWord": "претерпеть",
+    "incorrectWord": "притерпеть",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "165",
+    "correctWord": "превосходить",
+    "incorrectWord": "привосходить",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "166",
+    "correctWord": "пренебрежение",
+    "incorrectWord": "принебрежение",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "167",
+    "correctWord": "преобразить",
+    "incorrectWord": "приобразить",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "168",
+    "correctWord": "приурочение",
+    "incorrectWord": "преурочение",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "169",
+    "correctWord": "призматоид",
+    "incorrectWord": "презматоид",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "170",
+    "correctWord": "прелюдия",
+    "incorrectWord": "прилюдия",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "171",
+    "correctWord": "приёмщица",
+    "incorrectWord": "преёмщица",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "172",
+    "correctWord": "предзнаменовать",
+    "incorrectWord": "придзнаменовать",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "173",
+    "correctWord": "пресмыкающееся",
+    "incorrectWord": "присмыкающееся",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "174",
+    "correctWord": "привкус",
+    "incorrectWord": "превкус",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "175",
+    "correctWord": "превосходящий",
+    "incorrectWord": "привосходящий",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "176",
+    "correctWord": "предательство",
+    "incorrectWord": "придательство",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "177",
+    "correctWord": "предэкзаменационный",
+    "incorrectWord": "придэкзаменационный",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "178",
+    "correctWord": "преступление",
+    "incorrectWord": "приступление",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "179",
+    "correctWord": "прекращённый",
+    "incorrectWord": "прикращённый",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "180",
+    "correctWord": "предполагаемый",
+    "incorrectWord": "придполагаемый",
+    "wordCardSetId": "6",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "5"
+  },
+  {
+    "id": "181",
+    "correctWord": "прерывистый",
+    "incorrectWord": "прирывистый",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "182",
+    "correctWord": "предстартовый",
+    "incorrectWord": "придстартовый",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "183",
+    "correctWord": "превысить",
+    "incorrectWord": "привысить",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "184",
+    "correctWord": "приумыть",
+    "incorrectWord": "преумыть",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "185",
+    "correctWord": "преуменьшить",
+    "incorrectWord": "приуменьшить",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "186",
+    "correctWord": "предсенокосный",
+    "incorrectWord": "придсенокосный",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "187",
+    "correctWord": "притворный",
+    "incorrectWord": "претворный",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "188",
+    "correctWord": "предъявитель",
+    "incorrectWord": "придъявитель",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "189",
+    "correctWord": "притачанный",
+    "incorrectWord": "претачанный",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "190",
+    "correctWord": "прислать",
+    "incorrectWord": "преслать",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "191",
+    "correctWord": "презреть",
+    "incorrectWord": "призреть",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "192",
+    "correctWord": "прикусывать",
+    "incorrectWord": "прекусывать",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "193",
+    "correctWord": "приписник",
+    "incorrectWord": "преписник",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "194",
+    "correctWord": "преподобный",
+    "incorrectWord": "приподобный",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "195",
+    "correctWord": "пригасить",
+    "incorrectWord": "прегасить",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "196",
+    "correctWord": "прескучный",
+    "incorrectWord": "прискучный",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "197",
+    "correctWord": "приволье",
+    "incorrectWord": "преволье",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "198",
+    "correctWord": "престранный",
+    "incorrectWord": "пристранный",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "199",
+    "correctWord": "предрасположенность",
+    "incorrectWord": "придрасположенность",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "200",
+    "correctWord": "предгрозье",
+    "incorrectWord": "придгрозье",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "201",
+    "correctWord": "преобразователь",
+    "incorrectWord": "приобразователь",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "202",
+    "correctWord": "привой",
+    "incorrectWord": "превой",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "203",
+    "correctWord": "преклонённый",
+    "incorrectWord": "приклонённый",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "204",
+    "correctWord": "приобъектный",
+    "incorrectWord": "преобъектный",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "205",
+    "correctWord": "приземистый",
+    "incorrectWord": "преземистый",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "206",
+    "correctWord": "приценяться",
+    "incorrectWord": "преценяться",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "207",
+    "correctWord": "предметно-тематический",
+    "incorrectWord": "придметно-тематический",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "208",
+    "correctWord": "предолимпийский",
+    "incorrectWord": "придолимпийский",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "209",
+    "correctWord": "преподносить",
+    "incorrectWord": "приподносить",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "210",
+    "correctWord": "премиальный",
+    "incorrectWord": "примиальный",
+    "wordCardSetId": "7",
+    "chapterId": "1",
+    "ruleId": "2",
+    "rulePointId": "4"
+  },
+  {
+    "id": "211",
+    "correctWord": "сыграть",
+    "incorrectWord": "сиграть",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "212",
+    "correctWord": "межиздательский",
+    "incorrectWord": "межыздательский",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "213",
+    "correctWord": "разыскание",
+    "incorrectWord": "разискание",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "214",
+    "correctWord": "дезинформация",
+    "incorrectWord": "дезынформация",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "215",
+    "correctWord": "дезинфицированный",
+    "incorrectWord": "дезынфицированный",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "216",
+    "correctWord": "безындукционный",
+    "incorrectWord": "безиндукционный",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "217",
+    "correctWord": "поистине",
+    "incorrectWord": "поыстине",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "218",
+    "correctWord": "безымянка",
+    "incorrectWord": "безимянка",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "219",
+    "correctWord": "разыгранный",
+    "incorrectWord": "разыгранный",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "220",
+    "correctWord": "предыюльский",
+    "incorrectWord": "предиюльский",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "221",
+    "correctWord": "безынициативный",
+    "incorrectWord": "безинициативный",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "222",
+    "correctWord": "сымпровизировать",
+    "incorrectWord": "симпровизировать",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "223",
+    "correctWord": "постимпрессионизм",
+    "incorrectWord": "постымпрессионизм",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "224",
+    "correctWord": "изыскивать",
+    "incorrectWord": "изискивать",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "225",
+    "correctWord": "взыскивание",
+    "incorrectWord": "взискивание",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "226",
+    "correctWord": "соизволить",
+    "incorrectWord": "соызволить",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "227",
+    "correctWord": "панисламистский",
+    "incorrectWord": "панысламистский",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "228",
+    "correctWord": "дезинфекция",
+    "incorrectWord": "дезынфекция",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "229",
+    "correctWord": "заиленный",
+    "incorrectWord": "заыленный",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "230",
+    "correctWord": "дезинформационный",
+    "incorrectWord": "дезынформационный",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "231",
+    "correctWord": "предыюльский",
+    "incorrectWord": "предиюльский",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "232",
+    "correctWord": "безыдейный",
+    "incorrectWord": "безидейный",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "233",
+    "correctWord": "обыскивать",
+    "incorrectWord": "обискивать",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "234",
+    "correctWord": "подыгрывать",
+    "incorrectWord": "подигрывать",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "235",
+    "correctWord": "дезинтегратор",
+    "incorrectWord": "дезынтегратор",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "236",
+    "correctWord": "сыздетства",
+    "incorrectWord": "сиздетства",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "237",
+    "correctWord": "паниранизм",
+    "incorrectWord": "паныранизм",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "238",
+    "correctWord": "взыскать",
+    "incorrectWord": "взискать",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "239",
+    "correctWord": "обызвествлённый",
+    "incorrectWord": "обизвествлённый",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "240",
+    "correctWord": "надындивидуальный",
+    "incorrectWord": "надиндивидуальный",
+    "wordCardSetId": "8",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "241",
+    "correctWord": "дезинфекционный",
+    "incorrectWord": "дезынфекционный",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "242",
+    "correctWord": "возыметь",
+    "incorrectWord": "возиметь",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "243",
+    "correctWord": "трансиорданский",
+    "incorrectWord": "трансыорданский",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "244",
+    "correctWord": "дезинфектор",
+    "incorrectWord": "дезынфектор",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "245",
+    "correctWord": "переиначить",
+    "incorrectWord": "переыначить",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "246",
+    "correctWord": "контригра",
+    "incorrectWord": "контрыгра",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "247",
+    "correctWord": "дезинтегратор",
+    "incorrectWord": "дезынтегратор",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "248",
+    "correctWord": "мединститут",
+    "incorrectWord": "медынститут",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "249",
+    "correctWord": "совинформбюро",
+    "incorrectWord": "совынформбюро",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "250",
+    "correctWord": "разыменовать",
+    "incorrectWord": "разименовать",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "251",
+    "correctWord": "подыгрывать",
+    "incorrectWord": "подигрывать",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "252",
+    "correctWord": "безытоговый",
+    "incorrectWord": "безитоговый",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "253",
+    "correctWord": "взыскательный",
+    "incorrectWord": "взискательный",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "254",
+    "correctWord": "сыщик",
+    "incorrectWord": "сищик",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "255",
+    "correctWord": "сызмала",
+    "incorrectWord": "сизмала",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "256",
+    "correctWord": "соизмеримый",
+    "incorrectWord": "соызмеримый",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "257",
+    "correctWord": "паниранизм",
+    "incorrectWord": "паныранизм",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "258",
+    "correctWord": "разысканный",
+    "incorrectWord": "разисканный",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "259",
+    "correctWord": "межинститутский",
+    "incorrectWord": "межынститутский",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "260",
+    "correctWord": "дезинфицированный",
+    "incorrectWord": "дезынфицированный",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "261",
+    "correctWord": "дезинтеграция",
+    "incorrectWord": "дезынтеграция",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "262",
+    "correctWord": "дезинфекционный",
+    "incorrectWord": "дезынфекционный",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "263",
+    "correctWord": "предыдущий",
+    "incorrectWord": "предидущий",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "264",
+    "correctWord": "постинфарктный",
+    "incorrectWord": "постынфарктный",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "265",
+    "correctWord": "безымённый",
+    "incorrectWord": "безимённый",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "266",
+    "correctWord": "отыскать",
+    "incorrectWord": "отискать",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "267",
+    "correctWord": "поистратить",
+    "incorrectWord": "поыстратить",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "268",
+    "correctWord": "сыграть",
+    "incorrectWord": "сиграть",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "269",
+    "correctWord": "переимчивость",
+    "incorrectWord": "переымчивость",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "270",
+    "correctWord": "предыстория",
+    "incorrectWord": "предистория",
+    "wordCardSetId": "9",
+    "chapterId": "1",
+    "ruleId": "3",
+    "rulePointId": "6"
+  },
+  {
+    "id": "271",
+    "correctWord": "жар-птицын",
+    "incorrectWord": "жар-птицин",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "272",
+    "correctWord": "квалифицировать",
+    "incorrectWord": "квалифицыровать",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "273",
+    "correctWord": "рационализатор",
+    "incorrectWord": "рацыонализатор",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "274",
+    "correctWord": "бледнолицый",
+    "incorrectWord": "бледнолиций",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "275",
+    "correctWord": "цинга",
+    "incorrectWord": "цынга",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "276",
+    "correctWord": "публицистичный",
+    "incorrectWord": "публицыстичный",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "277",
+    "correctWord": "социализировать",
+    "incorrectWord": "соцыализировать",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "278",
+    "correctWord": "цыканье",
+    "incorrectWord": "циканье",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "279",
+    "correctWord": "малоинициативный",
+    "incorrectWord": "малоиницыативный",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "280",
+    "correctWord": "цыплятки",
+    "incorrectWord": "циплятки",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "281",
+    "correctWord": "розоволицый",
+    "incorrectWord": "розоволиций",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "282",
+    "correctWord": "кобылицын",
+    "incorrectWord": "кобылицин",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "283",
+    "correctWord": "цыпа",
+    "incorrectWord": "ципа",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "284",
+    "correctWord": "лисицын",
+    "incorrectWord": "лисицин",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "285",
+    "correctWord": "рацион",
+    "incorrectWord": "рацыон",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "286",
+    "correctWord": "безэмоциональный",
+    "incorrectWord": "безэмоцыональный",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "287",
+    "correctWord": "цыплятник",
+    "incorrectWord": "циплятник",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "288",
+    "correctWord": "притворщицы",
+    "incorrectWord": "притворщици",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "289",
+    "correctWord": "американизация",
+    "incorrectWord": "американизацыя",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "290",
+    "correctWord": "кобылицын",
+    "incorrectWord": "кобылицин",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "291",
+    "correctWord": "дисциплина",
+    "incorrectWord": "дисцыплина",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "292",
+    "correctWord": "нарцисс",
+    "incorrectWord": "нарцысс",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "293",
+    "correctWord": "по-цыгански",
+    "incorrectWord": "по-цигански",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "294",
+    "correctWord": "отшельницы",
+    "incorrectWord": "отшельници",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "295",
+    "correctWord": "канонизация",
+    "incorrectWord": "канонизацыя",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "296",
+    "correctWord": "пухлолицый",
+    "incorrectWord": "пухлолиций",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "297",
+    "correctWord": "непропорциональный",
+    "incorrectWord": "непропорцыональный",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "298",
+    "correctWord": "цитата",
+    "incorrectWord": "цытата",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "299",
+    "correctWord": "пациент",
+    "incorrectWord": "пацыент",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "300",
+    "correctWord": "панцирь",
+    "incorrectWord": "панцырь",
+    "wordCardSetId": "10",
+    "chapterId": "1",
+    "ruleId": "6",
+    "rulePointId": "7"
+  },
+  {
+    "id": "331",
+    "correctWord": "зайчонок",
+    "incorrectWord": "зайчёнок",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "332",
+    "correctWord": "пальцевой",
+    "incorrectWord": "пальцэвой",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "333",
+    "correctWord": "ключевой",
+    "incorrectWord": "ключивой",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "334",
+    "correctWord": "плужок",
+    "incorrectWord": "плужёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "335",
+    "correctWord": "каблучок",
+    "incorrectWord": "каблучёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "336",
+    "correctWord": "стишок",
+    "incorrectWord": "стишёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "337",
+    "correctWord": "холщовый",
+    "incorrectWord": "холщёвый",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "338",
+    "correctWord": "балычок",
+    "incorrectWord": "балычёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "339",
+    "correctWord": "распашонка",
+    "incorrectWord": "распашёнка",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "340",
+    "correctWord": "тунцовый",
+    "incorrectWord": "тунцёвый",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "341",
+    "correctWord": "ковшовый",
+    "incorrectWord": "ковшёвый",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "342",
+    "correctWord": "рожок",
+    "incorrectWord": "рожёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "343",
+    "correctWord": "пирожок",
+    "incorrectWord": "пирожёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "344",
+    "correctWord": "парничок",
+    "incorrectWord": "парничёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "345",
+    "correctWord": "сыночек",
+    "incorrectWord": "сыночёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "346",
+    "correctWord": "мозжечок",
+    "incorrectWord": "мозжечёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "347",
+    "correctWord": "рубцовый",
+    "incorrectWord": "рубцёвый",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "348",
+    "correctWord": "девчонка",
+    "incorrectWord": "девчёнка",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "349",
+    "correctWord": "торчок",
+    "incorrectWord": "торчёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "350",
+    "correctWord": "бубличек",
+    "incorrectWord": "бубличэк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "351",
+    "correctWord": "мундштучок",
+    "incorrectWord": "мундштучёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "352",
+    "correctWord": "светлячок",
+    "incorrectWord": "светлячёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "353",
+    "correctWord": "носочек",
+    "incorrectWord": "носочэк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "354",
+    "correctWord": "движок",
+    "incorrectWord": "движёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "355",
+    "correctWord": "ивнячок",
+    "incorrectWord": "ивнячёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "356",
+    "correctWord": "кушачок",
+    "incorrectWord": "кушачёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "357",
+    "correctWord": "рачонок",
+    "incorrectWord": "рачонёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "358",
+    "correctWord": "особнячок",
+    "incorrectWord": "особнячёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "359",
+    "correctWord": "паричок",
+    "incorrectWord": "паричёк",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "360",
+    "correctWord": "индюшонок",
+    "incorrectWord": "индюшёнок",
+    "wordCardSetId": "14",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "361",
+    "correctWord": "пылищей",
+    "incorrectWord": "пылищой",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "362",
+    "correctWord": "тельцом",
+    "incorrectWord": "тельцём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "363",
+    "correctWord": "багажом",
+    "incorrectWord": "багажём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "364",
+    "correctWord": "грушей",
+    "incorrectWord": "грушой",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "365",
+    "correctWord": "военврачом",
+    "incorrectWord": "военврачём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "366",
+    "correctWord": "проигрышем",
+    "incorrectWord": "проигрышём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "367",
+    "correctWord": "змеёнышем",
+    "incorrectWord": "змеёнышём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "368",
+    "correctWord": "крышей",
+    "incorrectWord": "крышой",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "369",
+    "correctWord": "торцом",
+    "incorrectWord": "торцём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "370",
+    "correctWord": "богачом",
+    "incorrectWord": "богачём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "371",
+    "correctWord": "пыльцой",
+    "incorrectWord": "пыльцёй",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "372",
+    "correctWord": "мохначом",
+    "incorrectWord": "мохначём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "373",
+    "correctWord": "хитрецой",
+    "incorrectWord": "хитрецёй",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "374",
+    "correctWord": "судовладельцем",
+    "incorrectWord": "судовладельцом",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "375",
+    "correctWord": "уроженцем",
+    "incorrectWord": "уроженцом",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "376",
+    "correctWord": "ткачом",
+    "incorrectWord": "ткачём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "377",
+    "correctWord": "глупышом",
+    "incorrectWord": "глупышём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "378",
+    "correctWord": "басмачом",
+    "incorrectWord": "басмачём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "379",
+    "correctWord": "свечой",
+    "incorrectWord": "свечёй",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "380",
+    "correctWord": "куличом",
+    "incorrectWord": "куличом",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "381",
+    "correctWord": "жильцом",
+    "incorrectWord": "жильцём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "382",
+    "correctWord": "трусцой",
+    "incorrectWord": "трусцёй",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "383",
+    "correctWord": "беляшом",
+    "incorrectWord": "беляшём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "384",
+    "correctWord": "кутежом",
+    "incorrectWord": "кутежём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "385",
+    "correctWord": "домочадцем",
+    "incorrectWord": "домочадцём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "386",
+    "correctWord": "жрецом",
+    "incorrectWord": "жрецём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "387",
+    "correctWord": "басмачом",
+    "incorrectWord": "басмачём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "388",
+    "correctWord": "арбитражем",
+    "incorrectWord": "арбитражём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "389",
+    "correctWord": "пейзажем",
+    "incorrectWord": "пейзажём",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "390",
+    "correctWord": "стажёр",
+    "incorrectWord": "стажор",
+    "wordCardSetId": "15",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "391",
+    "correctWord": "убережём",
+    "incorrectWord": "убережом",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "392",
+    "correctWord": "киномонтажом",
+    "incorrectWord": "киномонтажём",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "393",
+    "correctWord": "припечём",
+    "incorrectWord": "припечом",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "394",
+    "correctWord": "тюфячок",
+    "incorrectWord": "тюфячёк",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "395",
+    "correctWord": "душок",
+    "incorrectWord": "душёк",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "396",
+    "correctWord": "просяще",
+    "incorrectWord": "просящё",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "397",
+    "correctWord": "бумажонка",
+    "incorrectWord": "бумажёнка",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "398",
+    "correctWord": "курдючок",
+    "incorrectWord": "курдючёк",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "399",
+    "correctWord": "кленочек",
+    "incorrectWord": "кленочок",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "400",
+    "correctWord": "царицей",
+    "incorrectWord": "царицой",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "401",
+    "correctWord": "выходцем",
+    "incorrectWord": "выходцом",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "402",
+    "correctWord": "бурундучок",
+    "incorrectWord": "бурундучёк",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "403",
+    "correctWord": "растушёвка",
+    "incorrectWord": "растушовка",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "404",
+    "correctWord": "ручонка",
+    "incorrectWord": "ручёнка",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "405",
+    "correctWord": "хлеботорговцем",
+    "incorrectWord": "хлеботорговцом",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "406",
+    "correctWord": "бородачом",
+    "incorrectWord": "бородачём",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "407",
+    "correctWord": "сквознячок",
+    "incorrectWord": "сквознячёк",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "408",
+    "correctWord": "книжонка",
+    "incorrectWord": "книжёнка",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "409",
+    "correctWord": "грузовичок",
+    "incorrectWord": "грузовичёк",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "410",
+    "correctWord": "пальцевой",
+    "incorrectWord": "пальцёвой",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "411",
+    "correctWord": "черновичок",
+    "incorrectWord": "черновичёк",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "412",
+    "correctWord": "поржёт",
+    "incorrectWord": "поржот",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "413",
+    "correctWord": "плужок",
+    "incorrectWord": "плужёк",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "414",
+    "correctWord": "кирпичом",
+    "incorrectWord": "кирпичём",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "415",
+    "correctWord": "зайчонок",
+    "incorrectWord": "зайчёнок",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "416",
+    "correctWord": "кудряшом",
+    "incorrectWord": "кудряшём",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "417",
+    "correctWord": "загущённый",
+    "incorrectWord": "загущонный",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "418",
+    "correctWord": "автокружок",
+    "incorrectWord": "автокружёк",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "419",
+    "correctWord": "новичок",
+    "incorrectWord": "новичёк",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "420",
+    "correctWord": "жжёный",
+    "incorrectWord": "жжоный",
+    "wordCardSetId": "16",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "421",
+    "correctWord": "казачонок",
+    "incorrectWord": "казачёнок",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "422",
+    "correctWord": "малышок",
+    "incorrectWord": "малышёк",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "423",
+    "correctWord": "автомассажёр",
+    "incorrectWord": "автомассажор",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "424",
+    "correctWord": "нерешённый",
+    "incorrectWord": "нерешонный",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "425",
+    "correctWord": "смычок",
+    "incorrectWord": "смычёк",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "426",
+    "correctWord": "политзаключённый",
+    "incorrectWord": "политзаключонный",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "427",
+    "correctWord": "бельчонок",
+    "incorrectWord": "бельчёнок",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "428",
+    "correctWord": "резцовый",
+    "incorrectWord": "резцёвый",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "429",
+    "correctWord": "кулёчек",
+    "incorrectWord": "кулечек",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "430",
+    "correctWord": "перезапряжённый",
+    "incorrectWord": "перезапряжонный",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "431",
+    "correctWord": "добрячок",
+    "incorrectWord": "добрячёк",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "432",
+    "correctWord": "отомщённый",
+    "incorrectWord": "отомщонный",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "433",
+    "correctWord": "плечевой",
+    "incorrectWord": "плечёвой",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "434",
+    "correctWord": "поджигательницей",
+    "incorrectWord": "поджигательницой",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "435",
+    "correctWord": "плавничок",
+    "incorrectWord": "плавничёк",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "436",
+    "correctWord": "внучек",
+    "incorrectWord": "внучёк",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "437",
+    "correctWord": "устережём",
+    "incorrectWord": "устережом",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "438",
+    "correctWord": "подпряжённый",
+    "incorrectWord": "подпряжонный",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "439",
+    "correctWord": "жжёнка",
+    "incorrectWord": "жжонка",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "440",
+    "correctWord": "горячо",
+    "incorrectWord": "горячё",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "441",
+    "correctWord": "усечённый",
+    "incorrectWord": "усечонный",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "442",
+    "correctWord": "хомячок",
+    "incorrectWord": "хомячёк",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "443",
+    "correctWord": "фотокружок",
+    "incorrectWord": "фотокружёк",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "444",
+    "correctWord": "лущёный",
+    "incorrectWord": "лущоный",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "445",
+    "correctWord": "катышек",
+    "incorrectWord": "катышок",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "446",
+    "correctWord": "американцем",
+    "incorrectWord": "американцом",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "447",
+    "correctWord": "запечёт",
+    "incorrectWord": "запечот",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "448",
+    "correctWord": "сырцом",
+    "incorrectWord": "сырцём",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "449",
+    "correctWord": "верблюжонок",
+    "incorrectWord": "верблюжёнок",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "450",
+    "correctWord": "измельчённый",
+    "incorrectWord": "измельчонный",
+    "wordCardSetId": "17",
+    "chapterId": "1",
+    "ruleId": "7",
+    "rulePointId": "8"
+  },
+  {
+    "id": "451",
+    "correctWord": "отщёлкнутый",
+    "incorrectWord": "отщолкнутый",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "452",
+    "correctWord": "чёртик",
+    "incorrectWord": "чортик",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "453",
+    "correctWord": "счётчик",
+    "incorrectWord": "счотчик",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "454",
+    "correctWord": "амикошонство",
+    "incorrectWord": "амикошёнство",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "455",
+    "correctWord": "до-мажорный",
+    "incorrectWord": "до-мажёрный",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "456",
+    "correctWord": "начётчик",
+    "incorrectWord": "начотчик",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "457",
+    "correctWord": "прожёванный",
+    "incorrectWord": "прожованный",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "458",
+    "correctWord": "расчётливый",
+    "incorrectWord": "расчотливый",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "459",
+    "correctWord": "шомпольный",
+    "incorrectWord": "шёмпольный",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "460",
+    "correctWord": "шовный",
+    "incorrectWord": "шёвный",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "461",
+    "correctWord": "пижон",
+    "incorrectWord": "пижён",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "462",
+    "correctWord": "подчёска",
+    "incorrectWord": "подчоска",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "463",
+    "correctWord": "пережог",
+    "incorrectWord": "пережёг",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "464",
+    "correctWord": "джонка",
+    "incorrectWord": "джёнка",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "465",
+    "correctWord": "чёрствый",
+    "incorrectWord": "чорствый",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "466",
+    "correctWord": "шорканье",
+    "incorrectWord": "шёрканье",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "467",
+    "correctWord": "чётный",
+    "incorrectWord": "чотный",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "468",
+    "correctWord": "обжёванный",
+    "incorrectWord": "обжованный",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "469",
+    "correctWord": "обжорка",
+    "incorrectWord": "обжёрка",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "470",
+    "correctWord": "дешёвый",
+    "incorrectWord": "дешовый",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "471",
+    "correctWord": "нечёткий",
+    "incorrectWord": "нечоткий",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "472",
+    "correctWord": "жёлтый",
+    "incorrectWord": "жолтый",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "473",
+    "correctWord": "жёсткий",
+    "incorrectWord": "жосткий",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "474",
+    "correctWord": "чохом",
+    "incorrectWord": "чёхом",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "475",
+    "correctWord": "обжёванный",
+    "incorrectWord": "обжованный",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "476",
+    "correctWord": "жёлто-зелёный",
+    "incorrectWord": "жолто-зелёный",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "477",
+    "correctWord": "щёголь",
+    "incorrectWord": "щоголь",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "478",
+    "correctWord": "расчёсывать",
+    "incorrectWord": "расчосывать",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "479",
+    "correctWord": "шoу",
+    "incorrectWord": "шёу",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "480",
+    "correctWord": "шoк",
+    "incorrectWord": "шёк",
+    "wordCardSetId": "18",
+    "chapterId": "1",
+    "ruleId": "8",
+    "rulePointId": "9"
+  },
+  {
+    "id": "481",
+    "correctWord": "на блюдце",
+    "incorrectWord": "на блюдцэ",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "482",
+    "correctWord": "от усталости",
+    "incorrectWord": "от усталосте",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "483",
+    "correctWord": "по конторе",
+    "incorrectWord": "по контори",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "484",
+    "correctWord": "к рубрике",
+    "incorrectWord": "к рубрики",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "485",
+    "correctWord": "по ручке",
+    "incorrectWord": "по ручки",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "486",
+    "correctWord": "в грозди",
+    "incorrectWord": "в грозде",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "487",
+    "correctWord": "на изгороди",
+    "incorrectWord": "на изгороде",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "488",
+    "correctWord": "об интриге",
+    "incorrectWord": "об интриги",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "489",
+    "correctWord": "в разведке",
+    "incorrectWord": "в разведки",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "490",
+    "correctWord": "на ракете",
+    "incorrectWord": "на ракети",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "491",
+    "correctWord": "об опоре",
+    "incorrectWord": "об опори",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "492",
+    "correctWord": "к доблести",
+    "incorrectWord": "к доблесте",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "493",
+    "correctWord": "без прорези",
+    "incorrectWord": "без прорезе",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "494",
+    "correctWord": "при занятости",
+    "incorrectWord": "при занятосте",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "495",
+    "correctWord": "к пустыне",
+    "incorrectWord": "к пустыни",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "496",
+    "correctWord": "на плоскости",
+    "incorrectWord": "на плоскосте",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "497",
+    "correctWord": "к вежливости",
+    "incorrectWord": "к вежливосте",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "498",
+    "correctWord": "на тумбочке",
+    "incorrectWord": "на тумбочки",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "499",
+    "correctWord": "по поэме",
+    "incorrectWord": "по поэми",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "500",
+    "correctWord": "от прививки",
+    "incorrectWord": "от прививке",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "501",
+    "correctWord": "в перспективе",
+    "incorrectWord": "в перспективи",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "502",
+    "correctWord": "в искренности",
+    "incorrectWord": "в искренносте",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "503",
+    "correctWord": "из сумочки",
+    "incorrectWord": "из сумочке",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "504",
+    "correctWord": "при фирме",
+    "incorrectWord": "при фирми",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "505",
+    "correctWord": "к близорукости",
+    "incorrectWord": "к близорукосте",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "506",
+    "correctWord": "на марше",
+    "incorrectWord": "на марши",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "507",
+    "correctWord": "к республике",
+    "incorrectWord": "к республики",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "508",
+    "correctWord": "к отметке",
+    "incorrectWord": "к отметки",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "509",
+    "correctWord": "к современности",
+    "incorrectWord": "к современносте",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "510",
+    "correctWord": "у строчки",
+    "incorrectWord": "у строчке",
+    "wordCardSetId": "19",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "511",
+    "correctWord": "по контузии",
+    "incorrectWord": "по контузие",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "512",
+    "correctWord": "при включении",
+    "incorrectWord": "при включение",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "513",
+    "correctWord": "об индейце",
+    "incorrectWord": "об индейцэ",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "514",
+    "correctWord": "в газете",
+    "incorrectWord": "в газети",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "515",
+    "correctWord": "о вечере",
+    "incorrectWord": "о вечери",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "516",
+    "correctWord": "по громкости",
+    "incorrectWord": "по громкосте",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "517",
+    "correctWord": "о внучке",
+    "incorrectWord": "о внучки",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "518",
+    "correctWord": "из мифологии",
+    "incorrectWord": "из мифологие",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "519",
+    "correctWord": "о жребии",
+    "incorrectWord": "о жребие",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "520",
+    "correctWord": "к прогулке",
+    "incorrectWord": "к прогулки",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "521",
+    "correctWord": "при покупке",
+    "incorrectWord": "при покупки",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "522",
+    "correctWord": "у техники",
+    "incorrectWord": "у технике",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "523",
+    "correctWord": "в семени",
+    "incorrectWord": "в семене",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "524",
+    "correctWord": "от семени",
+    "incorrectWord": "от семене",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "525",
+    "correctWord": "к страховке",
+    "incorrectWord": "к страховки",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "526",
+    "correctWord": "для хирургии",
+    "incorrectWord": "для хирургие",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "527",
+    "correctWord": "из макушки",
+    "incorrectWord": "из макушке",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "528",
+    "correctWord": "от подружки",
+    "incorrectWord": "от подружке",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "529",
+    "correctWord": "на спинке",
+    "incorrectWord": "на спинки",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "530",
+    "correctWord": "к обстановке",
+    "incorrectWord": "к обстановки",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "531",
+    "correctWord": "на куртке",
+    "incorrectWord": "на куртки",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "532",
+    "correctWord": "по дивизии",
+    "incorrectWord": "по дивизие",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "533",
+    "correctWord": "на судне",
+    "incorrectWord": "на судни",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "534",
+    "correctWord": "по пятке",
+    "incorrectWord": "по пятки",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "535",
+    "correctWord": "по матушке",
+    "incorrectWord": "по матушки",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "536",
+    "correctWord": "к церемонии",
+    "incorrectWord": "к церемоние",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "537",
+    "correctWord": "без жидкости",
+    "incorrectWord": "без жидкосте",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "538",
+    "correctWord": "в сценарии",
+    "incorrectWord": "в сценарие",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "539",
+    "correctWord": "в лозунге",
+    "incorrectWord": "в лозунги",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "540",
+    "correctWord": "на камне",
+    "incorrectWord": "на камни",
+    "wordCardSetId": "20",
+    "chapterId": "1",
+    "ruleId": "9",
+    "rulePointId": "10"
+  },
+  {
+    "id": "541",
+    "correctWord": "заиндевел",
+    "incorrectWord": "заиндевил",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "542",
+    "correctWord": "просеял",
+    "incorrectWord": "просеил",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "543",
+    "correctWord": "завшивел",
+    "incorrectWord": "завшивил",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "544",
+    "correctWord": "тратил",
+    "incorrectWord": "трател",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "545",
+    "correctWord": "накляузничал",
+    "incorrectWord": "накляузничял",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "546",
+    "correctWord": "посредничал",
+    "incorrectWord": "посредничял",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "547",
+    "correctWord": "трапезничал",
+    "incorrectWord": "трапезничял",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "548",
+    "correctWord": "веял",
+    "incorrectWord": "веил",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "549",
+    "correctWord": "развесил",
+    "incorrectWord": "развесел",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "550",
+    "correctWord": "понадеялся",
+    "incorrectWord": "понадеелся",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "551",
+    "correctWord": "попарил",
+    "incorrectWord": "попарел",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "552",
+    "correctWord": "кланялся",
+    "incorrectWord": "кланелся",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "553",
+    "correctWord": "лоботрясничал",
+    "incorrectWord": "лоботрясничял",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "554",
+    "correctWord": "исполнил",
+    "incorrectWord": "исполнел",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "555",
+    "correctWord": "переслушал",
+    "incorrectWord": "переслушял",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "556",
+    "correctWord": "промаялся",
+    "incorrectWord": "промаился",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "557",
+    "correctWord": "пропесочил",
+    "incorrectWord": "пропесочел",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "558",
+    "correctWord": "построил",
+    "incorrectWord": "построел",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "559",
+    "correctWord": "выдержал",
+    "incorrectWord": "выдержял",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "560",
+    "correctWord": "насеял",
+    "incorrectWord": "насеел",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "561",
+    "correctWord": "скромничал",
+    "incorrectWord": "скромничял",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "562",
+    "correctWord": "обидел",
+    "incorrectWord": "обидил",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "563",
+    "correctWord": "заклеил",
+    "incorrectWord": "заклеел",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "564",
+    "correctWord": "вольничал",
+    "incorrectWord": "вольничял",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "565",
+    "correctWord": "подхалимничал",
+    "incorrectWord": "подхалимничял",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "566",
+    "correctWord": "обусловил",
+    "incorrectWord": "обусловел",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "567",
+    "correctWord": "выменял",
+    "incorrectWord": "выменил",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "568",
+    "correctWord": "выболел",
+    "incorrectWord": "выболил",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "569",
+    "correctWord": "строил",
+    "incorrectWord": "строял",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "570",
+    "correctWord": "видел",
+    "incorrectWord": "видил",
+    "wordCardSetId": "21",
+    "chapterId": "1",
+    "ruleId": "11",
+    "rulePointId": "11"
+  },
+  {
+    "id": "571",
+    "correctWord": "треплются",
+    "incorrectWord": "треплятся",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "572",
+    "correctWord": "разнообразят",
+    "incorrectWord": "разнообразют",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "573",
+    "correctWord": "зубоскалят",
+    "incorrectWord": "зубоскалют",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "574",
+    "correctWord": "увечат",
+    "incorrectWord": "увечят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "575",
+    "correctWord": "воспринимают",
+    "incorrectWord": "воспринимаят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "576",
+    "correctWord": "обязывают",
+    "incorrectWord": "обязываят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "577",
+    "correctWord": "сожалеют",
+    "incorrectWord": "сожалеят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "578",
+    "correctWord": "горбатятся",
+    "incorrectWord": "горбатются",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "579",
+    "correctWord": "шепчутся",
+    "incorrectWord": "шепчятся",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "580",
+    "correctWord": "начинаются",
+    "incorrectWord": "начинаятся",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "581",
+    "correctWord": "тужатся",
+    "incorrectWord": "тужятся",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "582",
+    "correctWord": "ставятся",
+    "incorrectWord": "ставются",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "583",
+    "correctWord": "ужасают",
+    "incorrectWord": "ужасаят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "584",
+    "correctWord": "раздражаются",
+    "incorrectWord": "раздражаятся",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "585",
+    "correctWord": "чинятся",
+    "incorrectWord": "чинются",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "586",
+    "correctWord": "вибрируют",
+    "incorrectWord": "вибрируят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "587",
+    "correctWord": "бурлачат",
+    "incorrectWord": "бурлачят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "588",
+    "correctWord": "знакомят",
+    "incorrectWord": "знакомют",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "589",
+    "correctWord": "косматятся",
+    "incorrectWord": "косматются",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "590",
+    "correctWord": "режут",
+    "incorrectWord": "режют",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "591",
+    "correctWord": "диссонируют",
+    "incorrectWord": "диссонируят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "592",
+    "correctWord": "пилятся",
+    "incorrectWord": "пилются",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "593",
+    "correctWord": "клохчут",
+    "incorrectWord": "клохчют",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "594",
+    "correctWord": "баламутят",
+    "incorrectWord": "баламутют",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "595",
+    "correctWord": "главенствуют",
+    "incorrectWord": "главенствуят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "596",
+    "correctWord": "корёжат",
+    "incorrectWord": "корёжят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "597",
+    "correctWord": "обезоруживают",
+    "incorrectWord": "обезоруживаят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "598",
+    "correctWord": "обезболивают",
+    "incorrectWord": "обезболиваят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "599",
+    "correctWord": "сканируют",
+    "incorrectWord": "сканируят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "600",
+    "correctWord": "действуют",
+    "incorrectWord": "действуят",
+    "wordCardSetId": "22",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "601",
+    "correctWord": "калечишь",
+    "incorrectWord": "калечешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "602",
+    "correctWord": "изрежешься",
+    "incorrectWord": "изрежишься",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "603",
+    "correctWord": "повадишься",
+    "incorrectWord": "повадешься",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "604",
+    "correctWord": "доловишь",
+    "incorrectWord": "доловешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "605",
+    "correctWord": "держишься",
+    "incorrectWord": "держешься",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "606",
+    "correctWord": "прогонишь",
+    "incorrectWord": "прогонешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "607",
+    "correctWord": "заклеишь",
+    "incorrectWord": "заклеешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "608",
+    "correctWord": "засалишься",
+    "incorrectWord": "засалешься",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "609",
+    "correctWord": "претворяешь",
+    "incorrectWord": "претворяишь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "610",
+    "correctWord": "расстроишься",
+    "incorrectWord": "расстроешься",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "611",
+    "correctWord": "оплачешь",
+    "incorrectWord": "оплачишь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "612",
+    "correctWord": "заносишь",
+    "incorrectWord": "заносешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "613",
+    "correctWord": "застрочишь",
+    "incorrectWord": "застрочешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "614",
+    "correctWord": "приклеишь",
+    "incorrectWord": "приклеешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "615",
+    "correctWord": "одолеешь",
+    "incorrectWord": "одолеишь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "616",
+    "correctWord": "обедняешь",
+    "incorrectWord": "обедняишь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "617",
+    "correctWord": "сблизишься",
+    "incorrectWord": "сблизешься",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "618",
+    "correctWord": "умеряешь",
+    "incorrectWord": "умеряишь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "619",
+    "correctWord": "удостоишься",
+    "incorrectWord": "удостоешься",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "620",
+    "correctWord": "выпаришь",
+    "incorrectWord": "выпарешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "621",
+    "correctWord": "присвоишь",
+    "incorrectWord": "присвоешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "622",
+    "correctWord": "вытерпишь",
+    "incorrectWord": "вытерпешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "623",
+    "correctWord": "примыкаешь",
+    "incorrectWord": "примыкаишь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "624",
+    "correctWord": "провертишь",
+    "incorrectWord": "провертешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "625",
+    "correctWord": "переложишь",
+    "incorrectWord": "переложешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "626",
+    "correctWord": "расклёшишь",
+    "incorrectWord": "расклёшешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "627",
+    "correctWord": "освищешь",
+    "incorrectWord": "освищишь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "628",
+    "correctWord": "провертишь",
+    "incorrectWord": "провертешь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "629",
+    "correctWord": "очумеешь",
+    "incorrectWord": "очумеишь",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "630",
+    "correctWord": "воспротивишься",
+    "incorrectWord": "воспротивешься",
+    "wordCardSetId": "23",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "631",
+    "correctWord": "отстроится",
+    "incorrectWord": "отстроется",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "632",
+    "correctWord": "сдержит",
+    "incorrectWord": "сдержет",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "633",
+    "correctWord": "обеляет",
+    "incorrectWord": "обеляит",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "634",
+    "correctWord": "выносит",
+    "incorrectWord": "выносет",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "635",
+    "correctWord": "удвоит",
+    "incorrectWord": "удвоет",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "636",
+    "correctWord": "окликнет",
+    "incorrectWord": "окликнит",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "637",
+    "correctWord": "чокнется",
+    "incorrectWord": "чокнится",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "638",
+    "correctWord": "остекленеет",
+    "incorrectWord": "остекленеит",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "639",
+    "correctWord": "реорганизуется",
+    "incorrectWord": "реорганизуится",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "640",
+    "correctWord": "подразгонит",
+    "incorrectWord": "подразгонет",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "641",
+    "correctWord": "опыляет",
+    "incorrectWord": "опыляит",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "642",
+    "correctWord": "выключится",
+    "incorrectWord": "выключется",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "643",
+    "correctWord": "оклеит",
+    "incorrectWord": "оклеет",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "644",
+    "correctWord": "диктует",
+    "incorrectWord": "диктуит",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "645",
+    "correctWord": "выдирает",
+    "incorrectWord": "выдираит",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "646",
+    "correctWord": "побреет",
+    "incorrectWord": "побреит",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "647",
+    "correctWord": "скажет",
+    "incorrectWord": "скажит",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "648",
+    "correctWord": "поиздержится",
+    "incorrectWord": "поиздержется",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "649",
+    "correctWord": "передержит",
+    "incorrectWord": "передержет",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "650",
+    "correctWord": "отказывается",
+    "incorrectWord": "отказываится",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "651",
+    "correctWord": "побуреет",
+    "incorrectWord": "побуреит",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "652",
+    "correctWord": "залечит",
+    "incorrectWord": "залечет",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "653",
+    "correctWord": "удешевляет",
+    "incorrectWord": "удешевляит",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "654",
+    "correctWord": "приумножится",
+    "incorrectWord": "приумножется",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "655",
+    "correctWord": "поплачет",
+    "incorrectWord": "поплачит",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "656",
+    "correctWord": "смотрится",
+    "incorrectWord": "смотрется",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "657",
+    "correctWord": "смыслит",
+    "incorrectWord": "смыслет",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "658",
+    "correctWord": "отдубасит",
+    "incorrectWord": "отдубасет",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "659",
+    "correctWord": "застроит",
+    "incorrectWord": "застроет",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "660",
+    "correctWord": "выделяется",
+    "incorrectWord": "выделяится",
+    "wordCardSetId": "24",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "661",
+    "correctWord": "пообвыкнем",
+    "incorrectWord": "пообвыкним",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "662",
+    "correctWord": "прикатим",
+    "incorrectWord": "прикатем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "663",
+    "correctWord": "портачим",
+    "incorrectWord": "портачем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "664",
+    "correctWord": "заартачимся",
+    "incorrectWord": "заартачемся",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "665",
+    "correctWord": "перетащим",
+    "incorrectWord": "перетащем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "666",
+    "correctWord": "маршируем",
+    "incorrectWord": "маршируим",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "667",
+    "correctWord": "обрежемся",
+    "incorrectWord": "обрежимся",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "668",
+    "correctWord": "крестим",
+    "incorrectWord": "крестем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "669",
+    "correctWord": "перетрусим",
+    "incorrectWord": "перетрусем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "670",
+    "correctWord": "согреем",
+    "incorrectWord": "согреим",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "671",
+    "correctWord": "поправим",
+    "incorrectWord": "поправем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "672",
+    "correctWord": "расклеимся",
+    "incorrectWord": "расклеемся",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "673",
+    "correctWord": "пахнем",
+    "incorrectWord": "пахним",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "674",
+    "correctWord": "опустимся",
+    "incorrectWord": "опустемся",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "675",
+    "correctWord": "богатеем",
+    "incorrectWord": "богатеим",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "676",
+    "correctWord": "усеем",
+    "incorrectWord": "усеим",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "677",
+    "correctWord": "вывозим",
+    "incorrectWord": "вывозем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "678",
+    "correctWord": "бываем",
+    "incorrectWord": "бываим",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "679",
+    "correctWord": "заполним",
+    "incorrectWord": "заполнем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "680",
+    "correctWord": "помножим",
+    "incorrectWord": "помножем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "681",
+    "correctWord": "высмотрим",
+    "incorrectWord": "высмотрем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "682",
+    "correctWord": "воспрянем",
+    "incorrectWord": "воспряним",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "683",
+    "correctWord": "закашляемся",
+    "incorrectWord": "закашляимся",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "684",
+    "correctWord": "отрезвляем",
+    "incorrectWord": "отрезвляим",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "685",
+    "correctWord": "разыгрываем",
+    "incorrectWord": "разыгрываим",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "686",
+    "correctWord": "содержимся",
+    "incorrectWord": "содержемся",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "687",
+    "correctWord": "разумеем",
+    "incorrectWord": "разумеим",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "688",
+    "correctWord": "побреемся",
+    "incorrectWord": "побреимся",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "689",
+    "correctWord": "отслужим",
+    "incorrectWord": "отслужем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "690",
+    "correctWord": "удержим",
+    "incorrectWord": "удержем",
+    "wordCardSetId": "25",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "691",
+    "correctWord": "попробуете",
+    "incorrectWord": "попробуите",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "692",
+    "correctWord": "помолитесь",
+    "incorrectWord": "помолитись",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "693",
+    "correctWord": "замолкнете",
+    "incorrectWord": "замолкните",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "694",
+    "correctWord": "отклеите",
+    "incorrectWord": "отклеете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "695",
+    "correctWord": "развиваетесь",
+    "incorrectWord": "развиваитесь",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "696",
+    "correctWord": "заметите",
+    "incorrectWord": "заметете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "697",
+    "correctWord": "обрушите",
+    "incorrectWord": "обрушете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "698",
+    "correctWord": "стареете",
+    "incorrectWord": "стареите",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "699",
+    "correctWord": "проносите",
+    "incorrectWord": "проносете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "700",
+    "correctWord": "претерпите",
+    "incorrectWord": "претерпете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "701",
+    "correctWord": "замаячите",
+    "incorrectWord": "замаячете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "702",
+    "correctWord": "сморщите",
+    "incorrectWord": "сморщете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "703",
+    "correctWord": "отвадите",
+    "incorrectWord": "отвадете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "704",
+    "correctWord": "удержите",
+    "incorrectWord": "удержете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "705",
+    "correctWord": "омерзеете",
+    "incorrectWord": "омерзеите",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "706",
+    "correctWord": "претерпите",
+    "incorrectWord": "претерпете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "707",
+    "correctWord": "попишете",
+    "incorrectWord": "попишите",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "708",
+    "correctWord": "привидитесь",
+    "incorrectWord": "привидетесь",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "709",
+    "correctWord": "построите",
+    "incorrectWord": "построете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "710",
+    "correctWord": "выстроите",
+    "incorrectWord": "выстроете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "711",
+    "correctWord": "ослепляете",
+    "incorrectWord": "ослепляите",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "712",
+    "correctWord": "хамеете",
+    "incorrectWord": "хамеите",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "713",
+    "correctWord": "бойкотируете",
+    "incorrectWord": "бойкотируите",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "714",
+    "correctWord": "почернеете",
+    "incorrectWord": "почернеите",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "715",
+    "correctWord": "встроите",
+    "incorrectWord": "встроете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "716",
+    "correctWord": "увидитесь",
+    "incorrectWord": "увидетесь",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "717",
+    "correctWord": "смотритесь",
+    "incorrectWord": "смотретесь",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "718",
+    "correctWord": "содержите",
+    "incorrectWord": "содержете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "719",
+    "correctWord": "заучите",
+    "incorrectWord": "заучете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "720",
+    "correctWord": "проспорите",
+    "incorrectWord": "проспорете",
+    "wordCardSetId": "26",
+    "chapterId": "1",
+    "ruleId": "10",
+    "rulePointId": "13"
+  },
+  {
+    "id": "721",
+    "correctWord": "щиплющийся",
+    "incorrectWord": "щиплящийся",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "722",
+    "correctWord": "топочущий",
+    "incorrectWord": "топочющий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "723",
+    "correctWord": "благомыслящий",
+    "incorrectWord": "благомыслющий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "724",
+    "correctWord": "захватывающий",
+    "incorrectWord": "захватываящий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "725",
+    "correctWord": "борющийся",
+    "incorrectWord": "борющейся",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "726",
+    "correctWord": "дырявящий",
+    "incorrectWord": "дырявещий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "727",
+    "correctWord": "мямлящий",
+    "incorrectWord": "мямлещий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "728",
+    "correctWord": "высящийся",
+    "incorrectWord": "высющийся",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "729",
+    "correctWord": "жалящий",
+    "incorrectWord": "жалющий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "730",
+    "correctWord": "дубасящий",
+    "incorrectWord": "дубасющий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "731",
+    "correctWord": "треплющий",
+    "incorrectWord": "треплящий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "732",
+    "correctWord": "лечащий",
+    "incorrectWord": "лечущий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "733",
+    "correctWord": "кроющийся",
+    "incorrectWord": "кроящийся",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "734",
+    "correctWord": "клеящийся",
+    "incorrectWord": "клеющийся",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "735",
+    "correctWord": "гладящий",
+    "incorrectWord": "гладющий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "736",
+    "correctWord": "пустующий",
+    "incorrectWord": "пустуящий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "737",
+    "correctWord": "торгующийся",
+    "incorrectWord": "торгуящийся",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "738",
+    "correctWord": "хулиганящий",
+    "incorrectWord": "хулиганющий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "739",
+    "correctWord": "колобродящий",
+    "incorrectWord": "колобродющий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "740",
+    "correctWord": "упрямящийся",
+    "incorrectWord": "упрямющийся",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "741",
+    "correctWord": "дурманящийся",
+    "incorrectWord": "дурманющийся",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "742",
+    "correctWord": "сообщающий",
+    "incorrectWord": "сообщаящий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "743",
+    "correctWord": "слышащий",
+    "incorrectWord": "слышущий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "744",
+    "correctWord": "тараторящий",
+    "incorrectWord": "тараторющий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "745",
+    "correctWord": "готовящийся",
+    "incorrectWord": "готовещийся",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "746",
+    "correctWord": "гундосящий",
+    "incorrectWord": "гундосещий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "747",
+    "correctWord": "фальшивящий",
+    "incorrectWord": "фальшивещий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "748",
+    "correctWord": "ужасающийся",
+    "incorrectWord": "ужасающейся",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "749",
+    "correctWord": "слюнявящий",
+    "incorrectWord": "слюнявющий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "750",
+    "correctWord": "отравляющий",
+    "incorrectWord": "отравляящий",
+    "wordCardSetId": "27",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "14"
+  },
+  {
+    "id": "751",
+    "correctWord": "значимый",
+    "incorrectWord": "значемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "752",
+    "correctWord": "общеприемлемый",
+    "incorrectWord": "общеприемлимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "753",
+    "correctWord": "нерешаемый",
+    "incorrectWord": "нерешаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "754",
+    "correctWord": "ненавидимый",
+    "incorrectWord": "ненавидемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "755",
+    "correctWord": "труднопонимаемый",
+    "incorrectWord": "труднопонимаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "756",
+    "correctWord": "общезначимый",
+    "incorrectWord": "общезначемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "757",
+    "correctWord": "звукопроницаемый",
+    "incorrectWord": "звукопроницаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "758",
+    "correctWord": "светопроницаемый",
+    "incorrectWord": "светопроницаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "759",
+    "correctWord": "независимый",
+    "incorrectWord": "независемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "760",
+    "correctWord": "уважаемый",
+    "incorrectWord": "уважаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "761",
+    "correctWord": "неафишируемый",
+    "incorrectWord": "неафишируимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "762",
+    "correctWord": "слышимый",
+    "incorrectWord": "слышемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "763",
+    "correctWord": "катапультируемый",
+    "incorrectWord": "катапультируимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "764",
+    "correctWord": "возобновляемый",
+    "incorrectWord": "возобновляимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "765",
+    "correctWord": "обратнозависимый",
+    "incorrectWord": "обратнозависемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "766",
+    "correctWord": "немыслимый",
+    "incorrectWord": "немыслемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "767",
+    "correctWord": "зависимый",
+    "incorrectWord": "зависемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "768",
+    "correctWord": "несгибаемый",
+    "incorrectWord": "несгибаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "769",
+    "correctWord": "ненавидимый",
+    "incorrectWord": "ненавидемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "770",
+    "correctWord": "легкоузнаваемый",
+    "incorrectWord": "легкоузнаваимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "771",
+    "correctWord": "необитаемый",
+    "incorrectWord": "необитаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "772",
+    "correctWord": "ненаказуемый",
+    "incorrectWord": "ненаказуимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "773",
+    "correctWord": "зависимый",
+    "incorrectWord": "зависемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "774",
+    "correctWord": "слышимый",
+    "incorrectWord": "слышемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "775",
+    "correctWord": "независимый",
+    "incorrectWord": "независемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "776",
+    "correctWord": "неисчерпаемый",
+    "incorrectWord": "неисчерпаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "777",
+    "correctWord": "неизменяемый",
+    "incorrectWord": "неизменяимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "778",
+    "correctWord": "изменяемый",
+    "incorrectWord": "изменяимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "779",
+    "correctWord": "взаимозависимый",
+    "incorrectWord": "взаимозависемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "780",
+    "correctWord": "несменяемый",
+    "incorrectWord": "несменяимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "781",
+    "correctWord": "значимый",
+    "incorrectWord": "значемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "782",
+    "correctWord": "общеприемлемый",
+    "incorrectWord": "общеприемлимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "783",
+    "correctWord": "нерешаемый",
+    "incorrectWord": "нерешаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "784",
+    "correctWord": "ненавидимый",
+    "incorrectWord": "ненавидемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "785",
+    "correctWord": "труднопонимаемый",
+    "incorrectWord": "труднопонимаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "786",
+    "correctWord": "общезначимый",
+    "incorrectWord": "общезначемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "787",
+    "correctWord": "звукопроницаемый",
+    "incorrectWord": "звукопроницаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "788",
+    "correctWord": "светопроницаемый",
+    "incorrectWord": "светопроницаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "789",
+    "correctWord": "независимый",
+    "incorrectWord": "независемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "790",
+    "correctWord": "уважаемый",
+    "incorrectWord": "уважаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "791",
+    "correctWord": "неафишируемый",
+    "incorrectWord": "неафишируимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "792",
+    "correctWord": "слышимый",
+    "incorrectWord": "слышемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "793",
+    "correctWord": "катапультируемый",
+    "incorrectWord": "катапультируимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "794",
+    "correctWord": "возобновляемый",
+    "incorrectWord": "возобновляимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "795",
+    "correctWord": "обратнозависимый",
+    "incorrectWord": "обратнозависемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "796",
+    "correctWord": "немыслимый",
+    "incorrectWord": "немыслемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "797",
+    "correctWord": "зависимый",
+    "incorrectWord": "зависемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "798",
+    "correctWord": "несгибаемый",
+    "incorrectWord": "несгибаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "799",
+    "correctWord": "ненавидимый",
+    "incorrectWord": "ненавидемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "800",
+    "correctWord": "легкоузнаваемый",
+    "incorrectWord": "легкоузнаваимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "801",
+    "correctWord": "необитаемый",
+    "incorrectWord": "необитаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "802",
+    "correctWord": "ненаказуемый",
+    "incorrectWord": "ненаказуимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "803",
+    "correctWord": "зависимый",
+    "incorrectWord": "зависемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "804",
+    "correctWord": "слышимый",
+    "incorrectWord": "слышемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "805",
+    "correctWord": "независимый",
+    "incorrectWord": "независемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "806",
+    "correctWord": "неисчерпаемый",
+    "incorrectWord": "неисчерпаимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "807",
+    "correctWord": "неизменяемый",
+    "incorrectWord": "неизменяимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "808",
+    "correctWord": "изменяемый",
+    "incorrectWord": "изменяимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "809",
+    "correctWord": "взаимозависимый",
+    "incorrectWord": "взаимозависемый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "810",
+    "correctWord": "несменяемый",
+    "incorrectWord": "несменяимый",
+    "wordCardSetId": "28",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "15"
+  },
+  {
+    "id": "811",
+    "correctWord": "выздоровевший",
+    "incorrectWord": "выздоровивший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "812",
+    "correctWord": "раскаявшийся",
+    "incorrectWord": "раскаевшийся",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "813",
+    "correctWord": "выплавивший",
+    "incorrectWord": "выплавевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "814",
+    "correctWord": "изжарившийся",
+    "incorrectWord": "изжаревшийся",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "815",
+    "correctWord": "выкашлявший",
+    "incorrectWord": "выкашлевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "816",
+    "correctWord": "закашлявшийся",
+    "incorrectWord": "закашлевшийся",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "817",
+    "correctWord": "закашлявший",
+    "incorrectWord": "закашлевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "818",
+    "correctWord": "прибавившийся",
+    "incorrectWord": "прибавевшийся",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "819",
+    "correctWord": "угробивший",
+    "incorrectWord": "угробевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "820",
+    "correctWord": "повеявший",
+    "incorrectWord": "повеевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "821",
+    "correctWord": "покаявшийся",
+    "incorrectWord": "покаевшийся",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "822",
+    "correctWord": "заиндевевший",
+    "incorrectWord": "заиндивевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "823",
+    "correctWord": "недослушавший",
+    "incorrectWord": "недослушевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "824",
+    "correctWord": "накуролесивший",
+    "incorrectWord": "накуролесевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "825",
+    "correctWord": "блеявший",
+    "incorrectWord": "блеевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "826",
+    "correctWord": "присобачивший",
+    "incorrectWord": "присобачевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "827",
+    "correctWord": "залаявший",
+    "incorrectWord": "залаевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "828",
+    "correctWord": "позарившийся",
+    "incorrectWord": "позаревшийся",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "829",
+    "correctWord": "отпаривший",
+    "incorrectWord": "отпаревший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "830",
+    "correctWord": "напроказничавший",
+    "incorrectWord": "напроказничевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "831",
+    "correctWord": "выпотевший",
+    "incorrectWord": "выпотивший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "832",
+    "correctWord": "перевидевший",
+    "incorrectWord": "перевидивший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "833",
+    "correctWord": "понадеявшийся",
+    "incorrectWord": "понадеевшийся",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "834",
+    "correctWord": "доверившийся",
+    "incorrectWord": "доверевшийся",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "835",
+    "correctWord": "важничавший",
+    "incorrectWord": "важничявший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "836",
+    "correctWord": "завидевший",
+    "incorrectWord": "завидивший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "837",
+    "correctWord": "подвыпивший",
+    "incorrectWord": "подвыпевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "838",
+    "correctWord": "выровнявший",
+    "incorrectWord": "выровнивший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "839",
+    "correctWord": "залаявший",
+    "incorrectWord": "залаевший",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "840",
+    "correctWord": "закашлявшийся",
+    "incorrectWord": "закашлевшийся",
+    "wordCardSetId": "29",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "16"
+  },
+  {
+    "id": "841",
+    "correctWord": "растоптанный",
+    "incorrectWord": "растоптонный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "842",
+    "correctWord": "синтезированный",
+    "incorrectWord": "синтезировонный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "843",
+    "correctWord": "взмыленный",
+    "incorrectWord": "взмылянный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "844",
+    "correctWord": "расшатанный",
+    "incorrectWord": "расшатонный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "845",
+    "correctWord": "выпаянный",
+    "incorrectWord": "выпаенный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "846",
+    "correctWord": "обкатанный",
+    "incorrectWord": "обкатенный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "847",
+    "correctWord": "расстрелянный",
+    "incorrectWord": "расстреленный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "848",
+    "correctWord": "разрубленный",
+    "incorrectWord": "разрублянный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "849",
+    "correctWord": "фаршированный",
+    "incorrectWord": "фаршировонный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "850",
+    "correctWord": "стуженый",
+    "incorrectWord": "стужиный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "851",
+    "correctWord": "выпаянный",
+    "incorrectWord": "выпаенный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "852",
+    "correctWord": "залеченный",
+    "incorrectWord": "залечянный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "853",
+    "correctWord": "выгулянный",
+    "incorrectWord": "выгуленный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "854",
+    "correctWord": "кристаллизованный",
+    "incorrectWord": "кристаллизовонный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "855",
+    "correctWord": "ощипанный",
+    "incorrectWord": "ощипонный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "856",
+    "correctWord": "спаянный",
+    "incorrectWord": "спаенный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "857",
+    "correctWord": "выковырянный",
+    "incorrectWord": "выковыренный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "858",
+    "correctWord": "растерянный",
+    "incorrectWord": "растеренный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "859",
+    "correctWord": "отмерянный",
+    "incorrectWord": "отмеренный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "860",
+    "correctWord": "обработанный",
+    "incorrectWord": "обработонный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "861",
+    "correctWord": "исковырянный",
+    "incorrectWord": "исковыренный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "862",
+    "correctWord": "выглаженный",
+    "incorrectWord": "выглажанный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "863",
+    "correctWord": "маринованный",
+    "incorrectWord": "мариновонный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "864",
+    "correctWord": "выщербленный",
+    "incorrectWord": "выщерблянный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "865",
+    "correctWord": "недоделанный",
+    "incorrectWord": "недоделонный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "866",
+    "correctWord": "утерянный",
+    "incorrectWord": "утеренный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "867",
+    "correctWord": "синтезированный",
+    "incorrectWord": "синтезировонный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "868",
+    "correctWord": "маркированный",
+    "incorrectWord": "маркировонный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "869",
+    "correctWord": "запаянный",
+    "incorrectWord": "запаенный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
+  },
+  {
+    "id": "870",
+    "correctWord": "заклеенный",
+    "incorrectWord": "заклеенный",
+    "wordCardSetId": "30",
+    "chapterId": "1",
+    "ruleId": "12",
+    "rulePointId": "17"
   }
 ]
