@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -62,7 +62,7 @@ public class WordCardResultFragment extends Fragment {
         }
     }
 
-    @BindView(R.id.tab_layout) TabLayout tabLayout;
+    @BindView(R.id.bottom_navigation_view) BottomNavigationView bottomNavigationView;
     @BindView(R.id.view_pager) ViewPager viewPager;
 
     private Unbinder unbinder;
@@ -75,7 +75,7 @@ public class WordCardResultFragment extends Fragment {
         unbinder = ButterKnife.bind(this, view);
 
         if (wrongAnswerWordCardIds.length == 0) {
-            tabLayout.setVisibility(View.GONE);
+            bottomNavigationView.setVisibility(View.GONE);
 
             viewPager.setAdapter(new FragmentStatePagerAdapter(getFragmentManager()) {
 
@@ -113,10 +113,31 @@ public class WordCardResultFragment extends Fragment {
                     return FRAGMENT_COUNT;
                 }
             });
+            viewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+                @Override
+                public void onPageSelected(int position) {
+                    switch (position) {
+                        case 0: bottomNavigationView.setSelectedItemId(R.id.result); break;
+                        case 1: bottomNavigationView.setSelectedItemId(R.id.list); break;
+                    }
+                }
+            });
 
-            tabLayout.setupWithViewPager(viewPager);
-            tabLayout.getTabAt(0).setText(R.string.word_card_result);
-            tabLayout.getTabAt(1).setText(R.string.word_card_list);
+            bottomNavigationView.setItemIconTintList(null);
+            bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    switch (item.getItemId()) {
+                        case R.id.result:
+                            viewPager.setCurrentItem(0);
+                            return true;
+                        case R.id.list:
+                            viewPager.setCurrentItem(1);
+                            return true;
+                    }
+                    return true;
+                }
+            });
         }
 
         setHasOptionsMenu(true);

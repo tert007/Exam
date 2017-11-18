@@ -13,6 +13,8 @@ import java.util.List;
  */
 
 public interface IChapterDetailView extends MvpView {
+    void requestToSetActionBarTitle(String title);
+
     void setChapterScore(float score);
     void setChapterViewColor(@ColorInt int color);
 

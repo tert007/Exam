@@ -12,15 +12,14 @@ import com.hannesdorfmann.mosby3.mvp.MvpView;
  * Created by tert0 on 04.10.2017.
  */
 
-public interface IMainView extends MvpView,
-        FragmentListener {
+public interface IMainView extends MvpView, FragmentListener {
 
+    void setActionBarTitle(String title);
     void setActionBarHomeButtonVisibility(boolean visible);
 
     void setMainFragment();
-    void setChapterFragment(int chapterId);
-
-    void setRuleFragment(int ruleId);
+    void setChapterDetailFragment(int chapterId);
+    void setRuleDetailFragment(int ruleId);
     void setTrainingMenuFragment(int ruleId);
     void setRuleDescriptionFragment(int ruleId);
 

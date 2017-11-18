@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
+import com.greenkeycompany.exam.activity.view.MainActivity;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.chapterdetail.model.RuleMenuItem;
 import com.greenkeycompany.exam.fragment.chapterdetail.presenter.IChapterDetailPresenter;
@@ -100,6 +101,11 @@ public class ChapterDetailFragment extends MvpFragment<IChapterDetailView, IChap
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         presenter.init(chapterId);
+    }
+
+    @Override
+    public void requestToSetActionBarTitle(String title) {
+        fragmentListener.requestToSetActionBarTitle(title);
     }
 
     @BindView(R.id.chapter_view) View chapterView;

@@ -83,6 +83,11 @@ public class RuleDetailFragment extends MvpFragment<IRuleDetailView, IRuleDetail
     }
 
     @Override
+    public void requestToSetActionBarTitle(String title) {
+        fragmentListener.requestToSetActionBarTitle(title);
+    }
+
+    @Override
     public void setBackgroundColor(@ColorInt int color) {
         parentView.setBackgroundColor(color);
     }

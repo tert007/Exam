@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/result"
+        android:orderInCategory="100"
+        android:icon="@drawable/bottom_navigation_cup_icon_selector"
+        android:title="@string/word_card_result"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/list"
+        android:orderInCategory="200"
+        android:icon="@drawable/bottom_navigation_list_icon_selector"
+        android:title="@string/word_card_list"
+        app:showAsAction="ifRoom" />
+</menu>

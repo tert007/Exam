@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
+import com.greenkeycompany.exam.activity.view.MainActivity;
 import com.greenkeycompany.exam.fragment.ChapterColorUtil;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.mainmenu.model.ChapterMenuItem;
@@ -73,8 +75,7 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
 
-        //getActivity().getActionBar().setTitle(R.string.app_name);
-        //getActivity().getActionBar().setDisplayHomeAsUpEnabled(false);
+        fragmentListener.requestToSetActionBarTitle(getString(R.string.app_name));
 
         return view;
     }
@@ -180,8 +181,6 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
 
             return new ViewHolder(view, itemClickListener);
         }
-
-        //private static final String percentFormat = "%1$d%%";
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {

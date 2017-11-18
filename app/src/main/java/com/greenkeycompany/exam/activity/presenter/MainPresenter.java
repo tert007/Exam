@@ -47,6 +47,13 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
     }
 
     @Override
+    public void requestToSetActionBarTitle(String title) {
+        if (isViewAttached()) {
+            getView().setActionBarTitle(title);
+        }
+    }
+
+    @Override
     public void requestToSetMainMenuFragment() {
         fragmentType = FragmentType.MAIN;
         if (isViewAttached()) {
@@ -59,7 +66,7 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
     public void requestToSetChapterFragment(int chapterId) {
         fragmentType = FragmentType.CHAPTER;
         if (isViewAttached()) {
-            getView().setChapterFragment(chapterId);
+            getView().setChapterDetailFragment(chapterId);
             getView().setActionBarHomeButtonVisibility(true);
         }
     }
@@ -68,7 +75,7 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
     public void requestToSetRuleDetailFragment(int ruleId) {
         fragmentType = FragmentType.RULE;
         if (isViewAttached()) {
-            getView().setRuleFragment(ruleId);
+            getView().setRuleDetailFragment(ruleId);
         }
     }
 

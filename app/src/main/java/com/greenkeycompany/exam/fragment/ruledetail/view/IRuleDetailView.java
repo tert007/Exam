@@ -9,6 +9,8 @@ import com.hannesdorfmann.mosby3.mvp.MvpView;
  */
 
 public interface IRuleDetailView extends MvpView {
+    void requestToSetActionBarTitle(String title);
+
     void setBackgroundColor(@ColorInt int color);
 
     void setRuleDescriptionCompleted(boolean completed);

@@ -7,6 +7,7 @@ import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.chapterdetail.model.RuleMenuItem;
 import com.greenkeycompany.exam.fragment.chapterdetail.view.IChapterDetailView;
 import com.greenkeycompany.exam.repository.IRepository;
+import com.greenkeycompany.exam.repository.model.Chapter;
 import com.greenkeycompany.exam.repository.model.WordCardSet;
 import com.greenkeycompany.exam.repository.model.result.ChapterExamResult;
 import com.greenkeycompany.exam.repository.model.Rule;
@@ -64,11 +65,13 @@ public class ChapterDetailPresenter extends MvpBasePresenter<IChapterDetailView>
             ruleMenuItemList.add(new RuleMenuItem(title, bestScore, wordCardCount, wordCardCompletedCount));
         }
 
+        Chapter chapter = repository.getChapter(chapterId);
         ChapterExamResult bestChapterResult = repository.getBestChapterExamResult(chapterId);
         if (isViewAttached()) {
-            getView().setRuleItemList(ruleMenuItemList);
+            getView().requestToSetActionBarTitle(chapter.getTitle());
             getView().setChapterViewColor(ChapterColorUtil.getColor(chapterId));
             getView().setChapterScore(bestChapterResult == null ? 0 : bestChapterResult.getScore());
+            getView().setRuleItemList(ruleMenuItemList);
         }
     }
 

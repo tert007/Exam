@@ -7,14 +7,14 @@
     android:background="?android:attr/selectableItemBackground"
 
     android:layout_width="match_parent"
-    android:layout_height="64dp">
+    android:layout_height="96dp">
 
     <TextView
         android:id="@+id/title_text_view"
 
-        tools:text="Гласные после шипящих и ц"
+        tools:text="Н и НН в суффиксах прилагательных, образованных от существительных"
 
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="?android:textColorPrimary"
 
         android:layout_width="0dp"

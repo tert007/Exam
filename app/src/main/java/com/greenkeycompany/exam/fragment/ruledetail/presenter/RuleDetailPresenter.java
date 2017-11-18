@@ -57,6 +57,7 @@ public class RuleDetailPresenter extends MvpBasePresenter<IRuleDetailView>
         trainingCompleted = isTrainingCompleted(wordCardSetList);
 
         if (isViewAttached()) {
+            getView().requestToSetActionBarTitle(rule.getTitle());
             getView().setBackgroundColor(ChapterColorUtil.getColor(rule.getChapterId()));
             getView().setRuleDescriptionCompleted(learned);
             getView().setRuleTrainingCompleted(trainingCompleted);

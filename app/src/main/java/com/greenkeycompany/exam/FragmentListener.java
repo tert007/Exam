@@ -7,8 +7,9 @@ import android.support.annotation.NonNull;
  */
 
 public interface FragmentListener {
-    void requestToSetMainMenuFragment();
+    void requestToSetActionBarTitle(String title);
 
+    void requestToSetMainMenuFragment();
     void requestToSetChapterFragment(int chapterId);
 
     void requestToSetTrainingMenuFragment(int ruleId);

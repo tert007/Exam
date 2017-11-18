@@ -1,5 +1,6 @@
 package com.greenkeycompany.exam.activity.view;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -48,8 +49,19 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     }
 
     @Override
+    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
+    }
+
+
+    @Override
     public void setActionBarHomeButtonVisibility(boolean visible) {
         getSupportActionBar().setDisplayHomeAsUpEnabled(visible);
+    }
+
+    @Override
+    public void requestToSetActionBarTitle(String title) {
+        presenter.requestToSetActionBarTitle(title);
     }
 
     @Override
@@ -93,12 +105,12 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     }
 
     @Override
-    public void setChapterFragment(int chapterId) {
+    public void setChapterDetailFragment(int chapterId) {
         setFragment(ChapterDetailFragment.newInstance(chapterId), FragmentType.CHAPTER);
     }
 
     @Override
-    public void setRuleFragment(int ruleId) {
+    public void setRuleDetailFragment(int ruleId) {
         setFragment(RuleDetailFragment.newInstance(ruleId), FragmentType.RULE);
     }
 
