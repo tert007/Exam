@@ -47,27 +47,22 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
     }
 
     @Override
-    public void requestToSetActionBarTitle(String title) {
-        if (isViewAttached()) {
-            getView().setActionBarTitle(title);
-        }
-    }
-
-    @Override
     public void requestToSetMainMenuFragment() {
         fragmentType = FragmentType.MAIN;
         if (isViewAttached()) {
             getView().setMainFragment();
-            getView().setActionBarHomeButtonVisibility(false);
+            //getView().setActionBarHomeButtonVisibility(false);
+            //getView().setActionBarPremiumButtonVisibility(true);
         }
     }
 
     @Override
-    public void requestToSetChapterFragment(int chapterId) {
+    public void requestToSetChapterDetailFragment(int chapterId) {
         fragmentType = FragmentType.CHAPTER;
         if (isViewAttached()) {
             getView().setChapterDetailFragment(chapterId);
-            getView().setActionBarHomeButtonVisibility(true);
+            //getView().setActionBarHomeButtonVisibility(true);
+            //getView().setActionBarPremiumButtonVisibility(false);
         }
     }
 
@@ -98,9 +93,15 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
     @Override
     public void requestToSetWordCardTrainingFragment(@NonNull TrainingType trainingType, int id) {
         switch (trainingType) {
-            case WORD_CARD_SET_TRAINING: fragmentType = FragmentType.WORD_CARD_RULE_POINT_TRAINING; break;
-            case RULE_EXAM: fragmentType = FragmentType.WORD_CARD_RULE_TRAINING; break;
-            case CHAPTER_EXAM: fragmentType = FragmentType.WORD_CARD_CHAPTER_TRAINING; break;
+            case WORD_CARD_SET_TRAINING:
+                fragmentType = FragmentType.WORD_CARD_RULE_POINT_TRAINING;
+                break;
+            case RULE_EXAM:
+                fragmentType = FragmentType.WORD_CARD_RULE_TRAINING;
+                break;
+            case CHAPTER_EXAM:
+                fragmentType = FragmentType.WORD_CARD_CHAPTER_TRAINING;
+                break;
         }
         if (isViewAttached()) {
             getView().setWordCardTrainingFragment(trainingType, id);
@@ -110,9 +111,15 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
     @Override
     public void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds) {
         switch (trainingType) {
-            case WORD_CARD_SET_TRAINING: fragmentType = FragmentType.WORD_CARD_RULE_POINT_RESULT; break;
-            case RULE_EXAM: fragmentType = FragmentType.WORD_CARD_RULE_RESULT; break;
-            case CHAPTER_EXAM: fragmentType = FragmentType.WORD_CARD_CHAPTER_RESULT; break;
+            case WORD_CARD_SET_TRAINING:
+                fragmentType = FragmentType.WORD_CARD_RULE_POINT_RESULT;
+                break;
+            case RULE_EXAM:
+                fragmentType = FragmentType.WORD_CARD_RULE_RESULT;
+                break;
+            case CHAPTER_EXAM:
+                fragmentType = FragmentType.WORD_CARD_CHAPTER_RESULT;
+                break;
         }
         if (isViewAttached()) {
             getView().setWordCardResultFragment(trainingType, resultId, wrongAnswerWordCardIds);

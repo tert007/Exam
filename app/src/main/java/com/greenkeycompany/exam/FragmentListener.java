@@ -7,15 +7,12 @@ import android.support.annotation.NonNull;
  */
 
 public interface FragmentListener {
-    void requestToSetActionBarTitle(String title);
-
     void requestToSetMainMenuFragment();
-    void requestToSetChapterFragment(int chapterId);
+    void requestToSetChapterDetailFragment(int chapterId);
 
     void requestToSetTrainingMenuFragment(int ruleId);
-
-    void requestToSetRuleDetailFragment(int ruleId);
     void requestToSetRuleDescriptionFragment(int ruleId);
+    void requestToSetRuleDetailFragment(int ruleId);
 
     void requestToSetWordCardTrainingFragment(@NonNull TrainingType trainingType, int id);
     void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds);

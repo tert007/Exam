@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
+import com.greenkeycompany.exam.activity.view.ActionBarView;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.ruledetail.presenter.IRuleDetailPresenter;
 import com.greenkeycompany.exam.fragment.ruledetail.presenter.RuleDetailPresenter;
@@ -36,6 +37,7 @@ import io.realm.Realm;
 public class RuleDetailFragment extends MvpFragment<IRuleDetailView, IRuleDetailPresenter>
         implements IRuleDetailView {
 
+    private ActionBarView actionBarView;
     private RealmRepository realmRepository = new RealmRepository(Realm.getDefaultInstance());
 
     @NonNull
@@ -73,6 +75,8 @@ public class RuleDetailFragment extends MvpFragment<IRuleDetailView, IRuleDetail
 
         unbinder = ButterKnife.bind(this, parentView);
 
+        actionBarView = (ActionBarView) getActivity();
+
         return parentView;
     }
 
@@ -84,7 +88,7 @@ public class RuleDetailFragment extends MvpFragment<IRuleDetailView, IRuleDetail
 
     @Override
     public void requestToSetActionBarTitle(String title) {
-        fragmentListener.requestToSetActionBarTitle(title);
+        actionBarView.setActionBarTitle(title);
     }
 
     @Override

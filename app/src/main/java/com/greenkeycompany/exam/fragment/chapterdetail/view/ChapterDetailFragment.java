@@ -18,7 +18,7 @@ import android.widget.TextView;
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
-import com.greenkeycompany.exam.activity.view.MainActivity;
+import com.greenkeycompany.exam.activity.view.ActionBarView;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.chapterdetail.model.RuleMenuItem;
 import com.greenkeycompany.exam.fragment.chapterdetail.presenter.IChapterDetailPresenter;
@@ -42,6 +42,7 @@ import io.realm.Realm;
 public class ChapterDetailFragment extends MvpFragment<IChapterDetailView, IChapterDetailPresenter>
         implements IChapterDetailView {
 
+    private ActionBarView actionBarView;
     private RealmRepository realmRepository = new RealmRepository(Realm.getDefaultInstance());
 
     @NonNull
@@ -94,6 +95,11 @@ public class ChapterDetailFragment extends MvpFragment<IChapterDetailView, IChap
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), RecyclerView.VERTICAL));
         recyclerView.setAdapter(adapter);
 
+        actionBarView = (ActionBarView) getActivity();
+
+        actionBarView.setActionBarHomeButtonVisibility(true);
+        actionBarView.setActionBarPremiumButtonVisibility(false);
+
         return view;
     }
 
@@ -105,7 +111,7 @@ public class ChapterDetailFragment extends MvpFragment<IChapterDetailView, IChap
 
     @Override
     public void requestToSetActionBarTitle(String title) {
-        fragmentListener.requestToSetActionBarTitle(title);
+        actionBarView.setActionBarTitle(title);
     }
 
     @BindView(R.id.chapter_view) View chapterView;
@@ -162,6 +168,7 @@ public class ChapterDetailFragment extends MvpFragment<IChapterDetailView, IChap
     public void onDestroy() {
         super.onDestroy();
         realmRepository.close();
+
     }
 
     @Override

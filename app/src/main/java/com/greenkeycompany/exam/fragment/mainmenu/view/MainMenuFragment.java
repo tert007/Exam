@@ -1,10 +1,10 @@
 package com.greenkeycompany.exam.fragment.mainmenu.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,7 +15,9 @@ import android.widget.TextView;
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
-import com.greenkeycompany.exam.activity.view.MainActivity;
+import com.greenkeycompany.exam.activity.view.ActionBarView;
+import com.greenkeycompany.exam.app.App;
+import com.greenkeycompany.exam.app.PremiumUtil;
 import com.greenkeycompany.exam.fragment.ChapterColorUtil;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.mainmenu.model.ChapterMenuItem;
@@ -24,8 +26,15 @@ import com.greenkeycompany.exam.fragment.mainmenu.presenter.MainMenuPresenter;
 import com.greenkeycompany.exam.repository.RealmRepository;
 import com.hannesdorfmann.mosby3.mvp.MvpFragment;
 
+import org.solovyev.android.checkout.ActivityCheckout;
+import org.solovyev.android.checkout.Checkout;
+import org.solovyev.android.checkout.Inventory;
+import org.solovyev.android.checkout.ProductTypes;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.Nonnull;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,7 +49,10 @@ import io.realm.Realm;
 public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresenter>
         implements IMainMenuView {
 
+    private ActionBarView actionBarView;
+
     private RealmRepository realmRepository = new RealmRepository(Realm.getDefaultInstance());
+    private ActivityCheckout checkout = Checkout.forActivity(getActivity(), App.get().getBilling());
 
     @NonNull
     @Override
@@ -75,7 +87,27 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
 
-        fragmentListener.requestToSetActionBarTitle(getString(R.string.app_name));
+        /*
+        checkout.start();
+        checkout.loadInventory(Inventory.Request.create().loadAllPurchases(), new Inventory.Callback() {
+            @Override
+            public void onLoaded(@Nonnull Inventory.Products products) {
+                final Inventory.Product product = products.get(ProductTypes.IN_APP);
+                if ( ! product.supported) return;
+
+                boolean isPurchased = product.isPurchased(PremiumUtil.PREMIUM_USER_SKU);
+                PremiumUtil.setPremiumUser(isPurchased);
+
+                actionBarView.setActionBarPremiumButtonVisibility( ! isPurchased);
+            }
+        });
+        */
+
+        actionBarView = (ActionBarView) getActivity();
+
+        actionBarView.setActionBarTitle(getString(R.string.app_name));
+        actionBarView.setActionBarHomeButtonVisibility(false);
+        actionBarView.setActionBarPremiumButtonVisibility( ! PremiumUtil.isPremiumUser());
 
         return view;
     }
@@ -98,13 +130,20 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
 
     @Override
     public void requestToSetChapterFragment(int chapterId) {
-        fragmentListener.requestToSetChapterFragment(chapterId);
+        fragmentListener.requestToSetChapterDetailFragment(chapterId);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        checkout.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
         realmRepository.close();
+        //checkout.stop();
+        super.onDestroy();
     }
 
     @Override
@@ -130,7 +169,6 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
         super.onDetach();
         fragmentListener = null;
     }
-
 
     static class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ViewHolder> {
 

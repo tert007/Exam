@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.greenkeycompany.exam.FragmentType;
 import com.greenkeycompany.exam.PurchaseActivity;
@@ -60,7 +59,7 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
 
     private static final int PURCHASE_PREMIUM_REQUEST_CODE = 199;
 
-    @BindView(R.id.action_bar_premium_icon) View premiumView;
+    @BindView(R.id.action_bar_premium_icon) View purchasePremiumView;
     @OnClick(R.id.action_bar_premium_icon)
     public void onPremiumIconClick() {
         startActivityForResult(new Intent(this, PurchaseActivity.class), PURCHASE_PREMIUM_REQUEST_CODE);
@@ -72,7 +71,7 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
         switch (requestCode) {
             case PURCHASE_PREMIUM_REQUEST_CODE:
                 if (resultCode == RESULT_OK) {
-                    premiumView.setVisibility(View.GONE);
+                    purchasePremiumView.setVisibility(View.GONE);
                 }
                 break;
         }
@@ -89,11 +88,9 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     }
 
     @Override
-    public void requestToSetActionBarTitle(String title) {
-        presenter.requestToSetActionBarTitle(title);
+    public void setActionBarPremiumButtonVisibility(boolean visible) {
+        purchasePremiumView.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
-
-
 
     @Override
     public void requestToSetMainMenuFragment() {
@@ -101,8 +98,8 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     }
 
     @Override
-    public void requestToSetChapterFragment(int chapterId) {
-        presenter.requestToSetChapterFragment(chapterId);
+    public void requestToSetChapterDetailFragment(int chapterId) {
+        presenter.requestToSetChapterDetailFragment(chapterId);
     }
 
     @Override

@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
+import com.greenkeycompany.exam.activity.view.ActionBarView;
 import com.greenkeycompany.exam.fragment.trainingmenu.model.WordCardMenuItem;
 import com.greenkeycompany.exam.fragment.trainingmenu.presenter.ITrainingMenuPresenter;
 import com.greenkeycompany.exam.fragment.trainingmenu.presenter.TrainingMenuPresenter;
@@ -37,6 +38,7 @@ import io.realm.Realm;
 public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITrainingMenuPresenter>
         implements ITrainingMenuView {
 
+    private ActionBarView actionBarView = (ActionBarView) getActivity();
     private RealmRepository realmRepository = new RealmRepository(Realm.getDefaultInstance());
 
     @NonNull

@@ -1,6 +1,5 @@
 package com.greenkeycompany.exam.activity.view;
 
-import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 
 import com.greenkeycompany.exam.FragmentListener;
@@ -12,10 +11,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpView;
  * Created by tert0 on 04.10.2017.
  */
 
-public interface IMainView extends MvpView, FragmentListener {
-
-    void setActionBarTitle(String title);
-    void setActionBarHomeButtonVisibility(boolean visible);
+public interface IMainView extends MvpView, ActionBarView, FragmentListener {
 
     void setMainFragment();
     void setChapterDetailFragment(int chapterId);
