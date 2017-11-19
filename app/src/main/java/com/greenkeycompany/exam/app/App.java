@@ -6,11 +6,11 @@ import android.util.Log;
 
 import com.google.android.gms.ads.MobileAds;
 import com.greenkeycompany.exam.R;
-import com.greenkeycompany.exam.repository.model.Chapter;
-import com.greenkeycompany.exam.repository.model.Rule;
-import com.greenkeycompany.exam.repository.model.RulePoint;
-import com.greenkeycompany.exam.repository.model.WordCard;
-import com.greenkeycompany.exam.repository.model.WordCardSet;
+import com.greenkeycompany.exam.main.repository.model.Chapter;
+import com.greenkeycompany.exam.main.repository.model.Rule;
+import com.greenkeycompany.exam.main.repository.model.RulePoint;
+import com.greenkeycompany.exam.main.repository.model.WordCard;
+import com.greenkeycompany.exam.main.repository.model.WordCardSet;
 
 import org.solovyev.android.checkout.Billing;
 
