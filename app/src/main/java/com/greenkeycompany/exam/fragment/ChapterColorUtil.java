@@ -15,8 +15,7 @@ public class ChapterColorUtil {
             case 1 : return Color.parseColor("#489D9B");
             case 2 : return Color.parseColor("#96C884");
             case 3 : return Color.parseColor("#5BACB4");
-            case 4 : return Color.parseColor("#FDAA89");
-
+            case 4 : return Color.parseColor("#e16f3e");
             default: return Color.BLACK;
         }
     }
