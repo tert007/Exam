@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rate_app_dialog_title">Оцените приложение</string>
+    <string name="rate_app_dialog_message">
+        Здравствуйте, если вам понравилось наше приложение и вы заинтересованы в его развитии,
+        потратьте минуту своего времени, чтобы оставить свою оценку и отзыв.
+    </string>
+
+    <string name="rate_app_dialog_rate_now">Оценить сейчас</string>
+    <string name="rate_app_dialog_remind_me_later">Напомнить позже</string>
+    <string name="rate_app_dialog_don_not_show_again">Нет, спасибо</string>
+</resources>

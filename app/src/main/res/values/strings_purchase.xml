@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="premium_access">Премиум-доступ</string>
+
+    <string name="purchase">Приобрести</string>
+
+    <string name="purchase_success">Вы получили премиум-доступ</string>
+    <string name="purchase_error">Ошибка системы оплаты</string>
+</resources>

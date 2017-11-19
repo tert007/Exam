@@ -1,15 +1,19 @@
 package com.greenkeycompany.exam.activity.view;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.greenkeycompany.exam.FragmentType;
+import com.greenkeycompany.exam.PurchaseActivity;
 import com.greenkeycompany.exam.R;
+import com.greenkeycompany.exam.RateDialog;
 import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.activity.presenter.IMainPresenter;
 import com.greenkeycompany.exam.activity.presenter.MainPresenter;
@@ -24,6 +28,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
         implements IMainView {
@@ -45,14 +50,38 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.action_bar_back_button_icon);
 
+        RateDialog rateDialog = new RateDialog(this);
+        if (rateDialog.isShouldShow()) {
+            rateDialog.show();
+        }
+
         presenter.requestToSetMainMenuFragment();
+    }
+
+    private static final int PURCHASE_PREMIUM_REQUEST_CODE = 199;
+
+    @BindView(R.id.action_bar_premium_icon) View premiumView;
+    @OnClick(R.id.action_bar_premium_icon)
+    public void onPremiumIconClick() {
+        startActivityForResult(new Intent(this, PurchaseActivity.class), PURCHASE_PREMIUM_REQUEST_CODE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case PURCHASE_PREMIUM_REQUEST_CODE:
+                if (resultCode == RESULT_OK) {
+                    premiumView.setVisibility(View.GONE);
+                }
+                break;
+        }
     }
 
     @Override
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
     }
-
 
     @Override
     public void setActionBarHomeButtonVisibility(boolean visible) {
@@ -63,6 +92,8 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     public void requestToSetActionBarTitle(String title) {
         presenter.requestToSetActionBarTitle(title);
     }
+
+
 
     @Override
     public void requestToSetMainMenuFragment() {

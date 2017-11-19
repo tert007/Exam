@@ -22,8 +22,29 @@
             android:background="@android:color/white"
 
             app:titleTextColor="@color/colorBlack"
-            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+            app:popupTheme="@style/AppTheme.PopupOverlay">
 
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+
+                android:layout_gravity="center_vertical|end">
+
+                <ImageView
+                    android:id="@+id/action_bar_premium_icon"
+
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    android:src="@drawable/action_bar_premium_icon_selector"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+        </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
     <FrameLayout

@@ -1,16 +1,14 @@
 package com.greenkeycompany.exam;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.greenkeycompany.exam.app.App;
+import com.greenkeycompany.exam.app.PremiumUtil;
 
 import org.solovyev.android.checkout.ActivityCheckout;
 import org.solovyev.android.checkout.Checkout;
@@ -27,14 +25,10 @@ import butterknife.Unbinder;
 
 public class PurchaseActivity extends AppCompatActivity {
 
-    private PremiumUtil premiumUtil = App.get().getPremiumUtil();
     private ActivityCheckout checkout = Checkout.forActivity(this, App.get().getBilling());
 
-    private boolean isPurchased;
-
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    //@BindView(R.id.premium_purchase_button) Button purchaseButton;
+    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.purchase_premium_view) View purchasePremiumView;
 
     private Unbinder unbinder;
 
@@ -42,24 +36,14 @@ public class PurchaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.purchase_activity);
+
         unbinder = ButterKnife.bind(this);
         checkout.start();
 
-        toolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
-        //getSupportActionBar().setHomeAsUpIndicator(R.drawable.action_bar_back_icon);
+        getSupportActionBar().setTitle(R.string.premium_access);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.action_bar_back_button_icon);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
     }
 
     @Override
@@ -68,22 +52,15 @@ public class PurchaseActivity extends AppCompatActivity {
         checkout.onActivityResult(requestCode, resultCode, data);
     }
 
-    @Override
-    protected void onDestroy() {
-        unbinder.unbind();
-        checkout.stop();
-        super.onDestroy();
-    }
-
-    /*
-    @OnClick(R.id.premium_purchase_button)
-    public void onPremiumButtonClick() {
+    @OnClick(R.id.purchase_premium_view)
+    public void onPurchasePremiumClick() {
         checkout.startPurchaseFlow(ProductTypes.IN_APP, PremiumUtil.PREMIUM_USER_SKU, null, new RequestListener<Purchase>() {
             @Override
             public void onSuccess(@Nonnull Purchase result) {
-                isPurchased = true;
-                premiumUtil.setPremiumUser(true);
-                purchaseButton.setVisibility(View.INVISIBLE);
+                PremiumUtil.setPremiumUser(true);
+                PurchaseActivity.this.setResult(RESULT_OK);
+
+                purchasePremiumView.setVisibility(View.INVISIBLE);
                 Toast.makeText(PurchaseActivity.this, R.string.purchase_success, Toast.LENGTH_LONG).show();
             }
 
@@ -93,11 +70,11 @@ public class PurchaseActivity extends AppCompatActivity {
             }
         });
     }
-    */
 
     @Override
-    public void finish() {
-        setResult(isPurchased ? RESULT_OK : RESULT_CANCELED);
-        super.finish();
+    protected void onDestroy() {
+        checkout.stop();
+        unbinder.unbind();
+        super.onDestroy();
     }
 }
