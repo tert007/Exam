@@ -87,7 +87,6 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
         recyclerView.setAdapter(adapter);
 
         actionBarView = (ActionBarView) getActivity();
-
         actionBarView.setActionBarTitle(getString(R.string.app_name));
         actionBarView.setActionBarHomeButtonVisibility(false);
         actionBarView.setActionBarPremiumButtonVisibility( ! PremiumUtil.isPremiumUser());
@@ -101,11 +100,6 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
         presenter.init();
     }
 
-    @OnClick(R.id.final_exam_view)
-    public void onFinalExamClick() {
-        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.FINAL_EXAM, 0);
-    }
-
     @Override
     public void setChapters(@NonNull List<ChapterMenuItem> chapterMenuItemList) {
         adapter.setItemList(chapterMenuItemList);
@@ -114,6 +108,11 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
     @Override
     public void requestToSetChapterFragment(int chapterId) {
         fragmentListener.requestToSetChapterDetailFragment(chapterId);
+    }
+
+    @Override
+    public void requestToSetFinalExamFragment() {
+        fragmentListener.requestToSetWordCardTrainingFragment(TrainingType.FINAL_EXAM, 0);
     }
 
     @Override
@@ -200,8 +199,13 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
         public void onBindViewHolder(ViewHolder holder, int position) {
             ChapterMenuItem chapterMenuItem = chapterMenuItemList.get(position);
 
+            if (chapterMenuItem.getId() == MainMenuPresenter.FINAL_EXAM_ITEM_ID) {
+                holder.titleTextView.setText(context.getString(R.string.final_exam));
+            } else {
+                holder.titleTextView.setText(chapterMenuItem.getTitle());
+            }
+
             holder.itemView.setBackgroundColor(ChapterColorUtil.getColor(chapterMenuItem.getId()));
-            holder.titleTextView.setText(chapterMenuItem.getTitle());
             holder.startTextView.setText(1 == 1 ?
                     context.getString(R.string.chapter_start) :
                     context.getString(R.string.chapter_continue));

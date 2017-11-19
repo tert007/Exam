@@ -1,31 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
+<android.support.v7.widget.RecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:orientation="vertical"
+    android:id="@+id/recycler_view"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
-        android:orientation="vertical"
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <!-- Вся фишка RecyclerView теряется, но для 5 элеметнов нормально -->
-        <TextView
-            android:id="@+id/final_exam_view"
-
-            android:text="@string/exam"
-
-            android:layout_width="match_parent"
-            android:layout_height="100dp" />
-    </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+    android:layout_height="wrap_content" />
