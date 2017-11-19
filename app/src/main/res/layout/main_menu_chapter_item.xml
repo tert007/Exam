@@ -45,7 +45,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/title_text_view"
+        android:id="@+id/exam_title_view"
 
         tools:text="Гласные"
         android:gravity="center"
@@ -55,16 +55,16 @@
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintRight_toRightOf="@+id/start_text_view"
+        app:layout_constraintRight_toRightOf="@+id/final_exam_view"
         app:layout_constraintTop_toTopOf="parent"
 
         app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintBottom_toTopOf="@+id/start_text_view"
-        app:layout_constraintLeft_toLeftOf="@+id/start_text_view"
+        app:layout_constraintBottom_toTopOf="@+id/final_exam_view"
+        app:layout_constraintLeft_toLeftOf="@+id/final_exam_view"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/start_text_view"
+        android:id="@+id/final_exam_view"
 
         tools:text="Начать"
 
@@ -81,7 +81,7 @@
         android:background="@drawable/chapter_button_background_selector"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/exam_title_view"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/progress_layout"
         app:layout_constraintHorizontal_bias="0.85"

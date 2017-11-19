@@ -20,6 +20,7 @@
 
     <!-- MAIN MENU -->
     <string name="chapter_start">Начать</string>
+    <string name="exam_start">Экзамен</string>
     <string name="chapter_continue">Продолжить</string>
 
     <!--  CHAPTER DETAIL -->
@@ -51,6 +52,8 @@
     <string name="chapter_completed">Пройдено %1$d из %2$d</string>
     <string name="rule_completed">Пройдено %1$d из %2$d</string>
 
+    <string name="chapter_exam_score_completed">Оценка: %1$s</string>
+    <string name="chapter_exam_word_card_completed">Пройдено %1$d слов из %2$d</string>
 
     <string name="word_card_completed">Пройдено %1$d</string>
 

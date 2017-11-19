@@ -17,6 +17,7 @@ public interface IChapterDetailView extends MvpView {
 
     void setChapterScore(float score);
     void setChapterViewColor(@ColorInt int color);
+    void setChapterWordCardCompletedCount(int wordCardCompletedCount, int wordCardCount);
 
     void setRuleItemList(@NonNull List<RuleMenuItem> ruleList);
 

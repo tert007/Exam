@@ -10,7 +10,7 @@
     android:layout_height="96dp">
 
     <TextView
-        android:id="@+id/title_text_view"
+        android:id="@+id/exam_title_view"
 
         tools:text="Н и НН в суффиксах прилагательных, образованных от существительных"
 
@@ -51,7 +51,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/score_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/exam_title_view"
         android:layout_marginBottom="8dp" />
 
     <TextView

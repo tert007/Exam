@@ -122,7 +122,13 @@ public class ChapterDetailFragment extends MvpFragment<IChapterDetailView, IChap
     @BindView(R.id.chapter_score_text_view) TextView scoreTextView;
     @Override
     public void setChapterScore(float score) {
-        scoreTextView.setText(ScoreUtil.convertScoreToString(score));
+        scoreTextView.setText(getString(R.string.chapter_exam_score_completed, ScoreUtil.convertScoreToString(score)));
+    }
+
+    @BindView(R.id.chapter_word_card_completed_count_text_view) TextView wordCardCompletedCountTextView;
+    @Override
+    public void setChapterWordCardCompletedCount(int wordCardCompletedCount, int wordCardCount) {
+        wordCardCompletedCountTextView.setText(getString(R.string.chapter_exam_word_card_completed, wordCardCompletedCount, wordCardCount));
     }
 
     @OnClick(R.id.chapter_start_training_text_view)
@@ -204,7 +210,7 @@ public class ChapterDetailFragment extends MvpFragment<IChapterDetailView, IChap
         class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
             @BindView(R.id.score_text_view) TextView scoreTextView;
-            @BindView(R.id.title_text_view) TextView titleTextView;
+            @BindView(R.id.exam_title_view) TextView titleTextView;
             @BindView(R.id.subtitle_text_view) TextView subtitleTextView;
 
             private ItemClickListener itemClickListener;

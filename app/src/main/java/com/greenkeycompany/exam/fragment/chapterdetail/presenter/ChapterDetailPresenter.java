@@ -44,6 +44,9 @@ public class ChapterDetailPresenter extends MvpBasePresenter<IChapterDetailView>
         ruleList = repository.getRuleList(chapterId);
         ruleMenuItemList = new ArrayList<>(ruleList.size());
 
+        int chapterWordCardCount = 0;
+        int chapterWordCardCompletedCount = 0;
+
         for (Rule rule : ruleList) {
             String title = rule.getTitle();
 
@@ -62,6 +65,9 @@ public class ChapterDetailPresenter extends MvpBasePresenter<IChapterDetailView>
                 wordCardCompletedCount += wordCardSetResult != null ? wordCardSetResult.getWordCardCompletedCount() : 0;
             }
 
+            chapterWordCardCount += wordCardCount;
+            chapterWordCardCompletedCount += wordCardCompletedCount;
+
             ruleMenuItemList.add(new RuleMenuItem(title, bestScore, wordCardCount, wordCardCompletedCount));
         }
 
@@ -71,6 +77,7 @@ public class ChapterDetailPresenter extends MvpBasePresenter<IChapterDetailView>
             getView().requestToSetActionBarTitle(chapter.getTitle());
             getView().setChapterViewColor(ChapterColorUtil.getColor(chapterId));
             getView().setChapterScore(bestChapterResult == null ? 0 : bestChapterResult.getScore());
+            getView().setChapterWordCardCompletedCount(chapterWordCardCompletedCount,chapterWordCardCount);
             getView().setRuleItemList(ruleMenuItemList);
         }
     }
