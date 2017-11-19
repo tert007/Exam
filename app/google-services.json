@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "613964851318",
+    "firebase_url": "https://russian-2bb5b.firebaseio.com",
+    "project_id": "russian-2bb5b",
+    "storage_bucket": "russian-2bb5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613964851318:android:6f24f17c928e25ed",
+        "android_client_info": {
+          "package_name": "com.greenkeycompany.exam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613964851318-msqtnc8asmkb47bifsb6bcsmu81dlie9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.greenkeycompany.exam",
+            "certificate_hash": "5b6e97d85b504be8acd40398988013e996ab9f48"
+          }
+        },
+        {
+          "client_id": "613964851318-c5s9g62epur9i61ktn21ab7sc780o0cf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC0otRST1rEC4OuirCyXVMXrCmGYsZ-1o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613964851318-c5s9g62epur9i61ktn21ab7sc780o0cf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
