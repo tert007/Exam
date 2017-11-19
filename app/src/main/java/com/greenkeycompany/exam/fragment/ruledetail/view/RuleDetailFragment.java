@@ -18,6 +18,7 @@ import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.activity.view.ActionBarView;
+import com.greenkeycompany.exam.app.PremiumUtil;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.ruledetail.presenter.IRuleDetailPresenter;
 import com.greenkeycompany.exam.fragment.ruledetail.presenter.RuleDetailPresenter;
@@ -73,9 +74,10 @@ public class RuleDetailFragment extends MvpFragment<IRuleDetailView, IRuleDetail
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         parentView = inflater.inflate(R.layout.rule_menu_fragment, container, false);
 
-        unbinder = ButterKnife.bind(this, parentView);
-
         actionBarView = (ActionBarView) getActivity();
+        actionBarView.setActionBarPremiumButtonVisibility( ! PremiumUtil.isPremiumUser());
+
+        unbinder = ButterKnife.bind(this, parentView);
 
         return parentView;
     }

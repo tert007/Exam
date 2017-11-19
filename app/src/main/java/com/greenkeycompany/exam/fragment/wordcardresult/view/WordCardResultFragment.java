@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
+import com.greenkeycompany.exam.activity.view.ActionBarView;
 import com.greenkeycompany.exam.fragment.wordcardresult.fragment.ContentFragment;
 import com.greenkeycompany.exam.fragment.wordcardresult.fragment.WordListFragment;
 
@@ -62,6 +63,8 @@ public class WordCardResultFragment extends Fragment {
         }
     }
 
+    private ActionBarView actionBarView;
+
     @BindView(R.id.bottom_navigation_view) BottomNavigationView bottomNavigationView;
     @BindView(R.id.view_pager) ViewPager viewPager;
 
@@ -73,6 +76,9 @@ public class WordCardResultFragment extends Fragment {
         View view = inflater.inflate(R.layout.word_card_result_fragment, container, false);
 
         unbinder = ButterKnife.bind(this, view);
+
+        actionBarView = (ActionBarView) getActivity();
+        actionBarView.setActionBarPremiumButtonVisibility(false);
 
         if (wrongAnswerWordCardIds.length == 0) {
             bottomNavigationView.setVisibility(View.GONE);

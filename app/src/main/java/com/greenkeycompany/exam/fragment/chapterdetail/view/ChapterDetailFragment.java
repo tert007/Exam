@@ -90,15 +90,14 @@ public class ChapterDetailFragment extends MvpFragment<IChapterDetailView, IChap
             }
         });
 
+        recyclerView.setNestedScrollingEnabled(false); //Очень плохое решение для больших списков, но для 5 элементов самое то
         recyclerView.setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), RecyclerView.VERTICAL));
         recyclerView.setAdapter(adapter);
 
         actionBarView = (ActionBarView) getActivity();
-
         actionBarView.setActionBarHomeButtonVisibility(true);
-        actionBarView.setActionBarPremiumButtonVisibility(false);
 
         return view;
     }

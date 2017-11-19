@@ -17,6 +17,7 @@ import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
 import com.greenkeycompany.exam.activity.view.ActionBarView;
+import com.greenkeycompany.exam.app.PremiumUtil;
 import com.greenkeycompany.exam.fragment.trainingmenu.model.WordCardMenuItem;
 import com.greenkeycompany.exam.fragment.trainingmenu.presenter.ITrainingMenuPresenter;
 import com.greenkeycompany.exam.fragment.trainingmenu.presenter.TrainingMenuPresenter;
@@ -38,7 +39,6 @@ import io.realm.Realm;
 public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITrainingMenuPresenter>
         implements ITrainingMenuView {
 
-    private ActionBarView actionBarView = (ActionBarView) getActivity();
     private RealmRepository realmRepository = new RealmRepository(Realm.getDefaultInstance());
 
     @NonNull
@@ -66,6 +66,8 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
         }
     }
 
+    private ActionBarView actionBarView;
+
     private TrainingAdapter adapter;
     @BindView(R.id.recycler_view) RecyclerView recyclerView;
 
@@ -79,6 +81,9 @@ public class TrainingMenuFragment extends MvpFragment<ITrainingMenuView, ITraini
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         parentView = inflater.inflate(R.layout.training_menu_fragment, container, false);
+
+        actionBarView = (ActionBarView) getActivity();
+        actionBarView.setActionBarPremiumButtonVisibility( ! PremiumUtil.isPremiumUser());
 
         unbinder = ButterKnife.bind(this, parentView);
 

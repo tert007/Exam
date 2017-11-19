@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.greenkeycompany.exam.FragmentListener;
 import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.TrainingType;
+import com.greenkeycompany.exam.activity.view.ActionBarView;
 import com.greenkeycompany.exam.fragment.ScoreUtil;
 import com.greenkeycompany.exam.fragment.wordcardtraining.presenter.IWordCardTrainingPresenter;
 import com.greenkeycompany.exam.fragment.wordcardtraining.presenter.WordCardTrainingPresenter;
@@ -73,12 +74,17 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
         }
     }
 
+    private ActionBarView actionBarView;
+
     private Unbinder unbinder;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.word_card_training_fragment, container, false);
+
+        actionBarView = (ActionBarView) getActivity();
+        actionBarView.setActionBarPremiumButtonVisibility(false);
 
         unbinder = ButterKnife.bind(this, view);
 

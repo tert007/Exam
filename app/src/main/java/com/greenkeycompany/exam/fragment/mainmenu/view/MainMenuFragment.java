@@ -52,7 +52,6 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
     private ActionBarView actionBarView;
 
     private RealmRepository realmRepository = new RealmRepository(Realm.getDefaultInstance());
-    private ActivityCheckout checkout = Checkout.forActivity(getActivity(), App.get().getBilling());
 
     @NonNull
     @Override
@@ -87,22 +86,6 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
 
-        /*
-        checkout.start();
-        checkout.loadInventory(Inventory.Request.create().loadAllPurchases(), new Inventory.Callback() {
-            @Override
-            public void onLoaded(@Nonnull Inventory.Products products) {
-                final Inventory.Product product = products.get(ProductTypes.IN_APP);
-                if ( ! product.supported) return;
-
-                boolean isPurchased = product.isPurchased(PremiumUtil.PREMIUM_USER_SKU);
-                PremiumUtil.setPremiumUser(isPurchased);
-
-                actionBarView.setActionBarPremiumButtonVisibility( ! isPurchased);
-            }
-        });
-        */
-
         actionBarView = (ActionBarView) getActivity();
 
         actionBarView.setActionBarTitle(getString(R.string.app_name));
@@ -134,15 +117,8 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        checkout.onActivityResult(requestCode, resultCode, data);
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
     public void onDestroy() {
         realmRepository.close();
-        //checkout.stop();
         super.onDestroy();
     }
 
