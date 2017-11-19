@@ -9,9 +9,12 @@ import android.support.annotation.ColorInt;
 
 public class ChapterColorUtil {
 
+    private static final int FINAL_EXAM_ID = 0;
+
     @ColorInt
     public static int getColor(int chapterId) {
         switch (chapterId) {
+            case FINAL_EXAM_ID : return Color.parseColor("#323132");
             case 1 : return Color.parseColor("#489D9B");
             case 2 : return Color.parseColor("#96C884");
             case 3 : return Color.parseColor("#5BACB4");

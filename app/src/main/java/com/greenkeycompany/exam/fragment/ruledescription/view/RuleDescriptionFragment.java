@@ -77,7 +77,7 @@ public class RuleDescriptionFragment extends MvpFragment<IRuleDescriptionView, I
         presenter.init(ruleId);
     }
 
-    @BindView(R.id.title_text_view) TextView titleTextView;
+    @BindView(R.id.exam_title_view) TextView titleTextView;
     @Override
     public void setRuleTitleView(@NonNull String title) {
         titleTextView.setText(title);

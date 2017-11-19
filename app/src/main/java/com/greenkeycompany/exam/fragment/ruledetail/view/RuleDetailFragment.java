@@ -123,7 +123,7 @@ public class RuleDetailFragment extends MvpFragment<IRuleDetailView, IRuleDetail
         gradientDrawable.setColor(ScoreUtil.getReferenceColor(score));
 
         ruleExamCompletedTextView.setBackground(gradientDrawable);
-        ruleExamCompletedTextView.setText(String.valueOf(score));
+        ruleExamCompletedTextView.setText(ScoreUtil.convertScoreToString(score));
     }
 
     @Override

@@ -38,7 +38,7 @@
 
             android:text="@string/rule"
             android:textSize="28sp"
-            android:textColor="#000"
+            android:textColor="@android:color/black"
 
             android:layout_width="200dp"
             android:layout_height="wrap_content"

@@ -201,14 +201,14 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
 
             if (chapterMenuItem.getId() == MainMenuPresenter.FINAL_EXAM_ITEM_ID) {
                 holder.titleTextView.setText(context.getString(R.string.final_exam));
+                holder.startTextView.setText(context.getString(R.string.final_exam_start));
             } else {
                 holder.titleTextView.setText(chapterMenuItem.getTitle());
+                holder.startTextView.setText(context.getString(R.string.chapter_start));
             }
 
             holder.itemView.setBackgroundColor(ChapterColorUtil.getColor(chapterMenuItem.getId()));
-            holder.startTextView.setText(1 == 1 ?
-                    context.getString(R.string.chapter_start) :
-                    context.getString(R.string.chapter_continue));
+
             holder.scoreTextView.setText(ScoreUtil.convertScoreToString(chapterMenuItem.getScore()));
         }
 

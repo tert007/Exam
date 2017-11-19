@@ -22,6 +22,7 @@
     <string name="chapter_start">Начать</string>
     <string name="exam_start">Экзамен</string>
     <string name="chapter_continue">Продолжить</string>
+    <string name="final_exam_start">Пройти</string>
 
     <!--  CHAPTER DETAIL -->
     <string name="chapter_exam_locked_title">Заблокированно</string>
