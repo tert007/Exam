@@ -15,5 +15,6 @@ import java.util.List;
 public interface IMainMenuView extends MvpView {
     void setChapters(@NonNull List<ChapterMenuItem> chapterList);
 
+    void requestToSetFinalExamFragment();
     void requestToSetChapterFragment(int chapterId);
 }

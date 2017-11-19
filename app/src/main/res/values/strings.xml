@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Русский язык</string>
 
+    <string name="application_admob_id" translatable="false">
+        ca-app-pub-5571311973400433~4238792482
+    </string>
+
+    <string name="interstitial_advertisement_id" translatable="false">
+        ca-app-pub-5571311973400433/3981262873
+    </string>
+
     <string name="restart">Перезапуск</string>
 
     <string name="rule">Правило</string>

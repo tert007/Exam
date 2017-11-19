@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.gms.ads.InterstitialAd;
 import com.greenkeycompany.exam.FragmentType;
 import com.greenkeycompany.exam.PurchaseActivity;
 import com.greenkeycompany.exam.R;
@@ -41,6 +42,7 @@ import butterknife.OnClick;
 public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
         implements IMainView {
 
+    //private InterstitialAd interstitialAd;
     private ActivityCheckout checkout = Checkout.forActivity(this, App.get().getBilling());
 
     @NonNull

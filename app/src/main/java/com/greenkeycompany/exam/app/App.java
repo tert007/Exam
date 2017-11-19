@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.res.AssetManager;
 import android.util.Log;
 
+import com.google.android.gms.ads.MobileAds;
+import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.repository.model.Chapter;
 import com.greenkeycompany.exam.repository.model.Rule;
 import com.greenkeycompany.exam.repository.model.RulePoint;
@@ -51,6 +53,7 @@ public class App extends Application {
         App.init(this);
         Realm.init(this);
         PremiumUtil.init(this);
+        MobileAds.initialize(this, getString(R.string.application_admob_id));
 
         RealmConfiguration config = new RealmConfiguration.Builder().initialData(new Realm.Transaction() {
             @Override
