@@ -19,7 +19,7 @@ public class PremiumUtil {
 
     static void init(@NonNull Context context) {
         PremiumUtil.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        PremiumUtil.premiumUser = sharedPreferences.getBoolean(PREMIUM_USER_KEY, true);
+        PremiumUtil.premiumUser = sharedPreferences.getBoolean(PREMIUM_USER_KEY, false);
     }
 
     public static boolean isPremiumUser() {

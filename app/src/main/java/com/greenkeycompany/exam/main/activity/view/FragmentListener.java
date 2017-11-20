@@ -9,6 +9,8 @@ import com.greenkeycompany.exam.main.TrainingType;
  */
 
 public interface FragmentListener {
+    void onResultFragmentRestartClick(@NonNull TrainingType trainingType);
+
     void requestToSetMainMenuFragment();
     void requestToSetChapterDetailFragment(int chapterId);
 

@@ -10,5 +10,5 @@ import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
 public interface IRuleDescriptionPresenter extends MvpPresenter<IRuleDescriptionView> {
     void init(int ruleId);
 
-    void onCompletedButtonClick();
+    void onLearnViewClick();
 }

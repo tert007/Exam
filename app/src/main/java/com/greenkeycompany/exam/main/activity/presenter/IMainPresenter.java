@@ -9,6 +9,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
  */
 
 public interface IMainPresenter extends MvpPresenter<IMainView>, FragmentListener {
-
     void onBackPressed();
+
+    void onInterstitialAdConsumed();
 }

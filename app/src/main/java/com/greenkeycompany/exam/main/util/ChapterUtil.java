@@ -7,9 +7,12 @@ import android.support.annotation.ColorInt;
  * Created by tert0 on 09.10.2017.
  */
 
-public class ChapterColorUtil {
+public class ChapterUtil {
 
-    private static final int FINAL_EXAM_ID = 0;
+    /**
+     * Финальный экзамен представлен в списке как последняя глава с id = 0;
+     */
+    public static final int FINAL_EXAM_ID = 0;
 
     @ColorInt
     public static int getColor(int chapterId) {
@@ -20,6 +23,17 @@ public class ChapterColorUtil {
             case 3 : return Color.parseColor("#5BACB4");
             case 4 : return Color.parseColor("#e16f3e");
             default: return Color.BLACK;
+        }
+    }
+
+    public static boolean isPremiumChapter(int chapterId) {
+        switch (chapterId) {
+            case 3:
+            case 4:
+                return true;
+
+            default:
+                return false;
         }
     }
 }

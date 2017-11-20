@@ -84,6 +84,7 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
         View view = inflater.inflate(R.layout.word_card_training_fragment, container, false);
 
         actionBarView = (ActionBarView) getActivity();
+        actionBarView.setActionBarHomeButtonVisibility(true);
         actionBarView.setActionBarPremiumButtonVisibility(false);
 
         unbinder = ButterKnife.bind(this, view);

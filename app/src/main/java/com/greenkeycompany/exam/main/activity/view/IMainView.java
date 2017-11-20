@@ -12,6 +12,9 @@ import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 public interface IMainView extends MvpView, ActionBarView, FragmentListener {
 
+    void showInterstitialAd();
+    void showPurchasePremiumActivity();
+
     void setMainFragment();
     void setChapterDetailFragment(int chapterId);
     void setRuleDetailFragment(int ruleId);

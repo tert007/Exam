@@ -44,7 +44,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/completed_view"
+            android:id="@+id/learn_rule_view"
 
             android:gravity="center"
 

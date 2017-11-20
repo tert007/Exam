@@ -2,7 +2,7 @@ package com.greenkeycompany.exam.main.fragment.trainingmenu.presenter;
 
 import android.support.annotation.NonNull;
 
-import com.greenkeycompany.exam.main.util.ChapterColorUtil;
+import com.greenkeycompany.exam.main.util.ChapterUtil;
 import com.greenkeycompany.exam.main.fragment.trainingmenu.model.WordCardMenuItem;
 import com.greenkeycompany.exam.main.fragment.trainingmenu.view.ITrainingMenuView;
 import com.greenkeycompany.exam.main.repository.IRepository;
@@ -51,7 +51,7 @@ public class TrainingMenuPresenter extends MvpBasePresenter<ITrainingMenuView>
 
         int chapterId = repository.getRule(ruleId).getChapterId();
         if (isViewAttached()) {
-            getView().setBackgroundColor(ChapterColorUtil.getColor(chapterId));
+            getView().setBackgroundColor(ChapterUtil.getColor(chapterId));
             getView().setTrainingModelItems(wordCardMenuItemList);
         }
     }

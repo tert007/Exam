@@ -16,7 +16,7 @@ import com.greenkeycompany.exam.R;
 import com.greenkeycompany.exam.main.TrainingType;
 import com.greenkeycompany.exam.main.activity.view.ActionBarView;
 import com.greenkeycompany.exam.app.PremiumUtil;
-import com.greenkeycompany.exam.main.util.ChapterColorUtil;
+import com.greenkeycompany.exam.main.util.ChapterUtil;
 import com.greenkeycompany.exam.main.util.ScoreUtil;
 import com.greenkeycompany.exam.main.fragment.mainmenu.model.ChapterMenuItem;
 import com.greenkeycompany.exam.main.fragment.mainmenu.presenter.IMainMenuPresenter;
@@ -189,7 +189,7 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
         public void onBindViewHolder(ViewHolder holder, int position) {
             ChapterMenuItem chapterMenuItem = chapterMenuItemList.get(position);
 
-            if (chapterMenuItem.getId() == MainMenuPresenter.FINAL_EXAM_ITEM_ID) {
+            if (chapterMenuItem.getId() == ChapterUtil.FINAL_EXAM_ID) {
                 holder.titleTextView.setText(context.getString(R.string.final_exam));
                 holder.startTextView.setText(context.getString(R.string.final_exam_start));
             } else {
@@ -197,7 +197,7 @@ public class MainMenuFragment extends MvpFragment<IMainMenuView, IMainMenuPresen
                 holder.startTextView.setText(context.getString(R.string.chapter_start));
             }
 
-            holder.itemView.setBackgroundColor(ChapterColorUtil.getColor(chapterMenuItem.getId()));
+            holder.itemView.setBackgroundColor(ChapterUtil.getColor(chapterMenuItem.getId()));
 
             holder.scoreTextView.setText(ScoreUtil.convertScoreToString(chapterMenuItem.getScore()));
         }

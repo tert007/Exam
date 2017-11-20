@@ -2,7 +2,7 @@ package com.greenkeycompany.exam.main.fragment.ruledetail.presenter;
 
 import android.support.annotation.NonNull;
 
-import com.greenkeycompany.exam.main.util.ChapterColorUtil;
+import com.greenkeycompany.exam.main.util.ChapterUtil;
 import com.greenkeycompany.exam.main.fragment.ruledetail.view.IRuleDetailView;
 import com.greenkeycompany.exam.main.repository.model.result.RuleExamResult;
 import com.greenkeycompany.exam.main.repository.IRepository;
@@ -57,7 +57,7 @@ public class RuleDetailPresenter extends MvpBasePresenter<IRuleDetailView>
 
         if (isViewAttached()) {
             getView().requestToSetActionBarTitle(rule.getTitle());
-            getView().setBackgroundColor(ChapterColorUtil.getColor(rule.getChapterId()));
+            getView().setBackgroundColor(ChapterUtil.getColor(rule.getChapterId()));
             getView().setRuleDescriptionCompleted(learned);
             getView().setRuleTrainingCompleted(trainingCompleted);
         }

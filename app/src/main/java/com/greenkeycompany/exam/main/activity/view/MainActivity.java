@@ -9,6 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.greenkeycompany.exam.main.FragmentType;
 import com.greenkeycompany.exam.main.activity.presenter.IMainPresenter;
 import com.greenkeycompany.exam.main.fragment.ruledescription.view.RuleDescriptionFragment;
@@ -41,7 +44,9 @@ import butterknife.OnClick;
 public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
         implements IMainView {
 
-    //private InterstitialAd interstitialAd;
+    private boolean interstitialAdClosed;
+    private InterstitialAd interstitialAd;
+
     private ActivityCheckout checkout = Checkout.forActivity(this, App.get().getBilling());
 
     @NonNull
@@ -60,6 +65,19 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.action_bar_back_button_icon);
+
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        if ( ! PremiumUtil.isPremiumUser()) {
+            interstitialAd.loadAd(new AdRequest.Builder().build());
+            interstitialAd.setAdListener(new AdListener() {
+                @Override
+                public void onAdClosed() {
+                    interstitialAdClosed = true;
+                    interstitialAd.loadAd(new AdRequest.Builder().build());
+                }
+            });
+        }
 
         checkout.start();
         checkout.loadInventory(Inventory.Request.create().loadAllPurchases(), new Inventory.Callback() {
@@ -88,6 +106,11 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
     @BindView(R.id.action_bar_premium_icon) View purchasePremiumView;
     @OnClick(R.id.action_bar_premium_icon)
     public void onPurchasePremiumClick() {
+        showPurchasePremiumActivity();
+    }
+
+    @Override
+    public void showPurchasePremiumActivity() {
         startActivityForResult(new Intent(this, PurchaseActivity.class), PURCHASE_PREMIUM_REQUEST_CODE);
     }
 
@@ -100,6 +123,24 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
                     purchasePremiumView.setVisibility(View.GONE);
                 }
                 break;
+        }
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        if (interstitialAdClosed) {
+            interstitialAdClosed = false;
+            presenter.onInterstitialAdConsumed();
+        }
+    }
+
+    @Override
+    public void showInterstitialAd() {
+        if (interstitialAd.isLoaded()) {
+            interstitialAd.show();
+        } else {
+            presenter.onInterstitialAdConsumed();
         }
     }
 
@@ -165,7 +206,7 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
 
     @Override
     public void setRuleDetailFragment(int ruleId) {
-        setFragment(RuleDetailFragment.newInstance(ruleId), FragmentType.RULE);
+        setFragment(RuleDetailFragment.newInstance(ruleId), FragmentType.RULE_DETAIL);
     }
 
     @Override
@@ -202,6 +243,11 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
                 replace(R.id.container, fragment).
                 addToBackStack(null).
                 commit();
+    }
+
+    @Override
+    public void onResultFragmentRestartClick(@NonNull TrainingType trainingType) {
+        presenter.onResultFragmentRestartClick(trainingType);
     }
 
     @Override

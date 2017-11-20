@@ -1,5 +1,6 @@
 package com.greenkeycompany.exam.main.fragment.ruledescription.view;
 
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.greenkeycompany.exam.R;
+import com.greenkeycompany.exam.main.activity.view.FragmentListener;
 import com.greenkeycompany.exam.main.fragment.ruledescription.presenter.IRuleDescriptionPresenter;
 import com.greenkeycompany.exam.main.fragment.ruledescription.presenter.RuleDescriptionPresenter;
 import com.greenkeycompany.exam.main.repository.RealmRepository;
@@ -100,15 +102,16 @@ public class RuleDescriptionFragment extends MvpFragment<IRuleDescriptionView, I
         contentHolderLayout.addView(textView);
     }
 
-    @BindView(R.id.completed_view) View completedView;
+    @BindView(R.id.learn_rule_view) View learnRuleView;
     @Override
-    public void setCompletedButtonVisibility(boolean visible) {
-        completedView.setVisibility(visible ? View.VISIBLE : View.GONE);
+    public void setLearnViewVisibility(boolean visible) {
+        learnRuleView.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
 
-    @OnClick(R.id.completed_view)
-    public void onCompletedViewClick() {
-        presenter.onCompletedButtonClick();
+    @OnClick(R.id.learn_rule_view)
+    public void onLearnViewClick() {
+        presenter.onLearnViewClick();
+        learnRuleView.setVisibility(View.INVISIBLE);
     }
 
     @Override

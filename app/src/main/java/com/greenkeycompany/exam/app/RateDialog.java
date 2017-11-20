@@ -23,7 +23,7 @@ public class RateDialog {
     private static final String DO_NOT_SHOW_AGAIN_KEY = "do_not_show_again";
     private static final String DIALOG_LAUNCH_TIMES_KEY = "dialog_launch_times";;
 
-    private static final int LAUNCHING_COUNT_TO_SHOWING = 3;
+    private static final int LAUNCHING_COUNT_TO_SHOWING = 10;
 
     private final Context context;
     private final SharedPreferences sharedPreferences;

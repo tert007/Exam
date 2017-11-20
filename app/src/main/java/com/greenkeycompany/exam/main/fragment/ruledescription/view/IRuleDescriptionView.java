@@ -13,5 +13,5 @@ public interface IRuleDescriptionView extends MvpView {
     void setRuleTitleView(@NonNull String title);
     void addRulePointView(@NonNull String title, @NonNull String message);
 
-    void setCompletedButtonVisibility(boolean visible);
+    void setLearnViewVisibility(boolean visible);
 }

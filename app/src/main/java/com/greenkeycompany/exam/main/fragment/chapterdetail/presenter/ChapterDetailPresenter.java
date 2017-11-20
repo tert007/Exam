@@ -2,7 +2,7 @@ package com.greenkeycompany.exam.main.fragment.chapterdetail.presenter;
 
 import android.support.annotation.NonNull;
 
-import com.greenkeycompany.exam.main.util.ChapterColorUtil;
+import com.greenkeycompany.exam.main.util.ChapterUtil;
 import com.greenkeycompany.exam.main.util.ScoreUtil;
 import com.greenkeycompany.exam.main.fragment.chapterdetail.model.RuleMenuItem;
 import com.greenkeycompany.exam.main.fragment.chapterdetail.view.IChapterDetailView;
@@ -75,7 +75,7 @@ public class ChapterDetailPresenter extends MvpBasePresenter<IChapterDetailView>
         ChapterExamResult bestChapterResult = repository.getBestChapterExamResult(chapterId);
         if (isViewAttached()) {
             getView().requestToSetActionBarTitle(chapter.getTitle());
-            getView().setChapterViewColor(ChapterColorUtil.getColor(chapterId));
+            getView().setChapterViewColor(ChapterUtil.getColor(chapterId));
             getView().setChapterScore(bestChapterResult == null ? 0 : bestChapterResult.getScore());
             getView().setChapterWordCardCompletedCount(chapterWordCardCompletedCount,chapterWordCardCount);
             getView().setRuleItemList(ruleMenuItemList);

@@ -35,7 +35,7 @@ public class RuleDescriptionPresenter extends MvpBasePresenter<IRuleDescriptionV
         boolean learned = ruleStatus != null && ruleStatus.isLearned();
         if (isViewAttached()) {
             getView().setRuleTitleView(rule.getTitle());
-            getView().setCompletedButtonVisibility( ! learned);
+            getView().setLearnViewVisibility( ! learned);
         }
 
         List<RulePoint> rulePointList = repository.getRulePointList(ruleId);
@@ -47,10 +47,7 @@ public class RuleDescriptionPresenter extends MvpBasePresenter<IRuleDescriptionV
     }
 
     @Override
-    public void onCompletedButtonClick() {
+    public void onLearnViewClick() {
         repository.addOrUpdateRuleStatus(ruleId, true);
-        if (isViewAttached()) {
-            getView().setCompletedButtonVisibility(false);
-        }
     }
 }

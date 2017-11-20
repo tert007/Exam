@@ -160,7 +160,7 @@ public class WordCardResultFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.restart:
-                //presenter.initTraining(trainingType, id);
+                fragmentListener.onResultFragmentRestartClick(trainingType);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
