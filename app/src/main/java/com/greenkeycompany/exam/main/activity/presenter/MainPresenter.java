@@ -27,39 +27,24 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
                 getView().finish();
             }
         } else {
-            if (fragmentType == FragmentType.WORD_CARD_SET_TRAINING_RESULT ||
-                fragmentType == FragmentType.RULE_EXAM_RESULT ||
-                fragmentType == FragmentType.CHAPTER_EXAM_RESULT ||
-                fragmentType == FragmentType.FINAL_EXAM_RESULT) {
+            if (FragmentType.isResultFragmentType(fragmentType)) {
+                FragmentType trainingFragmentType = fragmentType.getParent();
                 if (isViewAttached()) {
-                    getView().backStack(fragmentType.getParent());
+                    getView().backStack(trainingFragmentType); // Снять со стека 2 фрагмента, с результатом и с тренировкой
                 }
+                fragmentType = trainingFragmentType.getParent();
             } else {
                 if (isViewAttached()) {
                     getView().backStack();
                 }
+                fragmentType = fragmentType.getParent();
             }
-
-            fragmentType = fragmentType.getParent();
         }
     }
 
     @Override
     public void onResultFragmentRestartClick(@NonNull TrainingType trainingType) {
-        switch (trainingType) {
-            case FINAL_EXAM:
-                fragmentType = FragmentType.FINAL_EXAM;
-                break;
-            case CHAPTER_EXAM:
-                fragmentType = FragmentType.CHAPTER_EXAM;
-                break;
-            case RULE_EXAM:
-                fragmentType = FragmentType.RULE_EXAM;
-                break;
-            case WORD_CARD_SET_TRAINING:
-                fragmentType = FragmentType.WORD_CARD_SET_TRAINING;
-                break;
-        }
+        fragmentType = TrainingType.getReferenceTrainingFragmentType(trainingType);
         if (isViewAttached()) {
             getView().backStack();
         }
@@ -145,20 +130,7 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
 
     @Override
     public void requestToSetWordCardTrainingFragment(@NonNull TrainingType trainingType, int id) {
-        switch (trainingType) {
-            case WORD_CARD_SET_TRAINING:
-                fragmentType = FragmentType.WORD_CARD_SET_TRAINING;
-                break;
-            case RULE_EXAM:
-                fragmentType = FragmentType.RULE_EXAM;
-                break;
-            case CHAPTER_EXAM:
-                fragmentType = FragmentType.CHAPTER_EXAM;
-                break;
-            case FINAL_EXAM:
-                fragmentType = FragmentType.FINAL_EXAM;
-                break;
-        }
+        fragmentType = TrainingType.getReferenceTrainingFragmentType(trainingType);
         if (isViewAttached()) {
             getView().setWordCardTrainingFragment(trainingType, id);
         }
@@ -166,20 +138,7 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
 
     @Override
     public void requestToSetWordCardResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds) {
-        switch (trainingType) {
-            case WORD_CARD_SET_TRAINING:
-                fragmentType = FragmentType.WORD_CARD_SET_TRAINING_RESULT;
-                break;
-            case RULE_EXAM:
-                fragmentType = FragmentType.RULE_EXAM_RESULT;
-                break;
-            case CHAPTER_EXAM:
-                fragmentType = FragmentType.CHAPTER_EXAM_RESULT;
-                break;
-            case FINAL_EXAM:
-                fragmentType = FragmentType.FINAL_EXAM_RESULT;
-                break;
-        }
+        fragmentType = TrainingType.getReferenceResultFragmentType(trainingType);
         if (isViewAttached()) {
             getView().setWordCardResultFragment(trainingType, resultId, wrongAnswerWordCardIds);
         }

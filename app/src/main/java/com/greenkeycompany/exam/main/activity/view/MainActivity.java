@@ -67,7 +67,7 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.action_bar_back_button_icon);
 
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        interstitialAd.setAdUnitId(getString(R.string.interstitial_advertisement_id));
         if ( ! PremiumUtil.isPremiumUser()) {
             interstitialAd.loadAd(new AdRequest.Builder().build());
             interstitialAd.setAdListener(new AdListener() {
@@ -221,12 +221,12 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
 
     @Override
     public void setWordCardTrainingFragment(@NonNull TrainingType trainingType, int id) {
-        setFragment(WordCardTrainingFragment.newInstance(trainingType, id));
+        setFragment(WordCardTrainingFragment.newInstance(trainingType, id), TrainingType.getReferenceTrainingFragmentType(trainingType));
     }
 
     @Override
     public void setWordCardResultFragment(@NonNull TrainingType trainingType, int resultId, int[] wrongAnswerWordCardIds) {
-        setFragment(WordCardResultFragment.newInstance(trainingType, resultId, wrongAnswerWordCardIds));
+        setFragment(WordCardResultFragment.newInstance(trainingType, resultId, wrongAnswerWordCardIds), TrainingType.getReferenceResultFragmentType(trainingType));
     }
 
     public void setFragment(Fragment fragment, FragmentType fragmentType) {
@@ -234,14 +234,6 @@ public class MainActivity extends MvpActivity<IMainView, IMainPresenter>
                 beginTransaction().
                 replace(R.id.container, fragment).
                 addToBackStack(fragmentType.name()).
-                commit();
-    }
-
-    public void setFragment(Fragment fragment) {
-        getSupportFragmentManager().
-                beginTransaction().
-                replace(R.id.container, fragment).
-                addToBackStack(null).
                 commit();
     }
 

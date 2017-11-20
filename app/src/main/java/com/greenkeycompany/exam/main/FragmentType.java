@@ -1,5 +1,6 @@
 package com.greenkeycompany.exam.main;
 
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 /**
@@ -14,16 +15,16 @@ public enum FragmentType {
     TRAINING_MENU(RULE_DETAIL),
 
     FINAL_EXAM(MAIN),
-    FINAL_EXAM_RESULT(MAIN),
+    FINAL_EXAM_RESULT(FINAL_EXAM),
 
     CHAPTER_EXAM(CHAPTER),
-    CHAPTER_EXAM_RESULT(CHAPTER),
+    CHAPTER_EXAM_RESULT(CHAPTER_EXAM),
 
     RULE_EXAM(RULE_DETAIL),
-    RULE_EXAM_RESULT(RULE_DETAIL),
+    RULE_EXAM_RESULT(RULE_EXAM),
 
     WORD_CARD_SET_TRAINING(TRAINING_MENU),
-    WORD_CARD_SET_TRAINING_RESULT(TRAINING_MENU);
+    WORD_CARD_SET_TRAINING_RESULT(WORD_CARD_SET_TRAINING);
 
     private FragmentType parent;
     FragmentType(FragmentType parent) {
@@ -33,5 +34,16 @@ public enum FragmentType {
     @Nullable
     public FragmentType getParent() {
         return parent;
+    }
+
+    public static boolean isResultFragmentType(@NonNull FragmentType fragmentType) {
+        if (fragmentType == FragmentType.WORD_CARD_SET_TRAINING_RESULT ||
+                fragmentType == FragmentType.RULE_EXAM_RESULT ||
+                fragmentType == FragmentType.CHAPTER_EXAM_RESULT ||
+                fragmentType == FragmentType.FINAL_EXAM_RESULT) {
+            return true;
+        }
+
+        return false;
     }
 }

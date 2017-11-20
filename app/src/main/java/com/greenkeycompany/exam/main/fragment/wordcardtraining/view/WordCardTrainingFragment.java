@@ -202,7 +202,7 @@ public class WordCardTrainingFragment extends MvpFragment<IWordCardTrainingView,
     @BindView(R.id.score_text_view) TextView scoreTextView;
     @Override
     public void setScoreView(int trueAnswerCount, int wordCardCount) {
-        scoreTextView.setText(ScoreUtil.getScoreByString(trueAnswerCount, wordCardCount));
+        scoreTextView.setText(getString(R.string.training_score, ScoreUtil.getScoreByString(trueAnswerCount, wordCardCount)));
     }
 
     @Override

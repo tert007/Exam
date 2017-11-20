@@ -15,7 +15,7 @@ import java.util.List;
 public class WordCardListUtil {
 
     private static final int FINAL_EXAM_WORD_CARD_COUNT = 100;
-    private static final int CHAPTER_EXAM_WORD_CARD_COUNT = 50;
+    private static final int CHAPTER_EXAM_WORD_CARD_COUNT = 40;
     private static final int RULE_EXAM_WORD_CARD_COUNT = 30;
 
     public static List<WordCard> getWordCardSetList(@NonNull List<WordCard> wordCardList, int wordCardCount) {

@@ -27,13 +27,8 @@ public class ChapterUtil {
     }
 
     public static boolean isPremiumChapter(int chapterId) {
-        switch (chapterId) {
-            case 3:
-            case 4:
-                return true;
+        if (chapterId == 3) return true; // ТВЁРДЫЙ И МЯГКИЙ ЗНАК
 
-            default:
-                return false;
-        }
+        return false;
     }
 }
