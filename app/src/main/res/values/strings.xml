@@ -27,34 +27,31 @@
     <!--  CHAPTER DETAIL -->
     <string name="chapter_exam_locked_title">Заблокированно</string>
     <string name="chapter_exam_locked_message">
-        Выпоните экзамены по каждому правилу в данной главе на оценку 4,5 или выше, чтобы открыть экзамен по главе.
+        Пройдите экзамены по каждому правилу в данной главе на оценку 4,5 или выше, чтобы открыть экзамен по главе.
     </string>
 
     <!-- RULE_DETAIL  -->
     <string name="training_locked_title">Заблокированно</string>
     <string name="training_locked_message">
-        Для доустпа к тренировки необходимо прочитать правила.
+        Для доступа к тренировки необходимо прочитать правила.
     </string>
 
     <string name="exam_locked_title">Заблокированно</string>
     <string name="exam_locked_message">
-        Для доуступа к экзамену необходимо пройти каждый этап тренировки.
+        Для доступа к экзамену необходимо пройти каждый этап тренировки.
     </string>
 
     <string name="locked_close">Закрыть</string>
-
 
     <!-- DESCRIPTION -->
     <string name="rule_description">Правила</string>
     <string name="rule_description_completed">Прочитано</string>
 
-
-
     <string name="chapter_completed">Пройдено %1$d из %2$d</string>
     <string name="rule_completed">Пройдено %1$d из %2$d</string>
 
     <string name="chapter_exam_score_completed">Оценка: %1$s</string>
-    <string name="chapter_exam_word_card_completed">Пройдено %1$d слов из %2$d</string>
+    <string name="chapter_exam_word_card_completed">Пройдено %1$d из %2$d</string>
 
     <string name="word_card_completed">Пройдено %1$d</string>
 
