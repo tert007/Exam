@@ -2,11 +2,11 @@
 <resources>
     <string name="premium_access">Премиум-доступ</string>
 
-    <string name="premium_access_advantage_1_title">Без рекламы</string>
-    <string name="premium_access_advantage_1_message">Получите ещё больше комфорта, не отвлекаясь на рекламу</string>
+    <string name="premium_access_advantage_1_title">Отсутствие рекламы</string>
+    <string name="premium_access_advantage_1_message">Получите ещё больше комфорта не отвлекаясь на рекламные блоки в приложении</string>
 
-    <string name="premium_access_advantage_2_title">Доступ ко всем главам</string>
-    <string name="premium_access_advantage_2_message">Откройте главу \"Твёрдый и мягкий знаки\" и дополнительные материалы в будующем</string>
+    <string name="premium_access_advantage_2_title">Полный доступ к главам</string>
+    <string name="premium_access_advantage_2_message">Откройте \"Твёрдый и мягкий знаки\" и дополнительные материалы в будующем</string>
 
 
     <string name="purchase">Приобрести</string>
