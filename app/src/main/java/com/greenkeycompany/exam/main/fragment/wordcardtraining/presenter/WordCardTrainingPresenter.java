@@ -79,6 +79,7 @@ public class WordCardTrainingPresenter extends MvpBasePresenter<IWordCardTrainin
 
             getView().setWordView(isCorrectWord ? wordCard.getCorrectWord() : wordCard.getIncorrectWord());
             getView().setCorrectWordViewVisibility(false);
+            getView().setIncorrectWordViewVisibility(false);
 
             getView().setNextViewVisibility(false);
             getView().setAnswersButtonVisibility(true);

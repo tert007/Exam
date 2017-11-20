@@ -46,4 +46,16 @@ public enum FragmentType {
 
         return false;
     }
+
+    public static boolean isTrainingFragmentType(@NonNull FragmentType fragmentType) {
+        if (fragmentType == FragmentType.WORD_CARD_SET_TRAINING ||
+                fragmentType == FragmentType.RULE_EXAM ||
+                fragmentType == FragmentType.CHAPTER_EXAM ||
+                fragmentType == FragmentType.FINAL_EXAM) {
+            return true;
+        }
+
+        return false;
+    }
+
 }

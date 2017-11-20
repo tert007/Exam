@@ -28,11 +28,25 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
             }
         } else {
             if (FragmentType.isResultFragmentType(fragmentType)) {
-                FragmentType trainingFragmentType = fragmentType.getParent();
-                if (isViewAttached()) {
-                    getView().backStack(trainingFragmentType); // Снять со стека 2 фрагмента, с результатом и с тренировкой
+                if (PremiumUtil.isPremiumUser()) {
+                    FragmentType trainingFragmentType = fragmentType.getParent();
+                    if (isViewAttached()) {
+                        getView().backStack(trainingFragmentType); // Снять со стека 2 фрагмента, с результатом и с тренировкой
+                    }
+                    fragmentType = trainingFragmentType.getParent();
+                } else {
+                    if (random.nextBoolean()) {
+                        if (isViewAttached()) {
+                            getView().showInterstitialAd();
+                        }
+                    } else {
+                        FragmentType trainingFragmentType = fragmentType.getParent();
+                        if (isViewAttached()) {
+                            getView().backStack(trainingFragmentType); // Снять со стека 2 фрагмента, с результатом и с тренировкой
+                        }
+                        fragmentType = trainingFragmentType.getParent();
+                    }
                 }
-                fragmentType = trainingFragmentType.getParent();
             } else {
                 if (isViewAttached()) {
                     getView().backStack();
@@ -50,15 +64,15 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
         }
     }
 
-    private int ruleId;
     private Random random = new Random();
 
     @Override
-    public void onInterstitialAdConsumed() {
-        fragmentType = FragmentType.RULE_DETAIL;
+    public void onInterstitialAdConsumed() { //Вызывается после просмотра рекламы.
+        FragmentType trainingFragmentType = fragmentType.getParent();
         if (isViewAttached()) {
-            getView().setRuleDetailFragment(ruleId);
+            getView().backStack(trainingFragmentType); // Снять со стека 2 фрагмента, с результатом и с тренировкой
         }
+        fragmentType = trainingFragmentType.getParent();
     }
 
     @Override
@@ -92,24 +106,10 @@ public class MainPresenter extends MvpBasePresenter<IMainView>
 
     @Override
     public void requestToSetRuleDetailFragment(int ruleId) {
-        if (PremiumUtil.isPremiumUser()) {
             fragmentType = FragmentType.RULE_DETAIL;
             if (isViewAttached()) {
                 getView().setRuleDetailFragment(ruleId);
             }
-        } else {
-            this.ruleId = ruleId;
-            if (random.nextBoolean()) {
-                if (isViewAttached()) {
-                    getView().showInterstitialAd();
-                }
-            } else {
-                fragmentType = FragmentType.RULE_DETAIL;
-                if (isViewAttached()) {
-                    getView().setRuleDetailFragment(ruleId);
-                }
-            }
-        }
     }
 
     @Override
